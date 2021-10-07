@@ -302,22 +302,156 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="n">c91c580007c8</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df_pf7</span> <span class="o">=</span> <span class="n">pf7</span><span class="o">.</span><span class="n">sample_metadata</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">df_pf7</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">NameError</span>: name &#39;pf7&#39; is not defined
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sample</th>
+      <th>Study</th>
+      <th>Country</th>
+      <th>Admin level 1</th>
+      <th>Country latitude</th>
+      <th>Country longitude</th>
+      <th>Admin level 1 latitude</th>
+      <th>Admin level 1 longitude</th>
+      <th>Year</th>
+      <th>ENA</th>
+      <th>All samples same case</th>
+      <th>Population</th>
+      <th>% callable</th>
+      <th>QC pass</th>
+      <th>Exclusion reason</th>
+      <th>Sample type</th>
+      <th>Sample was in Pf6</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>FP0008-C</td>
+      <td>1147-PF-MR-CONWAY</td>
+      <td>Mauritania</td>
+      <td>Hodh el Gharbi</td>
+      <td>20.265149</td>
+      <td>-10.337093</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR1081237</td>
+      <td>FP0008-C</td>
+      <td>AF-W</td>
+      <td>82.16</td>
+      <td>True</td>
+      <td>Analysis_set</td>
+      <td>gDNA</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>FP0009-C</td>
+      <td>1147-PF-MR-CONWAY</td>
+      <td>Mauritania</td>
+      <td>Hodh el Gharbi</td>
+      <td>20.265149</td>
+      <td>-10.337093</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR1081238</td>
+      <td>FP0009-C</td>
+      <td>AF-W</td>
+      <td>88.85</td>
+      <td>True</td>
+      <td>Analysis_set</td>
+      <td>gDNA</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>FP0010-CW</td>
+      <td>1147-PF-MR-CONWAY</td>
+      <td>Mauritania</td>
+      <td>Hodh el Gharbi</td>
+      <td>20.265149</td>
+      <td>-10.337093</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR2889621</td>
+      <td>FP0010-CW</td>
+      <td>AF-W</td>
+      <td>86.46</td>
+      <td>True</td>
+      <td>Analysis_set</td>
+      <td>sWGA</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>FP0011-CW</td>
+      <td>1147-PF-MR-CONWAY</td>
+      <td>Mauritania</td>
+      <td>Hodh el Gharbi</td>
+      <td>20.265149</td>
+      <td>-10.337093</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR2889624</td>
+      <td>FP0011-CW</td>
+      <td>AF-W</td>
+      <td>86.35</td>
+      <td>True</td>
+      <td>Analysis_set</td>
+      <td>sWGA</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>FP0012-CW</td>
+      <td>1147-PF-MR-CONWAY</td>
+      <td>Mauritania</td>
+      <td>Hodh el Gharbi</td>
+      <td>20.265149</td>
+      <td>-10.337093</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR2889627</td>
+      <td>FP0012-CW</td>
+      <td>AF-W</td>
+      <td>89.74</td>
+      <td>True</td>
+      <td>Analysis_set</td>
+      <td>sWGA</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The data set has </span><span class="si">{}</span><span class="s2"> samples and </span><span class="si">{}</span><span class="s2"> fields&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">df_pf7</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">df_pf7</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
 </pre></div>
 </div>
 </div>
-</div>
-<p>The dataset has 20,864 samples and 17 fields.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df_pf7</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The data set has 20864 samples and 17 fields
 </pre></div>
 </div>
 </div>
@@ -393,10 +527,56 @@ dtype: int64
 <p>Data on the set of genomic positions and alleles can be accessed as dask arrays as follows:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pos</span><span class="p">,</span> <span class="n">ref</span><span class="p">,</span> <span class="n">alt</span> <span class="o">=</span> <span class="n">pf7</span><span class="o">.</span><span class="n">snp_sites</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chrom</span><span class="p">,</span><span class="n">pos</span> <span class="o">=</span> <span class="n">pf7</span><span class="o">.</span><span class="n">variants</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chrom</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<tr>
+<td>
+<table>
+  <thead>
+    <tr><td> </td><th> Array </th><th> Chunk </th></tr>
+  </thead>
+  <tbody>
+    <tr><th> Bytes </th><td> 81.17 MB </td> <td> 33.55 MB </td></tr>
+    <tr><th> Shape </th><td> (10145661,) </td> <td> (4194304,) </td></tr>
+    <tr><th> Count </th><td> 3 Tasks </td><td> 3 Chunks </td></tr>
+    <tr><th> Type </th><td> object </td><td> numpy.ndarray </td></tr>
+  </tbody>
+</table>
+</td>
+<td>
+<svg width="170" height="75" style="stroke:rgb(0,0,0);stroke-width:1" >
+
+  <!-- Horizontal lines -->
+  <line x1="0" y1="0" x2="120" y2="0" style="stroke-width:2" />
+  <line x1="0" y1="25" x2="120" y2="25" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="0" y1="0" x2="0" y2="25" style="stroke-width:2" />
+  <line x1="49" y1="0" x2="49" y2="25" />
+  <line x1="99" y1="0" x2="99" y2="25" />
+  <line x1="120" y1="0" x2="120" y2="25" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="0.0,0.0 120.0,0.0 120.0,25.412616514582485 0.0,25.412616514582485" style="fill:#ECB172A0;stroke-width:0"/>
+
+  <!-- Text -->
+  <text x="60.000000" y="45.412617" font-size="1.0rem" font-weight="100" text-anchor="middle" >10145661</text>
+  <text x="140.000000" y="12.706308" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(0,140.000000,12.706308)">1</text>
+</svg>
+</td>
+</tr>
+</table></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -443,111 +623,23 @@ dtype: int64
 </tr>
 </table></div></div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ref</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><table>
-<tr>
-<td>
-<table>
-  <thead>
-    <tr><td> </td><th> Array </th><th> Chunk </th></tr>
-  </thead>
-  <tbody>
-    <tr><th> Bytes </th><td> 81.17 MB </td> <td> 33.55 MB </td></tr>
-    <tr><th> Shape </th><td> (10145661,) </td> <td> (4194304,) </td></tr>
-    <tr><th> Count </th><td> 3 Tasks </td><td> 3 Chunks </td></tr>
-    <tr><th> Type </th><td> object </td><td> numpy.ndarray </td></tr>
-  </tbody>
-</table>
-</td>
-<td>
-<svg width="170" height="75" style="stroke:rgb(0,0,0);stroke-width:1" >
-
-  <!-- Horizontal lines -->
-  <line x1="0" y1="0" x2="120" y2="0" style="stroke-width:2" />
-  <line x1="0" y1="25" x2="120" y2="25" style="stroke-width:2" />
-
-  <!-- Vertical lines -->
-  <line x1="0" y1="0" x2="0" y2="25" style="stroke-width:2" />
-  <line x1="49" y1="0" x2="49" y2="25" />
-  <line x1="99" y1="0" x2="99" y2="25" />
-  <line x1="120" y1="0" x2="120" y2="25" style="stroke-width:2" />
-
-  <!-- Colored Rectangle -->
-  <polygon points="0.0,0.0 120.0,0.0 120.0,25.412616514582485 0.0,25.412616514582485" style="fill:#ECB172A0;stroke-width:0"/>
-
-  <!-- Text -->
-  <text x="60.000000" y="45.412617" font-size="1.0rem" font-weight="100" text-anchor="middle" >10145661</text>
-  <text x="140.000000" y="12.706308" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(0,140.000000,12.706308)">1</text>
-</svg>
-</td>
-</tr>
-</table></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><table>
-<tr>
-<td>
-<table>
-  <thead>
-    <tr><td> </td><th> Array </th><th> Chunk </th></tr>
-  </thead>
-  <tbody>
-    <tr><th> Bytes </th><td> 486.99 MB </td> <td> 33.55 MB </td></tr>
-    <tr><th> Shape </th><td> (10145661, 6) </td> <td> (699051, 6) </td></tr>
-    <tr><th> Count </th><td> 15 Tasks </td><td> 15 Chunks </td></tr>
-    <tr><th> Type </th><td> object </td><td> numpy.ndarray </td></tr>
-  </tbody>
-</table>
-</td>
-<td>
-<svg width="75" height="170" style="stroke:rgb(0,0,0);stroke-width:1" >
-
-  <!-- Horizontal lines -->
-  <line x1="0" y1="0" x2="25" y2="0" style="stroke-width:2" />
-  <line x1="0" y1="8" x2="25" y2="8" />
-  <line x1="0" y1="16" x2="25" y2="16" />
-  <line x1="0" y1="24" x2="25" y2="24" />
-  <line x1="0" y1="33" x2="25" y2="33" />
-  <line x1="0" y1="41" x2="25" y2="41" />
-  <line x1="0" y1="49" x2="25" y2="49" />
-  <line x1="0" y1="57" x2="25" y2="57" />
-  <line x1="0" y1="66" x2="25" y2="66" />
-  <line x1="0" y1="74" x2="25" y2="74" />
-  <line x1="0" y1="82" x2="25" y2="82" />
-  <line x1="0" y1="90" x2="25" y2="90" />
-  <line x1="0" y1="99" x2="25" y2="99" />
-  <line x1="0" y1="107" x2="25" y2="107" />
-  <line x1="0" y1="115" x2="25" y2="115" />
-  <line x1="0" y1="120" x2="25" y2="120" style="stroke-width:2" />
-
-  <!-- Vertical lines -->
-  <line x1="0" y1="0" x2="0" y2="120" style="stroke-width:2" />
-  <line x1="25" y1="0" x2="25" y2="120" style="stroke-width:2" />
-
-  <!-- Colored Rectangle -->
-  <polygon points="0.0,0.0 25.412616514582485,0.0 25.412616514582485,120.0 0.0,120.0" style="fill:#ECB172A0;stroke-width:0"/>
-
-  <!-- Text -->
-  <text x="12.706308" y="140.000000" font-size="1.0rem" font-weight="100" text-anchor="middle" >6</text>
-  <text x="45.412617" y="60.000000" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(-90,45.412617,60.000000)">10145661</text>
-</svg>
-</td>
-</tr>
-</table></div></div>
-</div>
 <p>The data on genomic variants can be loaded into memory as <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.array.html">numpy</a> arrays as shown in the following examples.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># read first 10 chromosomes</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">chrom</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
+<span class="n">c</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;Pf3D7_01_v3&#39;, &#39;Pf3D7_01_v3&#39;, &#39;Pf3D7_01_v3&#39;, &#39;Pf3D7_01_v3&#39;,
+       &#39;Pf3D7_01_v3&#39;, &#39;Pf3D7_01_v3&#39;, &#39;Pf3D7_01_v3&#39;, &#39;Pf3D7_01_v3&#39;,
+       &#39;Pf3D7_01_v3&#39;, &#39;Pf3D7_01_v3&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># read first 10 SNP positions into a numpy array</span>
@@ -558,52 +650,6 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([30, 37, 51, 58, 60, 61, 63, 64, 65, 67], dtype=int32)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># read first 10 SNP reference alleles</span>
-<span class="n">r</span> <span class="o">=</span> <span class="n">ref</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
-<span class="n">r</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;AAACCCTGAACCCTAAACCCTGAACCCTAAACCCTAAACCCTGAACCCTAAACCCTAAACCCTGAACCCTAAACCCTGAAACCTAAACCCTGAACCCTAAACCCTGAACCCTGAACCCTAACCCTAAACCCTAAACCTAAAACCCTGAACCCTAAACCCTG&#39;,
-       &#39;GAACCCTAAACCCTGAACCCTA&#39;, &#39;G&#39;,
-       &#39;AAACCCTAAACCCTGAACCCTAAACCCTAAACCCTGAACCCTAAACCCTGAAACCTAAACCCTGAACCCTAAACCCTGAACCCTGAACCCTAACCCTAAACCCTAAACCTAAAACCCTGAACCCTAAACCCTGAACCCTG&#39;,
-       &#39;AC&#39;, &#39;C&#39;, &#39;C&#39;, &#39;T&#39;,
-       &#39;AAACCCTGAACCCTAAACCCTAAACCCTGAACCCTAAACCCTGAAACCTAAACCCTGAACCCTAAACCCTGAACCCTGAACCCTAACCCTAAACCCTAAACCTAAAACCCTGAACCCTAAACCCTG&#39;,
-       &#39;ACCCTGAAC&#39;], dtype=object)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># read first 10 SNP alternate alleles</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">alt</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
-<span class="n">a</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[&#39;A&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;],
-       [&#39;*&#39;, &#39;G&#39;, &#39;GAACCCTAAACCCTGAACCCTAAACCCTAAACCCTGAACCCTA&#39;, &#39;&#39;, &#39;&#39;,
-        &#39;&#39;],
-       [&#39;*&#39;, &#39;GAACCCTAAACCCTAAACCCTGAACCCTAAACCCTA&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;],
-       [&#39;*&#39;, &#39;A&#39;,
-        &#39;GAACCCTAAACCCTGAACCCTAAACCCTAAACCCTGAACCCTAAACCCTGAAACCTAAACCCTGAACCCTAAACCCTGAACCCTGAACCCTAACCCTAAACCCTAAACCTAAAACCCTGAACCCTAAACCCTGAACCCTG&#39;,
-        &#39;&#39;, &#39;&#39;, &#39;&#39;],
-       [&#39;*&#39;, &#39;A&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;],
-       [&#39;*&#39;, &#39;A&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;],
-       [&#39;*&#39;, &#39;T&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;],
-       [&#39;*&#39;, &#39;A&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;],
-       [&#39;GAACCCTGAACCCTAAACCCTAAACCCTGAACCCTAAACCCTGAAACCTAAACCCTGAACCCTAAACCCTGAACCCTGAACCCTAACCCTAAACCCTAAACCTAAAACCCTGAACCCTAAACCCTG&#39;,
-        &#39;*&#39;, &#39;A&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;],
-       [&#39;*&#39;, &#39;A&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;]], dtype=object)
 </pre></div>
 </div>
 </div>
@@ -621,7 +667,7 @@ dtype: int64
 <p>SNP genotypes can be accessed as dask arrays as shown below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pf7</span><span class="o">.</span><span class="n">snp_genotypes</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pf7</span><span class="o">.</span><span class="n">calldata</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -762,7 +808,7 @@ dtype: int64
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_samples</span> <span class="o">=</span> <span class="n">pf7</span><span class="o">.</span><span class="n">sample_metadata</span><span class="p">()</span>
-<span class="n">gt</span> <span class="o">=</span> <span class="n">pf7</span><span class="o">.</span><span class="n">snp_genotypes</span><span class="p">()</span>
+<span class="n">gt</span> <span class="o">=</span> <span class="n">pf7</span><span class="o">.</span><span class="n">calldata</span><span class="p">()</span>
 <span class="nb">len</span><span class="p">(</span><span class="n">df_samples</span><span class="p">)</span> <span class="o">==</span> <span class="n">gt</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -792,7 +838,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>found 135 Indonesian samples
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>found 164 samples from Colombia
 </pre></div>
 </div>
 <div class="output text_html"><table>
@@ -803,8 +849,8 @@ dtype: int64
     <tr><td> </td><th> Array </th><th> Chunk </th></tr>
   </thead>
   <tbody>
-    <tr><th> Bytes </th><td> 2.74 GB </td> <td> 20.47 MB </td></tr>
-    <tr><th> Shape </th><td> (10145661, 135, 2) </td> <td> (167773, 61, 2) </td></tr>
+    <tr><th> Bytes </th><td> 3.33 GB </td> <td> 21.14 MB </td></tr>
+    <tr><th> Shape </th><td> (10145661, 164, 2) </td> <td> (167773, 63, 2) </td></tr>
     <tr><th> Count </th><td> 12993 Tasks </td><td> 244 Chunks </td></tr>
     <tr><th> Type </th><td> int8 </td><td> numpy.ndarray </td></tr>
   </tbody>
@@ -815,9 +861,9 @@ dtype: int64
 
   <!-- Horizontal lines -->
   <line x1="10" y1="0" x2="80" y2="70" style="stroke-width:2" />
-  <line x1="10" y1="6" x2="80" y2="76" />
-  <line x1="10" y1="17" x2="80" y2="88" />
-  <line x1="10" y1="17" x2="80" y2="88" />
+  <line x1="10" y1="4" x2="80" y2="75" />
+  <line x1="10" y1="12" x2="80" y2="83" />
+  <line x1="10" y1="22" x2="80" y2="93" />
   <line x1="10" y1="25" x2="80" y2="96" style="stroke-width:2" />
 
   <!-- Vertical lines -->
@@ -876,9 +922,9 @@ dtype: int64
 
   <!-- Horizontal lines -->
   <line x1="80" y1="70" x2="106" y2="70" style="stroke-width:2" />
-  <line x1="80" y1="76" x2="106" y2="76" />
-  <line x1="80" y1="88" x2="106" y2="88" />
-  <line x1="80" y1="88" x2="106" y2="88" />
+  <line x1="80" y1="75" x2="106" y2="75" />
+  <line x1="80" y1="83" x2="106" y2="83" />
+  <line x1="80" y1="93" x2="106" y2="93" />
   <line x1="80" y1="96" x2="106" y2="96" style="stroke-width:2" />
 
   <!-- Vertical lines -->
@@ -890,7 +936,7 @@ dtype: int64
 
   <!-- Text -->
   <text x="93.294544" y="116.000852" font-size="1.0rem" font-weight="100" text-anchor="middle" >2</text>
-  <text x="126.000852" y="83.294544" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(-90,126.000852,83.294544)">135</text>
+  <text x="126.000852" y="83.294544" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(-90,126.000852,83.294544)">164</text>
   <text x="35.294118" y="80.706734" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(45,35.294118,80.706734)">10145661</text>
 </svg>
 </td>
@@ -932,15 +978,13 @@ dtype: int64
 <p>If you want to work further with the genotype calls, you may find it convenient to use <a class="reference external" href="https://scikit-allel.readthedocs.io/en/stable/">scikit-allel</a>. E.g., the code below sets up a genotype array using the Colombian samples subset.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">allel</span>
-
-<span class="n">gt_indonesia</span> <span class="o">=</span> <span class="n">allel</span><span class="o">.</span><span class="n">GenotypeDaskArray</span><span class="p">(</span><span class="n">gt_indonesia</span><span class="p">)</span>
-<span class="n">gt_indonesia</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gt_colombia</span> <span class="o">=</span> <span class="n">allel</span><span class="o">.</span><span class="n">GenotypeDaskArray</span><span class="p">(</span><span class="n">gt_colombia</span><span class="p">)</span>
+<span class="n">gt_colombia</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div class="allel allel-DisplayAs2D"><span>&lt;GenotypeDaskArray shape=(10145661, 135, 2) dtype=int8&gt;</span><table><thead><tr><th></th><th style="text-align: center">0</th><th style="text-align: center">1</th><th style="text-align: center">2</th><th style="text-align: center">3</th><th style="text-align: center">4</th><th style="text-align: center">...</th><th style="text-align: center">130</th><th style="text-align: center">131</th><th style="text-align: center">132</th><th style="text-align: center">133</th><th style="text-align: center">134</th></tr></thead><tbody><tr><th style="text-align: center; background-color: white; border-right: 1px solid black; ">0</th><td style="text-align: center">./.</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">...</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td></tr><tr><th style="text-align: center; background-color: white; border-right: 1px solid black; ">1</th><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">0/0</td><td style="text-align: center">...</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td></tr><tr><th style="text-align: center; background-color: white; border-right: 1px solid black; ">2</th><td style="text-align: center">./.</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">...</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td></tr><tr><th style="text-align: center; background-color: white; border-right: 1px solid black; ">...</th><td style="text-align: center" colspan="12">...</td></tr><tr><th style="text-align: center; background-color: white; border-right: 1px solid black; ">10145658</th><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">...</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td></tr><tr><th style="text-align: center; background-color: white; border-right: 1px solid black; ">10145659</th><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">...</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td></tr><tr><th style="text-align: center; background-color: white; border-right: 1px solid black; ">10145660</th><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">...</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td></tr></tbody></table></div></div></div>
+<div class="output text_html"><div class="allel allel-DisplayAs2D"><span>&lt;GenotypeDaskArray shape=(10145661, 164, 2) dtype=int8&gt;</span><table><thead><tr><th></th><th style="text-align: center">0</th><th style="text-align: center">1</th><th style="text-align: center">2</th><th style="text-align: center">3</th><th style="text-align: center">4</th><th style="text-align: center">...</th><th style="text-align: center">159</th><th style="text-align: center">160</th><th style="text-align: center">161</th><th style="text-align: center">162</th><th style="text-align: center">163</th></tr></thead><tbody><tr><th style="text-align: center; background-color: white; border-right: 1px solid black; ">0</th><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">./.</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">...</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">./.</td><td style="text-align: center">0/0</td></tr><tr><th style="text-align: center; background-color: white; border-right: 1px solid black; ">1</th><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">./.</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">...</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">./.</td><td style="text-align: center">0/0</td></tr><tr><th style="text-align: center; background-color: white; border-right: 1px solid black; ">2</th><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">...</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">./.</td><td style="text-align: center">0/0</td></tr><tr><th style="text-align: center; background-color: white; border-right: 1px solid black; ">...</th><td style="text-align: center" colspan="12">...</td></tr><tr><th style="text-align: center; background-color: white; border-right: 1px solid black; ">10145658</th><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">...</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td></tr><tr><th style="text-align: center; background-color: white; border-right: 1px solid black; ">10145659</th><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">...</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td></tr><tr><th style="text-align: center; background-color: white; border-right: 1px solid black; ">10145660</th><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">...</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td></tr></tbody></table></div></div></div>
 </div>
 </div>
 </div>
