@@ -1,1 +1,1 @@
-# parasite-data
+# MalariaGEN parasite data
