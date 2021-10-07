@@ -1,0 +1,1012 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pf7 Data Access &#8212; MalariaGEN Pf7 Data User Guide</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="MalariaGEN parasite data user guide" href="../landing-page.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">MalariaGEN Pf7 Data User Guide</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../landing-page.html">
+   MalariaGEN parasite data user guide
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Pf7
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Pf7 Data Access
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/pf7/Data_exploration.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/malariagen/parasite-data"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/malariagen/parasite-data/issues/new?title=Issue%20on%20page%20%2Fpf7/Data_exploration.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/malariagen/parasite-data/master?urlpath=lab/tree/docs/pf7/Data_exploration.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/malariagen/parasite-data/blob/master/docs/pf7/Data_exploration.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#metadata">
+   Metadata
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#snp-sites-and-alleles-zarr">
+   SNP sites and alleles (zarr)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#snp-genotypes">
+     SNP genotypes
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="pf7-data-access">
+<h1>Pf7 Data Access<a class="headerlink" href="#pf7-data-access" title="Permalink to this headline">¶</a></h1>
+<p>This page provides information about how to access data from <a class="reference external" href="https://www.malariagen.net/resource/34">Plasmodium falciparum version 7 (Pf7)</a>  project via Google Cloud. This includes sample metadata and single nucleotide polymorphism (SNP) calls. This release spans multiple <a class="reference external" href="https://www.malariagen.net/">MalariaGEN</a> projects including <a class="reference external" href="https://www.malariagen.net/parasite/p-falciparum-community-project">Pf community project</a>, <a class="reference external" href="https://www.malariagen.net/parasite/genre-mekong">GenRe-Mekong</a> and <a class="reference external" href="https://www.malariagen.net/parasite/spotmalaria">SpotMalaria</a>, and a collaboration between xx studies spread around the globe.</p>
+<p>This notebook illustrates how to read data directly from the cloud, <strong>without having to first download any data locally</strong>. This notebook can be run from any computer, but will work best when run from a compute node within Google Cloud, because it will be physically closer to the data and so data transfer is faster. For example, this notebook can be run via MyBinder or Google Colab which are free interactive computing service running in the cloud.</p>
+<p>To launch this notebook in the cloud and run it for yourself, click the launch icon () at the top of the page and select one of the cloud computing services available.</p>
+<p>For a quick overview on the spatial and geographical distribution of the samples available, please visit our <a class="reference external" href="https://www.malariagen.net/apps/pf7/">Pf7 web-app</a>.</p>
+<div class="section" id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<p>Running this notebook requires some Python packages to be installed. These packages can be installed via pip or conda. E.g.:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The pf7 module is not yet included in the malariagen package. When it is the below should work.</span>
+<span class="c1"># !pip install -q malariagen_data</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To make accessing these data more convenient, we’ve created the malariagen_data Python package, which is available from PyPI. This is experimental so please let us know if you find any bugs or have any suggestions.</p>
+<p>Now import the packages we’ll need to use here.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">malariagen_data.pf7</span> <span class="kn">import</span> <span class="o">*</span> 
+<span class="c1"># import malariagen_data (above line will eventually be substituted for this)</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">dask</span>
+<span class="kn">import</span> <span class="nn">dask.array</span> <span class="k">as</span> <span class="nn">da</span>
+<span class="kn">from</span> <span class="nn">dask.diagnostics.progress</span> <span class="kn">import</span> <span class="n">ProgressBar</span>
+<span class="c1"># silence some warnings</span>
+<span class="n">dask</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="o">**</span><span class="p">{</span><span class="s1">&#39;array.slicing.split_large_chunks&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">})</span>
+<span class="kn">import</span> <span class="nn">allel</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To access the pf7 data stored on google cloud use the following code:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pf7</span> <span class="o">=</span> <span class="n">Pf7</span><span class="p">(</span><span class="s2">&quot;gs://pf7_staging/&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="metadata">
+<h2>Metadata<a class="headerlink" href="#metadata" title="Permalink to this headline">¶</a></h2>
+<p>Data on the samples that were sequenced as part of this resource are available. It includes the time and place of collection, quality metrics, and accesion numbers.</p>
+<p>To see all the information available, load sample metadata into a pandas dataframe:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_pf7</span> <span class="o">=</span> <span class="n">pf7</span><span class="o">.</span><span class="n">sample_metadata</span><span class="p">()</span>
+
+<span class="n">df_pf7</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="n">c91c580007c8</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df_pf7</span> <span class="o">=</span> <span class="n">pf7</span><span class="o">.</span><span class="n">sample_metadata</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">df_pf7</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;pf7&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>The dataset has 20,864 samples and 17 fields.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df_pf7</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can explore each of the fields:</p>
+<ul class="simple">
+<li><p>The <font color='purple'>Sample</font> column gives the unique sample identifier used throughout all Pf7 analyses.</p></li>
+<li><p>The <font color='purple'>Study</font> refers to the partner study which collected the sample.</p></li>
+<li><p>The <font color='purple'>Country</font> &amp; <font color='purple'>Admin level 1</font> describe the location where the sample was collected from.</p></li>
+<li><p>The <font color='purple'>Country latitude</font>, <font color='purple'>Country longitude</font>, <font color='purple'>Admin level 1 latitude</font> and <font color='purple'>Admin 1 longitude</font> contain the GADM coordinates for each country &amp; administrative level 1.</p></li>
+<li><p>The <font color='purple'>Year</font> column gives the time of sample collection.</p></li>
+<li><p>The <font color='purple'>ENA</font> column gives the run accession(s) for the sequencing read data for each sample.</p></li>
+<li><p>The <font color='purple'>All samples same case</font> column identifies samples set collected from the same individual.</p></li>
+<li><p>The <font color='purple'>Population</font> column gives the population to which the sample has been assigned to, based on the degree of genetic similarity to other samples. The possible values are: Africa-Central (AF-C), Africa - East (AF-E), Africa - Northeast (AF-NE), Africa - West (AF-W), Asia - South Asia - East (AS-SA-E), Asia - South Asia - West (AS-SA-W), Asia - Southeast Asia - East (AS-SEA-E), Asia - Southeast Asia - West (AS-SEA-W), Oceania - New Guinea (OC-NG), South America (SA).</p></li>
+<li><p>The <font color='purple'>% callable</font> column refers to the %  of the genome with coverage of at least 5 reads and less than 10% of reads with mapping quality 0.</p></li>
+<li><p>The <font color='purple'>QC pass</font> column defines whether the sample passed (True) or failed (False) QC.</p></li>
+<li><p>The <font color='purple'>Exclusion reason</font> describes the reason why the particular sample was excluded from the main analysis.</p></li>
+<li><p>The <font color='purple'>Sample type</font> column gives details on the sequencing method used on the particular sample  (gDNA, sWGA, MDA).</p></li>
+<li><p>The <font color='purple'>Sample was in Pf6</font> column defines whether the sample was included in the previous version of the data release (Pf6) or if it is new to Pf7.</p></li>
+</ul>
+<p>The python package <a class="reference external" href="https://pandas.pydata.org/">Pandas</a> can be used to explore and query the sample metadata in different ways. For example, here is a summary of the numbers of samples grouped by the country they were collected in:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_pf7</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Country&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Country
+Bangladesh                          1661
+Benin                                334
+Burkina Faso                          58
+Cambodia                            1726
+Cameroon                             295
+Colombia                             164
+Côte d&#39;Ivoire                         71
+Democratic Republic of the Congo     573
+Ethiopia                              34
+Gabon                                 59
+Gambia                              1247
+Ghana                               4150
+Guinea                               199
+India                                318
+Indonesia                            135
+Kenya                                732
+Laos                                1052
+Madagascar                            25
+Malawi                               371
+Mali                                1804
+Mauritania                           104
+Mozambique                            92
+Myanmar                             1261
+Nigeria                              146
+Papua New Guinea                     251
+Peru                                  21
+Senegal                              155
+Sudan                                203
+Tanzania                             697
+Thailand                            1107
+Uganda                                17
+Venezuela                              3
+Vietnam                             1734
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="snp-sites-and-alleles-zarr">
+<h2>SNP sites and alleles (zarr)<a class="headerlink" href="#snp-sites-and-alleles-zarr" title="Permalink to this headline">¶</a></h2>
+<p>These files contain details of 10,145,661 discovered variant genome positions. These variants were discovered amongst all samples from the release.</p>
+<p>4,397,801 of these variant positions are SNPs, with the remainder being either short insertion/deletions (indels), or a combination of SNPs and indels.</p>
+<p>Data on the set of genomic positions and alleles can be accessed as dask arrays as follows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pos</span><span class="p">,</span> <span class="n">ref</span><span class="p">,</span> <span class="n">alt</span> <span class="o">=</span> <span class="n">pf7</span><span class="o">.</span><span class="n">snp_sites</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pos</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<tr>
+<td>
+<table>
+  <thead>
+    <tr><td> </td><th> Array </th><th> Chunk </th></tr>
+  </thead>
+  <tbody>
+    <tr><th> Bytes </th><td> 40.58 MB </td> <td> 33.55 MB </td></tr>
+    <tr><th> Shape </th><td> (10145661,) </td> <td> (8388608,) </td></tr>
+    <tr><th> Count </th><td> 2 Tasks </td><td> 2 Chunks </td></tr>
+    <tr><th> Type </th><td> int32 </td><td> numpy.ndarray </td></tr>
+  </tbody>
+</table>
+</td>
+<td>
+<svg width="170" height="75" style="stroke:rgb(0,0,0);stroke-width:1" >
+
+  <!-- Horizontal lines -->
+  <line x1="0" y1="0" x2="120" y2="0" style="stroke-width:2" />
+  <line x1="0" y1="25" x2="120" y2="25" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="0" y1="0" x2="0" y2="25" style="stroke-width:2" />
+  <line x1="99" y1="0" x2="99" y2="25" />
+  <line x1="120" y1="0" x2="120" y2="25" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="0.0,0.0 120.0,0.0 120.0,25.412616514582485 0.0,25.412616514582485" style="fill:#ECB172A0;stroke-width:0"/>
+
+  <!-- Text -->
+  <text x="60.000000" y="45.412617" font-size="1.0rem" font-weight="100" text-anchor="middle" >10145661</text>
+  <text x="140.000000" y="12.706308" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(0,140.000000,12.706308)">1</text>
+</svg>
+</td>
+</tr>
+</table></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ref</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<tr>
+<td>
+<table>
+  <thead>
+    <tr><td> </td><th> Array </th><th> Chunk </th></tr>
+  </thead>
+  <tbody>
+    <tr><th> Bytes </th><td> 81.17 MB </td> <td> 33.55 MB </td></tr>
+    <tr><th> Shape </th><td> (10145661,) </td> <td> (4194304,) </td></tr>
+    <tr><th> Count </th><td> 3 Tasks </td><td> 3 Chunks </td></tr>
+    <tr><th> Type </th><td> object </td><td> numpy.ndarray </td></tr>
+  </tbody>
+</table>
+</td>
+<td>
+<svg width="170" height="75" style="stroke:rgb(0,0,0);stroke-width:1" >
+
+  <!-- Horizontal lines -->
+  <line x1="0" y1="0" x2="120" y2="0" style="stroke-width:2" />
+  <line x1="0" y1="25" x2="120" y2="25" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="0" y1="0" x2="0" y2="25" style="stroke-width:2" />
+  <line x1="49" y1="0" x2="49" y2="25" />
+  <line x1="99" y1="0" x2="99" y2="25" />
+  <line x1="120" y1="0" x2="120" y2="25" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="0.0,0.0 120.0,0.0 120.0,25.412616514582485 0.0,25.412616514582485" style="fill:#ECB172A0;stroke-width:0"/>
+
+  <!-- Text -->
+  <text x="60.000000" y="45.412617" font-size="1.0rem" font-weight="100" text-anchor="middle" >10145661</text>
+  <text x="140.000000" y="12.706308" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(0,140.000000,12.706308)">1</text>
+</svg>
+</td>
+</tr>
+</table></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<tr>
+<td>
+<table>
+  <thead>
+    <tr><td> </td><th> Array </th><th> Chunk </th></tr>
+  </thead>
+  <tbody>
+    <tr><th> Bytes </th><td> 486.99 MB </td> <td> 33.55 MB </td></tr>
+    <tr><th> Shape </th><td> (10145661, 6) </td> <td> (699051, 6) </td></tr>
+    <tr><th> Count </th><td> 15 Tasks </td><td> 15 Chunks </td></tr>
+    <tr><th> Type </th><td> object </td><td> numpy.ndarray </td></tr>
+  </tbody>
+</table>
+</td>
+<td>
+<svg width="75" height="170" style="stroke:rgb(0,0,0);stroke-width:1" >
+
+  <!-- Horizontal lines -->
+  <line x1="0" y1="0" x2="25" y2="0" style="stroke-width:2" />
+  <line x1="0" y1="8" x2="25" y2="8" />
+  <line x1="0" y1="16" x2="25" y2="16" />
+  <line x1="0" y1="24" x2="25" y2="24" />
+  <line x1="0" y1="33" x2="25" y2="33" />
+  <line x1="0" y1="41" x2="25" y2="41" />
+  <line x1="0" y1="49" x2="25" y2="49" />
+  <line x1="0" y1="57" x2="25" y2="57" />
+  <line x1="0" y1="66" x2="25" y2="66" />
+  <line x1="0" y1="74" x2="25" y2="74" />
+  <line x1="0" y1="82" x2="25" y2="82" />
+  <line x1="0" y1="90" x2="25" y2="90" />
+  <line x1="0" y1="99" x2="25" y2="99" />
+  <line x1="0" y1="107" x2="25" y2="107" />
+  <line x1="0" y1="115" x2="25" y2="115" />
+  <line x1="0" y1="120" x2="25" y2="120" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="0" y1="0" x2="0" y2="120" style="stroke-width:2" />
+  <line x1="25" y1="0" x2="25" y2="120" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="0.0,0.0 25.412616514582485,0.0 25.412616514582485,120.0 0.0,120.0" style="fill:#ECB172A0;stroke-width:0"/>
+
+  <!-- Text -->
+  <text x="12.706308" y="140.000000" font-size="1.0rem" font-weight="100" text-anchor="middle" >6</text>
+  <text x="45.412617" y="60.000000" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(-90,45.412617,60.000000)">10145661</text>
+</svg>
+</td>
+</tr>
+</table></div></div>
+</div>
+<p>The data on genomic variants can be loaded into memory as <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.array.html">numpy</a> arrays as shown in the following examples.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># read first 10 SNP positions into a numpy array</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pos</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
+<span class="n">p</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([30, 37, 51, 58, 60, 61, 63, 64, 65, 67], dtype=int32)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># read first 10 SNP reference alleles</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">ref</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
+<span class="n">r</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;AAACCCTGAACCCTAAACCCTGAACCCTAAACCCTAAACCCTGAACCCTAAACCCTAAACCCTGAACCCTAAACCCTGAAACCTAAACCCTGAACCCTAAACCCTGAACCCTGAACCCTAACCCTAAACCCTAAACCTAAAACCCTGAACCCTAAACCCTG&#39;,
+       &#39;GAACCCTAAACCCTGAACCCTA&#39;, &#39;G&#39;,
+       &#39;AAACCCTAAACCCTGAACCCTAAACCCTAAACCCTGAACCCTAAACCCTGAAACCTAAACCCTGAACCCTAAACCCTGAACCCTGAACCCTAACCCTAAACCCTAAACCTAAAACCCTGAACCCTAAACCCTGAACCCTG&#39;,
+       &#39;AC&#39;, &#39;C&#39;, &#39;C&#39;, &#39;T&#39;,
+       &#39;AAACCCTGAACCCTAAACCCTAAACCCTGAACCCTAAACCCTGAAACCTAAACCCTGAACCCTAAACCCTGAACCCTGAACCCTAACCCTAAACCCTAAACCTAAAACCCTGAACCCTAAACCCTG&#39;,
+       &#39;ACCCTGAAC&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># read first 10 SNP alternate alleles</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">alt</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
+<span class="n">a</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[&#39;A&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;],
+       [&#39;*&#39;, &#39;G&#39;, &#39;GAACCCTAAACCCTGAACCCTAAACCCTAAACCCTGAACCCTA&#39;, &#39;&#39;, &#39;&#39;,
+        &#39;&#39;],
+       [&#39;*&#39;, &#39;GAACCCTAAACCCTAAACCCTGAACCCTAAACCCTA&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;],
+       [&#39;*&#39;, &#39;A&#39;,
+        &#39;GAACCCTAAACCCTGAACCCTAAACCCTAAACCCTGAACCCTAAACCCTGAAACCTAAACCCTGAACCCTAAACCCTGAACCCTGAACCCTAACCCTAAACCCTAAACCTAAAACCCTGAACCCTAAACCCTGAACCCTG&#39;,
+        &#39;&#39;, &#39;&#39;, &#39;&#39;],
+       [&#39;*&#39;, &#39;A&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;],
+       [&#39;*&#39;, &#39;A&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;],
+       [&#39;*&#39;, &#39;T&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;],
+       [&#39;*&#39;, &#39;A&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;],
+       [&#39;GAACCCTGAACCCTAAACCCTAAACCCTGAACCCTAAACCCTGAAACCTAAACCCTGAACCCTAAACCCTGAACCCTGAACCCTAACCCTAAACCCTAAACCTAAAACCCTGAACCCTAAACCCTG&#39;,
+        &#39;*&#39;, &#39;A&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;],
+       [&#39;*&#39;, &#39;A&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;]], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="snp-genotypes">
+<h3>SNP genotypes<a class="headerlink" href="#snp-genotypes" title="Permalink to this headline">¶</a></h3>
+<p>SNP genotypes for individual samples are available.</p>
+<p>Genotypes are stored as a three-dimensional array, where:</p>
+<ul class="simple">
+<li><p>the first dimension corresponds to genomic positions,</p></li>
+<li><p>the second dimension is samples,</p></li>
+<li><p>the third dimension is ploidy (2).</p></li>
+</ul>
+<p>Values coded as integers, where -1 represents a missing value, 0 represents the reference allele, and 1, 2, and 3 represent alternate alleles.</p>
+<p>SNP genotypes can be accessed as dask arrays as shown below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pf7</span><span class="o">.</span><span class="n">snp_genotypes</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<tr>
+<td>
+<table>
+  <thead>
+    <tr><td> </td><th> Array </th><th> Chunk </th></tr>
+  </thead>
+  <tbody>
+    <tr><th> Bytes </th><td> 423.36 GB </td> <td> 33.55 MB </td></tr>
+    <tr><th> Shape </th><td> (10145661, 20864, 2) </td> <td> (167773, 100, 2) </td></tr>
+    <tr><th> Count </th><td> 12749 Tasks </td><td> 12749 Chunks </td></tr>
+    <tr><th> Type </th><td> int8 </td><td> numpy.ndarray </td></tr>
+  </tbody>
+</table>
+</td>
+<td>
+<svg width="156" height="146" style="stroke:rgb(0,0,0);stroke-width:1" >
+
+  <!-- Horizontal lines -->
+  <line x1="10" y1="0" x2="80" y2="70" style="stroke-width:2" />
+  <line x1="10" y1="1" x2="80" y2="71" />
+  <line x1="10" y1="2" x2="80" y2="73" />
+  <line x1="10" y1="4" x2="80" y2="74" />
+  <line x1="10" y1="5" x2="80" y2="75" />
+  <line x1="10" y1="6" x2="80" y2="77" />
+  <line x1="10" y1="8" x2="80" y2="78" />
+  <line x1="10" y1="9" x2="80" y2="79" />
+  <line x1="10" y1="10" x2="80" y2="81" />
+  <line x1="10" y1="12" x2="80" y2="82" />
+  <line x1="10" y1="13" x2="80" y2="83" />
+  <line x1="10" y1="14" x2="80" y2="85" />
+  <line x1="10" y1="16" x2="80" y2="86" />
+  <line x1="10" y1="17" x2="80" y2="88" />
+  <line x1="10" y1="18" x2="80" y2="89" />
+  <line x1="10" y1="20" x2="80" y2="90" />
+  <line x1="10" y1="21" x2="80" y2="92" />
+  <line x1="10" y1="22" x2="80" y2="93" />
+  <line x1="10" y1="24" x2="80" y2="94" />
+  <line x1="10" y1="25" x2="80" y2="96" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="10" y1="0" x2="10" y2="25" style="stroke-width:2" />
+  <line x1="13" y1="3" x2="13" y2="28" />
+  <line x1="17" y1="7" x2="17" y2="32" />
+  <line x1="20" y1="10" x2="20" y2="35" />
+  <line x1="24" y1="14" x2="24" y2="39" />
+  <line x1="28" y1="18" x2="28" y2="44" />
+  <line x1="32" y1="22" x2="32" y2="47" />
+  <line x1="35" y1="25" x2="35" y2="51" />
+  <line x1="39" y1="29" x2="39" y2="54" />
+  <line x1="42" y1="32" x2="42" y2="58" />
+  <line x1="47" y1="37" x2="47" y2="62" />
+  <line x1="50" y1="40" x2="50" y2="66" />
+  <line x1="54" y1="44" x2="54" y2="69" />
+  <line x1="57" y1="47" x2="57" y2="73" />
+  <line x1="61" y1="51" x2="61" y2="76" />
+  <line x1="66" y1="56" x2="66" y2="81" />
+  <line x1="69" y1="59" x2="69" y2="84" />
+  <line x1="73" y1="63" x2="73" y2="88" />
+  <line x1="76" y1="66" x2="76" y2="91" />
+  <line x1="80" y1="70" x2="80" y2="96" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="10.0,0.0 80.58823529411765,70.58823529411765 80.58823529411765,96.00085180870013 10.0,25.412616514582485" style="fill:#8B4903A0;stroke-width:0"/>
+
+  <!-- Horizontal lines -->
+  <line x1="10" y1="0" x2="35" y2="0" style="stroke-width:2" />
+  <line x1="13" y1="3" x2="38" y2="3" />
+  <line x1="17" y1="7" x2="42" y2="7" />
+  <line x1="20" y1="10" x2="45" y2="10" />
+  <line x1="24" y1="14" x2="49" y2="14" />
+  <line x1="28" y1="18" x2="54" y2="18" />
+  <line x1="32" y1="22" x2="57" y2="22" />
+  <line x1="35" y1="25" x2="61" y2="25" />
+  <line x1="39" y1="29" x2="64" y2="29" />
+  <line x1="42" y1="32" x2="68" y2="32" />
+  <line x1="47" y1="37" x2="72" y2="37" />
+  <line x1="50" y1="40" x2="76" y2="40" />
+  <line x1="54" y1="44" x2="79" y2="44" />
+  <line x1="57" y1="47" x2="83" y2="47" />
+  <line x1="61" y1="51" x2="86" y2="51" />
+  <line x1="66" y1="56" x2="91" y2="56" />
+  <line x1="69" y1="59" x2="94" y2="59" />
+  <line x1="73" y1="63" x2="98" y2="63" />
+  <line x1="76" y1="66" x2="101" y2="66" />
+  <line x1="80" y1="70" x2="106" y2="70" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="10" y1="0" x2="80" y2="70" style="stroke-width:2" />
+  <line x1="35" y1="0" x2="106" y2="70" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="10.0,0.0 35.41261651458248,0.0 106.00085180870013,70.58823529411765 80.58823529411765,70.58823529411765" style="fill:#8B4903A0;stroke-width:0"/>
+
+  <!-- Horizontal lines -->
+  <line x1="80" y1="70" x2="106" y2="70" style="stroke-width:2" />
+  <line x1="80" y1="71" x2="106" y2="71" />
+  <line x1="80" y1="73" x2="106" y2="73" />
+  <line x1="80" y1="74" x2="106" y2="74" />
+  <line x1="80" y1="75" x2="106" y2="75" />
+  <line x1="80" y1="77" x2="106" y2="77" />
+  <line x1="80" y1="78" x2="106" y2="78" />
+  <line x1="80" y1="79" x2="106" y2="79" />
+  <line x1="80" y1="81" x2="106" y2="81" />
+  <line x1="80" y1="82" x2="106" y2="82" />
+  <line x1="80" y1="83" x2="106" y2="83" />
+  <line x1="80" y1="85" x2="106" y2="85" />
+  <line x1="80" y1="86" x2="106" y2="86" />
+  <line x1="80" y1="88" x2="106" y2="88" />
+  <line x1="80" y1="89" x2="106" y2="89" />
+  <line x1="80" y1="90" x2="106" y2="90" />
+  <line x1="80" y1="92" x2="106" y2="92" />
+  <line x1="80" y1="93" x2="106" y2="93" />
+  <line x1="80" y1="94" x2="106" y2="94" />
+  <line x1="80" y1="96" x2="106" y2="96" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="80" y1="70" x2="80" y2="96" style="stroke-width:2" />
+  <line x1="106" y1="70" x2="106" y2="96" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="80.58823529411765,70.58823529411765 106.00085180870013,70.58823529411765 106.00085180870013,96.00085180870013 80.58823529411765,96.00085180870013" style="fill:#8B4903A0;stroke-width:0"/>
+
+  <!-- Text -->
+  <text x="93.294544" y="116.000852" font-size="1.0rem" font-weight="100" text-anchor="middle" >2</text>
+  <text x="126.000852" y="83.294544" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(-90,126.000852,83.294544)">20864</text>
+  <text x="35.294118" y="80.706734" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(45,35.294118,80.706734)">10145661</text>
+</svg>
+</td>
+</tr>
+</table></div></div>
+</div>
+<p>Note that the columns of this array (second dimension) match the rows in the sample metadata, if the same sample sets were loaded. I.e.:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_samples</span> <span class="o">=</span> <span class="n">pf7</span><span class="o">.</span><span class="n">sample_metadata</span><span class="p">()</span>
+<span class="n">gt</span> <span class="o">=</span> <span class="n">pf7</span><span class="o">.</span><span class="n">snp_genotypes</span><span class="p">()</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">df_samples</span><span class="p">)</span> <span class="o">==</span> <span class="n">gt</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can use this correspondance to apply further subsetting operations to the genotypes by querying the sample metadata. E.g.:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">dask.array</span> <span class="k">as</span> <span class="nn">da</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">loc_colombia</span> <span class="o">=</span> <span class="n">df_samples</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="s2">&quot;Country == &#39;Colombia&#39;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;found </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">loc_colombia</span><span class="p">)</span><span class="si">}</span><span class="s2"> samples from Colombia&quot;</span><span class="p">)</span>
+<span class="n">gt_colombia</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">compress</span><span class="p">(</span><span class="n">loc_colombia</span><span class="p">,</span> <span class="n">gt</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">gt_colombia</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>found 135 Indonesian samples
+</pre></div>
+</div>
+<div class="output text_html"><table>
+<tr>
+<td>
+<table>
+  <thead>
+    <tr><td> </td><th> Array </th><th> Chunk </th></tr>
+  </thead>
+  <tbody>
+    <tr><th> Bytes </th><td> 2.74 GB </td> <td> 20.47 MB </td></tr>
+    <tr><th> Shape </th><td> (10145661, 135, 2) </td> <td> (167773, 61, 2) </td></tr>
+    <tr><th> Count </th><td> 12993 Tasks </td><td> 244 Chunks </td></tr>
+    <tr><th> Type </th><td> int8 </td><td> numpy.ndarray </td></tr>
+  </tbody>
+</table>
+</td>
+<td>
+<svg width="156" height="146" style="stroke:rgb(0,0,0);stroke-width:1" >
+
+  <!-- Horizontal lines -->
+  <line x1="10" y1="0" x2="80" y2="70" style="stroke-width:2" />
+  <line x1="10" y1="6" x2="80" y2="76" />
+  <line x1="10" y1="17" x2="80" y2="88" />
+  <line x1="10" y1="17" x2="80" y2="88" />
+  <line x1="10" y1="25" x2="80" y2="96" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="10" y1="0" x2="10" y2="25" style="stroke-width:2" />
+  <line x1="13" y1="3" x2="13" y2="28" />
+  <line x1="17" y1="7" x2="17" y2="32" />
+  <line x1="20" y1="10" x2="20" y2="35" />
+  <line x1="24" y1="14" x2="24" y2="39" />
+  <line x1="28" y1="18" x2="28" y2="44" />
+  <line x1="32" y1="22" x2="32" y2="47" />
+  <line x1="35" y1="25" x2="35" y2="51" />
+  <line x1="39" y1="29" x2="39" y2="54" />
+  <line x1="42" y1="32" x2="42" y2="58" />
+  <line x1="47" y1="37" x2="47" y2="62" />
+  <line x1="50" y1="40" x2="50" y2="66" />
+  <line x1="54" y1="44" x2="54" y2="69" />
+  <line x1="57" y1="47" x2="57" y2="73" />
+  <line x1="61" y1="51" x2="61" y2="76" />
+  <line x1="66" y1="56" x2="66" y2="81" />
+  <line x1="69" y1="59" x2="69" y2="84" />
+  <line x1="73" y1="63" x2="73" y2="88" />
+  <line x1="76" y1="66" x2="76" y2="91" />
+  <line x1="80" y1="70" x2="80" y2="96" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="10.0,0.0 80.58823529411765,70.58823529411765 80.58823529411765,96.00085180870013 10.0,25.412616514582485" style="fill:#8B4903A0;stroke-width:0"/>
+
+  <!-- Horizontal lines -->
+  <line x1="10" y1="0" x2="35" y2="0" style="stroke-width:2" />
+  <line x1="13" y1="3" x2="38" y2="3" />
+  <line x1="17" y1="7" x2="42" y2="7" />
+  <line x1="20" y1="10" x2="45" y2="10" />
+  <line x1="24" y1="14" x2="49" y2="14" />
+  <line x1="28" y1="18" x2="54" y2="18" />
+  <line x1="32" y1="22" x2="57" y2="22" />
+  <line x1="35" y1="25" x2="61" y2="25" />
+  <line x1="39" y1="29" x2="64" y2="29" />
+  <line x1="42" y1="32" x2="68" y2="32" />
+  <line x1="47" y1="37" x2="72" y2="37" />
+  <line x1="50" y1="40" x2="76" y2="40" />
+  <line x1="54" y1="44" x2="79" y2="44" />
+  <line x1="57" y1="47" x2="83" y2="47" />
+  <line x1="61" y1="51" x2="86" y2="51" />
+  <line x1="66" y1="56" x2="91" y2="56" />
+  <line x1="69" y1="59" x2="94" y2="59" />
+  <line x1="73" y1="63" x2="98" y2="63" />
+  <line x1="76" y1="66" x2="101" y2="66" />
+  <line x1="80" y1="70" x2="106" y2="70" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="10" y1="0" x2="80" y2="70" style="stroke-width:2" />
+  <line x1="35" y1="0" x2="106" y2="70" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="10.0,0.0 35.41261651458248,0.0 106.00085180870013,70.58823529411765 80.58823529411765,70.58823529411765" style="fill:#8B4903A0;stroke-width:0"/>
+
+  <!-- Horizontal lines -->
+  <line x1="80" y1="70" x2="106" y2="70" style="stroke-width:2" />
+  <line x1="80" y1="76" x2="106" y2="76" />
+  <line x1="80" y1="88" x2="106" y2="88" />
+  <line x1="80" y1="88" x2="106" y2="88" />
+  <line x1="80" y1="96" x2="106" y2="96" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="80" y1="70" x2="80" y2="96" style="stroke-width:2" />
+  <line x1="106" y1="70" x2="106" y2="96" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="80.58823529411765,70.58823529411765 106.00085180870013,70.58823529411765 106.00085180870013,96.00085180870013 80.58823529411765,96.00085180870013" style="fill:#ECB172A0;stroke-width:0"/>
+
+  <!-- Text -->
+  <text x="93.294544" y="116.000852" font-size="1.0rem" font-weight="100" text-anchor="middle" >2</text>
+  <text x="126.000852" y="83.294544" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(-90,126.000852,83.294544)">135</text>
+  <text x="35.294118" y="80.706734" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(45,35.294118,80.706734)">10145661</text>
+</svg>
+</td>
+</tr>
+</table></div></div>
+</div>
+<p>Data can be read into memory as numpy arrays, e.g., read genotypes for the first 5 SNPs and the first 3 samples:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">gt</span><span class="p">[:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
+<span class="n">g</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[[-1, -1],
+        [ 0,  0],
+        [-1, -1]],
+
+       [[-1, -1],
+        [ 0,  0],
+        [-1, -1]],
+
+       [[-1, -1],
+        [ 0,  0],
+        [-1, -1]],
+
+       [[-1, -1],
+        [ 0,  0],
+        [-1, -1]],
+
+       [[-1, -1],
+        [ 0,  0],
+        [-1, -1]]], dtype=int8)
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you want to work further with the genotype calls, you may find it convenient to use <a class="reference external" href="https://scikit-allel.readthedocs.io/en/stable/">scikit-allel</a>. E.g., the code below sets up a genotype array using the Colombian samples subset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">allel</span>
+
+<span class="n">gt_indonesia</span> <span class="o">=</span> <span class="n">allel</span><span class="o">.</span><span class="n">GenotypeDaskArray</span><span class="p">(</span><span class="n">gt_indonesia</span><span class="p">)</span>
+<span class="n">gt_indonesia</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div class="allel allel-DisplayAs2D"><span>&lt;GenotypeDaskArray shape=(10145661, 135, 2) dtype=int8&gt;</span><table><thead><tr><th></th><th style="text-align: center">0</th><th style="text-align: center">1</th><th style="text-align: center">2</th><th style="text-align: center">3</th><th style="text-align: center">4</th><th style="text-align: center">...</th><th style="text-align: center">130</th><th style="text-align: center">131</th><th style="text-align: center">132</th><th style="text-align: center">133</th><th style="text-align: center">134</th></tr></thead><tbody><tr><th style="text-align: center; background-color: white; border-right: 1px solid black; ">0</th><td style="text-align: center">./.</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">...</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td></tr><tr><th style="text-align: center; background-color: white; border-right: 1px solid black; ">1</th><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">0/0</td><td style="text-align: center">...</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td></tr><tr><th style="text-align: center; background-color: white; border-right: 1px solid black; ">2</th><td style="text-align: center">./.</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">...</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td><td style="text-align: center">0/0</td></tr><tr><th style="text-align: center; background-color: white; border-right: 1px solid black; ">...</th><td style="text-align: center" colspan="12">...</td></tr><tr><th style="text-align: center; background-color: white; border-right: 1px solid black; ">10145658</th><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">...</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td></tr><tr><th style="text-align: center; background-color: white; border-right: 1px solid black; ">10145659</th><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">...</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td></tr><tr><th style="text-align: center; background-color: white; border-right: 1px solid black; ">10145660</th><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">...</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td><td style="text-align: center">./.</td></tr></tbody></table></div></div></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "malariagen-data-fjnzrmkt-py3.7"
+        },
+        kernelOptions: {
+            kernelName: "malariagen-data-fjnzrmkt-py3.7",
+            path: "./pf7"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'malariagen-data-fjnzrmkt-py3.7'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../landing-page.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">MalariaGEN parasite data user guide</p>
+            </div>
+        </a>
+    </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By DT5<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
