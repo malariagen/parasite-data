@@ -1,6 +1,7 @@
 format: jb-book
 root: landing-page
 parts:
-  - caption: Pf7 
+  - caption: Pf7
     chapters:
-    - file: pf7/Data_exploration.ipynb
+      - file: pf7/Data_exploration.ipynb
+      - file: pf7/api
