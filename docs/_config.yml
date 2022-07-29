@@ -1,22 +1,31 @@
 title: MalariaGEN Pf7 Data User Guide
-author: DT5 
+author: DT5
 copyright: "2021"
 logo: images/logo.png
 execute:
   execute_notebooks: "off"
-repository:    
+repository:
   url: https://github.com/malariagen/parasite-data
-  path_to_book              : docs
-  branch                    : master
+  path_to_book: docs
+  branch: master
 launch_buttons:
   notebook_interface: "jupyterlab"
   colab_url: "https://colab.research.google.com"
 html:
-  use_repository_button : true
+  use_repository_button: true
   use_issues_button: true
 parse:
   myst_enable_extensions:
     # don't forget to list any other extensions you want enabled,
     # including those that are enabled by default!
     - html_image
-
+sphinx:
+  extra_extensions:
+    - "sphinx.ext.autodoc"
+    - "numpydoc"
+  config:
+    bibtex_reference_style: label
+    bibtex_default_style: unsrt
+    myst_enable_extensions:
+      - substitution
+      - dollarmath
