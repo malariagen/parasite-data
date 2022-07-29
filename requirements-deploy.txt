@@ -1,3 +1,3 @@
 jupyter-book==0.11.3
-malariagen_data==3.0.0
+malariagen_data==6.0.0
 Jinja2<3.1

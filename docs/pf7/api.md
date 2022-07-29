@@ -5,29 +5,29 @@ This page provides documentation for functions in the [malariagen_data](https://
 ## Pf7()
 
 ```{eval-rst}
-.. automethod:: malariagen_data::Pf7
+.. automethod:: malariagen_data.pf7::Pf7
 ```
 
 ## sample_metadata()
 
 ```{eval-rst}
-.. automethod:: malariagen_data::Pf7.sample_metadata
+.. automethod:: malariagen_data.pf7::Pf7.sample_metadata
 ```
 
 ## genome_sequence()
 
 ```{eval-rst}
-.. automethod:: malariagen_data::Pf7.genome_sequence
+.. automethod:: malariagen_data.pf7::Pf7.genome_sequence
 ```
 
 ## genome_features()
 
 ```{eval-rst}
-.. automethod:: malariagen_data::Pf7.genome_features
+.. automethod:: malariagen_data.pf7::Pf7.genome_features
 ```
 
 ## variant_calls()
 
 ```{eval-rst}
-.. automethod:: malariagen_data::Pf7.variant_calls
+.. automethod:: malariagen_data.pf7::Pf7.variant_calls
 ```
