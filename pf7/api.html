@@ -282,9 +282,53 @@
 <p>This page provides documentation for functions in the <a class="reference external" href="https://github.com/malariagen/malariagen-data-python">malariagen_data</a> Python package for accessing <em>Plasmodium falciparum</em> data.</p>
 <div class="section" id="pf7">
 <h2>Pf7()<a class="headerlink" href="#pf7" title="Permalink to this headline">¶</a></h2>
+<dl class="py method">
+<dt id="malariagen_data.pf7.Pf7">
+<code class="sig-prename descclassname"><span class="pre">malariagen_data.pf7.</span></code><code class="sig-name descname"><span class="pre">Pf7</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#malariagen_data.pf7.Pf7" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides access to data from the Pf7 release.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>url</strong><span class="classifier">str, optional</span></dt><dd><p>Base path to data. Default uses Google Cloud Storage “gs://pf7_release/”,
+or specify a local path on your file system if data have been downloaded.</p>
+</dd>
+<dt><strong>data_config</strong><span class="classifier">str, optional</span></dt><dd><p>Path to config for structure of Pf7 data resource. Defaults to config included
+with the malariagen_data package.</p>
+</dd>
+<dt><strong>**kwargs</strong></dt><dd><p>Passed through to fsspec when setting up file system access.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>Access data from Google Cloud Storage (default):</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">malariagen_data</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pf7</span> <span class="o">=</span> <span class="n">malariagen_data</span><span class="o">.</span><span class="n">Pf7</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Access data downloaded to a local file system:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pf7</span> <span class="o">=</span> <span class="n">malariagen_data</span><span class="o">.</span><span class="n">Pf7</span><span class="p">(</span><span class="s2">&quot;/local/path/to/pf7_release/&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
 </div>
 <div class="section" id="sample-metadata">
 <h2>sample_metadata()<a class="headerlink" href="#sample-metadata" title="Permalink to this headline">¶</a></h2>
+<dl class="py method">
+<dt id="malariagen_data.pf7.Pf7.sample_metadata">
+<code class="sig-prename descclassname"><span class="pre">Pf7.</span></code><code class="sig-name descname"><span class="pre">sample_metadata</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#malariagen_data.pf7.Pf7.sample_metadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access sample metadata and return as pandas dataframe.
+Returns
+——-
+df : pandas.DataFrame</p>
+<blockquote>
+<div><p>A dataframe of sample metadata on the samples that were sequenced as part of this resource.
+Includes the time and place of collection, quality metrics, and accesion numbers.
+One row per sample.</p>
+</div></blockquote>
+</dd></dl>
+
 </div>
 <div class="section" id="genome-sequence">
 <h2>genome_sequence()<a class="headerlink" href="#genome-sequence" title="Permalink to this headline">¶</a></h2>
@@ -294,6 +338,31 @@
 </div>
 <div class="section" id="variant-calls">
 <h2>variant_calls()<a class="headerlink" href="#variant-calls" title="Permalink to this headline">¶</a></h2>
+<dl class="py method">
+<dt id="malariagen_data.pf7.Pf7.variant_calls">
+<code class="sig-prename descclassname"><span class="pre">Pf7.</span></code><code class="sig-name descname"><span class="pre">variant_calls</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">extended</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inline_array</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'native'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#malariagen_data.pf7.Pf7.variant_calls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access variant sites, site filters and genotype calls.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>extended</strong><span class="classifier">bool, optional</span></dt><dd><p>If False only the default variables are returned. If True all variables from the zarr are returned. Defaults to False.</p>
+</dd>
+<dt><strong>inline_array</strong><span class="classifier">bool, optional</span></dt><dd><p>Passed through to dask.array.from_array(). Defaults to True.</p>
+</dd>
+<dt><strong>chunks</strong><span class="classifier">str, optional</span></dt><dd><p>If ‘auto’ let dask decide chunk size. If ‘native’ use native zarr chunks.
+Also can be a target size, e.g., ‘200 MiB’. Defaults to “native”.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>ds</strong><span class="classifier">xarray.Dataset</span></dt><dd><p>Dataset containing either default or extended variables from the variant calls Zarr.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 </div>
 
