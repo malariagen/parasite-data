@@ -5,3 +5,6 @@ parts:
     chapters:
       - file: pf7/Data_exploration.ipynb
       - file: pf7/api
+  - caption: Pv4
+    chapters:
+      - file: pv4/api
