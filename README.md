@@ -24,7 +24,10 @@ If you find a bug related to usage, public data or documentation, please raise a
 
 ### Data Resource
 
-The current data resources available are: - Pf7
+The current data resources available are:
+
+- Pf7
+- Pv4
 
 The resources are explored through a series of Jupyter Notebooks, accessible from the `docs` directory in this repository.
 
