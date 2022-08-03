@@ -51,6 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Pv4 API" href="api.html" />
+    <link rel="prev" title="Pf7 API" href="../pf7/api.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -101,7 +103,7 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../pf7/Data_exploration.html">
+  <a class="reference internal" href="../pf7/Data_access.html">
    Pf7 Data Access
   </a>
  </li>
@@ -116,7 +118,12 @@
   Pv4
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Pv4 Data Access
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="api.html">
    Pv4 API
@@ -322,9 +329,7 @@
                 
   <div class="section" id="pv4-data-access">
 <h1>Pv4 Data Access<a class="headerlink" href="#pv4-data-access" title="Permalink to this headline">¶</a></h1>
-<p>This page provides information about how to access data from <a class="reference external" href="https://www.malariagen.net/resource/30">Plasmodium vivax version 4 (Pv4)</a> project via Google Cloud. This includes sample metadata and single nucleotide polymorphism (SNP) calls. This release spans <a class="reference external" href="https://www.malariagen.net/sites/default/files/Pv4%20contributing%20partner%20studies.pdf">11 partner studies and 3 external studies</a>.</p>
-<p>sample information including partner study information, location and year of collection, ENA accession numbers, and QC information for 1,895 samples from 27 countries.</p>
-<p>This release spans multiple <a class="reference external" href="https://www.malariagen.net/">MalariaGEN</a> projects including <a class="reference external" href="https://www.malariagen.net/parasite/p-falciparum-community-project">Pf community project</a>, <a class="reference external" href="https://www.malariagen.net/parasite/genre-mekong">GenRe-Mekong</a> and <a class="reference external" href="https://www.malariagen.net/parasite/spotmalaria">SpotMalaria</a>, and a collaboration between 82 studies spread around the globe. **</p>
+<p>This page provides information about how to access data from <a class="reference external" href="https://www.malariagen.net/resource/30">Plasmodium vivax version 4 (Pv4)</a> project via Google Cloud. This includes sample metadata and single nucleotide polymorphism (SNP) calls for 1,895 samples from 27 countries. This release spans <a class="reference external" href="https://www.malariagen.net/sites/default/files/Pv4%20contributing%20partner%20studies.pdf">11 partner studies and 3 external studies</a>.</p>
 <p>This notebook illustrates how to read data directly from the cloud, <strong>without having to first download any data locally</strong>. This notebook can be run from any computer, but will work best when run from a compute node within Google Cloud, because it will be physically closer to the data and so data transfer is faster. For example, this notebook can be run via MyBinder or Google Colab which are free interactive computing service running in the cloud.</p>
 <p>To launch this notebook in the cloud and run it for yourself, click the launch icon () at the top of the page and select one of the cloud computing services available.</p>
 <div class="section" id="setup">
@@ -332,7 +337,7 @@
 <p>Running this notebook requires some Python packages to be installed. These packages can be installed via pip or conda. E.g.:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The pf7 module is not yet included in the malariagen package. When it is the below should work.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The pv4 module is not yet included in the malariagen package. When it is the below should work.</span>
 <span class="c1"># !pip install -q malariagen_data</span>
 </pre></div>
 </div>
@@ -527,7 +532,7 @@
 </div>
 <p>We can explore each of the fields:</p>
 <ul class="simple">
-<li><p>The <font color='purple'>Sample</font> column gives the unique sample identifier used throughout all Pf7 analyses.</p></li>
+<li><p>The <font color='purple'>Sample</font> column gives the unique sample identifier used throughout all Pv4 analyses.</p></li>
 <li><p>The <font color='purple'>Study</font> refers to the partner study which collected the sample.</p></li>
 <li><p>The <font color='purple'>Country</font>, <font color='purple'>First-level administrative division</font> and <font color='purple'>Site</font> describe the location where the sample was collected from.</p></li>
 <li><p>The <font color='purple'>Lat</font> &amp; <font color='purple'>Long</font> contain the GADM coordinates for each country.</p></li>
@@ -538,7 +543,7 @@
 <li><p>The <font color='purple'>% callable</font> column refers to the %  of the genome with coverage of at least 5 reads and less than 10% of reads with mapping quality 0.</p></li>
 <li><p>The <font color='purple'>QC pass</font> column defines whether the sample passed (True) or failed (False) QC.</p></li>
 <li><p>The <font color='purple'>Exclusion reason</font> describes the reason why the particular sample was excluded from the main analysis.</p></li>
-<li><p>The <font color='purple'>Is returning traveller</font> column</p></li>
+<li><p>The <font color='purple'>Is returning traveller</font> column states if the sample was collected from a person returning from travel. The region assigned in this case was based on the reported country of travel.</p></li>
 </ul>
 <p>The python package <a class="reference external" href="https://pandas.pydata.org/">Pandas</a> can be used to explore and query the sample metadata in different ways. For example, here is a summary of the numbers of samples grouped by the country they were collected in:</p>
 <div class="cell docutils container">
@@ -585,7 +590,7 @@ dtype: int64
 <div class="section" id="variant-calls">
 <h2>Variant Calls<a class="headerlink" href="#variant-calls" title="Permalink to this headline">¶</a></h2>
 <p>These files contain details of 4,571,056 discovered variant genome positions. These variants were discovered amongst all samples from the release.</p>
-<p>… of these variant positions are SNPs, with the remainder being either short insertion/deletions (indels), or a combination of SNPs and indels.</p>
+<p>945,649 of these variant positions are SNPs, with the remainder being either short insertion/deletions (indels), or a combination of SNPs and indels.</p>
 <p>Data on variant calls, including the genomic positions, alleles, and genotypes, can be accessed as an xarray Dataset:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -8614,7 +8619,21 @@ Data variables:
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../pf7/api.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Pf7 API</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="api.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Pv4 API</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>
