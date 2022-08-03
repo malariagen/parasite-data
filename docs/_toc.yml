@@ -3,9 +3,9 @@ root: landing-page
 parts:
   - caption: Pf7
     chapters:
-      - file: pf7/Data_exploration.ipynb
+      - file: pf7/Data_access.ipynb
       - file: pf7/api
   - caption: Pv4
     chapters:
-      - file: pv4/Data_exploration.ipynb
+      - file: pv4/Data_access.ipynb
       - file: pv4/api
