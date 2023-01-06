@@ -338,7 +338,7 @@
 <p>Running this notebook requires some Python packages to be installed. These packages can be installed via pip or conda. E.g.:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install -q malariagen_data 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>-q<span class="w"> </span>malariagen_data<span class="w"> </span>
 </pre></div>
 </div>
 </div>
@@ -392,7 +392,7 @@
 </div>
 <div class="section" id="metadata">
 <h2>Metadata<a class="headerlink" href="#metadata" title="Permalink to this headline">¶</a></h2>
-<p>Data on the samples that were sequenced as part of this resource are available. It includes the time and place of collection, quality metrics, and accesion numbers.</p>
+<p>Data on the samples that were sequenced as part of this resource are available. It includes the time and place of collection, quality metrics, and accession numbers.</p>
 <p>To see all the information available, load sample metadata into a pandas dataframe:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -645,11 +645,11 @@
 <li><p>The <font color='purple'>Year</font> column gives the time of sample collection.</p></li>
 <li><p>The <font color='purple'>ENA</font> column gives the run accession(s) for the sequencing read data for each sample.</p></li>
 <li><p>The <font color='purple'>All samples same case</font> column identifies samples set collected from the same individual.</p></li>
-<li><p>The <font color='purple'>Population</font> column gives the population to which the sample has been assigned to, based on the degree of genetic similarity to other samples. The possible values are: Africa-Central (AF-C), Africa - East (AF-E), Africa - Northeast (AF-NE), Africa - West (AF-W), Asia - South Asia - East (AS-SA-E), Asia - South Asia - West (AS-SA-W), Asia - Southeast Asia - East (AS-SEA-E), Asia - Southeast Asia - West (AS-SEA-W), Oceania - New Guinea (OC-NG), South America (SA).</p></li>
+<li><p>The <font color='purple'>Population</font> column gives the population to which the sample has been assigned. The possible values are: Africa - West (AF-W), Africa-Central (AF-C), Africa - East (AF-E), Africa - Northeast (AF-NE), Asia - South - East (AS-S-E), Asia - South – Far East (AS-S-FE), Asia - Southeast - West (AS-SE-W), Asia - Southeast - East (AS-SE-E), Oceania - New Guinea (OC-NG), South America (SA).</p></li>
 <li><p>The <font color='purple'>% callable</font> column refers to the %  of the genome with coverage of at least 5 reads and less than 10% of reads with mapping quality 0.</p></li>
 <li><p>The <font color='purple'>QC pass</font> column defines whether the sample passed (True) or failed (False) QC.</p></li>
 <li><p>The <font color='purple'>Exclusion reason</font> describes the reason why the particular sample was excluded from the main analysis.</p></li>
-<li><p>The <font color='purple'>Sample type</font> column gives details on the sequencing method used on the particular sample  (gDNA, sWGA, MDA).</p></li>
+<li><p>The <font color='purple'>Sample type</font> column gives details on the DNA preparation method used</p></li>
 <li><p>The <font color='purple'>Sample was in Pf6</font> column defines whether the sample was included in the previous version of the data release (Pf6) or if it is new to Pf7.</p></li>
 </ul>
 <p>The python package <a class="reference external" href="https://pandas.pydata.org/">Pandas</a> can be used to explore and query the sample metadata in different ways. For example, here is a summary of the numbers of samples grouped by the country they were collected in:</p>
