@@ -21,7 +21,8 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install -r requirements-deploy.txt
+        python -m pip install --upgrade pip
+	pip install -r requirements-deploy.txt
 
     # Build the book
     - name: Build the book
