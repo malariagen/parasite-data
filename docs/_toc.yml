@@ -4,6 +4,7 @@ parts:
   - caption: Pf7
     chapters:
       - file: pf7/Data_access.ipynb
+      - file: pf7/examples.md
       - file: pf7/api
   - caption: Pv4
     chapters:
