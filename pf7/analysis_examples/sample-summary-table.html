@@ -1,0 +1,1549 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summarise Samples by Administrative Division &#8212; MalariaGEN parasite data user guide</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Summarise Genetic Variants" href="variant-summary-table.html" />
+    <link rel="prev" title="Plot Map of Chloroquine Resistance" href="chloroquine-resistance-map.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">MalariaGEN parasite data user guide</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../landing-page.html">
+   MalariaGEN parasite data user guide
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Pf7
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Data_access.html">
+   Pf7 Data Access
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../examples.html">
+   Pf7 Analysis Examples
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="chloroquine-resistance-map.html">
+     Plot Map of Chloroquine Resistance
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Summarise Samples by Administrative Division
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="variant-summary-table.html">
+     Summarise Genetic Variants
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="neighbour-joining-tree-swga.html">
+     Neighbour Joining Tree for sWGA vs. gDNA
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="proportion-eba175.html">
+     Plot
+     <em>
+      eba175
+     </em>
+     C Allele Proportions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../api.html">
+   Pf7 API
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Pv4
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../pv4/Data_access.html">
+   Pv4 Data Access
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../pv4/api.html">
+   Pv4 API
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/pf7/analysis_examples/sample-summary-table.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/malariagen/parasite-data"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/malariagen/parasite-data/issues/new?title=Issue%20on%20page%20%2Fpf7/analysis_examples/sample-summary-table.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/malariagen/parasite-data/master?urlpath=lab/tree/docs/pf7/analysis_examples/sample-summary-table.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/malariagen/parasite-data/blob/master/docs/pf7/analysis_examples/sample-summary-table.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Summarise Samples by Administrative Division
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#access-pf7-data-and-metadata">
+   Access Pf7 Data and Metadata
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#produce-the-table-of-samples-per-admin-division-level-1">
+   Produce the Table of Samples per Admin Division Level 1
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aggredate-the-data-by-our-fields-of-interest">
+     Aggredate the data by our fields of interest
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#merge-these-aggregated-dataframes-and-drop-duplicate-columns">
+     Merge these aggregated dataframes and drop duplicate columns
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#trim-off-the-number-from-region-column">
+     Trim off the number from Region column
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-in-samples-with-unverified-identity">
+     Add in samples with unverified identity
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-a-totals-row-at-the-bottom">
+     Add a totals row at the bottom
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#table-legend">
+     <strong>
+      Table Legend
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#write-the-table-to-a-file">
+     Write the table to a file
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Summarise Samples by Administrative Division</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Summarise Samples by Administrative Division
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#access-pf7-data-and-metadata">
+   Access Pf7 Data and Metadata
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#produce-the-table-of-samples-per-admin-division-level-1">
+   Produce the Table of Samples per Admin Division Level 1
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aggredate-the-data-by-our-fields-of-interest">
+     Aggredate the data by our fields of interest
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#merge-these-aggregated-dataframes-and-drop-duplicate-columns">
+     Merge these aggregated dataframes and drop duplicate columns
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#trim-off-the-number-from-region-column">
+     Trim off the number from Region column
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-in-samples-with-unverified-identity">
+     Add in samples with unverified identity
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-a-totals-row-at-the-bottom">
+     Add a totals row at the bottom
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#table-legend">
+     <strong>
+      Table Legend
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#write-the-table-to-a-file">
+     Write the table to a file
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="summarise-samples-by-administrative-division">
+<h1>Summarise Samples by Administrative Division<a class="headerlink" href="#summarise-samples-by-administrative-division" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>This notebook recreates <a class="reference external" href="https://figshare.com/ndownloader/files/38478530">Supplementary Table 1</a> from the <a class="reference external" href="https://wellcomeopenresearch.org/articles/8-22">Pf7 paper</a> - a summary of samples broken down by major sub-population, country, and first administrative division. Samples are sorted so that their corresponding countries appear in a West to East order in the table.</p>
+<p><strong>This notebook should take approximately one minute to run.</strong></p>
+</div>
+<div class="section" id="setup">
+<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
+<p>Install the malariagen Python package:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>-q<span class="w"> </span>--no-warn-conflicts<span class="w"> </span>malariagen_data
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">133.2/133.2 kB</span> <span class=" -Color -Color-Red">2.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">3.1/3.1 MB</span> <span class=" -Color -Color-Red">14.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">10.4/10.4 MB</span> <span class=" -Color -Color-Red">31.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">3.6/3.6 MB</span> <span class=" -Color -Color-Red">40.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">302.5/302.5 kB</span> <span class=" -Color -Color-Red">8.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">138.7/138.7 kB</span> <span class=" -Color -Color-Red">5.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">20.9/20.9 MB</span> <span class=" -Color -Color-Red">40.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">8.1/8.1 MB</span> <span class=" -Color -Color-Red">46.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">206.9/206.9 kB</span> <span class=" -Color -Color-Red">13.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">233.6/233.6 kB</span> <span class=" -Color -Color-Red">10.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h  Preparing metadata (setup.py) ... ?25l?25hdone
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">6.7/6.7 MB</span> <span class=" -Color -Color-Red">37.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.6/1.6 MB</span> <span class=" -Color -Color-Red">57.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h  Building wheel for asciitree (setup.py) ... ?25l?25hdone
+</pre></div>
+</div>
+</div>
+</div>
+<p>Import required libraries:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">dask</span>
+<span class="kn">import</span> <span class="nn">dask.array</span> <span class="k">as</span> <span class="nn">da</span>
+<span class="kn">from</span> <span class="nn">dask.diagnostics.progress</span> <span class="kn">import</span> <span class="n">ProgressBar</span>
+<span class="kn">import</span> <span class="nn">malariagen_data</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">collections</span>
+<span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="access-pf7-data-and-metadata">
+<h1>Access Pf7 Data and Metadata<a class="headerlink" href="#access-pf7-data-and-metadata" title="Permalink to this headline">¶</a></h1>
+<p>Here we define the data and metadata as pandas dataframes</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">release_data</span> <span class="o">=</span> <span class="n">malariagen_data</span><span class="o">.</span><span class="n">Pf7</span><span class="p">()</span>
+<span class="n">sample_metadata</span> <span class="o">=</span> <span class="n">release_data</span><span class="o">.</span><span class="n">sample_metadata</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="produce-the-table-of-samples-per-admin-division-level-1">
+<h1>Produce the Table of Samples per Admin Division Level 1<a class="headerlink" href="#produce-the-table-of-samples-per-admin-division-level-1" title="Permalink to this headline">¶</a></h1>
+<p>####Define a dictionary for sub-population names</p>
+<p>To make the eventual table output easier to interpret, we add a column ‘Region’ to the dataframe. The dictionary matches the codes for each major sub-population to their full names. E.g. ‘SA’ becomes ‘South America (SA)’ in the ‘Region’ column.</p>
+<p>We initially give a numeric prefix to the sub-populations so that they will appear in our desired order (west to east) in the table. This will be removed later on.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define a dictionary to link population code with the full name of each region</span>
+<span class="n">population_legend</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
+<span class="n">population_legend</span><span class="p">[</span><span class="s1">&#39;SA&#39;</span><span class="p">]</span>       <span class="o">=</span> <span class="s2">&quot;01. South America&quot;</span>
+<span class="n">population_legend</span><span class="p">[</span><span class="s1">&#39;AF-W&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">&quot;02. Africa - West&quot;</span>
+<span class="n">population_legend</span><span class="p">[</span><span class="s1">&#39;AF-C&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">&quot;03. Africa - Central&quot;</span>
+<span class="n">population_legend</span><span class="p">[</span><span class="s1">&#39;AF-NE&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">&quot;04. Africa - Northeast&quot;</span>
+<span class="n">population_legend</span><span class="p">[</span><span class="s1">&#39;AF-E&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">&quot;05. Africa - East&quot;</span>
+<span class="n">population_legend</span><span class="p">[</span><span class="s1">&#39;AS-S-E&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">&quot;06. Asia - South - East&quot;</span>
+<span class="n">population_legend</span><span class="p">[</span><span class="s1">&#39;AS-S-FE&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">&quot;07. Asia - South - Far East&quot;</span>
+<span class="n">population_legend</span><span class="p">[</span><span class="s1">&#39;AS-SE-W&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;08. Asia - Southeast - West&quot;</span>
+<span class="n">population_legend</span><span class="p">[</span><span class="s1">&#39;AS-SE-E&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;09. Asia - Southeast - East&quot;</span>
+<span class="n">population_legend</span><span class="p">[</span><span class="s1">&#39;OC-NG&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">&quot;10. Oceania - New Guinea&quot;</span>
+
+<span class="c1"># Include full name of each population as &#39;Region&#39; in the pf7_metadata dataframe</span>
+<span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;Region&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;Population&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">population_legend</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="si">}</span><span class="s1"> (</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1">)&#39;</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">population_legend</span> <span class="k">else</span> <span class="s1">&#39;11. Unverified identity&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>####Add a longitude column for sorting the table
+We already have longitude information for country and admin division which we could use to sort the table in our desired west to east order. However, there are some locations who’s subpopulation region and country longitude mean they don’t sort in a consistent west-to-east manner.</p>
+<p>Here we add a new longitude column for sorting the table ‘country_long_table’ which keeps all longitude values the same, except for locations which need a fake longitude to enable them to sort properly with the rest of their major sub-population or country.</p>
+<p>We make the new column so that the original longitude values are retained, in case they were ever needed in the future.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;country_long_table&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;Country longitude&#39;</span><span class="p">]</span> <span class="c1"># Add the new column for sorting the table</span>
+<span class="n">sample_metadata</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;Admin level 1&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Kisumu&#39;</span><span class="p">,</span> <span class="s1">&#39;country_long_table&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">40</span> <span class="c1"># Want it to appear last in AF-NE</span>
+<span class="n">sample_metadata</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;Admin level 1&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Kilifi&#39;</span><span class="p">,</span> <span class="s1">&#39;country_long_table&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">34</span> <span class="c1"># Want it to appear first in AF-E</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="aggredate-the-data-by-our-fields-of-interest">
+<h2>Aggredate the data by our fields of interest<a class="headerlink" href="#aggredate-the-data-by-our-fields-of-interest" title="Permalink to this headline">¶</a></h2>
+<p>Here we group by Region, Country, Admin level 1 and count the number of sequenced samples, then output to a dataframe, then order the locations from West to East based on country.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Aggregate data for all samples and store in a dataframe &#39;agg1&#39;</span>
+<span class="n">agg1</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">sample_metadata</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span>
+        <span class="p">[</span><span class="s1">&#39;Region&#39;</span><span class="p">,</span><span class="s1">&#39;Country&#39;</span><span class="p">,</span><span class="s1">&#39;Admin level 1&#39;</span><span class="p">,</span><span class="s1">&#39;country_long_table&#39;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">size</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">to_frame</span><span class="p">(</span><span class="s1">&#39;Sequenced samples&#39;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Region&#39;</span><span class="p">,</span><span class="s1">&#39;country_long_table&#39;</span><span class="p">,</span><span class="s1">&#39;Admin level 1&#39;</span><span class="p">])</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Do this again, but just for samples passing QC rather than all samples</span>
+<span class="c1"># We define new dataframes to keep each stage of data manipulation separate</span>
+<span class="n">agg2</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">sample_metadata</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span>
+        <span class="p">[</span><span class="s1">&#39;Region&#39;</span><span class="p">,</span><span class="s1">&#39;Country&#39;</span><span class="p">,</span><span class="s1">&#39;Admin level 1&#39;</span><span class="p">,</span><span class="s1">&#39;country_long_table&#39;</span><span class="p">,</span><span class="s1">&#39;QC pass&#39;</span><span class="p">]</span>
+        <span class="p">)</span>
+    <span class="o">.</span><span class="n">size</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">to_frame</span><span class="p">(</span><span class="s1">&#39;Analysis set samples&#39;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Region&#39;</span><span class="p">,</span><span class="s1">&#39;country_long_table&#39;</span><span class="p">,</span><span class="s1">&#39;Admin level 1&#39;</span><span class="p">])</span>
+<span class="p">)</span>
+<span class="n">agg3</span> <span class="o">=</span> <span class="n">agg2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">agg2</span><span class="p">[</span><span class="s1">&#39;QC pass&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="merge-these-aggregated-dataframes-and-drop-duplicate-columns">
+<h2>Merge these aggregated dataframes and drop duplicate columns<a class="headerlink" href="#merge-these-aggregated-dataframes-and-drop-duplicate-columns" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table_df</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">agg1</span><span class="p">,</span> <span class="n">agg3</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span> <span class="s1">&#39;Admin level 1&#39;</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s1">&#39;left&#39;</span><span class="p">,</span><span class="n">suffixes</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;_y&#39;</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Region&#39;</span><span class="p">,</span><span class="s1">&#39;country_long_table&#39;</span><span class="p">,</span> <span class="s1">&#39;Admin level 1&#39;</span><span class="p">])</span>
+    <span class="p">)</span> <span class="c1"># Merge</span>
+<span class="n">table_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">table_df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">regex</span><span class="o">=</span><span class="s1">&#39;_y$&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># Drop duplicate columns</span>
+<span class="n">table_df_trimmed</span> <span class="o">=</span> <span class="n">table_df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;country_long_table&#39;</span><span class="p">,</span><span class="s1">&#39;QC pass&#39;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># Drop further uneccesary columns and make a new df to avoid confusion</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="trim-off-the-number-from-region-column">
+<h2>Trim off the number from Region column<a class="headerlink" href="#trim-off-the-number-from-region-column" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove the first 3 characters from each value in the column</span>
+<span class="n">table_df_trimmed</span><span class="p">[</span><span class="s1">&#39;Region&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">table_df_trimmed</span><span class="p">[</span><span class="s1">&#39;Region&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="add-in-samples-with-unverified-identity">
+<h2>Add in samples with unverified identity<a class="headerlink" href="#add-in-samples-with-unverified-identity" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get our unverified location samples and count them</span>
+<span class="n">ui_samps</span> <span class="o">=</span> <span class="n">sample_metadata</span><span class="p">[</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;Region&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;11. Unverified identity&#39;</span><span class="p">]</span>
+<span class="n">no_ui</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ui_samps</span><span class="p">)</span>
+<span class="n">no_ui_qc</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ui_samps</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ui_samps</span><span class="p">[</span><span class="s1">&#39;QC pass&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">])</span>
+
+<span class="c1"># Create a mini dataframe to append to our main table</span>
+<span class="n">ui_sum</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Region&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Unverified identity&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Country&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Admin level 1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Sequenced samples&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">no_ui</span><span class="p">],</span>
+    <span class="s1">&#39;Analysis set samples&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">no_ui_qc</span><span class="p">]</span>
+<span class="p">}</span>
+<span class="n">ui_sum_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ui_sum</span><span class="p">)</span>
+
+<span class="c1"># Add to the main table</span>
+<span class="n">table_df_ui</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">table_df_trimmed</span><span class="p">,</span> <span class="n">ui_sum_df</span><span class="p">],</span> <span class="n">ignore_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">table_df_ui</span><span class="p">[</span><span class="s1">&#39;Analysis set samples&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">table_df_ui</span><span class="p">[</span><span class="s1">&#39;Analysis set samples&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int&#39;</span><span class="p">)</span> <span class="c1"># Convert from float to integer</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="add-a-totals-row-at-the-bottom">
+<h2>Add a totals row at the bottom<a class="headerlink" href="#add-a-totals-row-at-the-bottom" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">total_samps</span> <span class="o">=</span> <span class="n">table_df_ui</span><span class="p">[</span><span class="s1">&#39;Sequenced samples&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="s1">&#39;sum&#39;</span><span class="p">)</span>
+<span class="n">total_analysis</span> <span class="o">=</span> <span class="n">table_df_ui</span><span class="p">[</span><span class="s1">&#39;Analysis set samples&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="s1">&#39;sum&#39;</span><span class="p">)</span>
+<span class="n">totals</span> <span class="o">=</span>  <span class="p">{</span>
+    <span class="s1">&#39;Region&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Total&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Country&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Admin level 1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Sequenced samples&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">total_samps</span><span class="p">],</span>
+    <span class="s1">&#39;Analysis set samples&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">total_analysis</span><span class="p">]</span>
+<span class="p">}</span>
+<span class="n">totals_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">totals</span><span class="p">)</span>
+<span class="n">table_df_ui_totals</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">table_df_ui</span><span class="p">,</span> <span class="n">totals_df</span><span class="p">],</span> <span class="n">ignore_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This has all the info we need - but it could still be clearer to read</span>
+<span class="c1"># Make it so there is just one name per Region / Country</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_rows</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="n">table_df_final</span> <span class="o">=</span> <span class="n">table_df_ui_totals</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">&#39;Region&#39;</span><span class="p">,</span> <span class="s1">&#39;Country&#39;</span><span class="p">,</span> <span class="s1">&#39;Admin level 1&#39;</span><span class="p">])</span>
+<span class="n">table_df_final</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-2a49710a-4568-4e95-9120-8c71c2f04891" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>Sequenced samples</th>
+      <th>Analysis set samples</th>
+    </tr>
+    <tr>
+      <th>Region</th>
+      <th>Country</th>
+      <th>Admin level 1</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="6" valign="top">South America (SA)</th>
+      <th>Peru</th>
+      <th>Loreto</th>
+      <td>21</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">Colombia</th>
+      <th>Cauca</th>
+      <td>146</td>
+      <td>123</td>
+    </tr>
+    <tr>
+      <th>Choco</th>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>Nariño</th>
+      <td>7</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>Valle del Cauca</th>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>Venezuela</th>
+      <th>Bolivar</th>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th rowspan="31" valign="top">Africa - West (AF-W)</th>
+      <th rowspan="3" valign="top">Gambia</th>
+      <th>North Bank</th>
+      <td>252</td>
+      <td>186</td>
+    </tr>
+    <tr>
+      <th>Upper River</th>
+      <td>760</td>
+      <td>452</td>
+    </tr>
+    <tr>
+      <th>Western</th>
+      <td>235</td>
+      <td>225</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Senegal</th>
+      <th>Dakar</th>
+      <td>93</td>
+      <td>91</td>
+    </tr>
+    <tr>
+      <th>Sedhiou</th>
+      <td>62</td>
+      <td>59</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Guinea</th>
+      <th>Faranah</th>
+      <td>60</td>
+      <td>37</td>
+    </tr>
+    <tr>
+      <th>Nzerekore</th>
+      <td>139</td>
+      <td>114</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">Mauritania</th>
+      <th>Guidimaka</th>
+      <td>23</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <th>Hodh ech Chargui</th>
+      <td>40</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <th>Hodh el Gharbi</th>
+      <td>41</td>
+      <td>39</td>
+    </tr>
+    <tr>
+      <th>Côte d'Ivoire</th>
+      <th>Abidjan</th>
+      <td>71</td>
+      <td>71</td>
+    </tr>
+    <tr>
+      <th rowspan="6" valign="top">Mali</th>
+      <th>Bamako</th>
+      <td>215</td>
+      <td>209</td>
+    </tr>
+    <tr>
+      <th>Kayes</th>
+      <td>379</td>
+      <td>250</td>
+    </tr>
+    <tr>
+      <th>Koulikoro</th>
+      <td>991</td>
+      <td>614</td>
+    </tr>
+    <tr>
+      <th>Mopti</th>
+      <td>9</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>Segou</th>
+      <td>49</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th>Sikasso</th>
+      <td>161</td>
+      <td>57</td>
+    </tr>
+    <tr>
+      <th>Burkina Faso</th>
+      <th>Haut-Bassins</th>
+      <td>58</td>
+      <td>57</td>
+    </tr>
+    <tr>
+      <th rowspan="7" valign="top">Ghana</th>
+      <th>Ashanti</th>
+      <td>286</td>
+      <td>278</td>
+    </tr>
+    <tr>
+      <th>Brong Ahafo</th>
+      <td>69</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <th>Central</th>
+      <td>175</td>
+      <td>104</td>
+    </tr>
+    <tr>
+      <th>Eastern</th>
+      <td>21</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>Greater Accra</th>
+      <td>198</td>
+      <td>184</td>
+    </tr>
+    <tr>
+      <th>Upper East</th>
+      <td>3300</td>
+      <td>2454</td>
+    </tr>
+    <tr>
+      <th>Volta</th>
+      <td>41</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Benin</th>
+      <th>Atlantique</th>
+      <td>57</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>Littoral</th>
+      <td>277</td>
+      <td>105</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Nigeria</th>
+      <th>Kwara</th>
+      <td>8</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>Lagos</th>
+      <td>132</td>
+      <td>105</td>
+    </tr>
+    <tr>
+      <th>Gabon</th>
+      <th>Wouleu-Ntem</th>
+      <td>59</td>
+      <td>55</td>
+    </tr>
+    <tr>
+      <th>Cameroon</th>
+      <th>Sud-Ouest</th>
+      <td>294</td>
+      <td>264</td>
+    </tr>
+    <tr>
+      <th>Africa - Central (AF-C)</th>
+      <th>Democratic Republic of the Congo</th>
+      <th>Kinshasa</th>
+      <td>573</td>
+      <td>520</td>
+    </tr>
+    <tr>
+      <th rowspan="7" valign="top">Africa - Northeast (AF-NE)</th>
+      <th rowspan="3" valign="top">Sudan</th>
+      <th>Blue Nile</th>
+      <td>66</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Kassala</th>
+      <td>13</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>Khartoum</th>
+      <td>124</td>
+      <td>67</td>
+    </tr>
+    <tr>
+      <th>Uganda</th>
+      <th>Apac</th>
+      <td>15</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Ethiopia</th>
+      <th>Amhara</th>
+      <td>15</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>Oromia</th>
+      <td>19</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>Kenya</th>
+      <th>Kisumu</th>
+      <td>64</td>
+      <td>63</td>
+    </tr>
+    <tr>
+      <th rowspan="11" valign="top">Africa - East (AF-E)</th>
+      <th>Kenya</th>
+      <th>Kilifi</th>
+      <td>662</td>
+      <td>627</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Malawi</th>
+      <th>Chikwawa</th>
+      <td>319</td>
+      <td>231</td>
+    </tr>
+    <tr>
+      <th>Zomba</th>
+      <td>52</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">Tanzania</th>
+      <th>Kagera</th>
+      <td>61</td>
+      <td>52</td>
+    </tr>
+    <tr>
+      <th>Kigoma</th>
+      <td>199</td>
+      <td>143</td>
+    </tr>
+    <tr>
+      <th>Lindi</th>
+      <td>79</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <th>Morogoro</th>
+      <td>34</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <th>Tanga</th>
+      <td>324</td>
+      <td>297</td>
+    </tr>
+    <tr>
+      <th>Mozambique</th>
+      <th>Gaza</th>
+      <td>91</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Madagascar</th>
+      <th>Fianarantsoa</th>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Mahajanga</th>
+      <td>24</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Asia - South - East (AS-S-E)</th>
+      <th rowspan="2" valign="top">India</th>
+      <th>Odisha</th>
+      <td>122</td>
+      <td>114</td>
+    </tr>
+    <tr>
+      <th>West Bengal</th>
+      <td>122</td>
+      <td>119</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Asia - South - Far East (AS-S-FE)</th>
+      <th>India</th>
+      <th>Tripura</th>
+      <td>72</td>
+      <td>67</td>
+    </tr>
+    <tr>
+      <th>Bangladesh</th>
+      <th>Chittagong</th>
+      <td>1658</td>
+      <td>1310</td>
+    </tr>
+    <tr>
+      <th rowspan="10" valign="top">Asia - Southeast - West (AS-SE-W)</th>
+      <th rowspan="8" valign="top">Myanmar</th>
+      <th>Bago</th>
+      <td>124</td>
+      <td>89</td>
+    </tr>
+    <tr>
+      <th>Kachin</th>
+      <td>28</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <th>Kayin</th>
+      <td>760</td>
+      <td>631</td>
+    </tr>
+    <tr>
+      <th>Mandalay</th>
+      <td>120</td>
+      <td>114</td>
+    </tr>
+    <tr>
+      <th>Rakhine</th>
+      <td>19</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>Sagaing</th>
+      <td>93</td>
+      <td>38</td>
+    </tr>
+    <tr>
+      <th>Shan</th>
+      <td>65</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>Tanintharyi</th>
+      <td>51</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Thailand</th>
+      <th>Ranong</th>
+      <td>27</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>Tak</th>
+      <td>967</td>
+      <td>875</td>
+    </tr>
+    <tr>
+      <th rowspan="23" valign="top">Asia - Southeast - East (AS-SE-E)</th>
+      <th>Thailand</th>
+      <th>Sisakhet</th>
+      <td>112</td>
+      <td>59</td>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">Laos</th>
+      <th>Attapeu</th>
+      <td>210</td>
+      <td>204</td>
+    </tr>
+    <tr>
+      <th>Champasak</th>
+      <td>218</td>
+      <td>208</td>
+    </tr>
+    <tr>
+      <th>Salavan</th>
+      <td>147</td>
+      <td>144</td>
+    </tr>
+    <tr>
+      <th>Savannakhet</th>
+      <td>452</td>
+      <td>411</td>
+    </tr>
+    <tr>
+      <th>Sekong</th>
+      <td>25</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th rowspan="7" valign="top">Cambodia</th>
+      <th>Battambang</th>
+      <td>65</td>
+      <td>51</td>
+    </tr>
+    <tr>
+      <th>Koh Kong</th>
+      <td>5</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>Pailin</th>
+      <td>286</td>
+      <td>191</td>
+    </tr>
+    <tr>
+      <th>Preah Vihear</th>
+      <td>216</td>
+      <td>150</td>
+    </tr>
+    <tr>
+      <th>Pursat</th>
+      <td>671</td>
+      <td>460</td>
+    </tr>
+    <tr>
+      <th>Ratanakiri</th>
+      <td>420</td>
+      <td>358</td>
+    </tr>
+    <tr>
+      <th>Stueng Traeng</th>
+      <td>60</td>
+      <td>52</td>
+    </tr>
+    <tr>
+      <th rowspan="10" valign="top">Vietnam</th>
+      <th>Bac Lieu</th>
+      <td>4</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Binh Phuoc</th>
+      <td>751</td>
+      <td>657</td>
+    </tr>
+    <tr>
+      <th>Binh Thuan</th>
+      <td>11</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Dak Lak</th>
+      <td>112</td>
+      <td>106</td>
+    </tr>
+    <tr>
+      <th>Dak Nong</th>
+      <td>73</td>
+      <td>70</td>
+    </tr>
+    <tr>
+      <th>Gia Lai</th>
+      <td>376</td>
+      <td>337</td>
+    </tr>
+    <tr>
+      <th>Khanh Hoa</th>
+      <td>66</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <th>Ninh Thuan</th>
+      <td>205</td>
+      <td>73</td>
+    </tr>
+    <tr>
+      <th>Quang Nam</th>
+      <td>95</td>
+      <td>75</td>
+    </tr>
+    <tr>
+      <th>Quang Tri</th>
+      <td>40</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">Oceania - New Guinea (OC-NG)</th>
+      <th>Indonesia</th>
+      <th>Papua</th>
+      <td>133</td>
+      <td>121</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">Papua New Guinea</th>
+      <th>East Sepik</th>
+      <td>166</td>
+      <td>149</td>
+    </tr>
+    <tr>
+      <th>Madang</th>
+      <td>55</td>
+      <td>43</td>
+    </tr>
+    <tr>
+      <th>Milne Bay</th>
+      <td>30</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th>Unverified identity</th>
+      <th></th>
+      <th></th>
+      <td>160</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Total</th>
+      <th></th>
+      <th></th>
+      <td>20864</td>
+      <td>16203</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-2a49710a-4568-4e95-9120-8c71c2f04891')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-2a49710a-4568-4e95-9120-8c71c2f04891 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-2a49710a-4568-4e95-9120-8c71c2f04891');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-76ee4187-5b37-4d73-abe0-e13d541c29df">
+  <button class="colab-df-quickchart" onclick="quickchart('df-76ee4187-5b37-4d73-abe0-e13d541c29df')"
+            title="Suggest charts."
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-76ee4187-5b37-4d73-abe0-e13d541c29df button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+    </div>
+  </div>
+</div></div>
+</div>
+</div>
+<div class="section" id="table-legend">
+<h2><strong>Table Legend</strong><a class="headerlink" href="#table-legend" title="Permalink to this headline">¶</a></h2>
+<p>Supplementary Table 1. Breakdown of analysis set samples by geography. Sites are divided into ten populations as described in the main text. Note that a) samples from Kisumu in western Kenya have been assigned to the Africa - Northeast (AF-NE) population, whereas samples from Kilifi in southern Kenya have been assigned to the Africa - East (AF-E) population, b) samples from Odisha and West Bengal in India to the west of Bangladesh have been assigned to the Asia - South Asia - West (AS-S-E) population, whereas samples from Tripura in India to the east of Bangladesh have been assigned to the Asia - South Asia - East (AS-S-FE) population and c) samples from Ranong and Tak in western Thailand have been assigned to the Western SE Asia (AS-SE-W) region, whereas samples from Sisakhet in eastern Thailand have been assigned to the Eastern SE Asia (AS-SE-E) region. 10 returning travellers were reported as returning from Ghana (3), Kenya (2), Uganda (2), Mozambique (1) and Papua, Indonesia (2) and were excluded from analysis. 65 samples which were identified as lab strains were also excluded from analysis.</p>
+</div>
+<div class="section" id="write-the-table-to-a-file">
+<h2>Write the table to a file<a class="headerlink" href="#write-the-table-to-a-file" title="Permalink to this headline">¶</a></h2>
+<p>We can output this to a location in Google Drive</p>
+<p>First we need to connect Google Drive by running the following:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># You will need to authorise Google Colab access to Google Drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mounted at /content/drive
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This will send the file to your Google Drive, where you can download it from if needed</span>
+<span class="c1"># Change the file path if you wish to send the file to a specific location</span>
+<span class="c1"># Change the file name if you wish to call it something else</span>
+<span class="n">table_df_final</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s1">&#39;/content/drive/My Drive/Pf7_supp_table1.xlsx&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./pf7/analysis_examples"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="chloroquine-resistance-map.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Plot Map of Chloroquine Resistance</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="variant-summary-table.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Summarise Genetic Variants</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Kathryn Murie<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

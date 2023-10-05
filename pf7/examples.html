@@ -51,7 +51,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Pf7 API" href="api.html" />
+    <link rel="next" title="Plot Map of Chloroquine Resistance" href="analysis_examples/chloroquine-resistance-map.html" />
     <link rel="prev" title="Pf7 Data Access" href="Data_access.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -107,10 +107,46 @@
    Pf7 Data Access
   </a>
  </li>
- <li class="toctree-l1 current active">
+ <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
    Pf7 Analysis Examples
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="analysis_examples/chloroquine-resistance-map.html">
+     Plot Map of Chloroquine Resistance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="analysis_examples/sample-summary-table.html">
+     Summarise Samples by Administrative Division
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="analysis_examples/variant-summary-table.html">
+     Summarise Genetic Variants
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="analysis_examples/neighbour-joining-tree-swga.html">
+     Neighbour Joining Tree for sWGA vs. gDNA
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="analysis_examples/proportion-eba175.html">
+     Plot
+     <em>
+      eba175
+     </em>
+     C Allele Proportions
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="api.html">
@@ -237,6 +273,40 @@
   <div class="section" id="pf7-analysis-examples">
 <h1>Pf7 Analysis Examples<a class="headerlink" href="#pf7-analysis-examples" title="Permalink to this headline">¶</a></h1>
 <p>The notebooks below provide examples of analyses for the Pf7 data release.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/chloroquine-resistance-map.html">Plot Map of Chloroquine Resistance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/chloroquine-resistance-map.html#introduction">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/chloroquine-resistance-map.html#setup">Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/chloroquine-resistance-map.html#combine-data-into-a-single-dataframe">Combine data into a single dataframe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/chloroquine-resistance-map.html#figure-plotting-setup">Figure plotting setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/chloroquine-resistance-map.html#create-data-summaries">Create data summaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/chloroquine-resistance-map.html#plot-the-figure">Plot the figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/sample-summary-table.html">Summarise Samples by Administrative Division</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/sample-summary-table.html#introduction">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/sample-summary-table.html#setup">Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/sample-summary-table.html#access-pf7-data-and-metadata">Access Pf7 Data and Metadata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/sample-summary-table.html#produce-the-table-of-samples-per-admin-division-level-1">Produce the Table of Samples per Admin Division Level 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/variant-summary-table.html">Summarise Genetic Variants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/variant-summary-table.html#introduction">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/neighbour-joining-tree-swga.html">Neighbour Joining Tree for sWGA vs. gDNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/neighbour-joining-tree-swga.html#introduction">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/neighbour-joining-tree-swga.html#activate-r-magic">Activate R magic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/neighbour-joining-tree-swga.html#setup">Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/neighbour-joining-tree-swga.html#a-ghana-upper-east-2015">A) Ghana, Upper East, 2015</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/neighbour-joining-tree-swga.html#b-kenya-kilifi-2007-2012">B) Kenya, Kilifi, 2007-2012</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/neighbour-joining-tree-swga.html#c-cambodia-pursat-2016">C) Cambodia, Pursat, 2016</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/neighbour-joining-tree-swga.html#d-vietnam-binh-phuoc-2016">D) Vietnam, Binh Phuoc, 2016</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/proportion-eba175.html">Plot <em>eba175</em> C Allele Proportions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/proportion-eba175.html#introduction">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/proportion-eba175.html#setup">Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/proportion-eba175.html#access-pf7-data">Access Pf7 Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/proportion-eba175.html#combine-data-into-a-single-dataframe">Combine data into a single dataframe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/proportion-eba175.html#distribution-of-allelic-types-by-population">Distribution of allelic types by population</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/proportion-eba175.html#make-the-figure">Make the figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_examples/proportion-eba175.html#distribution-of-allelic-types-at-a-more-granular-level">Distribution of allelic types at a more granular level</a></li>
+</ul>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -271,10 +341,10 @@
             <p class="prev-next-title">Pf7 Data Access</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="api.html" title="next page">
+    <a class='right-next' id="next-link" href="analysis_examples/chloroquine-resistance-map.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Pf7 API</p>
+        <p class="prev-next-title">Plot Map of Chloroquine Resistance</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
