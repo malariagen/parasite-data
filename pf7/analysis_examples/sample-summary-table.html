@@ -118,6 +118,11 @@
   </label>
   <ul class="current">
    <li class="toctree-l2">
+    <a class="reference internal" href="PCoA.html">
+     Principal Coordinate Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="chloroquine-resistance-map.html">
      Plot Map of Chloroquine Resistance
     </a>
@@ -130,6 +135,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="variant-summary-table.html">
      Summarise Genetic Variants
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="barplot-samples-by-country.html">
+     Barplot of Samples by Country
     </a>
    </li>
    <li class="toctree-l2">
@@ -279,64 +289,59 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Summarise Samples by Administrative Division
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
    Introduction
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#setup">
    Setup
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#access-pf7-data-and-metadata">
    Access Pf7 Data and Metadata
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#produce-the-table-of-samples-per-admin-division-level-1">
    Produce the Table of Samples per Admin Division Level 1
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#aggredate-the-data-by-our-fields-of-interest">
-     Aggredate the data by our fields of interest
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aggregate-the-data-by-our-fields-of-interest">
+     Aggregate the data by our fields of interest
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#merge-these-aggregated-dataframes-and-drop-duplicate-columns">
      Merge these aggregated dataframes and drop duplicate columns
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#trim-off-the-number-from-region-column">
      Trim off the number from Region column
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-in-samples-with-unverified-identity">
      Add in samples with unverified identity
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-a-totals-row-at-the-bottom">
      Add a totals row at the bottom
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#table-legend">
      <strong>
       Table Legend
      </strong>
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#write-the-table-to-a-file">
      Write the table to a file
     </a>
@@ -363,64 +368,59 @@
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Summarise Samples by Administrative Division
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
    Introduction
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#setup">
    Setup
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#access-pf7-data-and-metadata">
    Access Pf7 Data and Metadata
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#produce-the-table-of-samples-per-admin-division-level-1">
    Produce the Table of Samples per Admin Division Level 1
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#aggredate-the-data-by-our-fields-of-interest">
-     Aggredate the data by our fields of interest
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aggregate-the-data-by-our-fields-of-interest">
+     Aggregate the data by our fields of interest
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#merge-these-aggregated-dataframes-and-drop-duplicate-columns">
      Merge these aggregated dataframes and drop duplicate columns
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#trim-off-the-number-from-region-column">
      Trim off the number from Region column
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-in-samples-with-unverified-identity">
      Add in samples with unverified identity
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-a-totals-row-at-the-bottom">
      Add a totals row at the bottom
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#table-legend">
      <strong>
       Table Legend
      </strong>
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#write-the-table-to-a-file">
      Write the table to a file
     </a>
@@ -438,14 +438,13 @@
                 
   <div class="section" id="summarise-samples-by-administrative-division">
 <h1>Summarise Samples by Administrative Division<a class="headerlink" href="#summarise-samples-by-administrative-division" title="Permalink to this headline">¶</a></h1>
-</div>
 <div class="section" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>This notebook recreates <a class="reference external" href="https://figshare.com/ndownloader/files/38478530">Supplementary Table 1</a> from the <a class="reference external" href="https://wellcomeopenresearch.org/articles/8-22">Pf7 paper</a> - a summary of samples broken down by major sub-population, country, and first administrative division. Samples are sorted so that their corresponding countries appear in a West to East order in the table.</p>
 <p><strong>This notebook should take approximately one minute to run.</strong></p>
 </div>
 <div class="section" id="setup">
-<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
 <p>Install the malariagen Python package:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -489,7 +488,7 @@
 </div>
 </div>
 <div class="section" id="access-pf7-data-and-metadata">
-<h1>Access Pf7 Data and Metadata<a class="headerlink" href="#access-pf7-data-and-metadata" title="Permalink to this headline">¶</a></h1>
+<h2>Access Pf7 Data and Metadata<a class="headerlink" href="#access-pf7-data-and-metadata" title="Permalink to this headline">¶</a></h2>
 <p>Here we define the data and metadata as pandas dataframes</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -501,7 +500,7 @@
 </div>
 </div>
 <div class="section" id="produce-the-table-of-samples-per-admin-division-level-1">
-<h1>Produce the Table of Samples per Admin Division Level 1<a class="headerlink" href="#produce-the-table-of-samples-per-admin-division-level-1" title="Permalink to this headline">¶</a></h1>
+<h2>Produce the Table of Samples per Admin Division Level 1<a class="headerlink" href="#produce-the-table-of-samples-per-admin-division-level-1" title="Permalink to this headline">¶</a></h2>
 <p>####Define a dictionary for sub-population names</p>
 <p>To make the eventual table output easier to interpret, we add a column ‘Region’ to the dataframe. The dictionary matches the codes for each major sub-population to their full names. E.g. ‘SA’ becomes ‘South America (SA)’ in the ‘Region’ column.</p>
 <p>We initially give a numeric prefix to the sub-populations so that they will appear in our desired order (west to east) in the table. This will be removed later on.</p>
@@ -539,8 +538,8 @@ We already have longitude information for country and admin division which we co
 </div>
 </div>
 </div>
-<div class="section" id="aggredate-the-data-by-our-fields-of-interest">
-<h2>Aggredate the data by our fields of interest<a class="headerlink" href="#aggredate-the-data-by-our-fields-of-interest" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="aggregate-the-data-by-our-fields-of-interest">
+<h3>Aggregate the data by our fields of interest<a class="headerlink" href="#aggregate-the-data-by-our-fields-of-interest" title="Permalink to this headline">¶</a></h3>
 <p>Here we group by Region, Country, Admin level 1 and count the number of sequenced samples, then output to a dataframe, then order the locations from West to East based on country.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -577,7 +576,7 @@ We already have longitude information for country and admin division which we co
 </div>
 </div>
 <div class="section" id="merge-these-aggregated-dataframes-and-drop-duplicate-columns">
-<h2>Merge these aggregated dataframes and drop duplicate columns<a class="headerlink" href="#merge-these-aggregated-dataframes-and-drop-duplicate-columns" title="Permalink to this headline">¶</a></h2>
+<h3>Merge these aggregated dataframes and drop duplicate columns<a class="headerlink" href="#merge-these-aggregated-dataframes-and-drop-duplicate-columns" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table_df</span> <span class="o">=</span> <span class="p">(</span>
@@ -592,7 +591,7 @@ We already have longitude information for country and admin division which we co
 </div>
 </div>
 <div class="section" id="trim-off-the-number-from-region-column">
-<h2>Trim off the number from Region column<a class="headerlink" href="#trim-off-the-number-from-region-column" title="Permalink to this headline">¶</a></h2>
+<h3>Trim off the number from Region column<a class="headerlink" href="#trim-off-the-number-from-region-column" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove the first 3 characters from each value in the column</span>
@@ -603,7 +602,7 @@ We already have longitude information for country and admin division which we co
 </div>
 </div>
 <div class="section" id="add-in-samples-with-unverified-identity">
-<h2>Add in samples with unverified identity<a class="headerlink" href="#add-in-samples-with-unverified-identity" title="Permalink to this headline">¶</a></h2>
+<h3>Add in samples with unverified identity<a class="headerlink" href="#add-in-samples-with-unverified-identity" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get our unverified location samples and count them</span>
@@ -630,7 +629,7 @@ We already have longitude information for country and admin division which we co
 </div>
 </div>
 <div class="section" id="add-a-totals-row-at-the-bottom">
-<h2>Add a totals row at the bottom<a class="headerlink" href="#add-a-totals-row-at-the-bottom" title="Permalink to this headline">¶</a></h2>
+<h3>Add a totals row at the bottom<a class="headerlink" href="#add-a-totals-row-at-the-bottom" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">total_samps</span> <span class="o">=</span> <span class="n">table_df_ui</span><span class="p">[</span><span class="s1">&#39;Sequenced samples&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="s1">&#39;sum&#39;</span><span class="p">)</span>
@@ -1453,11 +1452,11 @@ We already have longitude information for country and admin division which we co
 </div>
 </div>
 <div class="section" id="table-legend">
-<h2><strong>Table Legend</strong><a class="headerlink" href="#table-legend" title="Permalink to this headline">¶</a></h2>
+<h3><strong>Table Legend</strong><a class="headerlink" href="#table-legend" title="Permalink to this headline">¶</a></h3>
 <p>Supplementary Table 1. Breakdown of analysis set samples by geography. Sites are divided into ten populations as described in the main text. Note that a) samples from Kisumu in western Kenya have been assigned to the Africa - Northeast (AF-NE) population, whereas samples from Kilifi in southern Kenya have been assigned to the Africa - East (AF-E) population, b) samples from Odisha and West Bengal in India to the west of Bangladesh have been assigned to the Asia - South Asia - West (AS-S-E) population, whereas samples from Tripura in India to the east of Bangladesh have been assigned to the Asia - South Asia - East (AS-S-FE) population and c) samples from Ranong and Tak in western Thailand have been assigned to the Western SE Asia (AS-SE-W) region, whereas samples from Sisakhet in eastern Thailand have been assigned to the Eastern SE Asia (AS-SE-E) region. 10 returning travellers were reported as returning from Ghana (3), Kenya (2), Uganda (2), Mozambique (1) and Papua, Indonesia (2) and were excluded from analysis. 65 samples which were identified as lab strains were also excluded from analysis.</p>
 </div>
 <div class="section" id="write-the-table-to-a-file">
-<h2>Write the table to a file<a class="headerlink" href="#write-the-table-to-a-file" title="Permalink to this headline">¶</a></h2>
+<h3>Write the table to a file<a class="headerlink" href="#write-the-table-to-a-file" title="Permalink to this headline">¶</a></h3>
 <p>We can output this to a location in Google Drive</p>
 <p>First we need to connect Google Drive by running the following:</p>
 <div class="cell docutils container">
@@ -1480,6 +1479,7 @@ We already have longitude information for country and admin division which we co
 <span class="c1"># Change the file name if you wish to call it something else</span>
 <span class="n">table_df_final</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s1">&#39;/content/drive/My Drive/Pf7_supp_table1.xlsx&#39;</span><span class="p">)</span>
 </pre></div>
+</div>
 </div>
 </div>
 </div>

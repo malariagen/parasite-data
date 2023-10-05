@@ -52,7 +52,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Summarise Samples by Administrative Division" href="sample-summary-table.html" />
-    <link rel="prev" title="Pf7 Analysis Examples" href="../examples.html" />
+    <link rel="prev" title="Principal Coordinate Analysis" href="PCoA.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -117,6 +117,11 @@
    </i>
   </label>
   <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="PCoA.html">
+     Principal Coordinate Analysis
+    </a>
+   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Plot Map of Chloroquine Resistance
@@ -130,6 +135,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="variant-summary-table.html">
      Summarise Genetic Variants
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="barplot-samples-by-country.html">
+     Barplot of Samples by Country
     </a>
    </li>
    <li class="toctree-l2">
@@ -279,76 +289,69 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Plot Map of Chloroquine Resistance
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
    Introduction
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#setup">
    Setup
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#access-pf7-data">
-     Access Pf7 Data
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#access-pf7-data">
+   Access Pf7 Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#drug-resistance-in-p-falciparum">
+     Drug resistance in
+     <em>
+      P. falciparum
+     </em>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#drug-resistance-in-p-falciparum">
-       Drug resistance in
-       <em>
-        P. falciparum
-       </em>
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#combine-data-into-a-single-dataframe">
    Combine data into a single dataframe
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#figure-plotting-setup">
    Figure plotting setup
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#create-data-summaries">
    Create data summaries
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#aggregation-functions">
      1. Aggregation functions
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#data-filtering-and-summaries">
      2. Data filtering and summaries
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#plot-the-figure">
    Plot the figure
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#load-map-images">
      Load map images
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-main-plot-commands">
      The main plot commands
     </a>
@@ -375,76 +378,69 @@
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Plot Map of Chloroquine Resistance
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
    Introduction
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#setup">
    Setup
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#access-pf7-data">
-     Access Pf7 Data
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#access-pf7-data">
+   Access Pf7 Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#drug-resistance-in-p-falciparum">
+     Drug resistance in
+     <em>
+      P. falciparum
+     </em>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#drug-resistance-in-p-falciparum">
-       Drug resistance in
-       <em>
-        P. falciparum
-       </em>
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#combine-data-into-a-single-dataframe">
    Combine data into a single dataframe
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#figure-plotting-setup">
    Figure plotting setup
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#create-data-summaries">
    Create data summaries
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#aggregation-functions">
      1. Aggregation functions
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#data-filtering-and-summaries">
      2. Data filtering and summaries
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#plot-the-figure">
    Plot the figure
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#load-map-images">
      Load map images
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-main-plot-commands">
      The main plot commands
     </a>
@@ -462,14 +458,13 @@
                 
   <div class="section" id="plot-map-of-chloroquine-resistance">
 <h1>Plot Map of Chloroquine Resistance<a class="headerlink" href="#plot-map-of-chloroquine-resistance" title="Permalink to this headline">¶</a></h1>
-</div>
 <div class="section" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>This notebook recreates Figure 2 from the <a class="reference external" href="https://wellcomeopenresearch.org/articles/8-22">Pf7 paper</a> - a map of West African sampling locations with levels of Chloroquine resistance plotted as pie charts.</p>
 <p><strong>This notebook should take approximately two minutes to run.</strong></p>
 </div>
 <div class="section" id="setup">
-<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
 <p>We will use a package called cartopy for making the maps in this notebook. It needs to be installed:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -568,6 +563,7 @@ Successfully installed cartopy-0.22.0
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mounted at /content/drive
 </pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -932,9 +928,8 @@ Pf7_inferred_resist 100%[===================&gt;]   2.07M  3.77MB/s    in 0.5s
 <p>For more information on the drug chloroquine, you can <a class="reference external" href="https://en.wikipedia.org/wiki/Chloroquine">read here</a></p>
 </div>
 </div>
-</div>
 <div class="section" id="combine-data-into-a-single-dataframe">
-<h1>Combine data into a single dataframe<a class="headerlink" href="#combine-data-into-a-single-dataframe" title="Permalink to this headline">¶</a></h1>
+<h2>Combine data into a single dataframe<a class="headerlink" href="#combine-data-into-a-single-dataframe" title="Permalink to this headline">¶</a></h2>
 <p>In order to create the final figure it is easier to have all relevant data combined.</p>
 <p>For the final figure we need to keep:</p>
 <ul class="simple">
@@ -1311,7 +1306,7 @@ Pf7_inferred_resist 100%[===================&gt;]   2.07M  3.77MB/s    in 0.5s
 </div>
 </div>
 <div class="section" id="figure-plotting-setup">
-<h1>Figure plotting setup<a class="headerlink" href="#figure-plotting-setup" title="Permalink to this headline">¶</a></h1>
+<h2>Figure plotting setup<a class="headerlink" href="#figure-plotting-setup" title="Permalink to this headline">¶</a></h2>
 <p>Here we define a few items which will help us to plot the Chloroquine figure.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1371,10 +1366,10 @@ Pf7_inferred_resist 100%[===================&gt;]   2.07M  3.77MB/s    in 0.5s
 </div>
 </div>
 <div class="section" id="create-data-summaries">
-<h1>Create data summaries<a class="headerlink" href="#create-data-summaries" title="Permalink to this headline">¶</a></h1>
+<h2>Create data summaries<a class="headerlink" href="#create-data-summaries" title="Permalink to this headline">¶</a></h2>
 <p>These will be used to build the final figure</p>
 <div class="section" id="aggregation-functions">
-<h2>1. Aggregation functions<a class="headerlink" href="#aggregation-functions" title="Permalink to this headline">¶</a></h2>
+<h3>1. Aggregation functions<a class="headerlink" href="#aggregation-functions" title="Permalink to this headline">¶</a></h3>
 <p>Here we define two functions <strong>proportion_agg</strong> and <strong>n_agg</strong>.</p>
 <p>Proportion_agg summarises the proportion of samples listed as ‘Resistant’ out of all samples which are listed as either ‘Sensitive’ or ‘Resistant’ - i.e. not ‘Undetermined’. It returns a pandas series object with this information.</p>
 <p>n_agg does the same but for the counts, rather than proportions.</p>
@@ -1408,7 +1403,7 @@ Pf7_inferred_resist 100%[===================&gt;]   2.07M  3.77MB/s    in 0.5s
 </div>
 </div>
 <div class="section" id="data-filtering-and-summaries">
-<h2>2. Data filtering and summaries<a class="headerlink" href="#data-filtering-and-summaries" title="Permalink to this headline">¶</a></h2>
+<h3>2. Data filtering and summaries<a class="headerlink" href="#data-filtering-and-summaries" title="Permalink to this headline">¶</a></h3>
 <p>Here we create further data subsets and summaries to help with plotting the final figure.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1510,9 +1505,9 @@ Name: Location, dtype: object
 </div>
 </div>
 <div class="section" id="plot-the-figure">
-<h1>Plot the figure<a class="headerlink" href="#plot-the-figure" title="Permalink to this headline">¶</a></h1>
+<h2>Plot the figure<a class="headerlink" href="#plot-the-figure" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="load-map-images">
-<h2>Load map images<a class="headerlink" href="#load-map-images" title="Permalink to this headline">¶</a></h2>
+<h3>Load map images<a class="headerlink" href="#load-map-images" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># First we need to download the map image file via a web link:</span>
@@ -1560,7 +1555,7 @@ NE1_50M_SR_W.zip    100%[===================&gt;]  84.32M  35.9MB/s    in 2.4s
 </div>
 </div>
 <div class="section" id="the-main-plot-commands">
-<h2>The main plot commands<a class="headerlink" href="#the-main-plot-commands" title="Permalink to this headline">¶</a></h2>
+<h3>The main plot commands<a class="headerlink" href="#the-main-plot-commands" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the figure resolution - higher values = higher resolution</span>
@@ -1709,6 +1704,7 @@ NE1_50M_SR_W.zip    100%[===================&gt;]  84.32M  35.9MB/s    in 2.4s
 <p><strong>Figure legend</strong>: Heterogenity of chloroquine resistance in west Africa. Inferred resistance levels to chloroquine between 2013 and 2016 in different administrative divisions within West Africa. We only include locations for which we have at least 25 samples with an unambiguous inferred chloroquine resistance phenotype. Note the very different chloroquine resistance profiles in nearby locations, e.g. Volta, Ghana vs Atlantique, Benin.</p>
 </div>
 </div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -1735,11 +1731,11 @@ NE1_50M_SR_W.zip    100%[===================&gt;]  84.32M  35.9MB/s    in 2.4s
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../examples.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="PCoA.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Pf7 Analysis Examples</p>
+            <p class="prev-next-title">Principal Coordinate Analysis</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="sample-summary-table.html" title="next page">

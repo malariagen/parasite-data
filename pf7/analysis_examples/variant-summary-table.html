@@ -51,7 +51,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Neighbour Joining Tree for sWGA vs. gDNA" href="neighbour-joining-tree-swga.html" />
+    <link rel="next" title="Barplot of Samples by Country" href="barplot-samples-by-country.html" />
     <link rel="prev" title="Summarise Samples by Administrative Division" href="sample-summary-table.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -118,6 +118,11 @@
   </label>
   <ul class="current">
    <li class="toctree-l2">
+    <a class="reference internal" href="PCoA.html">
+     Principal Coordinate Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="chloroquine-resistance-map.html">
      Plot Map of Chloroquine Resistance
     </a>
@@ -130,6 +135,11 @@
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Summarise Genetic Variants
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="barplot-samples-by-country.html">
+     Barplot of Samples by Country
     </a>
    </li>
    <li class="toctree-l2">
@@ -279,47 +289,40 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Summarise Genetic Variants
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
    Introduction
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#setup">
-     Setup
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#access-pf7-data">
-     Access Pf7 Data
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#extract-variables-of-interest-for-table">
-     Extract variables of interest for table
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#make-a-new-dataframe-for-the-final-table">
-     Make a new dataframe for the final table
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#make-the-final-table">
-     Make the final table
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#write-the-table-to-a-file">
-     Write the table to a file
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#access-pf7-data">
+   Access Pf7 Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#extract-variables-of-interest-for-table">
+   Extract variables of interest for table
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#make-a-new-dataframe-for-the-final-table">
+   Make a new dataframe for the final table
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#make-the-final-table">
+   Make the final table
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#write-the-table-to-a-file">
+   Write the table to a file
+  </a>
  </li>
 </ul>
 
@@ -341,47 +344,40 @@
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Summarise Genetic Variants
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
    Introduction
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#setup">
-     Setup
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#access-pf7-data">
-     Access Pf7 Data
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#extract-variables-of-interest-for-table">
-     Extract variables of interest for table
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#make-a-new-dataframe-for-the-final-table">
-     Make a new dataframe for the final table
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#make-the-final-table">
-     Make the final table
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#write-the-table-to-a-file">
-     Write the table to a file
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#access-pf7-data">
+   Access Pf7 Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#extract-variables-of-interest-for-table">
+   Extract variables of interest for table
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#make-a-new-dataframe-for-the-final-table">
+   Make a new dataframe for the final table
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#make-the-final-table">
+   Make the final table
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#write-the-table-to-a-file">
+   Write the table to a file
+  </a>
  </li>
 </ul>
 
@@ -394,12 +390,12 @@
                 
   <div class="section" id="summarise-genetic-variants">
 <h1>Summarise Genetic Variants<a class="headerlink" href="#summarise-genetic-variants" title="Permalink to this headline">¶</a></h1>
-</div>
 <div class="section" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>This notebook recreates <a class="reference external" href="https://figshare.com/ndownloader/files/38478530">Supplementary Table 3</a> from the <a class="reference external" href="https://wellcomeopenresearch.org/articles/8-22">Pf7 paper</a>.</p>
 <p>This table summarises the quantities and types of genetic variants found in the Pf7 dataset.</p>
 <p><strong>This notebook should take approximately two minutes to run.</strong></p>
+</div>
 <div class="section" id="setup">
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
 <p>Install the malariagen Python package:</p>
@@ -2637,10 +2633,10 @@ Data variables:
             <p class="prev-next-title">Summarise Samples by Administrative Division</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="neighbour-joining-tree-swga.html" title="next page">
+    <a class='right-next' id="next-link" href="barplot-samples-by-country.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Neighbour Joining Tree for sWGA vs. gDNA</p>
+        <p class="prev-next-title">Barplot of Samples by Country</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -52,7 +52,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Plot eba175 C Allele Proportions" href="proportion-eba175.html" />
-    <link rel="prev" title="Summarise Genetic Variants" href="variant-summary-table.html" />
+    <link rel="prev" title="Barplot of Samples by Country" href="barplot-samples-by-country.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -118,6 +118,11 @@
   </label>
   <ul class="current">
    <li class="toctree-l2">
+    <a class="reference internal" href="PCoA.html">
+     Principal Coordinate Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="chloroquine-resistance-map.html">
      Plot Map of Chloroquine Resistance
     </a>
@@ -130,6 +135,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="variant-summary-table.html">
      Summarise Genetic Variants
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="barplot-samples-by-country.html">
+     Barplot of Samples by Country
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -279,142 +289,135 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Neighbour Joining Tree for sWGA vs. gDNA
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
    Introduction
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#neighbour-joining-trees">
      Neighbour Joining Trees
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#activate-r-magic">
    Activate R magic
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#setup">
    Setup
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#access-the-data">
-     Access the data
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-a-dataframe-for-the-sample-data-in-r">
-     Create a dataframe for the sample data in R
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#begin-the-njt-process">
-     Begin the NJT Process
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#access-the-data">
+   Access the data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-a-dataframe-for-the-sample-data-in-r">
+   Create a dataframe for the sample data in R
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#begin-the-njt-process">
+   Begin the NJT Process
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-ghana-upper-east-2015">
    A) Ghana, Upper East, 2015
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-a-nj-tree-object">
      Create a NJ tree object
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#plotting-functions-for-the-njt">
      Plotting Functions for the NJT
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-a-dataframe-with-sample-type-colour-assignments">
      Create a dataframe with sample type + colour assignments
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#put-all-the-functions-into-action">
      Put all the functions into action
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#plot-the-njt">
      Plot the NJT
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#write-the-figure-to-a-file">
      Write the figure to a file
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#continue-on-to-make-the-rest-of-the-figure">
-     Continue on to make the rest of the figure
-    </a>
-   </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#continue-on-to-make-the-rest-of-the-figure">
+   Continue on to make the rest of the figure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#b-kenya-kilifi-2007-2012">
    B) Kenya, Kilifi, 2007-2012
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#redfine-pass-samples">
      Redfine pass_samples
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#remake-the-tree-object">
      Remake the tree object
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#redefine-groups-for-our-current-pass-samples-variable">
      Redefine ‘groups’ for our current ‘pass_samples’ variable
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#plot-the-new-njt">
      Plot the new NJT
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
      Write the figure to a file
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#c-cambodia-pursat-2016">
    C) Cambodia, Pursat, 2016
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id2">
      Write the figure to a file
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#d-vietnam-binh-phuoc-2016">
    D) Vietnam, Binh Phuoc, 2016
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id3">
      Write the figure to a file
     </a>
@@ -441,142 +444,135 @@
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Neighbour Joining Tree for sWGA vs. gDNA
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
    Introduction
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#neighbour-joining-trees">
      Neighbour Joining Trees
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#activate-r-magic">
    Activate R magic
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#setup">
    Setup
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#access-the-data">
-     Access the data
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-a-dataframe-for-the-sample-data-in-r">
-     Create a dataframe for the sample data in R
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#begin-the-njt-process">
-     Begin the NJT Process
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#access-the-data">
+   Access the data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-a-dataframe-for-the-sample-data-in-r">
+   Create a dataframe for the sample data in R
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#begin-the-njt-process">
+   Begin the NJT Process
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-ghana-upper-east-2015">
    A) Ghana, Upper East, 2015
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-a-nj-tree-object">
      Create a NJ tree object
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#plotting-functions-for-the-njt">
      Plotting Functions for the NJT
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-a-dataframe-with-sample-type-colour-assignments">
      Create a dataframe with sample type + colour assignments
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#put-all-the-functions-into-action">
      Put all the functions into action
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#plot-the-njt">
      Plot the NJT
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#write-the-figure-to-a-file">
      Write the figure to a file
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#continue-on-to-make-the-rest-of-the-figure">
-     Continue on to make the rest of the figure
-    </a>
-   </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#continue-on-to-make-the-rest-of-the-figure">
+   Continue on to make the rest of the figure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#b-kenya-kilifi-2007-2012">
    B) Kenya, Kilifi, 2007-2012
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#redfine-pass-samples">
      Redfine pass_samples
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#remake-the-tree-object">
      Remake the tree object
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#redefine-groups-for-our-current-pass-samples-variable">
      Redefine ‘groups’ for our current ‘pass_samples’ variable
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#plot-the-new-njt">
      Plot the new NJT
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
      Write the figure to a file
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#c-cambodia-pursat-2016">
    C) Cambodia, Pursat, 2016
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id2">
      Write the figure to a file
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#d-vietnam-binh-phuoc-2016">
    D) Vietnam, Binh Phuoc, 2016
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id3">
      Write the figure to a file
     </a>
@@ -594,22 +590,21 @@
                 
   <div class="section" id="neighbour-joining-tree-for-swga-vs-gdna">
 <h1>Neighbour Joining Tree for sWGA vs. gDNA<a class="headerlink" href="#neighbour-joining-tree-for-swga-vs-gdna" title="Permalink to this headline">¶</a></h1>
-</div>
 <div class="section" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>This notebook recreates <a class="reference external" href="https://figshare.com/ndownloader/files/38478530">Supplementary Figure 3</a> from the <a class="reference external" href="https://wellcomeopenresearch.org/articles/8-22">Pf7 paper</a> - a neighbour-joining tree (NJT) comparing selective whole-genome amplification <strong>(sWGA)</strong> with whole genome sequencing <strong>(WGS)</strong> samples.</p>
 <p>The tree demonstrates the lack of bias due to amplification/sequencing methods in Pf7.</p>
 <p>Unlike most of the other example notebooks in the Pf7 data resource, this notebook runs using predominantly R code rather than Python. The main reason for this is that the package used to build the NJT, ape, has better options for customising and visualising the tree than currently available Python libraries.</p>
 <p><strong>This notebook should take approximately five minutes to run.</strong></p>
 <div class="section" id="neighbour-joining-trees">
-<h2>Neighbour Joining Trees<a class="headerlink" href="#neighbour-joining-trees" title="Permalink to this headline">¶</a></h2>
+<h3>Neighbour Joining Trees<a class="headerlink" href="#neighbour-joining-trees" title="Permalink to this headline">¶</a></h3>
 <p>A neighbour joining tree, or NJT, is a type of distance-based tree used to visualise population structure for a set of samples. A tree will plot more closely related samples on nearby ‘branches’, while more distantly related samples appear farther apart in a tree.</p>
 <p>A NJT makes use of a distance matrix, which contains information on how near/distant samples are in an evolutionary sense. In the case of the Pf7 data, this distance matrix was calculated using high-quality bi-allelic single nucleotide polymorphisms (SNPs) from across the Pf genome. A NJT is created by joining the closest samples (or <strong>neighbours</strong>) over and over until the final tree is built.</p>
 <p>For this use case, a NJT is a good choice because it is less computationally expensive than other trees such as Maximum Likelihood while still being a robust method for analysing genetic structure. You can read the original paper on the method <a class="reference external" href="https://academic.oup.com/mbe/article/4/4/406/1029664">here</a> and a more user-friendly guide to the concept <a class="reference external" href="https://www.tenderisthebyte.com/blog/2022/08/31/neighbor-joining-trees/#:~:text=The%20method%20was%20first%20introduced,via%20an%20iterative%20clustering%20process.">here</a></p>
 </div>
 </div>
 <div class="section" id="activate-r-magic">
-<h1>Activate R magic<a class="headerlink" href="#activate-r-magic" title="Permalink to this headline">¶</a></h1>
+<h2>Activate R magic<a class="headerlink" href="#activate-r-magic" title="Permalink to this headline">¶</a></h2>
 <p>This notebook is running from a Python kernel so that we can load the MalariaGEN python package with a “pip install” command.</p>
 <p>As mentioned, we need the rest of the notebook to run with R. To enable this, we activate <strong>R magic commands</strong>. This means that anytime a code cell starts with <strong>“%%R”</strong>, it will run R code within the cell.</p>
 <div class="cell docutils container">
@@ -622,7 +617,7 @@
 </div>
 </div>
 <div class="section" id="setup">
-<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
 <p>Install the malariagen package.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -692,6 +687,7 @@
 <span class="n">library</span><span class="p">(</span><span class="n">RcppCNPy</span><span class="p">)</span>
 <span class="n">library</span><span class="p">(</span><span class="n">reticulate</span><span class="p">)</span>
 </pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -1125,9 +1121,8 @@ df_samples$population_colour &lt;- ifelse(df_samples$`Sample type` == &quot;gDNA
 </div>
 </div>
 </div>
-</div>
 <div class="section" id="a-ghana-upper-east-2015">
-<h1>A) Ghana, Upper East, 2015<a class="headerlink" href="#a-ghana-upper-east-2015" title="Permalink to this headline">¶</a></h1>
+<h2>A) Ghana, Upper East, 2015<a class="headerlink" href="#a-ghana-upper-east-2015" title="Permalink to this headline">¶</a></h2>
 <p>To generate the first NJT of the figure, we must subset the metadata and the distance matrix to include only samples which meet the following criteria:</p>
 <ul class="simple">
 <li><p>Passed Quality Control (QC), denoted as ‘Analysis set’</p></li>
@@ -1174,7 +1169,7 @@ aggregate(Sample ~ Country+`Sample type`, df_samples[pass_samples, ], FUN=length
 </div>
 </div>
 <div class="section" id="create-a-nj-tree-object">
-<h2>Create a NJ tree object<a class="headerlink" href="#create-a-nj-tree-object" title="Permalink to this headline">¶</a></h2>
+<h3>Create a NJ tree object<a class="headerlink" href="#create-a-nj-tree-object" title="Permalink to this headline">¶</a></h3>
 <p>We use the ‘nj’ command from ape on a subset of the distance matrix, defined as the ‘TRUE’ component of the logical vector we created earlier.</p>
 <p>This should be a matrix of 225 x 225 samples.</p>
 <div class="cell docutils container">
@@ -1187,7 +1182,7 @@ aggregate(Sample ~ Country+`Sample type`, df_samples[pass_samples, ], FUN=length
 </div>
 </div>
 <div class="section" id="plotting-functions-for-the-njt">
-<h2>Plotting Functions for the NJT<a class="headerlink" href="#plotting-functions-for-the-njt" title="Permalink to this headline">¶</a></h2>
+<h3>Plotting Functions for the NJT<a class="headerlink" href="#plotting-functions-for-the-njt" title="Permalink to this headline">¶</a></h3>
 <p>Below are a series of functions which plot the NJT.</p>
 <ol class="simple">
 <li><p><strong>computeEdgeGroupCounts</strong>: This function creates a matrix which tracks the counts of groups associated with edges of the NJT. Edge is another word for branch within a tree. It requires a ‘phylotree’ object and a list of labels for groups ‘labelgroups’.</p></li>
@@ -1281,7 +1276,7 @@ assignGroupColorToUniqueEdges &lt;- function(phylotree, edge_group_counts, group
 </div>
 </div>
 <div class="section" id="create-a-dataframe-with-sample-type-colour-assignments">
-<h2>Create a dataframe with sample type + colour assignments<a class="headerlink" href="#create-a-dataframe-with-sample-type-colour-assignments" title="Permalink to this headline">¶</a></h2>
+<h3>Create a dataframe with sample type + colour assignments<a class="headerlink" href="#create-a-dataframe-with-sample-type-colour-assignments" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>%%R
@@ -1320,7 +1315,7 @@ colourings_population
 </div>
 </div>
 <div class="section" id="put-all-the-functions-into-action">
-<h2>Put all the functions into action<a class="headerlink" href="#put-all-the-functions-into-action" title="Permalink to this headline">¶</a></h2>
+<h3>Put all the functions into action<a class="headerlink" href="#put-all-the-functions-into-action" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>%%R
@@ -1336,7 +1331,7 @@ edge_colors = unlist(assignGroupColorToUniqueEdges(
 </div>
 </div>
 <div class="section" id="plot-the-njt">
-<h2>Plot the NJT<a class="headerlink" href="#plot-the-njt" title="Permalink to this headline">¶</a></h2>
+<h3>Plot the NJT<a class="headerlink" href="#plot-the-njt" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">R</span>
@@ -1356,7 +1351,7 @@ edge_colors = unlist(assignGroupColorToUniqueEdges(
 <p><strong>Figure legend</strong>: Lack of bias in population structure due to use of sWGA from Ghana, Upper East, in 2015. Genome-wide unrooted neighbour-joining tree showing population structure where one subset of samples were sequenced from genomic DNA (gDNA, n = 61) material (shown as blue lines), and a second subset of samples were sequenced using sWGA material (n = 164, shown in red).</p>
 </div>
 <div class="section" id="write-the-figure-to-a-file">
-<h2>Write the figure to a file<a class="headerlink" href="#write-the-figure-to-a-file" title="Permalink to this headline">¶</a></h2>
+<h3>Write the figure to a file<a class="headerlink" href="#write-the-figure-to-a-file" title="Permalink to this headline">¶</a></h3>
 <p>We can output this to a location in Google Drive</p>
 <p>First we need to connect Google Drive by running the following:</p>
 <div class="cell docutils container">
@@ -1396,12 +1391,12 @@ edge_colors = unlist(assignGroupColorToUniqueEdges(
 </div>
 </div>
 </div>
+</div>
 <div class="section" id="continue-on-to-make-the-rest-of-the-figure">
 <h2>Continue on to make the rest of the figure<a class="headerlink" href="#continue-on-to-make-the-rest-of-the-figure" title="Permalink to this headline">¶</a></h2>
 </div>
-</div>
 <div class="section" id="b-kenya-kilifi-2007-2012">
-<h1>B) Kenya, Kilifi, 2007-2012<a class="headerlink" href="#b-kenya-kilifi-2007-2012" title="Permalink to this headline">¶</a></h1>
+<h2>B) Kenya, Kilifi, 2007-2012<a class="headerlink" href="#b-kenya-kilifi-2007-2012" title="Permalink to this headline">¶</a></h2>
 <p>For the following three plots, we only need to re-run a section of the above code, in order to:</p>
 <ul class="simple">
 <li><p>Redefine pass_samples as our new subset of interest</p></li>
@@ -1411,7 +1406,7 @@ edge_colors = unlist(assignGroupColorToUniqueEdges(
 </ul>
 <p>This is because all the plotting functions and the sampletype:colour association dataframe above can be used for any NJT plot. The code blocks that change the plot are the four listed above.</p>
 <div class="section" id="redfine-pass-samples">
-<h2>Redfine pass_samples<a class="headerlink" href="#redfine-pass-samples" title="Permalink to this headline">¶</a></h2>
+<h3>Redfine pass_samples<a class="headerlink" href="#redfine-pass-samples" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>%%R
@@ -1454,7 +1449,7 @@ aggregate(Sample ~ Country+`Sample type`, df_samples[pass_samples, ], FUN=length
 </div>
 </div>
 <div class="section" id="remake-the-tree-object">
-<h2>Remake the tree object<a class="headerlink" href="#remake-the-tree-object" title="Permalink to this headline">¶</a></h2>
+<h3>Remake the tree object<a class="headerlink" href="#remake-the-tree-object" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">R</span>
@@ -1465,7 +1460,7 @@ aggregate(Sample ~ Country+`Sample type`, df_samples[pass_samples, ], FUN=length
 </div>
 </div>
 <div class="section" id="redefine-groups-for-our-current-pass-samples-variable">
-<h2>Redefine ‘groups’ for our current ‘pass_samples’ variable<a class="headerlink" href="#redefine-groups-for-our-current-pass-samples-variable" title="Permalink to this headline">¶</a></h2>
+<h3>Redefine ‘groups’ for our current ‘pass_samples’ variable<a class="headerlink" href="#redefine-groups-for-our-current-pass-samples-variable" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>%%R
@@ -1481,7 +1476,7 @@ edge_colors = unlist(assignGroupColorToUniqueEdges(
 </div>
 </div>
 <div class="section" id="plot-the-new-njt">
-<h2>Plot the new NJT<a class="headerlink" href="#plot-the-new-njt" title="Permalink to this headline">¶</a></h2>
+<h3>Plot the new NJT<a class="headerlink" href="#plot-the-new-njt" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">R</span>
@@ -1501,7 +1496,7 @@ edge_colors = unlist(assignGroupColorToUniqueEdges(
 <p><strong>Figure legend</strong>: Lack of bias in population structure due to use of sWGA from Kenya, Kilifi, between 2007 - 2012. Genome-wide unrooted neighbour-joining tree showing population structure where one subset of samples were sequenced from genomic DNA (gDNA, n = 151) material (shown as blue lines), and a second subset of samples were sequenced using sWGA material (n = 222, shown in red).</p>
 </div>
 <div class="section" id="id1">
-<h2>Write the figure to a file<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h3>Write the figure to a file<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>If you have already mounted your Google Drive for the above plot, you do not need to run it again.</p>
 <p>If you need to mount it again, uncomment the following code:</p>
 <div class="cell docutils container">
@@ -1537,7 +1532,7 @@ edge_colors = unlist(assignGroupColorToUniqueEdges(
 </div>
 </div>
 <div class="section" id="c-cambodia-pursat-2016">
-<h1>C) Cambodia, Pursat, 2016<a class="headerlink" href="#c-cambodia-pursat-2016" title="Permalink to this headline">¶</a></h1>
+<h2>C) Cambodia, Pursat, 2016<a class="headerlink" href="#c-cambodia-pursat-2016" title="Permalink to this headline">¶</a></h2>
 <p>We will now repeat the above steps to generate a NJT in exactly the same way. This time we will look at samples from Cambodia, Pursat, in 2016.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1615,7 +1610,7 @@ edge_colors = unlist(assignGroupColorToUniqueEdges(
 </div>
 <p><strong>Figure legend</strong>: Lack of bias in population structure due to use of sWGA from Cambodia, Pursat, in 2016. Genome-wide unrooted neighbour-joining tree showing population structure where one subset of samples were sequenced from genomic DNA (gDNA, n = 30) material (shown as blue lines), and a second subset of samples were sequenced using sWGA material (n = 22, shown in red).</p>
 <div class="section" id="id2">
-<h2>Write the figure to a file<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h3>Write the figure to a file<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>If you have already mounted your Google Drive for the above plot, you do not need to run it again.</p>
 <p>If you need to mount it again, uncomment the following code:</p>
 <div class="cell docutils container">
@@ -1651,7 +1646,7 @@ edge_colors = unlist(assignGroupColorToUniqueEdges(
 </div>
 </div>
 <div class="section" id="d-vietnam-binh-phuoc-2016">
-<h1>D) Vietnam, Binh Phuoc, 2016<a class="headerlink" href="#d-vietnam-binh-phuoc-2016" title="Permalink to this headline">¶</a></h1>
+<h2>D) Vietnam, Binh Phuoc, 2016<a class="headerlink" href="#d-vietnam-binh-phuoc-2016" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>%%R
@@ -1728,7 +1723,7 @@ edge_colors = unlist(assignGroupColorToUniqueEdges(
 </div>
 <p><strong>Figure legend</strong>: Lack of bias in population structure due to use of sWGA from Vietnam, Binh Phuoc, in 2016. Genome-wide unrooted neighbour-joining tree showing population structure where one subset of samples were sequenced from genomic DNA (gDNA, n = 39) material (shown as blue lines), and a second subset of samples were sequenced using sWGA material (n = 22, shown in red).</p>
 <div class="section" id="id3">
-<h2>Write the figure to a file<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<h3>Write the figure to a file<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>If you have already mounted your Google Drive for the above plot, you do not need to run it again.</p>
 <p>If you need to mount it again, uncomment the following code:</p>
 <div class="cell docutils container">
@@ -1765,6 +1760,7 @@ edge_colors = unlist(assignGroupColorToUniqueEdges(
 Now you should have four PDF files corresponding to the four panels of supplementary Figure 3 in the Pf7 paper.</p>
 </div>
 </div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -1791,11 +1787,11 @@ Now you should have four PDF files corresponding to the four panels of supplemen
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="variant-summary-table.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="barplot-samples-by-country.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Summarise Genetic Variants</p>
+            <p class="prev-next-title">Barplot of Samples by Country</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="proportion-eba175.html" title="next page">
