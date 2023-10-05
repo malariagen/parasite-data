@@ -1,6 +1,8 @@
 # Pf7 Analysis Examples
 
-The notebooks below provide examples of analyses for the Pf7 data release. 
+The notebooks below provide guided examples of analyses for the Pf7 data release. 
+
+All of these notebooks are executable with Google Colaboratory, a free interactive computing service. To run a notebook for yourself, simply click the launch icon (<i class=\"fas fa-rocket\"></i>) at the top of the notebook and select **"Google Colab"**. 
 
 ```{tableofcontents}
 ```
