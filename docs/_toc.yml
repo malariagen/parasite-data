@@ -6,9 +6,11 @@ parts:
       - file: pf7/Data_access.ipynb
       - file: pf7/examples.md
         sections:
+        - file: pf7/analysis_examples/PCoA.ipynb
         - file: pf7/analysis_examples/chloroquine-resistance-map.ipynb
         - file: pf7/analysis_examples/sample-summary-table.ipynb
         - file: pf7/analysis_examples/variant-summary-table.ipynb
+        - file: pf7/analysis_examples/barplot-samples-by-country.ipynb
         - file: pf7/analysis_examples/neighbour-joining-tree-swga.ipynb
         - file: pf7/analysis_examples/proportion-eba175.ipynb
       - file: pf7/api
