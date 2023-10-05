@@ -1,6 +1,6 @@
 title: MalariaGEN parasite data user guide
-author: Kathryn Murie
-copyright: "2021"
+author: MalariaGEN 
+copyright: "2023"
 logo: images/logo.png
 execute:
   execute_notebooks: "off"
