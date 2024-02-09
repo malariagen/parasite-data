@@ -6,21 +6,19 @@ parts:
       - file: pf7/Data_access.ipynb
       - file: pf7/examples.md
         sections:
-        title: Useful Genomics How-Tos
-        - file: pf7/analysis_examples/igv-notebook.ipynb
-        title: Summarise Pf7 Data
+        - file: pf7/analysis_examples/useful-how-tos.md
+          sections:
+          - file: pf7/analysis_examples/igv-notebook.ipynb
         - file: pf7/analysis_examples/sample-summary-table.ipynb
         - file: pf7/analysis_examples/sample-collection-over-time.ipynb
         - file: pf7/analysis_examples/barplot-samples-by-country.ipynb        
         - file: pf7/analysis_examples/variant-summary-table.ipynb
         - file: pf7/analysis_examples/global-sample-map.ipynb
-        title: Study Evolution Against Malaria Control Measures in Pf7
         - file: pf7/analysis_examples/drug-resistance-summary.ipynb
         - file: pf7/analysis_examples/chloroquine-resistance-map.ipynb
         - file: pf7/analysis_examples/summarise_hrp2_hrp3_deletions.ipynb
         - file: pf7/analysis_examples/visualise_hrp2_hrp3_deletions.ipynb
         - file: pf7/analysis_examples/csp-cterm-analysis.ipynb
-        title: Population Structure and Selection in Pf7
         - file: pf7/analysis_examples/PCoA.ipynb
         - file: pf7/analysis_examples/geographic-genetic-differentiation.ipynb
         - file: pf7/analysis_examples/neighbour-joining-tree-swga.ipynb
