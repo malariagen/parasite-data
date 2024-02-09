@@ -6,7 +6,7 @@ parts:
       - file: pf7/Data_access.ipynb
       - file: pf7/examples.md
         sections:
-          - caption: Useful Genomics How-Tos
+          - caption: Useful Genomics How Tos
             chapters:
               - file: pf7/analysis_examples/igv-notebook.ipynb
               - file: pf7/analysis_examples/sample-summary-table.ipynb
