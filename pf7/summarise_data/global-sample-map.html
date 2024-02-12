@@ -1,0 +1,2751 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plot Global Map of Samples &#8212; MalariaGEN parasite data user guide</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="*Pf7 Analysis Guides:**Study Evolution Against Malaria Control Measures" href="../evolution-malaria-control.html" />
+    <link rel="prev" title="Summarise Genetic Variants" href="variant-summary-table.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">MalariaGEN parasite data user guide</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../landing-page.html">
+   MalariaGEN parasite data user guide
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Pf7
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Data_access.html">
+   Pf7 Data Access
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../useful-how-tos.html">
+   <em>
+    <em>
+     Pf7 Analysis Guides
+    </em>
+    :
+   </em>
+   * Useful Genomics How-Tos
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../useful_how_tos/igv-notebook.html">
+     Visualizing Genomic Regions of Pf7 Samples with IGV Plots
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../summarise-data.html">
+   <em>
+    <em>
+     Pf7 Analysis Guides
+    </em>
+    :
+   </em>
+   * Summarise Pf7 Data
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="sample-summary-table.html">
+     Summarise Samples by Administrative Division
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sample-collection-over-time.html">
+     Visualising sample collections over time
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="barplot-samples-by-country.html">
+     Barplot of Samples by Country
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="variant-summary-table.html">
+     Summarise Genetic Variants
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Plot Global Map of Samples
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../evolution-malaria-control.html">
+   *
+   <em>
+    Pf7 Analysis Guides
+   </em>
+   :**Study Evolution Against Malaria Control Measures
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../evolution_malaria_control/drug-resistance-summary.html">
+     Drug Resistance Frequencies Across Pf7
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../evolution_malaria_control/chloroquine-resistance-map.html">
+     Plot Map of Chloroquine Resistance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../evolution_malaria_control/summarise_hrp2_hrp3_deletions.html">
+     Summarise
+     <em>
+      hrp2
+     </em>
+     and
+     <em>
+      hrp3
+     </em>
+     Deletions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../evolution_malaria_control/visualise_hrp2_hrp3_deletions.html">
+     Visualise
+     <em>
+      hrp2
+     </em>
+     and
+     <em>
+      hrp3
+     </em>
+     Deletions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../evolution_malaria_control/csp-cterm-analysis.html">
+     Analyse csp C-Terminal Variation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../popgen.html">
+   <em>
+    <em>
+     Pf7 Analysis Guides
+    </em>
+    :
+   </em>
+   * Population Structure and Selection
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../popgen/PCoA.html">
+     Principal Coordinate Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../popgen/geographic-genetic-differentiation.html">
+     Geographic patterns of population differentiation and gene flow
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../popgen/neighbour-joining-tree-swga.html">
+     Neighbour Joining Tree for sWGA vs. gDNA
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../popgen/proportion-eba175.html">
+     Plot
+     <em>
+      eba175
+     </em>
+     C Allele Proportions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../api.html">
+   Pf7 API
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Pv4
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../pv4/Data_access.html">
+   Pv4 Data Access
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../pv4/api.html">
+   Pv4 API
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/pf7/summarise_data/global-sample-map.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/malariagen/parasite-data"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/malariagen/parasite-data/issues/new?title=Issue%20on%20page%20%2Fpf7/summarise_data/global-sample-map.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/malariagen/parasite-data/master?urlpath=lab/tree/docs/pf7/summarise_data/global-sample-map.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/malariagen/parasite-data/blob/master/docs/pf7/summarise_data/global-sample-map.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-access">
+   Data Access
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preparing-the-data-for-the-figure">
+   Preparing the data for the figure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plotting-figure-1a-from-the-pf7-paper">
+   Plotting figure 1A from the Pf7 paper
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plotting-using-the-basemap-package">
+     Plotting using the ‘Basemap’ package
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recreating-the-plot-using-the-cartopy-package">
+     Recreating the plot using the ‘Cartopy’ package
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#save-the-figure">
+     Save the figure:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Plot Global Map of Samples</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-access">
+   Data Access
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preparing-the-data-for-the-figure">
+   Preparing the data for the figure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plotting-figure-1a-from-the-pf7-paper">
+   Plotting figure 1A from the Pf7 paper
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plotting-using-the-basemap-package">
+     Plotting using the ‘Basemap’ package
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recreating-the-plot-using-the-cartopy-package">
+     Recreating the plot using the ‘Cartopy’ package
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#save-the-figure">
+     Save the figure:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="plot-global-map-of-samples">
+<h1>Plot Global Map of Samples<a class="headerlink" href="#plot-global-map-of-samples" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>The publicly available Pf7 dataset for <em>Plasmodium falciparum</em> comprises 20,864 samples, collected by 82 partner studies from 33 countries in Africa, Asia, South America and Oceania between 1984 and 2018. In this notebook, we will generate Figure 1 (Panel A) from the <a class="reference external" href="https://doi.org/10.12688/wellcomeopenres.18681.1">Pf7 paper</a>. This figure shows where the samples of the Pf7 dataset were collected on a global map, highlighting the 97 first-level administrative divisions from which samples were taken within countries. On this figure, points represent sampling locations, coloured according to the major sub-population to which the location is assigned. This notebook will demonstrate the code required to generate this figure panel. As one of the Python packages used to generate this panel is now depreciated, this notebook will also demonstrate an alternative method to generate this panel, and output this  as both a .png and .pdf file.</p>
+<p><strong>This notebook should take around 2 minutes to run.</strong></p>
+</div>
+<div class="section" id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<p>Install the MalariaGEN, basemap, and cartopy packages:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>-q<span class="w"> </span>--no-warn-conflicts<span class="w"> </span>malariagen_data
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>-q<span class="w"> </span>--no-warn-conflicts<span class="w"> </span>basemap
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>-q<span class="w"> </span>--no-warn-conflicts<span class="w"> </span>cartopy
+</pre></div>
+</div>
+</div>
+</div>
+<p>Load the required Python libraries:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">malariagen_data</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">collections</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib.image</span> <span class="kn">import</span> <span class="n">imread</span>
+<span class="kn">from</span> <span class="nn">mpl_toolkits.basemap</span> <span class="kn">import</span> <span class="n">Basemap</span>
+<span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
+<span class="kn">import</span> <span class="nn">cartopy.feature</span> <span class="k">as</span> <span class="nn">cfeature</span>
+<span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="data-access">
+<h2>Data Access<a class="headerlink" href="#data-access" title="Permalink to this headline">¶</a></h2>
+<p>Firstly, load the Pf7 metadata. We then check the ‘shape’ of the data to make sure it is what we were expecting. This is the full metadata for the Pf7 dataset, which includes 20864 samples, with 17 variables of associated metadata.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load Pf7 data</span>
+<span class="n">release_data</span> <span class="o">=</span> <span class="n">malariagen_data</span><span class="o">.</span><span class="n">Pf7</span><span class="p">()</span>
+<span class="n">sample_metadata</span> <span class="o">=</span> <span class="n">release_data</span><span class="o">.</span><span class="n">sample_metadata</span><span class="p">()</span>
+
+<span class="c1"># View the &#39;shape&#39; of the data - i.e. how many rows and columns does it have?</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sample_metadata</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(20864, 17)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Often when working with dataframes such as these, it is useful to check the first few rows of the dataset to make sure it is the correct data and in the format we are expecting. You can see each sample has an ID, information on when and where it was collected, and details on their related genetic data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># View the top few rows of the metadata</span>
+<span class="n">sample_metadata</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-3dcccf9b-61ae-4f6b-8867-3e8094b66865" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sample</th>
+      <th>Study</th>
+      <th>Country</th>
+      <th>Admin level 1</th>
+      <th>Country latitude</th>
+      <th>Country longitude</th>
+      <th>Admin level 1 latitude</th>
+      <th>Admin level 1 longitude</th>
+      <th>Year</th>
+      <th>ENA</th>
+      <th>All samples same case</th>
+      <th>Population</th>
+      <th>% callable</th>
+      <th>QC pass</th>
+      <th>Exclusion reason</th>
+      <th>Sample type</th>
+      <th>Sample was in Pf6</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>FP0008-C</td>
+      <td>1147-PF-MR-CONWAY</td>
+      <td>Mauritania</td>
+      <td>Hodh el Gharbi</td>
+      <td>20.265149</td>
+      <td>-10.337093</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR1081237</td>
+      <td>FP0008-C</td>
+      <td>AF-W</td>
+      <td>82.16</td>
+      <td>True</td>
+      <td>Analysis_set</td>
+      <td>gDNA</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>FP0009-C</td>
+      <td>1147-PF-MR-CONWAY</td>
+      <td>Mauritania</td>
+      <td>Hodh el Gharbi</td>
+      <td>20.265149</td>
+      <td>-10.337093</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR1081238</td>
+      <td>FP0009-C</td>
+      <td>AF-W</td>
+      <td>88.85</td>
+      <td>True</td>
+      <td>Analysis_set</td>
+      <td>gDNA</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>FP0010-CW</td>
+      <td>1147-PF-MR-CONWAY</td>
+      <td>Mauritania</td>
+      <td>Hodh el Gharbi</td>
+      <td>20.265149</td>
+      <td>-10.337093</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR2889621</td>
+      <td>FP0010-CW</td>
+      <td>AF-W</td>
+      <td>86.46</td>
+      <td>True</td>
+      <td>Analysis_set</td>
+      <td>sWGA</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>FP0011-CW</td>
+      <td>1147-PF-MR-CONWAY</td>
+      <td>Mauritania</td>
+      <td>Hodh el Gharbi</td>
+      <td>20.265149</td>
+      <td>-10.337093</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR2889624</td>
+      <td>FP0011-CW</td>
+      <td>AF-W</td>
+      <td>86.35</td>
+      <td>True</td>
+      <td>Analysis_set</td>
+      <td>sWGA</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>FP0012-CW</td>
+      <td>1147-PF-MR-CONWAY</td>
+      <td>Mauritania</td>
+      <td>Hodh el Gharbi</td>
+      <td>20.265149</td>
+      <td>-10.337093</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR2889627</td>
+      <td>FP0012-CW</td>
+      <td>AF-W</td>
+      <td>89.74</td>
+      <td>True</td>
+      <td>Analysis_set</td>
+      <td>sWGA</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-3dcccf9b-61ae-4f6b-8867-3e8094b66865')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-3dcccf9b-61ae-4f6b-8867-3e8094b66865 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-3dcccf9b-61ae-4f6b-8867-3e8094b66865');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-4adb530e-4f8a-4f9c-8f82-fa7f67014202">
+  <button class="colab-df-quickchart" onclick="quickchart('df-4adb530e-4f8a-4f9c-8f82-fa7f67014202')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-4adb530e-4f8a-4f9c-8f82-fa7f67014202 button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+    </div>
+  </div>
+</div></div>
+</div>
+</div>
+<div class="section" id="preparing-the-data-for-the-figure">
+<h2>Preparing the data for the figure<a class="headerlink" href="#preparing-the-data-for-the-figure" title="Permalink to this headline">¶</a></h2>
+<p>In the figure we would like to do three things:</p>
+<ol class="simple">
+<li><p>Show a world map</p></li>
+<li><p>Highlight the locations from which samples were taken. In our case, this will be as circular points.</p></li>
+<li><p>Colour each point by the sub-population to which the samples were assigned.</p></li>
+</ol>
+<p>To do this, we will start by generating a dictionary object which we can use as a legend for the plot, with the full title for each population:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#You might have noticed the &#39;Population&#39; variable in the above meta-data does not contain the full name of each population, only an abbreviation.</span>
+<span class="c1">#Here, we generate a dictionary which contains the full name of each population. This will be useful later in creating a legend for the plot.</span>
+<span class="n">Population_legend</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
+<span class="n">Population_legend</span><span class="p">[</span><span class="s1">&#39;SA&#39;</span><span class="p">]</span>       <span class="o">=</span> <span class="s2">&quot;South America&quot;</span>
+<span class="n">Population_legend</span><span class="p">[</span><span class="s1">&#39;AF-W&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">&quot;Africa - West&quot;</span>
+<span class="n">Population_legend</span><span class="p">[</span><span class="s1">&#39;AF-C&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">&quot;Africa - Central&quot;</span>
+<span class="n">Population_legend</span><span class="p">[</span><span class="s1">&#39;AF-NE&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">&quot;Africa - Northeast&quot;</span>
+<span class="n">Population_legend</span><span class="p">[</span><span class="s1">&#39;AF-E&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">&quot;Africa - East&quot;</span>
+<span class="n">Population_legend</span><span class="p">[</span><span class="s1">&#39;AS-S-E&#39;</span><span class="p">]</span>   <span class="o">=</span> <span class="s2">&quot;Asia - South - East&quot;</span>
+<span class="n">Population_legend</span><span class="p">[</span><span class="s1">&#39;AS-S-FE&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">&quot;Asia - South - Far East&quot;</span>
+<span class="n">Population_legend</span><span class="p">[</span><span class="s1">&#39;AS-SE-W&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">&quot;Asia - Southeast - West&quot;</span>
+<span class="n">Population_legend</span><span class="p">[</span><span class="s1">&#39;AS-SE-E&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">&quot;Asia - Southeast - East&quot;</span>
+<span class="n">Population_legend</span><span class="p">[</span><span class="s1">&#39;OC-NG&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">&quot;Oceania - New Guinea&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We would then like to assign each population a colour:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We create a second dictionary object, where each population is given a hexadecimal colour e.g. #4daf4a</span>
+<span class="n">Population_colours</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
+<span class="n">Population_colours</span><span class="p">[</span><span class="s1">&#39;SA&#39;</span><span class="p">]</span>      <span class="o">=</span> <span class="s2">&quot;#4daf4a&quot;</span>
+<span class="n">Population_colours</span><span class="p">[</span><span class="s1">&#39;AF-W&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">&quot;#e31a1c&quot;</span>
+<span class="n">Population_colours</span><span class="p">[</span><span class="s1">&#39;AF-C&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">&quot;#fd8d3c&quot;</span>
+<span class="n">Population_colours</span><span class="p">[</span><span class="s1">&#39;AF-NE&#39;</span><span class="p">]</span>   <span class="o">=</span> <span class="s2">&quot;#bb8129&quot;</span>
+<span class="n">Population_colours</span><span class="p">[</span><span class="s1">&#39;AF-E&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">&quot;#fecc5c&quot;</span>
+<span class="n">Population_colours</span><span class="p">[</span><span class="s1">&#39;AS-S-E&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">&quot;#dfc0eb&quot;</span>
+<span class="n">Population_colours</span><span class="p">[</span><span class="s1">&#39;AS-S-FE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;#984ea3&quot;</span>
+<span class="n">Population_colours</span><span class="p">[</span><span class="s1">&#39;AS-SE-W&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;#9ecae1&quot;</span>
+<span class="n">Population_colours</span><span class="p">[</span><span class="s1">&#39;AS-SE-E&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;#3182bd&quot;</span>
+<span class="n">Population_colours</span><span class="p">[</span><span class="s1">&#39;OC-NG&#39;</span><span class="p">]</span>   <span class="o">=</span> <span class="s2">&quot;#f781bf&quot;</span>
+
+<span class="c1"># Then we generate a new variable - &#39;population colour&#39; onto the metadata, and impute the assigned colours using the dictionary</span>
+<span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;Population_colour&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;Population&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">Population_colours</span><span class="p">)</span>
+
+<span class="c1"># Note we now have an extra colomn</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sample_metadata</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="c1"># Lets check the above has worked by outputting the first few rows of the data, now with the new Population_colour variable</span>
+<span class="c1"># you will see each population has now been assigned their corresponding colour</span>
+<span class="n">sample_metadata</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(20864, 18)
+</pre></div>
+</div>
+<div class="output text_html">
+  <div id="df-67d65bc9-5d03-4e4a-b0ca-c799efc5d2a9" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sample</th>
+      <th>Study</th>
+      <th>Country</th>
+      <th>Admin level 1</th>
+      <th>Country latitude</th>
+      <th>Country longitude</th>
+      <th>Admin level 1 latitude</th>
+      <th>Admin level 1 longitude</th>
+      <th>Year</th>
+      <th>ENA</th>
+      <th>All samples same case</th>
+      <th>Population</th>
+      <th>% callable</th>
+      <th>QC pass</th>
+      <th>Exclusion reason</th>
+      <th>Sample type</th>
+      <th>Sample was in Pf6</th>
+      <th>Population_colour</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>FP0008-C</td>
+      <td>1147-PF-MR-CONWAY</td>
+      <td>Mauritania</td>
+      <td>Hodh el Gharbi</td>
+      <td>20.265149</td>
+      <td>-10.337093</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR1081237</td>
+      <td>FP0008-C</td>
+      <td>AF-W</td>
+      <td>82.16</td>
+      <td>True</td>
+      <td>Analysis_set</td>
+      <td>gDNA</td>
+      <td>True</td>
+      <td>#e31a1c</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>FP0009-C</td>
+      <td>1147-PF-MR-CONWAY</td>
+      <td>Mauritania</td>
+      <td>Hodh el Gharbi</td>
+      <td>20.265149</td>
+      <td>-10.337093</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR1081238</td>
+      <td>FP0009-C</td>
+      <td>AF-W</td>
+      <td>88.85</td>
+      <td>True</td>
+      <td>Analysis_set</td>
+      <td>gDNA</td>
+      <td>True</td>
+      <td>#e31a1c</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>FP0010-CW</td>
+      <td>1147-PF-MR-CONWAY</td>
+      <td>Mauritania</td>
+      <td>Hodh el Gharbi</td>
+      <td>20.265149</td>
+      <td>-10.337093</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR2889621</td>
+      <td>FP0010-CW</td>
+      <td>AF-W</td>
+      <td>86.46</td>
+      <td>True</td>
+      <td>Analysis_set</td>
+      <td>sWGA</td>
+      <td>False</td>
+      <td>#e31a1c</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>FP0011-CW</td>
+      <td>1147-PF-MR-CONWAY</td>
+      <td>Mauritania</td>
+      <td>Hodh el Gharbi</td>
+      <td>20.265149</td>
+      <td>-10.337093</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR2889624</td>
+      <td>FP0011-CW</td>
+      <td>AF-W</td>
+      <td>86.35</td>
+      <td>True</td>
+      <td>Analysis_set</td>
+      <td>sWGA</td>
+      <td>False</td>
+      <td>#e31a1c</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>FP0012-CW</td>
+      <td>1147-PF-MR-CONWAY</td>
+      <td>Mauritania</td>
+      <td>Hodh el Gharbi</td>
+      <td>20.265149</td>
+      <td>-10.337093</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR2889627</td>
+      <td>FP0012-CW</td>
+      <td>AF-W</td>
+      <td>89.74</td>
+      <td>True</td>
+      <td>Analysis_set</td>
+      <td>sWGA</td>
+      <td>False</td>
+      <td>#e31a1c</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-67d65bc9-5d03-4e4a-b0ca-c799efc5d2a9')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-67d65bc9-5d03-4e4a-b0ca-c799efc5d2a9 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-67d65bc9-5d03-4e4a-b0ca-c799efc5d2a9');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-b20d6164-e1a2-4e17-8d68-a1bd6a899e5d">
+  <button class="colab-df-quickchart" onclick="quickchart('df-b20d6164-e1a2-4e17-8d68-a1bd6a899e5d')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-b20d6164-e1a2-4e17-8d68-a1bd6a899e5d button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+    </div>
+  </div>
+</div></div>
+</div>
+<p>Next, we would like to count the number of samples from each location. Note that we have three levels of information for each location, making it a little tricky. To get counts for each location, we would like each of three category levels to be included:</p>
+<ol class="simple">
+<li><p>The population the sample came from (e.g. East Africa)</p></li>
+<li><p>The country the sample came from (e.g. Kenya)</p></li>
+<li><p>The administrative level within each country (e.g. Kilifi)</p></li>
+</ol>
+<p>We therefore need to count the number of samples within each sub-category (e.g. East Africa - Kenya - Kilifi). To do this we can create a new dataframe, where we count the number of samples in each sub-category:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Here, we create the new dataframe &#39;sample_metadata_admin1&#39;.</span>
+<span class="n">sample_metadata_admin1</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+        <span class="n">sample_metadata</span>                   <span class="c1"># we first take the previous dataframe from above</span>
+        <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span>           <span class="c1"># then group the data by several variables (Population, Country &amp; Admin level 1)</span>
+                  <span class="s1">&#39;Country&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;Admin level 1&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;Population_colour&#39;</span><span class="p">,</span>    <span class="c1"># we also want to include some of the other variables from the previous dataframe (population colour and latitude/longitude)</span>
+                  <span class="s1">&#39;Admin level 1 latitude&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;Admin level 1 longitude&#39;</span><span class="p">])</span>
+        <span class="o">.</span><span class="n">size</span><span class="p">()</span>
+        <span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Number of samples&#39;</span><span class="p">)</span>                       <span class="c1"># Then count samples within each subgroup (Population &gt; Country &gt; Admin level 1)</span>
+    <span class="p">)</span>
+
+    <span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">&#39;Country&#39;</span><span class="p">,</span> <span class="s1">&#39;Admin level 1&#39;</span><span class="p">])</span> <span class="c1"># we then set Country and Admin level 1 as the new index</span>
+<span class="p">)</span>
+
+<span class="c1"># Lets check the above has worked correctly by outputting the new dataframe</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_rows</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># display a maximum of 100 rows</span>
+<span class="n">sample_metadata_admin1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-af89a708-60cc-440c-8fb3-4c87467193a1" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>Population</th>
+      <th>Population_colour</th>
+      <th>Admin level 1 latitude</th>
+      <th>Admin level 1 longitude</th>
+      <th>Number of samples</th>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <th>Admin level 1</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Democratic Republic of the Congo</th>
+      <th>Kinshasa</th>
+      <td>AF-C</td>
+      <td>#fd8d3c</td>
+      <td>-4.436710</td>
+      <td>15.904241</td>
+      <td>573</td>
+    </tr>
+    <tr>
+      <th>Kenya</th>
+      <th>Kilifi</th>
+      <td>AF-E</td>
+      <td>#fecc5c</td>
+      <td>-3.174404</td>
+      <td>39.686888</td>
+      <td>662</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Madagascar</th>
+      <th>Fianarantsoa</th>
+      <td>AF-E</td>
+      <td>#fecc5c</td>
+      <td>-21.856236</td>
+      <td>46.862308</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Mahajanga</th>
+      <td>AF-E</td>
+      <td>#fecc5c</td>
+      <td>-16.536991</td>
+      <td>46.684670</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Malawi</th>
+      <th>Chikwawa</th>
+      <td>AF-E</td>
+      <td>#fecc5c</td>
+      <td>-16.164374</td>
+      <td>34.708946</td>
+      <td>319</td>
+    </tr>
+    <tr>
+      <th>Zomba</th>
+      <td>AF-E</td>
+      <td>#fecc5c</td>
+      <td>-15.398794</td>
+      <td>35.426953</td>
+      <td>52</td>
+    </tr>
+    <tr>
+      <th>Mozambique</th>
+      <th>Gaza</th>
+      <td>AF-E</td>
+      <td>#fecc5c</td>
+      <td>-23.320472</td>
+      <td>32.804083</td>
+      <td>91</td>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">Tanzania</th>
+      <th>Kagera</th>
+      <td>AF-E</td>
+      <td>#fecc5c</td>
+      <td>-1.880386</td>
+      <td>31.453920</td>
+      <td>61</td>
+    </tr>
+    <tr>
+      <th>Kigoma</th>
+      <td>AF-E</td>
+      <td>#fecc5c</td>
+      <td>-4.764340</td>
+      <td>30.402827</td>
+      <td>199</td>
+    </tr>
+    <tr>
+      <th>Lindi</th>
+      <td>AF-E</td>
+      <td>#fecc5c</td>
+      <td>-9.480658</td>
+      <td>38.406946</td>
+      <td>79</td>
+    </tr>
+    <tr>
+      <th>Morogoro</th>
+      <td>AF-E</td>
+      <td>#fecc5c</td>
+      <td>-7.922830</td>
+      <td>36.989147</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <th>Tanga</th>
+      <td>AF-E</td>
+      <td>#fecc5c</td>
+      <td>-5.217996</td>
+      <td>38.281878</td>
+      <td>324</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Ethiopia</th>
+      <th>Amhara</th>
+      <td>AF-NE</td>
+      <td>#bb8129</td>
+      <td>11.562464</td>
+      <td>38.047312</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>Oromia</th>
+      <td>AF-NE</td>
+      <td>#bb8129</td>
+      <td>7.507237</td>
+      <td>38.765442</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>Kenya</th>
+      <th>Kisumu</th>
+      <td>AF-NE</td>
+      <td>#bb8129</td>
+      <td>-0.163033</td>
+      <td>34.834400</td>
+      <td>64</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">Sudan</th>
+      <th>Blue Nile</th>
+      <td>AF-NE</td>
+      <td>#bb8129</td>
+      <td>11.268474</td>
+      <td>34.125379</td>
+      <td>66</td>
+    </tr>
+    <tr>
+      <th>Kassala</th>
+      <td>AF-NE</td>
+      <td>#bb8129</td>
+      <td>15.988691</td>
+      <td>35.750775</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>Khartoum</th>
+      <td>AF-NE</td>
+      <td>#bb8129</td>
+      <td>15.843679</td>
+      <td>32.801797</td>
+      <td>124</td>
+    </tr>
+    <tr>
+      <th>Uganda</th>
+      <th>Apac</th>
+      <td>AF-NE</td>
+      <td>#bb8129</td>
+      <td>2.119374</td>
+      <td>32.571842</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Benin</th>
+      <th>Atlantique</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>6.611916</td>
+      <td>2.221643</td>
+      <td>57</td>
+    </tr>
+    <tr>
+      <th>Littoral</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>6.364695</td>
+      <td>2.411790</td>
+      <td>277</td>
+    </tr>
+    <tr>
+      <th>Burkina Faso</th>
+      <th>Haut-Bassins</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>11.367824</td>
+      <td>-4.332121</td>
+      <td>58</td>
+    </tr>
+    <tr>
+      <th>Cameroon</th>
+      <th>Sud-Ouest</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>5.198150</td>
+      <td>9.290182</td>
+      <td>294</td>
+    </tr>
+    <tr>
+      <th>Côte d'Ivoire</th>
+      <th>Abidjan</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>5.420295</td>
+      <td>-4.064976</td>
+      <td>71</td>
+    </tr>
+    <tr>
+      <th>Gabon</th>
+      <th>Wouleu-Ntem</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>1.401591</td>
+      <td>11.952537</td>
+      <td>59</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">Gambia</th>
+      <th>North Bank</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>13.507441</td>
+      <td>-16.008547</td>
+      <td>252</td>
+    </tr>
+    <tr>
+      <th>Upper River</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>13.393779</td>
+      <td>-14.160274</td>
+      <td>760</td>
+    </tr>
+    <tr>
+      <th>Western</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>13.245396</td>
+      <td>-16.401559</td>
+      <td>235</td>
+    </tr>
+    <tr>
+      <th rowspan="7" valign="top">Ghana</th>
+      <th>Ashanti</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>6.803616</td>
+      <td>-1.448573</td>
+      <td>286</td>
+    </tr>
+    <tr>
+      <th>Brong Ahafo</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>7.706088</td>
+      <td>-1.657978</td>
+      <td>69</td>
+    </tr>
+    <tr>
+      <th>Central</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>5.560964</td>
+      <td>-1.197226</td>
+      <td>175</td>
+    </tr>
+    <tr>
+      <th>Eastern</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>6.412757</td>
+      <td>-0.450589</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <th>Greater Accra</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>5.821748</td>
+      <td>0.065873</td>
+      <td>198</td>
+    </tr>
+    <tr>
+      <th>Upper East</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>10.777652</td>
+      <td>-0.820531</td>
+      <td>3300</td>
+    </tr>
+    <tr>
+      <th>Volta</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>7.269002</td>
+      <td>0.392035</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Guinea</th>
+      <th>Faranah</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>10.490027</td>
+      <td>-10.658152</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <th>Nzerekore</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>8.437316</td>
+      <td>-8.899060</td>
+      <td>139</td>
+    </tr>
+    <tr>
+      <th rowspan="6" valign="top">Mali</th>
+      <th>Bamako</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>12.611017</td>
+      <td>-7.979135</td>
+      <td>215</td>
+    </tr>
+    <tr>
+      <th>Kayes</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>13.872913</td>
+      <td>-10.230416</td>
+      <td>379</td>
+    </tr>
+    <tr>
+      <th>Koulikoro</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>13.625339</td>
+      <td>-7.645231</td>
+      <td>991</td>
+    </tr>
+    <tr>
+      <th>Mopti</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>14.705153</td>
+      <td>-3.511409</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>Segou</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>13.811435</td>
+      <td>-5.697849</td>
+      <td>49</td>
+    </tr>
+    <tr>
+      <th>Sikasso</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>11.432507</td>
+      <td>-6.558964</td>
+      <td>161</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">Mauritania</th>
+      <th>Guidimaka</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>15.377000</td>
+      <td>-12.125584</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th>Hodh ech Chargui</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>18.193701</td>
+      <td>-7.090179</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <th>Hodh el Gharbi</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Nigeria</th>
+      <th>Kwara</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>8.982546</td>
+      <td>4.372565</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>Lagos</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>6.527058</td>
+      <td>3.564947</td>
+      <td>132</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Senegal</th>
+      <th>Dakar</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>14.754651</td>
+      <td>-17.265418</td>
+      <td>93</td>
+    </tr>
+    <tr>
+      <th>Sedhiou</th>
+      <td>AF-W</td>
+      <td>#e31a1c</td>
+      <td>12.893239</td>
+      <td>-15.586912</td>
+      <td>62</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">India</th>
+      <th>Odisha</th>
+      <td>AS-S-E</td>
+      <td>#dfc0eb</td>
+      <td>20.505428</td>
+      <td>84.418059</td>
+      <td>122</td>
+    </tr>
+    <tr>
+      <th>West Bengal</th>
+      <td>AS-S-E</td>
+      <td>#dfc0eb</td>
+      <td>23.815952</td>
+      <td>87.980900</td>
+      <td>122</td>
+    </tr>
+    <tr>
+      <th>Bangladesh</th>
+      <th>Chittagong</th>
+      <td>AS-S-FE</td>
+      <td>#984ea3</td>
+      <td>22.712080</td>
+      <td>91.730275</td>
+      <td>1658</td>
+    </tr>
+    <tr>
+      <th>India</th>
+      <th>Tripura</th>
+      <td>AS-S-FE</td>
+      <td>#984ea3</td>
+      <td>23.744503</td>
+      <td>91.741765</td>
+      <td>72</td>
+    </tr>
+    <tr>
+      <th rowspan="7" valign="top">Cambodia</th>
+      <th>Battambang</th>
+      <td>AS-SE-E</td>
+      <td>#3182bd</td>
+      <td>12.979183</td>
+      <td>103.101657</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <th>Koh Kong</th>
+      <td>AS-SE-E</td>
+      <td>#3182bd</td>
+      <td>11.464804</td>
+      <td>103.467717</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>Pailin</th>
+      <td>AS-SE-E</td>
+      <td>#3182bd</td>
+      <td>12.878391</td>
+      <td>102.633336</td>
+      <td>286</td>
+    </tr>
+    <tr>
+      <th>Preah Vihear</th>
+      <td>AS-SE-E</td>
+      <td>#3182bd</td>
+      <td>13.797960</td>
+      <td>105.007949</td>
+      <td>216</td>
+    </tr>
+    <tr>
+      <th>Pursat</th>
+      <td>AS-SE-E</td>
+      <td>#3182bd</td>
+      <td>12.365194</td>
+      <td>103.636298</td>
+      <td>671</td>
+    </tr>
+    <tr>
+      <th>Ratanakiri</th>
+      <td>AS-SE-E</td>
+      <td>#3182bd</td>
+      <td>13.792914</td>
+      <td>107.087046</td>
+      <td>420</td>
+    </tr>
+    <tr>
+      <th>Stueng Traeng</th>
+      <td>AS-SE-E</td>
+      <td>#3182bd</td>
+      <td>13.803394</td>
+      <td>106.176850</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">Laos</th>
+      <th>Attapeu</th>
+      <td>AS-SE-E</td>
+      <td>#3182bd</td>
+      <td>14.793855</td>
+      <td>106.945076</td>
+      <td>210</td>
+    </tr>
+    <tr>
+      <th>Champasak</th>
+      <td>AS-SE-E</td>
+      <td>#3182bd</td>
+      <td>14.771686</td>
+      <td>105.960564</td>
+      <td>218</td>
+    </tr>
+    <tr>
+      <th>Salavan</th>
+      <td>AS-SE-E</td>
+      <td>#3182bd</td>
+      <td>15.848394</td>
+      <td>106.273702</td>
+      <td>147</td>
+    </tr>
+    <tr>
+      <th>Savannakhet</th>
+      <td>AS-SE-E</td>
+      <td>#3182bd</td>
+      <td>16.553723</td>
+      <td>105.705702</td>
+      <td>452</td>
+    </tr>
+    <tr>
+      <th>Sekong</th>
+      <td>AS-SE-E</td>
+      <td>#3182bd</td>
+      <td>15.582019</td>
+      <td>107.039114</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <th>Thailand</th>
+      <th>Sisakhet</th>
+      <td>AS-SE-E</td>
+      <td>#3182bd</td>
+      <td>14.855947</td>
+      <td>104.371389</td>
+      <td>112</td>
+    </tr>
+    <tr>
+      <th rowspan="10" valign="top">Vietnam</th>
+      <th>Bac Lieu</th>
+      <td>AS-SE-E</td>
+      <td>#3182bd</td>
+      <td>9.313846</td>
+      <td>105.489220</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>Binh Phuoc</th>
+      <td>AS-SE-E</td>
+      <td>#3182bd</td>
+      <td>11.755317</td>
+      <td>106.908543</td>
+      <td>751</td>
+    </tr>
+    <tr>
+      <th>Binh Thuan</th>
+      <td>AS-SE-E</td>
+      <td>#3182bd</td>
+      <td>11.117520</td>
+      <td>108.048195</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>Dak Lak</th>
+      <td>AS-SE-E</td>
+      <td>#3182bd</td>
+      <td>12.824588</td>
+      <td>108.206988</td>
+      <td>112</td>
+    </tr>
+    <tr>
+      <th>Dak Nong</th>
+      <td>AS-SE-E</td>
+      <td>#3182bd</td>
+      <td>12.227999</td>
+      <td>107.688640</td>
+      <td>73</td>
+    </tr>
+    <tr>
+      <th>Gia Lai</th>
+      <td>AS-SE-E</td>
+      <td>#3182bd</td>
+      <td>13.797699</td>
+      <td>108.240959</td>
+      <td>376</td>
+    </tr>
+    <tr>
+      <th>Khanh Hoa</th>
+      <td>AS-SE-E</td>
+      <td>#3182bd</td>
+      <td>12.328065</td>
+      <td>109.038169</td>
+      <td>66</td>
+    </tr>
+    <tr>
+      <th>Ninh Thuan</th>
+      <td>AS-SE-E</td>
+      <td>#3182bd</td>
+      <td>11.705161</td>
+      <td>108.869176</td>
+      <td>205</td>
+    </tr>
+    <tr>
+      <th>Quang Nam</th>
+      <td>AS-SE-E</td>
+      <td>#3182bd</td>
+      <td>15.589768</td>
+      <td>107.959958</td>
+      <td>95</td>
+    </tr>
+    <tr>
+      <th>Quang Tri</th>
+      <td>AS-SE-E</td>
+      <td>#3182bd</td>
+      <td>16.745896</td>
+      <td>106.930243</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <th rowspan="8" valign="top">Myanmar</th>
+      <th>Bago</th>
+      <td>AS-SE-W</td>
+      <td>#9ecae1</td>
+      <td>18.298181</td>
+      <td>96.130844</td>
+      <td>124</td>
+    </tr>
+    <tr>
+      <th>Kachin</th>
+      <td>AS-SE-W</td>
+      <td>#9ecae1</td>
+      <td>26.073837</td>
+      <td>97.347428</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <th>Kayin</th>
+      <td>AS-SE-W</td>
+      <td>#9ecae1</td>
+      <td>17.141314</td>
+      <td>97.797344</td>
+      <td>760</td>
+    </tr>
+    <tr>
+      <th>Mandalay</th>
+      <td>AS-SE-W</td>
+      <td>#9ecae1</td>
+      <td>21.209223</td>
+      <td>96.003494</td>
+      <td>120</td>
+    </tr>
+    <tr>
+      <th>Rakhine</th>
+      <td>AS-SE-W</td>
+      <td>#9ecae1</td>
+      <td>19.720378</td>
+      <td>93.735927</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>Sagaing</th>
+      <td>AS-SE-W</td>
+      <td>#9ecae1</td>
+      <td>24.142075</td>
+      <td>95.336510</td>
+      <td>93</td>
+    </tr>
+    <tr>
+      <th>Shan</th>
+      <td>AS-SE-W</td>
+      <td>#9ecae1</td>
+      <td>21.721974</td>
+      <td>98.126917</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <th>Tanintharyi</th>
+      <td>AS-SE-W</td>
+      <td>#9ecae1</td>
+      <td>12.661494</td>
+      <td>98.745189</td>
+      <td>51</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Thailand</th>
+      <th>Ranong</th>
+      <td>AS-SE-W</td>
+      <td>#9ecae1</td>
+      <td>9.966645</td>
+      <td>98.700506</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <th>Tak</th>
+      <td>AS-SE-W</td>
+      <td>#9ecae1</td>
+      <td>16.714952</td>
+      <td>98.791050</td>
+      <td>967</td>
+    </tr>
+    <tr>
+      <th>Indonesia</th>
+      <th>Papua</th>
+      <td>OC-NG</td>
+      <td>#f781bf</td>
+      <td>-4.662878</td>
+      <td>138.691107</td>
+      <td>133</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">Papua New Guinea</th>
+      <th>East Sepik</th>
+      <td>OC-NG</td>
+      <td>#f781bf</td>
+      <td>-4.311829</td>
+      <td>143.171785</td>
+      <td>166</td>
+    </tr>
+    <tr>
+      <th>Madang</th>
+      <td>OC-NG</td>
+      <td>#f781bf</td>
+      <td>-5.160796</td>
+      <td>145.287638</td>
+      <td>55</td>
+    </tr>
+    <tr>
+      <th>Milne Bay</th>
+      <td>OC-NG</td>
+      <td>#f781bf</td>
+      <td>-9.959220</td>
+      <td>150.845963</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">Colombia</th>
+      <th>Cauca</th>
+      <td>SA</td>
+      <td>#4daf4a</td>
+      <td>2.386240</td>
+      <td>-76.857248</td>
+      <td>146</td>
+    </tr>
+    <tr>
+      <th>Choco</th>
+      <td>SA</td>
+      <td>#4daf4a</td>
+      <td>5.987357</td>
+      <td>-76.971119</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>Nariño</th>
+      <td>SA</td>
+      <td>#4daf4a</td>
+      <td>1.563412</td>
+      <td>-77.867314</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>Valle del Cauca</th>
+      <td>SA</td>
+      <td>#4daf4a</td>
+      <td>3.868855</td>
+      <td>-76.531745</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>Peru</th>
+      <th>Loreto</th>
+      <td>SA</td>
+      <td>#4daf4a</td>
+      <td>-4.123815</td>
+      <td>-74.424073</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <th>Venezuela</th>
+      <th>Bolivar</th>
+      <td>SA</td>
+      <td>#4daf4a</td>
+      <td>6.213313</td>
+      <td>-63.486330</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-af89a708-60cc-440c-8fb3-4c87467193a1')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-af89a708-60cc-440c-8fb3-4c87467193a1 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-af89a708-60cc-440c-8fb3-4c87467193a1');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-4b1c6108-145b-476f-9b88-8b5a008b130e">
+  <button class="colab-df-quickchart" onclick="quickchart('df-4b1c6108-145b-476f-9b88-8b5a008b130e')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-4b1c6108-145b-476f-9b88-8b5a008b130e button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+    </div>
+  </div>
+</div></div>
+</div>
+</div>
+<div class="section" id="plotting-figure-1a-from-the-pf7-paper">
+<h2>Plotting figure 1A from the Pf7 paper<a class="headerlink" href="#plotting-figure-1a-from-the-pf7-paper" title="Permalink to this headline">¶</a></h2>
+<p>We can now plot figure 1A from the Pf7 paper. Firstly, we set the basic plotting parameters for the plot, such as the font sizes. We then set the range of latitude and longitude we would like to include in the plot, as well as the total size of the image.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set basic plotting parameters (this is required regardless of whether the &#39;Basemap&#39; or &#39;Cartopy&#39; package is used)</span>
+<span class="n">rcParams</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span>
+<span class="n">base_font_size</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">base_font_size</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.labelsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">base_font_size</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;xtick.labelsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">base_font_size</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;ytick.labelsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">base_font_size</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;legend.fontsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">base_font_size</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.linewidth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">.5</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;lines.linewidth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">.5</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;patch.linewidth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">.5</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;ytick.direction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;out&#39;</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;xtick.direction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;out&#39;</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;lines.markeredgewidth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">.5</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.max_open_warning&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1000</span>
+
+<span class="c1"># Define the maximum and minimum latitude and longitude for the map</span>
+<span class="n">min_lat</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">&#39;Admin level 1 latitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">-</span> <span class="mi">3</span>
+<span class="n">max_lat</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">&#39;Admin level 1 latitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span> <span class="o">+</span> <span class="mi">3</span>
+<span class="n">min_long</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">&#39;Admin level 1 longitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">-</span> <span class="mi">3</span>
+<span class="n">max_long</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">&#39;Admin level 1 longitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span> <span class="o">+</span> <span class="mi">3</span>
+
+<span class="c1"># Then define the total size of the image</span>
+<span class="n">map_size</span> <span class="o">=</span> <span class="p">((</span><span class="nb">int</span><span class="p">(</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">&#39;Admin level 1 longitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span> <span class="o">+</span> <span class="mi">3</span>  <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">&#39;Admin level 1 longitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">-</span> <span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">10</span> <span class="p">,</span>
+<span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">&#39;Admin level 1 latitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span> <span class="o">+</span> <span class="mi">3</span>  <span class="o">-</span>  <span class="nb">int</span><span class="p">(</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">&#39;Admin level 1 latitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">-</span> <span class="mi">3</span> <span class="p">)</span> <span class="o">/</span> <span class="mi">10</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="plotting-using-the-basemap-package">
+<h3>Plotting using the ‘Basemap’ package<a class="headerlink" href="#plotting-using-the-basemap-package" title="Permalink to this headline">¶</a></h3>
+<p>In this first code chunk, we use the Basemap plotting function from the mpl_toolkits package. This code will recreate the image from the published Pf7 paper. However, this package is now deprecated. In future, the map can be recreated using a different map building package - ‘cartopy’. The code to generate this plot is in the following code chunk (see below).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. Define the figure and axes</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">map_size</span><span class="p">)</span>
+
+<span class="n">alpha</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+<span class="c1"># 2. Draw the map background</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">Basemap</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;cyl&#39;</span><span class="p">,</span> <span class="n">resolution</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">,</span>
+            <span class="n">llcrnrlat</span><span class="o">=</span><span class="n">min_lat</span><span class="p">,</span> <span class="n">urcrnrlat</span><span class="o">=</span><span class="n">max_lat</span><span class="p">,</span>
+            <span class="n">llcrnrlon</span><span class="o">=</span><span class="n">min_long</span><span class="p">,</span> <span class="n">urcrnrlon</span><span class="o">=</span><span class="n">max_long</span>
+          <span class="p">)</span>
+
+<span class="n">m</span><span class="o">.</span><span class="n">shadedrelief</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">drawcountries</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+
+<span class="c1"># 3. Show admin 1 levels, with color reflecting population</span>
+<span class="n">m</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">&#39;Admin level 1 longitude&#39;</span><span class="p">],</span>
+    <span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">&#39;Admin level 1 latitude&#39;</span><span class="p">],</span>
+    <span class="n">c</span><span class="o">=</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">&#39;Population_colour&#39;</span><span class="p">],</span>
+    <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span>
+    <span class="n">s</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">,</span>
+    <span class="n">latlon</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+
+<span class="c1"># 4. Make legend with dummy points</span>
+<span class="k">for</span> <span class="n">population</span> <span class="ow">in</span> <span class="n">Population_colours</span><span class="p">:</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;Population&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">population</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+        <span class="p">[],</span>
+        <span class="p">[],</span>
+        <span class="n">c</span><span class="o">=</span><span class="n">Population_colours</span><span class="p">[</span><span class="n">population</span><span class="p">],</span>
+        <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span>
+        <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">,</span>
+        <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">Population_legend</span><span class="p">[</span><span class="n">population</span><span class="p">]</span><span class="si">}</span><span class="s2"> (n=</span><span class="si">{</span><span class="n">n</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">)&quot;</span>
+    <span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">scatterpoints</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">labelspacing</span><span class="o">=</span><span class="mf">.7</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">0.22</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mf">27.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;Population&#39;</span><span class="p">)</span>
+
+<span class="c1"># 5. Add title (optional)</span>
+<span class="c1">#plt.title(&quot;Figure 1A: Sampling locations&quot;)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/global-sample-map_19_0.png" src="../../_images/global-sample-map_19_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="recreating-the-plot-using-the-cartopy-package">
+<h3>Recreating the plot using the ‘Cartopy’ package<a class="headerlink" href="#recreating-the-plot-using-the-cartopy-package" title="Permalink to this headline">¶</a></h3>
+<p>Next, we recreate the plot using the ‘Cartopy’. While the code used is not identical to that used for the original plot, it uses the same coordinates and plots the sampling locations of the points to generate a near identical plot. This code should be used in future to generate the figures.</p>
+<p>To do this, we first need to download the map image we will use. This first code chunk downloads an image to use from the Natural Earth Data website, this  will be used to generate the plot.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># First we need to download the map image file via a web link:</span>
+<span class="o">!</span>wget<span class="w"> </span>https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/50m/raster/HYP_50M_SR_W.zip
+
+<span class="c1"># Unzip the file and define the path to the image file:</span>
+<span class="o">!</span>unzip<span class="w"> </span><span class="s1">&#39;./HYP_50M_SR_W.zip&#39;</span>
+<span class="n">image</span> <span class="o">=</span> <span class="s1">&#39;./HYP_50M_SR_W.tif&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2023-11-15 17:24:25--  https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/50m/raster/HYP_50M_SR_W.zip
+Resolving www.naturalearthdata.com (www.naturalearthdata.com)... 50.87.253.14
+Connecting to www.naturalearthdata.com (www.naturalearthdata.com)|50.87.253.14|:443... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: https://naciscdn.org/naturalearth/50m/raster/HYP_50M_SR_W.zip [following]
+--2023-11-15 17:24:25--  https://naciscdn.org/naturalearth/50m/raster/HYP_50M_SR_W.zip
+Resolving naciscdn.org (naciscdn.org)... 18.65.229.31, 18.65.229.84, 18.65.229.10, ...
+Connecting to naciscdn.org (naciscdn.org)|18.65.229.31|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 102197904 (97M) [application/zip]
+Saving to: ‘HYP_50M_SR_W.zip.3’
+
+HYP_50M_SR_W.zip.3  100%[===================&gt;]  97.46M   280MB/s    in 0.3s    
+
+2023-11-15 17:24:26 (280 MB/s) - ‘HYP_50M_SR_W.zip.3’ saved [102197904/102197904]
+
+Archive:  ./HYP_50M_SR_W.zip
+replace HYP_50M_SR_W.README.html? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: HYP_50M_SR_W.README.html  
+replace HYP_50M_SR_W.VERSION.txt? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+ extracting: HYP_50M_SR_W.VERSION.txt  
+replace HYP_50M_SR_W.prj? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: HYP_50M_SR_W.prj        
+replace HYP_50M_SR_W.tfw? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: HYP_50M_SR_W.tfw        
+replace HYP_50M_SR_W.tif? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: HYP_50M_SR_W.tif        y
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;./HYP_50M_SR_W.tif&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. Define the figure and axes</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">map_size</span><span class="p">)</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+<span class="c1"># 2. Draw the map background with identical parameters</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_extent</span><span class="p">([</span><span class="n">min_long</span><span class="p">,</span> <span class="n">max_long</span><span class="p">,</span><span class="n">min_lat</span><span class="p">,</span> <span class="n">max_lat</span><span class="p">],</span> <span class="n">crs</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">imread</span><span class="p">(</span><span class="n">image</span><span class="p">),</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;upper&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.4</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span>
+          <span class="n">extent</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">90</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">BORDERS</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">)</span>
+
+<span class="c1"># 3. Show admin 1 levels, with color reflecting population</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">&#39;Admin level 1 longitude&#39;</span><span class="p">],</span>
+    <span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">&#39;Admin level 1 latitude&#39;</span><span class="p">],</span>
+    <span class="n">c</span><span class="o">=</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">&#39;Population_colour&#39;</span><span class="p">],</span>
+    <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span>
+    <span class="n">s</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">,</span>
+    <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="c1"># 4. Make legend with dummy points</span>
+<span class="k">for</span> <span class="n">population</span> <span class="ow">in</span> <span class="n">Population_colours</span><span class="p">:</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;Population&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">population</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+        <span class="p">[],</span>
+        <span class="p">[],</span>
+        <span class="n">c</span><span class="o">=</span><span class="n">Population_colours</span><span class="p">[</span><span class="n">population</span><span class="p">],</span>
+        <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span>
+        <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">,</span>
+        <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">Population_legend</span><span class="p">[</span><span class="n">population</span><span class="p">]</span><span class="si">}</span><span class="s2"> (n=</span><span class="si">{</span><span class="n">n</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">)&quot;</span>
+    <span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">scatterpoints</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">labelspacing</span><span class="o">=</span><span class="mf">.7</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">0.22</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mf">27.5</span><span class="p">,</span> <span class="mf">4.1</span><span class="p">,</span> <span class="s1">&#39;Population&#39;</span><span class="p">)</span>
+
+<span class="c1"># 5. Add title (optional)</span>
+<span class="c1">#plt.title(&quot;Figure 1A: Sampling locations&quot;)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/global-sample-map_22_0.png" src="../../_images/global-sample-map_22_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="save-the-figure">
+<h3>Save the figure:<a class="headerlink" href="#save-the-figure" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mount Google Drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+
+<span class="c1"># Save sampling locations plot</span>
+<span class="c1"># This will send the file to your Google Drive, where you can download it from if needed</span>
+<span class="c1"># Note, this code will only save the updated &#39;cartopy&#39; version of the plot. If you would like to save the original version instead, you will have to comment out the code chunk which generates the map using cartopy (the chunk directly above this one).</span>
+<span class="c1"># Change the file path if you wish to send the file to a specific location</span>
+<span class="c1"># Change the file name if you wish to call it something else</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;/content/drive/My Drive/&#39;</span>
+<span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;Pf7_figure_1A_sample_collections_map&#39;</span>
+
+<span class="c1"># We save as both .png and .PDF files</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">250</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.pdf&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>In summary, in this notebook, we accessed the MalariaGEN data available on the cloud for the latest <em>Plasmodium falciparum</em> data release (Pf7). We then recreated the Figure 1A plot from the Pf7 paper using the ‘Basemap’ package. As this package is now depreciated, we then updated the plot for future data releases using the cartopy package, and output this as both a .png and .pdf file.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "20220907_install_basemap"
+        },
+        kernelOptions: {
+            kernelName: "20220907_install_basemap",
+            path: "./pf7/summarise_data"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = '20220907_install_basemap'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="variant-summary-table.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Summarise Genetic Variants</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../evolution-malaria-control.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">*<em>Pf7 Analysis Guides</em>:**Study Evolution Against Malaria Control Measures</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By MalariaGEN<br/>
+    
+        &copy; Copyright 2023.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
