@@ -1,4 +1,4 @@
-# **Pf7 Analysis Guides*:** Population Structure and Selection 
+# **Pf7 Analysis Guides:** Population Structure and Selection 
 
 The notebooks below cover the population genetic analysis of Pf7 samples. You can run analyses of population structure (PCoA, NJT) or look at selection in the gene *eba175*, for example.  
 

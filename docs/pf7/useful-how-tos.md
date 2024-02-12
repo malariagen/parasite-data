@@ -1,4 +1,4 @@
-# **Pf7 Analysis Guides*:** Useful Genomics How-Tos
+# **Pf7 Analysis Guides:** Useful Genomics How-Tos
 
 These notebooks cover different techniques for the genomic analysis of Pf7 data, which are not explicitly linked to a display item from the [Pf7 paper.](https://wellcomeopenresearch.org/articles/8-22/v1)
 
