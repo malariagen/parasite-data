@@ -14,15 +14,15 @@ parts:
         - file: pf7/summarise_data/barplot-samples-by-country.ipynb        
         - file: pf7/summarise_data/variant-summary-table.ipynb
         - file: pf7/summarise_data/global-sample-map.ipynb
-      -file: pf7/evolution-malaria-control.md
-       sections:
+      - file: pf7/evolution-malaria-control.md
+        sections:
         - file: pf7/evolution_malaria_control/drug-resistance-summary.ipynb
         - file: pf7/evolution_malaria_control/chloroquine-resistance-map.ipynb
         - file: pf7/evolution_malaria_control/summarise_hrp2_hrp3_deletions.ipynb
         - file: pf7/evolution_malaria_control/visualise_hrp2_hrp3_deletions.ipynb
         - file: pf7/evolution_malaria_control/csp-cterm-analysis.ipynb
-      -file: pf7/popgen.md
-       sections:
+      - file: pf7/popgen.md
+        sections:
         - file: pf7/popgen/PCoA.ipynb
         - file: pf7/popgen/geographic-genetic-differentiation.ipynb
         - file: pf7/popgen/neighbour-joining-tree-swga.ipynb
