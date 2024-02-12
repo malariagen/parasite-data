@@ -5,8 +5,6 @@ parts:
     chapters:
       - file: pf7/Data_access.ipynb
       - file: pf7/useful-how-tos.md
-        sections:
-        - file: pf7/useful_how_tos/igv-notebook.ipynb
       - file: pf7/summarise-data.md
         sections:
         - file: pf7/summarise_data/sample-summary-table.ipynb
