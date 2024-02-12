@@ -1,4 +1,4 @@
-# Pf7 API
+# **Pf7 API**
 
 This page provides documentation for functions in the [malariagen_data](https://github.com/malariagen/malariagen-data-python) Python package for accessing _Plasmodium falciparum_ data.
 

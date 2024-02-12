@@ -1,4 +1,4 @@
-# **Pf7 Analysis Guides:**Study Evolution Against Malaria Control Measures
+# **Pf7 Analysis Guides:** Study Evolution Against Malaria Control Measures
 
 The notebooks below walk through the analysis of evolution against malaria control measures in Pf7 samples.  Current topics include resistance to antimalarial drugs and genetic variation in genes linked to rapid diagnostic test failure (*hrp2* and *hrp3*) and vaccine escape (*csp*). 
 
