@@ -4,23 +4,29 @@ parts:
   - caption: Pf7
     chapters:
       - file: pf7/Data_access.ipynb
-      - file: pf7/examples.md
+      - file: pf7/useful-how-tos.md
         sections:
-        - file: pf7/analysis_examples/igv-notebook.ipynb
-        - file: pf7/analysis_examples/sample-summary-table.ipynb
-        - file: pf7/analysis_examples/sample-collection-over-time.ipynb
-        - file: pf7/analysis_examples/barplot-samples-by-country.ipynb        
-        - file: pf7/analysis_examples/variant-summary-table.ipynb
-        - file: pf7/analysis_examples/global-sample-map.ipynb
-        - file: pf7/analysis_examples/drug-resistance-summary.ipynb
-        - file: pf7/analysis_examples/chloroquine-resistance-map.ipynb
-        - file: pf7/analysis_examples/summarise_hrp2_hrp3_deletions.ipynb
-        - file: pf7/analysis_examples/visualise_hrp2_hrp3_deletions.ipynb
-        - file: pf7/analysis_examples/csp-cterm-analysis.ipynb
-        - file: pf7/analysis_examples/PCoA.ipynb
-        - file: pf7/analysis_examples/geographic-genetic-differentiation.ipynb
-        - file: pf7/analysis_examples/neighbour-joining-tree-swga.ipynb
-        - file: pf7/analysis_examples/proportion-eba175.ipynb
+        - file: pf7/useful_how_tos/igv-notebook.ipynb
+      - file: pf7/summarise-data.md
+        sections:
+        - file: pf7/summarise_data/sample-summary-table.ipynb
+        - file: pf7/summarise_data/sample-collection-over-time.ipynb
+        - file: pf7/summarise_data/barplot-samples-by-country.ipynb        
+        - file: pf7/summarise_data/variant-summary-table.ipynb
+        - file: pf7/summarise_data/global-sample-map.ipynb
+      -file: pf7/evolution-malaria-control.md
+       sections:
+        - file: pf7/evolution_malaria_control/drug-resistance-summary.ipynb
+        - file: pf7/evolution_malaria_control/chloroquine-resistance-map.ipynb
+        - file: pf7/evolution_malaria_control/summarise_hrp2_hrp3_deletions.ipynb
+        - file: pf7/evolution_malaria_control/visualise_hrp2_hrp3_deletions.ipynb
+        - file: pf7/evolution_malaria_control/csp-cterm-analysis.ipynb
+      -file: pf7/popgen.md
+       sections:
+        - file: pf7/popgen/PCoA.ipynb
+        - file: pf7/popgen/geographic-genetic-differentiation.ipynb
+        - file: pf7/popgen/neighbour-joining-tree-swga.ipynb
+        - file: pf7/popgen/proportion-eba175.ipynb
       - file: pf7/api
   - caption: Pv4
     chapters:
