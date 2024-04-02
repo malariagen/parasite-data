@@ -911,14 +911,8 @@ import malariagen_data
 <p>This dataset includes the samples that are resistant to 10 drugs or combinations of drugs and to rapid diagnostic tests (RDT) detection: chloroquine, pyrimethamine, sulfadoxine, mefloquine, artemisinin, piperaquine, sulfadoxine- pyrimethamine for treatment of uncomplicated malaria, sulfadoxine- pyrimethamine for intermittent preventive treatment in pregnancy, artesunate-mefloquine, dihydroartemisinin-piperaquine, hrp2 and hrp3 gene deletions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read the data</span>
-
-<span class="c1"># Our website is undergoing some maintenance, please use this temporary URL</span>
-<span class="c1"># Try this URL</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read the data from the MalariaGEN.net resources website</span>
 <span class="n">resistance_classification_fn</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://www.malariagen.net/wp-content/uploads/2023/11/Pf7_inferred_resistance_status_classification.txt&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
-
-<span class="c1"># But if it does not work, try this URL (uncomment the command)</span>
-<span class="c1">#resistance_classification_fn = pd.read_csv(&#39;https://www.malariagen.net/sites/default/files/Pf7_inferred_resistance_status_classification.txt&#39;, sep=&#39;\t&#39;)</span>
 
 <span class="c1"># Print the first rows</span>
 <span class="n">resistance_classification_fn</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -1265,8 +1259,7 @@ import malariagen_data
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read the data</span>
-<span class="n">drm_calls_fn</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://www.malariagen.net/wp-content/uploads/2023/11/Pf7_drug_resistance_marker_genotypes.txt&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="p">)</span> <span class="c1"># Temporary URL</span>
-<span class="c1">#drm_calls_fn = pd.read_csv(&#39;https://www.malariagen.net/sites/default/files/Pf7_drug_resistance_marker_genotypes.txt&#39;, sep=&#39;\t&#39;, ) # Alternative URL if above does not work</span>
+<span class="n">drm_calls_fn</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://www.malariagen.net/wp-content/uploads/2023/11/Pf7_drug_resistance_marker_genotypes.txt&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="p">)</span>
 
 <span class="c1"># Rename the first column as &#39;Sample&#39;</span>
 <span class="n">drm_calls_fn</span> <span class="o">=</span> <span class="n">drm_calls_fn</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="n">drm_calls_fn</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="s1">&#39;Sample&#39;</span><span class="p">})</span>

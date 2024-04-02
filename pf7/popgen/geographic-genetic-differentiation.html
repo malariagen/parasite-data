@@ -1011,12 +1011,8 @@ Name: ContinentCode, dtype: int64
 <p>In this notebook, we will leverage pre-calculated mean <span class="math notranslate nohighlight">\(F_{ST}\)</span> values between all major sub-subpopulations, which were previously computed for Pf7 using <a class="reference external" href="https://scikit-allel.readthedocs.io/en/stable/stats/fst.html">Hudson’s method as implemented in scikit-allel v1.2.0</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Our website is undergoing some maintenance, please use this temporary URL</span>
-<span class="c1"># Try this URL</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Retrieve FST values from a MalariaGEN.net data file</span>
 <span class="n">fst</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://www.malariagen.net/wp-content/uploads/2024/01/fst_populations_all_snps_pf7.txt&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="c1"># But if it does not work, try this URL (uncomment the command)</span>
-<span class="c1">#fst = pd.read_csv(&#39;https://www.malariagen.net/sites/default/files/fst_populations_all_snps_pf7.txt&#39;, sep=&#39;\t&#39;, index_col=0)</span>
 
 <span class="c1"># Rename subpopulation names in accordance with Pf7</span>
 <span class="n">fst</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;AS-SA-W&quot;</span><span class="p">:</span> <span class="s2">&quot;AS-S-FE&quot;</span><span class="p">,</span> <span class="s2">&quot;AS-SA-E&quot;</span><span class="p">:</span> <span class="s2">&quot;AS-S-E&quot;</span><span class="p">,</span> <span class="s1">&#39;AS-SEA-W&#39;</span><span class="p">:</span> <span class="s1">&#39;AS-SE-W&#39;</span><span class="p">,</span> <span class="s1">&#39;AS-SEA-E&#39;</span> <span class="p">:</span> <span class="s1">&#39;AS-SE-E&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>

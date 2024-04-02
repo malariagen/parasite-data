@@ -625,12 +625,8 @@ import malariagen_data
 <p>We also need to access Pf7 samples <em>hrp2</em> and <em>hrp3</em> deletion status (including breakpoint and deletion type).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Our website is undergoing some maintenance, please use this temporary URL</span>
-<span class="c1"># Try this URL</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fetch the details of hrp calls from this MalariaGEN.net file</span>
 <span class="n">hrp_calls_fn</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://www.malariagen.net/wp-content/uploads/2024/01/hrp_calls_pf7.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
-
-<span class="c1"># But if it does not work, try this URL (uncomment the command)</span>
-<span class="c1">#hrp_calls_fn = pd.read_csv(&#39;https://www.malariagen.net/sites/default/files/hrp_calls_pf7.tsv&#39;, sep=&#39;\t&#39;)</span>
 </pre></div>
 </div>
 </div>
