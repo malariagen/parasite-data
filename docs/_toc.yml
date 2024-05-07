@@ -1,6 +1,9 @@
 format: jb-book
 root: landing-page
 parts:
+  - caption: Malaria Parasite Data Access
+    chapters:
+      - file: cloud_data_access/parasite-cloud-data-access.ipynb
   - caption: Pf7
     chapters:
       - file: pf7/Data_access.ipynb
