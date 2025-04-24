@@ -1,9 +1,35 @@
 format: jb-book
 root: landing-page
 parts:
-  - caption: Malaria Parasite Data Access
+  - caption: Malaria Parasite Google Cloud Data Access
     chapters:
       - file: cloud_data_access/parasite-cloud-data-access.ipynb
+  - caption: Pf8
+    chapters:
+      - file: pf8/Data_access.ipynb
+      - file: pf8/useful-how-tos.md
+        sections:
+        - file: pf8/useful_genomics_howtos/igv_notebook.ipynb
+      - file: pf8/summarise-data.md
+        sections:
+        - file: pf8/summarise_data/table_sample_summary.ipynb
+        - file: pf8/summarise_data/Visualising_sample_collections_over_time.ipynb
+        - file: pf8/summarise_data/SamplesByCountry_Barplot.ipynb        
+        - file: pf8/summarise_data/table_variants_summary.ipynb
+        - file: pf8/summarise_data/figure1_samplemap.ipynb
+      - file: pf8/evolution-malaria-control.md
+        sections:
+        - file: pf8/evolution_malaria_control/table_dr_summary.ipynb
+        - file: pf8/evolution_malaria_control/drug_resistance_trends.ipynb
+        - file: pf8/evolution_malaria_control/cnv_fig.ipynb
+        - file: pf8/evolution_malaria_control/Figure_HRPDeletion.ipynb
+        - file: pf8/evolution_malaria_control/Drug_Resistance_Pf7_Pf8_Concordance.ipynb
+      - file: pf8/popgen.md
+        sections:
+        - file: pf8/popgen/PCoA.ipynb
+        - file: pf8/popgen/njt_pf8_anjl.ipynb
+        - file: pf8/popgen/Pf8_fws_figure_public_notebook.ipynb
+      - file: pf8/api.md
   - caption: Pf7
     chapters:
       - file: pf7/Data_access.ipynb
