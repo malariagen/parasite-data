@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Introduction &#8212; MalariaGEN parasite data user guide</title>
+    <title>Plot Copy Number Variation (CNV) trends &#8212; MalariaGEN parasite data user guide</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="hrp2 and hrp3 Deletion Breakpoints" href="Figure_HRPDeletion.html" />
-    <link rel="prev" title="Introduction" href="drug_resistance_trends.html" />
+    <link rel="next" title="Explore hrp2 and hrp3 Deletion Breakpoints" href="Figure_HRPDeletion.html" />
+    <link rel="prev" title="Explore Drug Resistance Trends in Africa" href="drug_resistance_trends.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -148,7 +148,7 @@
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../summarise-data.html">
    <strong>
-    Pf7 Analysis Guides:
+    Pf8 Analysis Guides:
    </strong>
    Summarise Pf8 Data
   </a>
@@ -160,7 +160,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../summarise_data/table_sample_summary.html">
-     Introduction
+     Create sample location summary table
     </a>
    </li>
    <li class="toctree-l2">
@@ -170,17 +170,17 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../summarise_data/SamplesByCountry_Barplot.html">
-     Introduction
+     Plot sample collection per country
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../summarise_data/table_variants_summary.html">
-     Introduction
+     Summarise genetic variant types
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../summarise_data/figure1_samplemap.html">
-     Introduction
+     Create map of sample collection locations
     </a>
    </li>
   </ul>
@@ -200,21 +200,22 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="table_dr_summary.html">
-     Drug Resistance Frequencies
+     Plot Drug Resistance Frequencies
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="drug_resistance_trends.html">
-     Introduction
+     Explore Drug Resistance Trends in Africa
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Introduction
+     Plot Copy Number Variation (CNV) trends
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Figure_HRPDeletion.html">
+     Explore
      <em>
       hrp2
      </em>
@@ -247,7 +248,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../popgen/PCoA.html">
-     Introduction
+     Principal Coordinate Analysis
     </a>
    </li>
    <li class="toctree-l2">
@@ -257,7 +258,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../popgen/Pf8_fws_figure_public_notebook.html">
-     Display Fws Across Populations
+     Explore Fws Across Populations
     </a>
    </li>
   </ul>
@@ -555,49 +556,42 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Introduction
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#setup">
    Setup
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#access-pf8-data">
    Access Pf8 Data
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cnv-calls">
-     CNV calls
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cnv-calls">
+   CNV calls
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#figure-preperation">
+   Figure preperation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#save-the-figure">
+     Save the Figure
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#figure-preperation">
-     Figure preperation
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#time-series-plots-of-cnv-prevalence">
+   Time-series plots of CNV prevalence
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Save the figure
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#save-the-figure">
-       Save the Figure
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-series-plots-of-cnv-prevalence">
-     Time-series plots of CNV prevalence
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-       Save the figure
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
@@ -611,7 +605,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Introduction</h1>
+                <h1>Plot Copy Number Variation (CNV) trends</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -621,49 +615,42 @@
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Introduction
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#setup">
    Setup
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#access-pf8-data">
    Access Pf8 Data
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cnv-calls">
-     CNV calls
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cnv-calls">
+   CNV calls
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#figure-preperation">
+   Figure preperation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#save-the-figure">
+     Save the Figure
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#figure-preperation">
-     Figure preperation
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#time-series-plots-of-cnv-prevalence">
+   Time-series plots of CNV prevalence
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Save the figure
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#save-the-figure">
-       Save the Figure
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-series-plots-of-cnv-prevalence">
-     Time-series plots of CNV prevalence
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-       Save the figure
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
@@ -676,13 +663,12 @@
             
               <div>
                 
-  <div class="section" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="plot-copy-number-variation-cnv-trends">
+<h1>Plot Copy Number Variation (CNV) trends<a class="headerlink" href="#plot-copy-number-variation-cnv-trends" title="Permalink to this headline">¶</a></h1>
 <p>This notebook will generate two figures: the first provides a population-level overview of the prevalence of copy number variations (CNV), while the second visualizes how CNV prevalence changes over time.</p>
 <p><strong>This notebook should take approximately two minutes to run.</strong></p>
-</div>
 <div class="section" id="setup">
-<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
 <p>Install and import the malariagen Python package:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -735,7 +721,7 @@
 </div>
 </div>
 <div class="section" id="access-pf8-data">
-<h1>Access Pf8 Data<a class="headerlink" href="#access-pf8-data" title="Permalink to this headline">¶</a></h1>
+<h2>Access Pf8 Data<a class="headerlink" href="#access-pf8-data" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">release_data</span> <span class="o">=</span> <span class="n">malariagen_data</span><span class="o">.</span><span class="n">Pf8</span><span class="p">()</span>
@@ -749,6 +735,7 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_samples_qc_pass</span> <span class="o">=</span> <span class="n">df_samples</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_samples</span><span class="p">[</span><span class="s2">&quot;QC pass&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">]</span>
 </pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -1852,13 +1839,13 @@ Name: count, dtype: int64
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Introduction</p>
+            <p class="prev-next-title">Explore Drug Resistance Trends in Africa</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="Figure_HRPDeletion.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><em>hrp2</em> and <em>hrp3</em> Deletion Breakpoints</p>
+        <p class="prev-next-title">Explore <em>hrp2</em> and <em>hrp3</em> Deletion Breakpoints</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

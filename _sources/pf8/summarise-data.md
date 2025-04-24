@@ -1,4 +1,4 @@
-# **Pf7 Analysis Guides:** Summarise Pf8 Data
+# **Pf8 Analysis Guides:** Summarise Pf8 Data
 
 The notebooks below provide guides to summarising data from the Pf8 data release. 
 

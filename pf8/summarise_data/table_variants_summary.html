@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Introduction &#8212; MalariaGEN parasite data user guide</title>
+    <title>Summarise genetic variant types &#8212; MalariaGEN parasite data user guide</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Introduction" href="figure1_samplemap.html" />
-    <link rel="prev" title="Introduction" href="SamplesByCountry_Barplot.html" />
+    <link rel="next" title="Create map of sample collection locations" href="figure1_samplemap.html" />
+    <link rel="prev" title="Plot sample collection per country" href="SamplesByCountry_Barplot.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -146,7 +146,7 @@
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../summarise-data.html">
    <strong>
-    Pf7 Analysis Guides:
+    Pf8 Analysis Guides:
    </strong>
    Summarise Pf8 Data
   </a>
@@ -158,7 +158,7 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="table_sample_summary.html">
-     Introduction
+     Create sample location summary table
     </a>
    </li>
    <li class="toctree-l2">
@@ -168,17 +168,17 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="SamplesByCountry_Barplot.html">
-     Introduction
+     Plot sample collection per country
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Introduction
+     Summarise genetic variant types
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="figure1_samplemap.html">
-     Introduction
+     Create map of sample collection locations
     </a>
    </li>
   </ul>
@@ -198,21 +198,22 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../evolution_malaria_control/table_dr_summary.html">
-     Drug Resistance Frequencies
+     Plot Drug Resistance Frequencies
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../evolution_malaria_control/drug_resistance_trends.html">
-     Introduction
+     Explore Drug Resistance Trends in Africa
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../evolution_malaria_control/cnv_fig.html">
-     Introduction
+     Plot Copy Number Variation (CNV) trends
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../evolution_malaria_control/Figure_HRPDeletion.html">
+     Explore
      <em>
       hrp2
      </em>
@@ -245,7 +246,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../popgen/PCoA.html">
-     Introduction
+     Principal Coordinate Analysis
     </a>
    </li>
    <li class="toctree-l2">
@@ -255,7 +256,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../popgen/Pf8_fws_figure_public_notebook.html">
-     Display Fws Across Populations
+     Explore Fws Across Populations
     </a>
    </li>
   </ul>
@@ -553,49 +554,45 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
    Introduction
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#setup">
-     Setup
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#access-pf8-data">
-     Access Pf8 Data
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#extract-variables-of-interest-for-table">
-     Extract variables of interest for table
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#make-a-new-dataframe-for-the-final-table">
-     Make a new dataframe for the final table
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#make-the-final-table">
-     Make the final table
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#access-pf8-data">
+   Access Pf8 Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#extract-variables-of-interest-for-table">
+   Extract variables of interest for table
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#make-a-new-dataframe-for-the-final-table">
+   Make a new dataframe for the final table
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#make-the-final-table">
+   Make the final table
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#snp-only-callset">
    SNP-only Callset
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#write-the-table-to-a-file">
-     Write the table to a file
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#write-the-table-to-a-file">
+   Write the table to a file
+  </a>
  </li>
 </ul>
 
@@ -607,7 +604,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Introduction</h1>
+                <h1>Summarise genetic variant types</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -617,49 +614,45 @@
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
    Introduction
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#setup">
-     Setup
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#access-pf8-data">
-     Access Pf8 Data
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#extract-variables-of-interest-for-table">
-     Extract variables of interest for table
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#make-a-new-dataframe-for-the-final-table">
-     Make a new dataframe for the final table
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#make-the-final-table">
-     Make the final table
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#access-pf8-data">
+   Access Pf8 Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#extract-variables-of-interest-for-table">
+   Extract variables of interest for table
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#make-a-new-dataframe-for-the-final-table">
+   Make a new dataframe for the final table
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#make-the-final-table">
+   Make the final table
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#snp-only-callset">
    SNP-only Callset
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#write-the-table-to-a-file">
-     Write the table to a file
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#write-the-table-to-a-file">
+   Write the table to a file
+  </a>
  </li>
 </ul>
 
@@ -670,8 +663,10 @@
             
               <div>
                 
-  <div class="section" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="summarise-genetic-variant-types">
+<h1>Summarise genetic variant types<a class="headerlink" href="#summarise-genetic-variant-types" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>This notebook creates a table summarising the quantities and types of genetic variants in the Pf8 dataset.</p>
 <p>The table will be generated for two callsets:</p>
 <ol class="simple">
@@ -679,6 +674,7 @@
 <li><p><strong>SNP-only callset:</strong> Excludes non-SNP variants.</p></li>
 </ol>
 <p><strong>This notebook should take approximately two minutes to run.</strong></p>
+</div>
 <div class="section" id="setup">
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
 <p>Install the malariagen Python package:</p>
@@ -2345,9 +2341,8 @@ Data variables:
 </div>
 <p><strong>Summary of discovered variant positions.</strong> The table shows variant positions containing only single nucleotide polymorphisms (SNPs) and variant positions containing non-SNPs (indels or spanning deletions). Note that some non-SNP positions may also contain SNPs. We then further sub-divide each of these into those within exons (coding) and those in intronic or intergenic regions (non-coding). We further sub-divide SNPs into those containing only two alleles (bi-allelic) or those containing three or more alleles (multi-allelic). Discovered variant positions are unique positions in the reference genome where either SNP or indel variation was discovered by our analysis pipeline. Pass variant positions are the subset of discovered positions that passed our quality filters. Alleles per pass position shows the mean number of distinct alleles at each pass position; biallelic variants have two alleles by definition</p>
 </div>
-</div>
 <div class="section" id="snp-only-callset">
-<h1>SNP-only Callset<a class="headerlink" href="#snp-only-callset" title="Permalink to this headline">¶</a></h1>
+<h2>SNP-only Callset<a class="headerlink" href="#snp-only-callset" title="Permalink to this headline">¶</a></h2>
 <p>For convenience and to capture all existing SNPs in the callset, we also created a SNP-only callset. Please see Pf8 supplementary materials for details.</p>
 <p>In order to generate the variant summary table for SNP-only callset, we simply adjust the dataset and run the rest of the code as is.</p>
 <div class="cell docutils container">
@@ -4294,6 +4289,7 @@ Data variables:
 </div></div>
 </div>
 <p><strong>Summary of genomic variants within the SNP-only callset.</strong> The number of discovered SNPs are higher than in the corresponding categories for the full callset because SNPs in shared SNP-indel positions were being masked from the count of SNPs in the full callset. In the SNP-only callset, they are counted as indels are removed.</p>
+</div>
 <div class="section" id="write-the-table-to-a-file">
 <h2>Write the table to a file<a class="headerlink" href="#write-the-table-to-a-file" title="Permalink to this headline">¶</a></h2>
 <p>We can output this to a location in Google Drive</p>
@@ -4355,13 +4351,13 @@ Data variables:
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Introduction</p>
+            <p class="prev-next-title">Plot sample collection per country</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="figure1_samplemap.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Introduction</p>
+        <p class="prev-next-title">Create map of sample collection locations</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
