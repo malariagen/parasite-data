@@ -138,7 +138,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../useful_genomics_howtos/igv_notebook.html">
-     Visualizing Genomic Regions of Pf8 Samples with IGV Plots
+     Visualizing genomic regions of Pf8 samples with IGV-notebook
     </a>
    </li>
   </ul>
@@ -554,84 +554,75 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Principal Coordinate Analysis
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#introduction">
-     Introduction
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#principal-coordinate-analysis-pcoa">
-       <strong>
-        Principal Coordinate Analysis - PCoA
-       </strong>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#setup">
-     Setup
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data-access">
-     Data Access
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#subset-data">
-     Subset data
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#perform-pcoa">
-     Perform PCoA
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#principal-coordinate-analysis-pcoa">
+     <strong>
+      Principal Coordinate Analysis - PCoA
+     </strong>
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-access">
+   Data Access
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subset-data">
+   Subset data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#perform-pcoa">
+   Perform PCoA
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#assign-colours-to-sub-populations">
    Assign colours to sub-populations
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#plot-the-pcoa">
    Plot the PCoA
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pc1-vs-pc2">
-     PC1 vs. PC2
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pc1-vs-pc8">
-     PC1 vs. PC8
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#additional-plot-1-pc1-vs-pc3">
-     <strong>
-      Additional Plot 1
-     </strong>
-     : PC1 vs. PC3
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#additional-plot-2-pc2-vs-pc3">
-     <strong>
-      Additional Plot 2
-     </strong>
-     : PC2 vs. PC3
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pc1-vs-pc2">
+   PC1 vs. PC2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pc1-vs-pc8">
+   PC1 vs. PC8
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#additional-plot-1-pc1-vs-pc3">
+   <strong>
+    Additional Plot 1
+   </strong>
+   : PC1 vs. PC3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#additional-plot-2-pc2-vs-pc3">
+   <strong>
+    Additional Plot 2
+   </strong>
+   : PC2 vs. PC3
+  </a>
  </li>
 </ul>
 
@@ -653,84 +644,75 @@
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Principal Coordinate Analysis
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#introduction">
-     Introduction
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#principal-coordinate-analysis-pcoa">
-       <strong>
-        Principal Coordinate Analysis - PCoA
-       </strong>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#setup">
-     Setup
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data-access">
-     Data Access
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#subset-data">
-     Subset data
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#perform-pcoa">
-     Perform PCoA
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#principal-coordinate-analysis-pcoa">
+     <strong>
+      Principal Coordinate Analysis - PCoA
+     </strong>
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-access">
+   Data Access
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subset-data">
+   Subset data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#perform-pcoa">
+   Perform PCoA
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#assign-colours-to-sub-populations">
    Assign colours to sub-populations
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#plot-the-pcoa">
    Plot the PCoA
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pc1-vs-pc2">
-     PC1 vs. PC2
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pc1-vs-pc8">
-     PC1 vs. PC8
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#additional-plot-1-pc1-vs-pc3">
-     <strong>
-      Additional Plot 1
-     </strong>
-     : PC1 vs. PC3
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#additional-plot-2-pc2-vs-pc3">
-     <strong>
-      Additional Plot 2
-     </strong>
-     : PC2 vs. PC3
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pc1-vs-pc2">
+   PC1 vs. PC2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pc1-vs-pc8">
+   PC1 vs. PC8
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#additional-plot-1-pc1-vs-pc3">
+   <strong>
+    Additional Plot 1
+   </strong>
+   : PC1 vs. PC3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#additional-plot-2-pc2-vs-pc3">
+   <strong>
+    Additional Plot 2
+   </strong>
+   : PC2 vs. PC3
+  </a>
  </li>
 </ul>
 
@@ -1605,9 +1587,8 @@
 <p>It looks like there might be distinct clusters of samples emerging along the first three PCs. At the moment, we can’t say more than that because we have not assigned any information to the points (samples) in the plot.</p>
 <p>We want to know whether samples show geographical genetic structure, so we need to give each major sub-population a distinguishing factor. In this case, we will use different colours for each sub-population.</p>
 </div>
-</div>
 <div class="section" id="assign-colours-to-sub-populations">
-<h1>Assign colours to sub-populations<a class="headerlink" href="#assign-colours-to-sub-populations" title="Permalink to this headline">¶</a></h1>
+<h2>Assign colours to sub-populations<a class="headerlink" href="#assign-colours-to-sub-populations" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># View subpopulations in dataset</span>
@@ -1738,7 +1719,7 @@
 </div>
 </div>
 <div class="section" id="plot-the-pcoa">
-<h1>Plot the PCoA<a class="headerlink" href="#plot-the-pcoa" title="Permalink to this headline">¶</a></h1>
+<h2>Plot the PCoA<a class="headerlink" href="#plot-the-pcoa" title="Permalink to this headline">¶</a></h2>
 <p>We will define two functions that will build the PCoA plot:</p>
 <p><strong>1. plot_pca_coords</strong>: This function takes the pcoa results and the sample metadata as input, while also having several other parameters to customise the plot appearance.</p>
 <p>An important parameter to note is <code class="docutils literal notranslate"><span class="pre">sample_populations</span></code>. The ordering of populations in the plot determines the order that points are layered on the plot. So if Central Africa is plotted before the larger, closely related populations of West Africa and East Africa, then Central Africa becomes covered by the larger populations’ points. This parameter lets us tweak the order of populations so that plot clarity is enhanced.</p>
@@ -1968,6 +1949,7 @@
     <span class="c1"># Return the final PCoA figure</span>
     <span class="k">return</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
 </pre></div>
+</div>
 </div>
 </div>
 </div>
