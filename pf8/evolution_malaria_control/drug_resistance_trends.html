@@ -1,0 +1,2580 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction &#8212; MalariaGEN parasite data user guide</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Introduction" href="cnv_fig.html" />
+    <link rel="prev" title="Drug Resistance Frequencies" href="table_dr_summary.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">MalariaGEN parasite data user guide</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../landing-page.html">
+   MalariaGEN parasite data user guide
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Malaria Parasite Google Cloud Data Access
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../cloud_data_access/parasite-cloud-data-access.html">
+   <strong>
+    Malaria Parasite Google Cloud Data Access
+   </strong>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Pf8
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Data_access.html">
+   <strong>
+    Pf8 Data Access
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../useful-how-tos.html">
+   <strong>
+    Pf8 Analysis Guides:
+   </strong>
+   Useful Genomics How-Tos
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../useful_genomics_howtos/igv_notebook.html">
+     Visualizing Genomic Regions of Pf8 Samples with IGV Plots
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../summarise-data.html">
+   <strong>
+    Pf7 Analysis Guides:
+   </strong>
+   Summarise Pf8 Data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../summarise_data/table_sample_summary.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../summarise_data/Visualising_sample_collections_over_time.html">
+     Visualising sample collections over time
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../summarise_data/SamplesByCountry_Barplot.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../summarise_data/table_variants_summary.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../summarise_data/figure1_samplemap.html">
+     Introduction
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../evolution-malaria-control.html">
+   <strong>
+    Pf8 Analysis Guides:
+   </strong>
+   Study Evolution Against Malaria Control Measures
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="table_dr_summary.html">
+     Drug Resistance Frequencies
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cnv_fig.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Figure_HRPDeletion.html">
+     <em>
+      hrp2
+     </em>
+     and
+     <em>
+      hrp3
+     </em>
+     Deletion Breakpoints
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Drug_Resistance_Pf7_Pf8_Concordance.html">
+     Drug Resistance in Pf7 vs Pf8
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../popgen.html">
+   <strong>
+    Pf8 Analysis Guides:
+   </strong>
+   Population Structure and Selection
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../popgen/PCoA.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../popgen/njt_pf8_anjl.html">
+     Create a Neighbour Joining Tree
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../popgen/Pf8_fws_figure_public_notebook.html">
+     Display Fws Across Populations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../api.html">
+   <strong>
+    Pf8 API
+   </strong>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Pf7
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../pf7/Data_access.html">
+   <strong>
+    Pf7 Data Access
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../pf7/summarise-data.html">
+   <strong>
+    Pf7 Analysis Guides:
+   </strong>
+   Summarise Pf7 Data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/summarise_data/sample-summary-table.html">
+     Summarise Samples by Administrative Division
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/summarise_data/sample-collection-over-time.html">
+     Visualising sample collections over time
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/summarise_data/barplot-samples-by-country.html">
+     Barplot of Samples by Country
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/summarise_data/variant-summary-table.html">
+     Summarise Genetic Variants
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/summarise_data/global-sample-map.html">
+     Plot Global Map of Samples
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../pf7/evolution-malaria-control.html">
+   <strong>
+    Pf7 Analysis Guides:
+   </strong>
+   Study Evolution Against Malaria Control Measures
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/evolution_malaria_control/drug-resistance-summary.html">
+     Drug Resistance Frequencies Across Pf7
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/evolution_malaria_control/chloroquine-resistance-map.html">
+     Plot Map of Chloroquine Resistance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/evolution_malaria_control/summarise_hrp2_hrp3_deletions.html">
+     Summarise
+     <em>
+      hrp2
+     </em>
+     and
+     <em>
+      hrp3
+     </em>
+     Deletions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/evolution_malaria_control/visualise_hrp2_hrp3_deletions.html">
+     Visualise
+     <em>
+      hrp2
+     </em>
+     and
+     <em>
+      hrp3
+     </em>
+     Deletions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/evolution_malaria_control/csp-cterm-analysis.html">
+     Analyse csp C-Terminal Variation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../pf7/popgen.html">
+   <strong>
+    Pf7 Analysis Guides:
+   </strong>
+   Population Structure and Selection
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/popgen/PCoA.html">
+     Principal Coordinate Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/popgen/geographic-genetic-differentiation.html">
+     Geographic patterns of population differentiation and gene flow
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/popgen/neighbour-joining-tree-swga.html">
+     Neighbour Joining Tree for sWGA vs. gDNA
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/popgen/proportion-eba175.html">
+     Plot
+     <em>
+      eba175
+     </em>
+     C Allele Proportions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../pf7/api.html">
+   <strong>
+    Pf7 API
+   </strong>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Pv4
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../pv4/Data_access.html">
+   <strong>
+    Pv4 Data Access
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../pv4/api.html">
+   <strong>
+    Pv4 API
+   </strong>
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/pf8/evolution_malaria_control/drug_resistance_trends.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/malariagen/parasite-data"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/malariagen/parasite-data/issues/new?title=Issue%20on%20page%20%2Fpf8/evolution_malaria_control/drug_resistance_trends.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/malariagen/parasite-data/master?urlpath=lab/tree/docs/pf8/evolution_malaria_control/drug_resistance_trends.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/malariagen/parasite-data/blob/master/docs/pf8/evolution_malaria_control/drug_resistance_trends.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#access-pf8-data">
+     Access Pf8 Data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#inferred-drug-resistance-in-p-falciparum">
+       Inferred drug resistance in
+       <em>
+        P. falciparum
+       </em>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#combine-data-into-a-single-dataframe">
+   Combine data into a single dataframe
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-1-chloroquine-resistance-map">
+     Plot 1: Chloroquine Resistance Map
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#figure-plotting-setup">
+       Figure plotting setup
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#create-data-summaries">
+       Create data summaries
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#aggregation-functions">
+         1. Aggregation functions
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#data-filtering-and-summaries">
+         2. Data filtering and summaries
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-the-figure">
+     Plot the figure
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#load-map-images">
+       Load map images
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-main-plot-commands">
+       The main plot commands
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#figure-2-line-plot-of-inferred-drug-resistance-over-time">
+     Figure 2: Line plot of Inferred Drug Resistance Over Time
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Introduction</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#access-pf8-data">
+     Access Pf8 Data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#inferred-drug-resistance-in-p-falciparum">
+       Inferred drug resistance in
+       <em>
+        P. falciparum
+       </em>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#combine-data-into-a-single-dataframe">
+   Combine data into a single dataframe
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-1-chloroquine-resistance-map">
+     Plot 1: Chloroquine Resistance Map
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#figure-plotting-setup">
+       Figure plotting setup
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#create-data-summaries">
+       Create data summaries
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#aggregation-functions">
+         1. Aggregation functions
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#data-filtering-and-summaries">
+         2. Data filtering and summaries
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-the-figure">
+     Plot the figure
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#load-map-images">
+       Load map images
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-main-plot-commands">
+       The main plot commands
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#figure-2-line-plot-of-inferred-drug-resistance-over-time">
+     Figure 2: Line plot of Inferred Drug Resistance Over Time
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>This notebook creates two figures that show spatial and temporal prevelance of inferred drug resistance using the data from <em>Plasmodium falciparum</em> version 8 (Pf8) project. The first figure is a map of West African sampling locations with levels of inferred chloroquine resistance plotted as pie charts. The second figure is a line plot showing the prevalence of inferred chloroquine resistance in different countries over the years.</p>
+<p><strong>This notebook should take approximately three minutes to run.</strong></p>
+</div>
+<div class="section" id="setup">
+<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
+<p>We will use a package called cartopy for making the maps in this notebook. It needs to be installed:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>cartopy
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting cartopy
+  Downloading Cartopy-0.24.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.9 kB)
+Requirement already satisfied: numpy&gt;=1.23 in /usr/local/lib/python3.11/dist-packages (from cartopy) (1.26.4)
+Requirement already satisfied: matplotlib&gt;=3.6 in /usr/local/lib/python3.11/dist-packages (from cartopy) (3.10.0)
+Requirement already satisfied: shapely&gt;=1.8 in /usr/local/lib/python3.11/dist-packages (from cartopy) (2.0.7)
+Requirement already satisfied: packaging&gt;=21 in /usr/local/lib/python3.11/dist-packages (from cartopy) (24.2)
+Requirement already satisfied: pyshp&gt;=2.3 in /usr/local/lib/python3.11/dist-packages (from cartopy) (2.3.1)
+Requirement already satisfied: pyproj&gt;=3.3.1 in /usr/local/lib/python3.11/dist-packages (from cartopy) (3.7.1)
+Requirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/lib/python3.11/dist-packages (from matplotlib&gt;=3.6-&gt;cartopy) (1.3.1)
+Requirement already satisfied: cycler&gt;=0.10 in /usr/local/lib/python3.11/dist-packages (from matplotlib&gt;=3.6-&gt;cartopy) (0.12.1)
+Requirement already satisfied: fonttools&gt;=4.22.0 in /usr/local/lib/python3.11/dist-packages (from matplotlib&gt;=3.6-&gt;cartopy) (4.56.0)
+Requirement already satisfied: kiwisolver&gt;=1.3.1 in /usr/local/lib/python3.11/dist-packages (from matplotlib&gt;=3.6-&gt;cartopy) (1.4.8)
+Requirement already satisfied: pillow&gt;=8 in /usr/local/lib/python3.11/dist-packages (from matplotlib&gt;=3.6-&gt;cartopy) (11.1.0)
+Requirement already satisfied: pyparsing&gt;=2.3.1 in /usr/local/lib/python3.11/dist-packages (from matplotlib&gt;=3.6-&gt;cartopy) (3.2.1)
+Requirement already satisfied: python-dateutil&gt;=2.7 in /usr/local/lib/python3.11/dist-packages (from matplotlib&gt;=3.6-&gt;cartopy) (2.8.2)
+Requirement already satisfied: certifi in /usr/local/lib/python3.11/dist-packages (from pyproj&gt;=3.3.1-&gt;cartopy) (2025.1.31)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.11/dist-packages (from python-dateutil&gt;=2.7-&gt;matplotlib&gt;=3.6-&gt;cartopy) (1.17.0)
+Downloading Cartopy-0.24.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">11.7/11.7 MB</span> <span class=" -Color -Color-Red">31.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hInstalling collected packages: cartopy
+Successfully installed cartopy-0.24.1
+</pre></div>
+</div>
+</div>
+</div>
+<p>We also need the malariagen data package to be installed:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>malariagen_data<span class="w"> </span>-q<span class="w"> </span>--no-warn-conflicts
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Installing build dependencies ... ?25l?25hdone
+  Getting requirements to build wheel ... ?25l?25hdone
+  Preparing metadata (pyproject.toml) ... ?25l?25hdone
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">4.0/4.0 MB</span> <span class=" -Color -Color-Red">19.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h  Preparing metadata (setup.py) ... ?25l?25hdone
+  Preparing metadata (setup.py) ... ?25l?25hdone
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">71.7/71.7 kB</span> <span class=" -Color -Color-Red">4.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">775.9/775.9 kB</span> <span class=" -Color -Color-Red">29.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">25.9/25.9 MB</span> <span class=" -Color -Color-Red">25.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">8.7/8.7 MB</span> <span class=" -Color -Color-Red">49.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">210.6/210.6 kB</span> <span class=" -Color -Color-Red">13.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">6.3/6.3 MB</span> <span class=" -Color -Color-Red">52.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">3.3/3.3 MB</span> <span class=" -Color -Color-Red">62.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">7.8/7.8 MB</span> <span class=" -Color -Color-Red">44.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">78.1/78.1 kB</span> <span class=" -Color -Color-Red">5.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">101.7/101.7 kB</span> <span class=" -Color -Color-Red">8.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">8.9/8.9 MB</span> <span class=" -Color -Color-Red">43.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">228.0/228.0 kB</span> <span class=" -Color -Color-Red">16.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">13.4/13.4 MB</span> <span class=" -Color -Color-Red">34.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.6/1.6 MB</span> <span class=" -Color -Color-Red">38.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h  Building wheel for malariagen_data (pyproject.toml) ... ?25l?25hdone
+  Building wheel for dash-cytoscape (setup.py) ... ?25l?25hdone
+  Building wheel for asciitree (setup.py) ... ?25l?25hdone
+</pre></div>
+</div>
+</div>
+</div>
+<p>Import the required python libraries</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">collections</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">malariagen_data</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">drive</span>
+
+<span class="c1">#import plotting libraries</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">cartopy</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geopandas</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+
+<span class="c1">#specifc imports to map and plot samples</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">cartopy.crs</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ccrs</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">cartopy.feature</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cfeature</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.offsetbox</span><span class="w"> </span><span class="kn">import</span> <span class="n">AnchoredText</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">Counter</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">cartopy.io</span><span class="w"> </span><span class="kn">import</span> <span class="n">shapereader</span><span class="p">,</span> <span class="n">DownloadWarning</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">time</span><span class="w"> </span><span class="kn">import</span> <span class="n">strftime</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">mpl_toolkits.axes_grid1.inset_locator</span><span class="w"> </span><span class="kn">import</span> <span class="n">inset_axes</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.patches</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mpatches</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.image</span><span class="w"> </span><span class="kn">import</span> <span class="n">imread</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Mount Google Drive to enable saving of the figure</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># You will need to authorise Google Colab access to Google Drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mounted at /content/drive
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="access-pf8-data">
+<h2>Access Pf8 Data<a class="headerlink" href="#access-pf8-data" title="Permalink to this headline">¶</a></h2>
+<p>We use the malariagen data package to load sample data and metadata</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_data</span> <span class="o">=</span> <span class="n">malariagen_data</span><span class="o">.</span><span class="n">Pf8</span><span class="p">()</span>
+<span class="n">sample_metadata</span> <span class="o">=</span> <span class="n">sample_data</span><span class="o">.</span><span class="n">sample_metadata</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>For these figure, we also need to load the inferred drug resistance status classifications of of QC-pass Pf8 samples which we can access from the Sanger’s cloud storage.</p>
+<p>This dataset includes the samples that are predicted to be resistant to 10 drugs or combinations of drugs and to rapid diagnostic tests (RDT) detection: chloroquine, pyrimethamine, sulfadoxine, mefloquine, artemisinin, piperaquine, sulfadoxine- pyrimethamine for treatment of uncomplicated malaria, sulfadoxine- pyrimethamine for intermittent preventive treatment in pregnancy, artesunate-mefloquine, dihydroartemisinin-piperaquine, <em>hrp2</em> and <em>hrp3</em> gene deletions.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read the file in as a pandas dataframe</span>
+<span class="n">res_class</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://pf8-release.cog.sanger.ac.uk/Pf8_inferred_resistance_status_classification.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;sample&#39;</span><span class="p">:</span><span class="s1">&#39;Sample&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Take a look at the structure of the drug resistance classification dataframe</span>
+<span class="n">res_class</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-9d82323b-e013-4a8c-bb47-f8e6cc34039e" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sample</th>
+      <th>Chloroquine</th>
+      <th>Pyrimethamine</th>
+      <th>Sulfadoxine</th>
+      <th>Mefloquine</th>
+      <th>Artemisinin</th>
+      <th>Piperaquine</th>
+      <th>SP (uncomplicated)</th>
+      <th>SP (IPTp)</th>
+      <th>AS-MQ</th>
+      <th>DHA-PPQ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>FP0008-C</td>
+      <td>Undetermined</td>
+      <td>Undetermined</td>
+      <td>Undetermined</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>FP0009-C</td>
+      <td>Resistant</td>
+      <td>Resistant</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Resistant</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>FP0010-CW</td>
+      <td>Undetermined</td>
+      <td>Resistant</td>
+      <td>Resistant</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Resistant</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-9d82323b-e013-4a8c-bb47-f8e6cc34039e')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-9d82323b-e013-4a8c-bb47-f8e6cc34039e button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-9d82323b-e013-4a8c-bb47-f8e6cc34039e');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-97df8445-eeca-488c-8368-0ac3a2cc147a">
+  <button class="colab-df-quickchart" onclick="quickchart('df-97df8445-eeca-488c-8368-0ac3a2cc147a')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-97df8445-eeca-488c-8368-0ac3a2cc147a button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+<p>You can see that this file contains a sample identifier, followed by information on the resistance of that sample to different antimalarial treatments.</p>
+<div class="section" id="inferred-drug-resistance-in-p-falciparum">
+<h3>Inferred drug resistance in <em>P. falciparum</em><a class="headerlink" href="#inferred-drug-resistance-in-p-falciparum" title="Permalink to this headline">¶</a></h3>
+<p>For the Pf8 project samples were classified as resistant or sensitive to major antimalarials and combinations based on genotyping of known drug resistance alleles. The full list of alleles used for this analysis is found in Table 2 in another notebook. A full explanation of the methods for this classification process is detailed <a class="reference external" href="https://pf8-release.cog.sanger.ac.uk/Pf8_resistance_classification.pdf">here</a>.</p>
+<p>The figures created by this notebook covers chloroquine resistance. Samples in Pf8 were classified according to their <em>crt</em> genotype at codon 76:</p>
+<ul class="simple">
+<li><p><strong>K</strong> = Sensitive</p></li>
+<li><p><strong>T</strong> = Resistant</p></li>
+<li><p><strong>K/T</strong> heterozygote = Undetermined</p></li>
+<li><p><strong>missing</strong> = Undetermined</p></li>
+<li><p><strong>other mutation</strong> = Undetermined</p></li>
+</ul>
+<p>For more information on the drug chloroquine, you can <a class="reference external" href="https://en.wikipedia.org/wiki/Chloroquine">read here</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="combine-data-into-a-single-dataframe">
+<h1>Combine data into a single dataframe<a class="headerlink" href="#combine-data-into-a-single-dataframe" title="Permalink to this headline">¶</a></h1>
+<p>In order to create the final figure it is easier to have all relevant data combined.</p>
+<p>For the final figure we need to keep:</p>
+<ul class="simple">
+<li><p>All samples from sample_metadata which pass QC (n = 24,409)</p></li>
+<li><p>Columns 2 to 9 from the res_class dataframe (these contain the drug resistance classifications)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Filter sample metadata to include only QC pass samples</span>
+<span class="n">sample_metadata_qcpass</span> <span class="o">=</span> <span class="n">sample_metadata</span><span class="p">[</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;QC pass&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">]</span>
+<span class="n">sample_metadata_qcpass</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(24409, 17)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Trim res_class down to only relevant columns</span>
+<span class="n">res_class_trim</span> <span class="o">=</span> <span class="n">res_class</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">9</span><span class="p">]</span> <span class="c1"># We keep the sample ID column to allow us to merge with sample_metadata using this information</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Merge the two dataframes on identical Sample IDs</span>
+<span class="n">df_all_sample_metadata</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+    <span class="n">left</span> <span class="o">=</span> <span class="n">sample_metadata_qcpass</span><span class="p">,</span>
+    <span class="n">right</span> <span class="o">=</span> <span class="n">res_class_trim</span><span class="p">,</span>
+    <span class="n">left_on</span> <span class="o">=</span> <span class="s1">&#39;Sample&#39;</span><span class="p">,</span>
+    <span class="n">right_on</span> <span class="o">=</span> <span class="s1">&#39;Sample&#39;</span><span class="p">,</span>
+    <span class="n">how</span> <span class="o">=</span> <span class="s1">&#39;inner&#39;</span><span class="p">)</span>
+
+<span class="c1"># View the new dataframe stucture</span>
+<span class="n">df_all_sample_metadata</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-ff3b5f6a-e8dd-42cf-a355-f38013bc3d9c" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sample</th>
+      <th>Study</th>
+      <th>Country</th>
+      <th>Admin level 1</th>
+      <th>Country latitude</th>
+      <th>Country longitude</th>
+      <th>Admin level 1 latitude</th>
+      <th>Admin level 1 longitude</th>
+      <th>Year</th>
+      <th>ENA</th>
+      <th>...</th>
+      <th>Sample type</th>
+      <th>Sample was in Pf7</th>
+      <th>Chloroquine</th>
+      <th>Pyrimethamine</th>
+      <th>Sulfadoxine</th>
+      <th>Mefloquine</th>
+      <th>Artemisinin</th>
+      <th>Piperaquine</th>
+      <th>SP (uncomplicated)</th>
+      <th>SP (IPTp)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>FP0008-C</td>
+      <td>1147-PF-MR-CONWAY</td>
+      <td>Mauritania</td>
+      <td>Hodh el Gharbi</td>
+      <td>20.265149</td>
+      <td>-10.337093</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR1081237</td>
+      <td>...</td>
+      <td>gDNA</td>
+      <td>True</td>
+      <td>Undetermined</td>
+      <td>Undetermined</td>
+      <td>Undetermined</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>FP0009-C</td>
+      <td>1147-PF-MR-CONWAY</td>
+      <td>Mauritania</td>
+      <td>Hodh el Gharbi</td>
+      <td>20.265149</td>
+      <td>-10.337093</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR1081238</td>
+      <td>...</td>
+      <td>gDNA</td>
+      <td>True</td>
+      <td>Resistant</td>
+      <td>Resistant</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Resistant</td>
+      <td>Sensitive</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>FP0010-CW</td>
+      <td>1147-PF-MR-CONWAY</td>
+      <td>Mauritania</td>
+      <td>Hodh el Gharbi</td>
+      <td>20.265149</td>
+      <td>-10.337093</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR2889621</td>
+      <td>...</td>
+      <td>sWGA</td>
+      <td>True</td>
+      <td>Undetermined</td>
+      <td>Resistant</td>
+      <td>Resistant</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Resistant</td>
+      <td>Sensitive</td>
+    </tr>
+  </tbody>
+</table>
+<p>3 rows × 25 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-ff3b5f6a-e8dd-42cf-a355-f38013bc3d9c')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-ff3b5f6a-e8dd-42cf-a355-f38013bc3d9c button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-ff3b5f6a-e8dd-42cf-a355-f38013bc3d9c');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-d5f54915-e8fa-4d7c-87b0-4735c0b1358a">
+  <button class="colab-df-quickchart" onclick="quickchart('df-d5f54915-e8fa-4d7c-87b0-4735c0b1358a')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-d5f54915-e8fa-4d7c-87b0-4735c0b1358a button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="section" id="plot-1-chloroquine-resistance-map">
+<h2>Plot 1: Chloroquine Resistance Map<a class="headerlink" href="#plot-1-chloroquine-resistance-map" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="figure-plotting-setup">
+<h3>Figure plotting setup<a class="headerlink" href="#figure-plotting-setup" title="Permalink to this headline">¶</a></h3>
+<p>Here we define a few items which will help us to plot the first figure.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Firstly, a list named &#39;drugs&#39; which lists the antimalarial treatment types from our combined dataframe</span>
+<span class="c1"># this leaves open the option of investigating other drugs should we be interested in doing that in the future.</span>
+<span class="n">drugs</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;Chloroquine&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Pyrimethamine&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Sulfadoxine&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Mefloquine&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Artemisinin&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Piperaquine&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;SP (uncomplicated)&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;SP (IPTp)&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Secondly, an ordered dictionary which maps the codes for major sub-populations to the full name of the major sub-population.</span>
+<span class="c1"># We choose an ordered dictionary, rather than a regular python dictionary, to keep the order of our subpopulations from west to east.</span>
+<span class="n">populations</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;SA&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;South America&#39;</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AF-W&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;West Africa&#39;</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AF-C&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Central Africa&#39;</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AF-NE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Northeast Africa&#39;</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AF-E&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;East Africa&#39;</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AS-SA-W&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Western South Asia&#39;</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AS-SA-E&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Eastern South Asia&#39;</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AS-SEA-W&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Western Southeast Asia&#39;</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AS-SEA-E&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Eastern Southeast Asia&#39;</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;OC-NG&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Oceania&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Finally, an ordered dictionary which maps the codes for major sub-populations to a colour code.</span>
+<span class="c1"># This ordered dictionary preserves the order of the subpopulations in the previous code block</span>
+<span class="n">population_colours</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;SA&#39;</span><span class="p">]</span>       <span class="o">=</span> <span class="s2">&quot;#4daf4a&quot;</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AF-W&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">&quot;#e31a1c&quot;</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AF-C&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">&quot;#fd8d3c&quot;</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AF-NE&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">&quot;#bb8129&quot;</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AF-E&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">&quot;#fecc5c&quot;</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AS-SA-W&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">&quot;#dfc0eb&quot;</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AS-SA-E&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">&quot;#984ea3&quot;</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AS-SEA-W&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;#9ecae1&quot;</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AS-SEA-E&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;#3182bd&quot;</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;OC-NG&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">&quot;#f781bf&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="create-data-summaries">
+<h3>Create data summaries<a class="headerlink" href="#create-data-summaries" title="Permalink to this headline">¶</a></h3>
+<p>These will be used to build the final figure.</p>
+<div class="section" id="aggregation-functions">
+<h4>1. Aggregation functions<a class="headerlink" href="#aggregation-functions" title="Permalink to this headline">¶</a></h4>
+<p>Here we define two functions <strong>proportion_agg</strong> and <strong>n_agg</strong>.</p>
+<p>Proportion_agg summarises the proportion of samples listed as ‘Resistant’ out of all samples which are listed as either ‘Sensitive’ or ‘Resistant’ - i.e. not ‘Undetermined’. It returns a pandas series object with this information.</p>
+<p>n_agg does the same but for the counts, rather than proportions.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">proportion_agg</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">names</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span> <span class="c1"># create an empty ordered dictionary</span>
+    <span class="k">for</span> <span class="n">drug</span> <span class="ow">in</span> <span class="n">drugs</span><span class="p">:</span> <span class="c1"># Loop over each drug type</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">drug</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;Undetermined&#39;</span><span class="p">)</span> <span class="p">)</span> <span class="c1"># Count how many entries are not &#39;Undetermined&#39;</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">proportion</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span> <span class="c1"># Assign nan if none</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">proportion</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span> <span class="c1"># Otherwise, calculate the proportion of samples which are &#39;Resistant&#39;</span>
+                <span class="p">(</span> <span class="n">x</span><span class="p">[</span><span class="n">drug</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Resistant&#39;</span><span class="p">)</span>
+            <span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span>
+                <span class="p">(</span> <span class="n">x</span><span class="p">[</span><span class="n">drug</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;Undetermined&#39;</span> <span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="n">names</span><span class="p">[</span><span class="n">drug</span><span class="p">]</span> <span class="o">=</span> <span class="n">proportion</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">names</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">n_agg</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">names</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">drug</span> <span class="ow">in</span> <span class="n">drugs</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">drug</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;Undetermined&#39;</span><span class="p">)</span> <span class="p">)</span>
+        <span class="n">names</span><span class="p">[</span><span class="n">drug</span><span class="p">]</span> <span class="o">=</span> <span class="n">n</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">names</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="data-filtering-and-summaries">
+<h4>2. Data filtering and summaries<a class="headerlink" href="#data-filtering-and-summaries" title="Permalink to this headline">¶</a></h4>
+<p>Here we create further data subsets and summaries to help with plotting the final figure.</p>
+<p><strong>Note</strong>: The defined values can be adjusted. However, modifying the location (which can be a list of countries, populations, or Admin Level 1) may require further adjustments, such as updating the map.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define some limits on which samples are going to be included</span>
+<span class="n">min_year</span><span class="o">=</span><span class="mi">2018</span>
+<span class="n">max_year</span><span class="o">=</span><span class="mi">2022</span>
+<span class="n">location</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;AF-W&#39;</span><span class="p">]</span>
+<span class="n">drug</span><span class="o">=</span><span class="s1">&#39;Chloroquine&#39;</span>
+<span class="n">min_n</span> <span class="o">=</span> <span class="mi">25</span> <span class="c1"># This is the minimum number of samples needed with an unambiguous inferred drug resistance phenotype</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a new dataframe which includes only samples which meet the year range specified previously</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df_all_sample_metadata</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
+        <span class="n">df_all_sample_metadata</span><span class="p">[</span><span class="s1">&#39;QC pass&#39;</span><span class="p">]</span> <span class="c1"># Also only include samples passing QC</span>
+        <span class="o">&amp;</span> <span class="p">(</span> <span class="n">df_all_sample_metadata</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">min_year</span> <span class="p">)</span>
+        <span class="o">&amp;</span> <span class="p">(</span> <span class="n">df_all_sample_metadata</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">max_year</span> <span class="p">)</span>
+    <span class="p">]</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="c1"># Avoids SettingWithCopyWarning</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s1">&#39;Year group&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">min_year</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">max_year</span><span class="si">}</span><span class="s2">&quot;</span> <span class="c1"># Create a new column for year group in the new dataframe</span>
+
+<span class="c1"># Filter the dataframe by location criteria specified above</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">loc</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">location</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Population&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">loc</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">loc</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Admin level 1&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">loc</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a dataframe for the sample frequencies of this new filtered dataframe &#39;df&#39; using the function &#39;proportion_agg&#39;</span>
+<span class="n">df_freqs</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+        <span class="n">df</span>
+        <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Admin level 1 longitude&#39;</span><span class="p">,</span> <span class="s1">&#39;Country&#39;</span><span class="p">,</span> <span class="s1">&#39;Admin level 1&#39;</span><span class="p">,</span> <span class="s1">&#39;Year group&#39;</span><span class="p">])</span>
+        <span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">proportion_agg</span><span class="p">,</span> <span class="n">include_groups</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="n">drug</span><span class="p">]</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="c1"># Create a dataframe for the sample counts of this new filtered dataframe &#39;df&#39; using the function &#39;n_agg&#39;</span>
+<span class="n">df_n</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+        <span class="n">df</span>
+        <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Admin level 1 longitude&#39;</span><span class="p">,</span> <span class="s1">&#39;Country&#39;</span><span class="p">,</span> <span class="s1">&#39;Admin level 1&#39;</span><span class="p">,</span> <span class="s1">&#39;Year group&#39;</span><span class="p">])</span>
+        <span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">n_agg</span><span class="p">,</span> <span class="n">include_groups</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="n">drug</span><span class="p">]</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="c1"># Create a new column for Location which includes info on the location but also the sample counts per location</span>
+<span class="n">df_freqs</span><span class="p">[</span><span class="s1">&#39;Location&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_n</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Admin level 1&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> ($n$=</span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Chloroquine&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Filter the &#39;Location&#39; and resistance proportion data based on a condition where the count of &#39;Chloroquine&#39; is at least the previously specified minimum count (25).</span>
+<span class="n">locations</span> <span class="o">=</span> <span class="n">df_freqs</span><span class="p">[</span><span class="s1">&#39;Location&#39;</span><span class="p">][</span><span class="n">df_n</span><span class="p">[</span><span class="s1">&#39;Chloroquine&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">min_n</span><span class="p">]</span>
+<span class="n">resistance_proportions</span> <span class="o">=</span> <span class="n">df_freqs</span><span class="p">[</span><span class="s1">&#39;Chloroquine&#39;</span><span class="p">][</span><span class="n">df_n</span><span class="p">[</span><span class="s1">&#39;Chloroquine&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">min_n</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>View the West African locations for which we have at least 25 samples with an unambiguous chloroquine resistance classification.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">locations</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Western, Gambia ($n$=122)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Upper River, Gambia ($n$=156)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Koulikoro, Mali ($n$=50)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Segou, Mali ($n$=32)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Ashanti, Ghana ($n$=114)</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Central, Ghana ($n$=203)</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Upper East, Ghana ($n$=1521)</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Eastern, Ghana ($n$=72)</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Greater Accra, Ghana ($n$=385)</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Ogun, Nigeria ($n$=38)</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Oyo, Nigeria ($n$=42)</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Ondo, Nigeria ($n$=26)</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Adamawa, Nigeria ($n$=35)</td>
+    </tr>
+  </tbody>
+</table>
+</div><br><label><b>dtype:</b> object</label></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="plot-the-figure">
+<h2>Plot the figure<a class="headerlink" href="#plot-the-figure" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="load-map-images">
+<h3>Load map images<a class="headerlink" href="#load-map-images" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># First we need to download the map image file via a web link:</span>
+<span class="o">!</span>wget<span class="w"> </span>https://naturalearth.s3.amazonaws.com/4.1.1/50m_raster/NE1_50M_SR_W.zip
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2025-02-26 23:03:47--  https://naturalearth.s3.amazonaws.com/4.1.1/50m_raster/NE1_50M_SR_W.zip
+Resolving naturalearth.s3.amazonaws.com (naturalearth.s3.amazonaws.com)... 52.218.153.43, 52.218.229.219, 52.218.250.203, ...
+Connecting to naturalearth.s3.amazonaws.com (naturalearth.s3.amazonaws.com)|52.218.153.43|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 88413091 (84M) [application/zip]
+Saving to: ‘NE1_50M_SR_W.zip’
+
+NE1_50M_SR_W.zip    100%[===================&gt;]  84.32M  62.7MB/s    in 1.3s    
+
+2025-02-26 23:03:48 (62.7 MB/s) - ‘NE1_50M_SR_W.zip’ saved [88413091/88413091]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Unzip the file and define the path to the image file:</span>
+<span class="o">!</span>unzip<span class="w"> </span><span class="s1">&#39;./NE1_50M_SR_W.zip&#39;</span>
+<span class="n">image</span> <span class="o">=</span> <span class="s1">&#39;./NE1_50M_SR_W/NE1_50M_SR_W.tif&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Archive:  ./NE1_50M_SR_W.zip
+replace NE1_50M_SR_W/NE1_50M_SR_W.tfw? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: NE1_50M_SR_W/NE1_50M_SR_W.tfw  
+replace NE1_50M_SR_W/NE1_50M_SR_W.tif? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: NE1_50M_SR_W/NE1_50M_SR_W.tif  
+replace NE1_50M_SR_W/Read_me.txt? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: NE1_50M_SR_W/Read_me.txt  
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="the-main-plot-commands">
+<h3>The main plot commands<a class="headerlink" href="#the-main-plot-commands" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the figure resolution - higher values = higher resolution</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.dpi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 1280x960 with 0 Axes&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a list of dictionaries &#39;location_coords&#39;</span>
+<span class="c1"># This list stores information for each location in the plot:</span>
+<span class="c1"># annotation_ha sets the alignment of the pie chart with a location</span>
+<span class="c1"># x/y_offsets set how far off the centre alignment the pie chart will appear</span>
+<span class="c1"># pie_lon, pie_lat set the coordinates of each pie chart</span>
+<span class="c1"># connection_style sets the connector line</span>
+
+<span class="c1"># Note that here the administrative divisions are hard coded - i.e. written out rather than linked to a variable</span>
+<span class="c1"># If you were to investigate a different region, you may need to re-write these names according to</span>
+<span class="c1"># what is contiained within the &#39;locations&#39; variable, as well as tweaking the other values</span>
+<span class="c1"># to suit your new map</span>
+
+<span class="n">locations_coords</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="nb">dict</span><span class="p">(</span><span class="n">location</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Western&#39;</span><span class="p">),</span> <span class="n">annotation_ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="p">,</span>       <span class="n">x_offset</span><span class="o">=-</span><span class="mi">2</span> <span class="p">,</span> <span class="n">y_offset</span><span class="o">=-</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">pie_lon</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">pie_lat</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">connection_style</span> <span class="o">=</span><span class="s2">&quot;arc3,rad=0.&quot;</span><span class="p">),</span>
+        <span class="nb">dict</span><span class="p">(</span><span class="n">location</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Upper River&#39;</span><span class="p">),</span> <span class="n">annotation_ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span>    <span class="n">x_offset</span><span class="o">=</span><span class="mf">0.2</span> <span class="p">,</span> <span class="n">y_offset</span><span class="o">=-</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">pie_lon</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">pie_lat</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">connection_style</span> <span class="o">=</span><span class="s2">&quot;arc3,rad=0.&quot;</span><span class="p">),</span>
+        <span class="nb">dict</span><span class="p">(</span><span class="n">location</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Koulikoro&#39;</span><span class="p">),</span> <span class="n">annotation_ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="p">,</span>     <span class="n">x_offset</span><span class="o">=</span><span class="mf">2.5</span> <span class="p">,</span> <span class="n">y_offset</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">pie_lon</span><span class="o">=</span><span class="mf">0.7071</span><span class="p">,</span> <span class="n">pie_lat</span><span class="o">=</span><span class="mf">0.7071</span><span class="p">,</span> <span class="n">connection_style</span> <span class="o">=</span><span class="s2">&quot;arc3,rad=-0.&quot;</span><span class="p">),</span>
+        <span class="nb">dict</span><span class="p">(</span><span class="n">location</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Segou&#39;</span><span class="p">),</span> <span class="n">annotation_ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="p">,</span>        <span class="n">x_offset</span><span class="o">=-</span><span class="mf">1.5</span> <span class="p">,</span> <span class="n">y_offset</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="n">pie_lon</span><span class="o">=-</span><span class="mf">0.7071</span><span class="p">,</span> <span class="n">pie_lat</span><span class="o">=-</span><span class="mf">0.7071</span><span class="p">,</span> <span class="n">connection_style</span> <span class="o">=</span><span class="s2">&quot;arc3,rad=-0.&quot;</span><span class="p">),</span>
+        <span class="nb">dict</span><span class="p">(</span><span class="n">location</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Ashanti&#39;</span><span class="p">),</span> <span class="n">annotation_ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="p">,</span>       <span class="n">x_offset</span><span class="o">=-</span><span class="mf">2.2</span> <span class="p">,</span> <span class="n">y_offset</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">pie_lon</span><span class="o">=-</span><span class="mf">0.7071</span><span class="p">,</span> <span class="n">pie_lat</span><span class="o">=</span><span class="mf">0.7071</span><span class="p">,</span> <span class="n">connection_style</span> <span class="o">=</span><span class="s2">&quot;arc3,rad=0.&quot;</span><span class="p">),</span>
+        <span class="nb">dict</span><span class="p">(</span><span class="n">location</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Central&#39;</span><span class="p">),</span><span class="n">annotation_ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="p">,</span>        <span class="n">x_offset</span><span class="o">=-</span><span class="mi">2</span> <span class="p">,</span> <span class="n">y_offset</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="n">pie_lon</span><span class="o">=-</span><span class="mf">0.7071</span><span class="p">,</span> <span class="n">pie_lat</span><span class="o">=-</span><span class="mf">0.7071</span><span class="p">,</span> <span class="n">connection_style</span> <span class="o">=</span><span class="s2">&quot;arc3,rad=0.&quot;</span><span class="p">),</span>
+        <span class="nb">dict</span><span class="p">(</span><span class="n">location</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Upper East&#39;</span><span class="p">),</span> <span class="n">annotation_ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="p">,</span>    <span class="n">x_offset</span><span class="o">=</span><span class="mi">0</span> <span class="p">,</span> <span class="n">y_offset</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">pie_lon</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">pie_lat</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">connection_style</span> <span class="o">=</span><span class="s2">&quot;arc3,rad=0.&quot;</span><span class="p">),</span>
+        <span class="nb">dict</span><span class="p">(</span><span class="n">location</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Eastern&#39;</span><span class="p">),</span> <span class="n">annotation_ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="p">,</span> <span class="n">x_offset</span><span class="o">=</span><span class="mi">0</span> <span class="p">,</span> <span class="n">y_offset</span><span class="o">=-</span><span class="mf">2.8</span><span class="p">,</span> <span class="n">pie_lon</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">pie_lat</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">connection_style</span> <span class="o">=</span><span class="s2">&quot;arc3,rad=0.&quot;</span><span class="p">),</span>
+        <span class="nb">dict</span><span class="p">(</span><span class="n">location</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Greater Accra&#39;</span><span class="p">),</span> <span class="n">annotation_ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="p">,</span> <span class="n">x_offset</span><span class="o">=</span><span class="mi">2</span> <span class="p">,</span> <span class="n">y_offset</span><span class="o">=-</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">pie_lon</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">pie_lat</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">connection_style</span> <span class="o">=</span><span class="s2">&quot;arc3,rad=0.&quot;</span><span class="p">),</span>
+        <span class="nb">dict</span><span class="p">(</span><span class="n">location</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Ogun&#39;</span><span class="p">),</span><span class="n">annotation_ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="p">,</span>          <span class="n">x_offset</span><span class="o">=</span><span class="mi">0</span> <span class="p">,</span> <span class="n">y_offset</span><span class="o">=-</span><span class="mf">1.3</span><span class="p">,</span> <span class="n">pie_lon</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">pie_lat</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">connection_style</span> <span class="o">=</span><span class="s2">&quot;arc3,rad=0.&quot;</span><span class="p">),</span>
+        <span class="nb">dict</span><span class="p">(</span><span class="n">location</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Oyo&#39;</span><span class="p">),</span> <span class="n">annotation_ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="p">,</span>    <span class="n">x_offset</span><span class="o">=</span><span class="mi">2</span> <span class="p">,</span> <span class="n">y_offset</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">pie_lon</span><span class="o">=</span><span class="mf">0.7071</span><span class="p">,</span> <span class="n">pie_lat</span><span class="o">=</span><span class="mf">0.7071</span><span class="p">,</span> <span class="n">connection_style</span> <span class="o">=</span><span class="s2">&quot;arc3,rad=-0.&quot;</span><span class="p">),</span>
+        <span class="nb">dict</span><span class="p">(</span><span class="n">location</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Ondo&#39;</span><span class="p">),</span> <span class="n">annotation_ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="p">,</span>      <span class="n">x_offset</span><span class="o">=</span><span class="mi">2</span> <span class="p">,</span> <span class="n">y_offset</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="n">pie_lon</span><span class="o">=</span><span class="mf">0.7071</span><span class="p">,</span> <span class="n">pie_lat</span><span class="o">=-</span><span class="mf">0.7071</span><span class="p">,</span> <span class="n">connection_style</span> <span class="o">=</span><span class="s2">&quot;arc3,rad=-0.&quot;</span><span class="p">),</span>
+        <span class="nb">dict</span><span class="p">(</span><span class="n">location</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Adamawa&#39;</span><span class="p">),</span> <span class="n">annotation_ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="p">,</span>      <span class="n">x_offset</span><span class="o">=</span> <span class="o">-</span><span class="mf">0.3</span> <span class="p">,</span> <span class="n">y_offset</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="n">pie_lon</span><span class="o">=</span><span class="mf">0.7071</span><span class="p">,</span> <span class="n">pie_lat</span><span class="o">=-</span><span class="mf">0.7071</span><span class="p">,</span> <span class="n">connection_style</span> <span class="o">=</span><span class="s2">&quot;arc3,rad=-0.&quot;</span><span class="p">),</span>
+
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The final function for plotting</span>
+
+<span class="c1"># Set up the plot axes using a Plate Carrée projection</span>
+<span class="c1"># A Plate Carrée projection sets lines of latitude and longitude</span>
+<span class="c1"># to be represented as equally spaced horizontal and vertical lines</span>
+<span class="c1"># Suppress warnings from &#39;imread&#39; that let us know the image file is downloaded from a URL</span>
+<span class="c1"># Next line after this will download an additional map for drawing borders</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">UserWarning</span><span class="p">)</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">imread</span><span class="p">(</span><span class="n">image</span><span class="p">),</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;upper&#39;</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span>
+          <span class="n">extent</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">90</span><span class="p">])</span>
+
+<span class="c1"># Next line after this will download an additional map for drawing borders</span>
+<span class="k">with</span> <span class="n">warnings</span><span class="o">.</span><span class="n">catch_warnings</span><span class="p">():</span>
+    <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">DownloadWarning</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cartopy</span><span class="o">.</span><span class="n">feature</span><span class="o">.</span><span class="n">BORDERS</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span> <span class="c1"># This adds border lines between countries</span>
+
+<span class="c1"># Make a new dataframe &#39;proportion_resistant&#39; which sets a new index and drops the old index</span>
+<span class="n">proportion_resistant</span> <span class="o">=</span> <span class="n">resistance_proportions</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Iterate over locations</span>
+<span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">loc</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">locations</span><span class="p">):</span>
+    <span class="n">adm1</span> <span class="o">=</span> <span class="n">loc</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># Save the part of the &#39;loc&#39; string occuring before the comma &#39;,&#39; as adm1</span>
+
+    <span class="c1"># Extract latitude and longitude for the location</span>
+    <span class="n">lat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">df_all_sample_metadata</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_all_sample_metadata</span><span class="p">[</span><span class="s1">&#39;Admin level 1&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">adm1</span><span class="p">][</span><span class="s1">&#39;Admin level 1 latitude&#39;</span><span class="p">])</span>
+    <span class="n">lon</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">df_all_sample_metadata</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_all_sample_metadata</span><span class="p">[</span><span class="s1">&#39;Admin level 1&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">adm1</span><span class="p">][</span><span class="s1">&#39;Admin level 1 longitude&#39;</span><span class="p">])</span>
+
+    <span class="c1"># Define the function &#39;plot_pie&#39; to make a pie chart per location</span>
+    <span class="c1"># This function takes parameters including the proportion of resistant samples,</span>
+    <span class="c1"># The location coordinates (lon, lat)</span>
+    <span class="c1"># ax = location on larger map of West Africa</span>
+    <span class="c1"># width, height = size of pie chart</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">plot_pie</span><span class="p">(</span><span class="n">proportion_resistant</span><span class="p">,</span><span class="n">lon</span><span class="p">,</span><span class="n">lat</span><span class="p">,</span><span class="n">ax</span><span class="p">,</span><span class="n">width</span><span class="p">,</span><span class="n">height</span><span class="p">):</span>
+        <span class="n">ax_sub</span> <span class="o">=</span> <span class="n">inset_axes</span><span class="p">(</span>
+            <span class="n">ax</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+            <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="n">lon</span> <span class="o">+</span> <span class="n">locations_coords</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="s1">&#39;pie_lon&#39;</span><span class="p">],</span> <span class="n">lat</span> <span class="o">+</span> <span class="n">locations_coords</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="s1">&#39;pie_lat&#39;</span><span class="p">]),</span>
+            <span class="n">bbox_transform</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">transData</span><span class="p">,</span>
+            <span class="n">borderpad</span><span class="o">=</span><span class="mi">0</span>
+        <span class="p">)</span>
+        <span class="c1"># Set colours for the pie chart</span>
+        <span class="n">wedges</span><span class="p">,</span><span class="n">texts</span><span class="o">=</span> <span class="n">ax_sub</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">proportion_resistant</span><span class="p">,</span> <span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;grey&#39;</span><span class="p">],</span> <span class="n">radius</span><span class="o">=</span><span class="mf">2.75</span><span class="p">,</span> <span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">counterclock</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="c1"># Set the line connector between pie chart and location</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+            <span class="p">[</span><span class="n">lon</span><span class="p">,</span> <span class="n">lon</span> <span class="o">+</span> <span class="n">locations_coords</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="s1">&#39;pie_lon&#39;</span><span class="p">]]</span>
+            <span class="p">,</span> <span class="p">[</span><span class="n">lat</span><span class="p">,</span> <span class="n">lat</span> <span class="o">+</span> <span class="n">locations_coords</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="s1">&#39;pie_lat&#39;</span><span class="p">]]</span>
+            <span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span>
+        <span class="p">)</span>
+        <span class="c1"># Set annotations for the pie chart</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">loc</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;,</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">loc</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;(&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">(&#39;</span> <span class="o">+</span> <span class="n">loc</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;(&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span>
+                    <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">),</span>
+                    <span class="n">xycoords</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">,</span>
+                    <span class="n">xytext</span><span class="o">=</span><span class="p">(</span>
+                        <span class="n">lon</span> <span class="o">+</span> <span class="n">locations_coords</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="s1">&#39;x_offset&#39;</span><span class="p">],</span>
+                        <span class="n">lat</span> <span class="o">+</span> <span class="n">locations_coords</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="s1">&#39;y_offset&#39;</span><span class="p">]</span>
+                    <span class="p">),</span>
+                    <span class="n">textcoords</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">,</span>
+                    <span class="n">fontsize</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+                    <span class="n">ha</span> <span class="o">=</span> <span class="n">locations_coords</span><span class="p">[</span><span class="s1">&#39;location&#39;</span> <span class="o">==</span> <span class="n">adm1</span><span class="p">][</span><span class="s1">&#39;annotation_ha&#39;</span><span class="p">],</span>
+                    <span class="n">va</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span>
+                    <span class="p">)</span>
+    <span class="n">plot_pie</span><span class="p">([</span><span class="n">proportion_resistant</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="mi">1</span><span class="o">-</span><span class="n">proportion_resistant</span><span class="p">[</span><span class="n">n</span><span class="p">]],</span><span class="n">lon</span><span class="p">,</span><span class="n">lat</span><span class="p">,</span><span class="n">ax</span><span class="p">,</span><span class="mf">.08</span><span class="p">,</span><span class="mf">.08</span><span class="p">)</span>
+
+<span class="c1"># Set final plot axes limits</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">21</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span>
+
+<span class="c1"># Set a legend</span>
+<span class="n">red_patch</span> <span class="o">=</span> <span class="n">mpatches</span><span class="o">.</span><span class="n">Patch</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Chloroquine resistant&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="p">[</span><span class="n">red_patch</span><span class="p">],</span><span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span><span class="o">-</span><span class="mi">10</span><span class="p">),</span><span class="n">prop</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">})</span>
+
+<span class="c1"># This will send the file to your Google Drive, where you can download it from if needed</span>
+<span class="c1"># Change the file path if you wish to send the file to a specific location</span>
+<span class="c1"># Change the file name if you wish to call it something else</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;/content/drive/My Drive/&#39;</span>
+<span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;map_waf_chloroquine&#39;</span>
+
+<span class="c1"># We save as both .png and .PDF files</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">240</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s2">&quot;tight&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.pdf&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/drug_resistance_trends_40_0.png" src="../../_images/drug_resistance_trends_40_0.png" />
+</div>
+</div>
+<p><strong>Figure legend</strong>: Heterogeneity of chloroquine resistance in West Africa. Inferred resistance levels to chloroquine between 2018 and 2022 in different administrative divisions within West Africa. We only include locations for which we have at least 25 samples with an unambiguous inferred chloroquine resistance phenotype. Note the very different chloroquine resistance profiles in different countries, e.g. Ghana and Mali.</p>
+</div>
+</div>
+<div class="section" id="figure-2-line-plot-of-inferred-drug-resistance-over-time">
+<h2>Figure 2: Line plot of Inferred Drug Resistance Over Time<a class="headerlink" href="#figure-2-line-plot-of-inferred-drug-resistance-over-time" title="Permalink to this headline">¶</a></h2>
+<p>To visualize temporal trends in drug resistance prevalence, we will use line plots to illustrate changes in resistance over time. To enhance applicability to other drugs and conditions, we will write a function that enables easy selection of:</p>
+<ul class="simple">
+<li><p>Countries</p></li>
+<li><p>Drug</p></li>
+<li><p>Years</p></li>
+</ul>
+<p>Unlike the previous map, samples will be grouped by year and country rather than by administrative division. After filtering, the function will calculate the prevalence of resistance along with the standard error to quantify uncertainty in the estimates.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">filter_samples_calculate_prevalence</span><span class="p">(</span><span class="n">df_all_sample_metadata</span><span class="p">,</span> <span class="n">country</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">min_year</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_year</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">population</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">drug</span><span class="o">=</span><span class="s1">&#39;Chloroquine&#39;</span><span class="p">,</span> <span class="n">min_n</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">based</span><span class="o">=</span> <span class="s1">&#39;Year&#39;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Filter samples based on year, location, drug resistance phenotype, and country.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    - df_all_sample_metadata (DataFrame): DataFrame with sample metadata</span>
+<span class="sd">    - country (list of str, optional): List of countries to filter on. Default is None, which doesn&#39;t filter by country.</span>
+<span class="sd">    - min_year (int, optional): Minimum year for inclusion. Default value is None, which means no subset.</span>
+<span class="sd">    - max_year (int, optional): Maximum year for inclusion. Default is None, which means no subset.</span>
+<span class="sd">    - location (list of str, optional): List of locations for filtering. Default is None.</span>
+<span class="sd">    - drug (str, optional): Drug, see above for the full list. Default is &#39;Chloroquine&#39;.</span>
+<span class="sd">    - min_n (int, optional): Minimum sample count needed for each country-year pair. Default is 25.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    - DataFrame with filtered sample frequencies and counts.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Filter by year range and QC pass</span>
+    <span class="k">if</span> <span class="n">min_year</span> <span class="ow">and</span> <span class="n">max_year</span><span class="p">:</span>
+
+      <span class="n">df</span> <span class="o">=</span> <span class="n">df_all_sample_metadata</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
+          <span class="p">(</span><span class="n">df_all_sample_metadata</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">min_year</span><span class="p">)</span> <span class="o">&amp;</span>
+          <span class="p">(</span><span class="n">df_all_sample_metadata</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">max_year</span><span class="p">)</span>
+      <span class="p">]</span>
+      <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Year group&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">min_year</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">max_year</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+      <span class="n">df</span><span class="o">=</span> <span class="n">df_all_sample_metadata</span>
+
+    <span class="c1"># Copy dataframe to avoid SettingWithCopyWarning and add year group column</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+
+    <span class="k">if</span> <span class="n">population</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Population&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">population</span><span class="p">)]</span>
+
+    <span class="c1"># Filter by country if provided</span>
+    <span class="k">if</span> <span class="n">country</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">country</span><span class="p">)]</span>
+
+
+    <span class="k">if</span> <span class="n">min_n</span><span class="p">:</span>
+      <span class="c1"># Calculate sample counts using n_agg function</span>
+      <span class="n">df_n</span> <span class="o">=</span> <span class="p">(</span>
+          <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+              <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Country&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">])</span>
+              <span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">n_agg</span><span class="p">,</span> <span class="n">include_groups</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="n">drug</span><span class="p">]</span>
+          <span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+      <span class="p">)</span>
+
+      <span class="c1"># Filter (Country, Year) groups that do not meet min_n</span>
+      <span class="n">valid_groups</span> <span class="o">=</span> <span class="n">df_n</span><span class="p">[</span><span class="n">df_n</span><span class="p">[</span><span class="n">drug</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">min_n</span><span class="p">][[</span><span class="s1">&#39;Country&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">]]</span>
+
+      <span class="c1"># Merge valid groups back to the main dataframe to filter `df`</span>
+      <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">valid_groups</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Calculate frequencies of the specified drug using proportion_agg function</span>
+    <span class="n">df_freqs</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+            <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Country&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">])</span>
+            <span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">proportion_agg</span><span class="p">,</span> <span class="n">include_groups</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="n">drug</span><span class="p">]</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="n">df_freqs</span><span class="p">[</span><span class="s1">&#39;Resistant Proportion&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_freqs</span><span class="p">[</span><span class="n">drug</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span>
+
+    <span class="k">if</span> <span class="n">min_n</span><span class="p">:</span>
+      <span class="n">df_freqs</span> <span class="o">=</span> <span class="n">df_freqs</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_n</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">suffixes</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;_count&#39;</span><span class="p">))</span>
+
+    <span class="c1"># Calculate binomial standard error</span>
+    <span class="n">df_freqs</span><span class="p">[</span><span class="s1">&#39;Standard Error&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span>
+        <span class="p">(</span><span class="n">df_freqs</span><span class="p">[</span><span class="s1">&#39;Resistant Proportion&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">100</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">df_freqs</span><span class="p">[</span><span class="s1">&#39;Resistant Proportion&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">100</span><span class="p">)</span> <span class="o">/</span> <span class="n">df_freqs</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">drug</span><span class="si">}</span><span class="s2">_count&quot;</span><span class="p">]</span>
+    <span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+
+    <span class="k">return</span> <span class="n">df_freqs</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now let’s test the function!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_filtered</span> <span class="o">=</span> <span class="n">filter_samples_calculate_prevalence</span><span class="p">(</span>
+    <span class="n">df_all_sample_metadata</span><span class="p">,</span>
+    <span class="n">country</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Ghana&quot;</span><span class="p">,</span> <span class="s2">&quot;Gambia&quot;</span><span class="p">,</span> <span class="s2">&quot;Kenya&quot;</span><span class="p">,</span> <span class="s2">&quot;Democratic Republic of the Congo&quot;</span><span class="p">,</span>  <span class="s2">&quot;Tanzania&quot;</span><span class="p">],</span>  <span class="c1"># List of countries to filter</span>
+    <span class="n">drug</span><span class="o">=</span><span class="s1">&#39;Chloroquine&#39;</span><span class="p">,</span>
+    <span class="n">min_n</span><span class="o">=</span><span class="mi">25</span>
+<span class="p">)</span>
+
+<span class="n">df_filtered</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-b694815b-a820-4dab-ba7f-55b6a8fce941" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country</th>
+      <th>Year</th>
+      <th>Chloroquine</th>
+      <th>Resistant Proportion</th>
+      <th>Chloroquine_count</th>
+      <th>Standard Error</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Democratic Republic of the Congo</td>
+      <td>2012.0</td>
+      <td>0.680851</td>
+      <td>68.085106</td>
+      <td>141</td>
+      <td>3.925665</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Democratic Republic of the Congo</td>
+      <td>2013.0</td>
+      <td>0.741573</td>
+      <td>74.157303</td>
+      <td>89</td>
+      <td>4.640351</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Democratic Republic of the Congo</td>
+      <td>2014.0</td>
+      <td>0.522727</td>
+      <td>52.272727</td>
+      <td>88</td>
+      <td>5.324509</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Democratic Republic of the Congo</td>
+      <td>2015.0</td>
+      <td>0.515152</td>
+      <td>51.515152</td>
+      <td>33</td>
+      <td>8.699886</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Democratic Republic of the Congo</td>
+      <td>2016.0</td>
+      <td>0.524590</td>
+      <td>52.459016</td>
+      <td>61</td>
+      <td>6.394097</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-b694815b-a820-4dab-ba7f-55b6a8fce941')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-b694815b-a820-4dab-ba7f-55b6a8fce941 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-b694815b-a820-4dab-ba7f-55b6a8fce941');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-26fb71ed-7f21-4fba-ace7-70cd01296c03">
+  <button class="colab-df-quickchart" onclick="quickchart('df-26fb71ed-7f21-4fba-ace7-70cd01296c03')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-26fb71ed-7f21-4fba-ace7-70cd01296c03 button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+<p>We will loop over the countries and plot data points for each on the same panel. Data points will be connected with solid lines if consecutive years have data, and dashed lines if there are gaps between years. Finally, we will plot error bars to represent the standard error of resistance estimates.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define x-axis limits and tick intervals</span>
+<span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span> <span class="o">=</span> <span class="mi">1982</span><span class="p">,</span> <span class="mi">2023</span>
+<span class="n">x_ticks</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>  <span class="c1"># Set figure size</span>
+
+<span class="c1"># Loop through each country to plot its resistance trend</span>
+<span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">df_filtered</span><span class="p">[</span><span class="s2">&quot;Country&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
+    <span class="c1"># Extract data for the current country</span>
+    <span class="n">country_data</span> <span class="o">=</span> <span class="n">df_filtered</span><span class="p">[</span><span class="n">df_filtered</span><span class="p">[</span><span class="s2">&quot;Country&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">country</span><span class="p">]</span>
+
+    <span class="c1"># Assign a unique color to the country from Seaborn&#39;s &quot;tab10&quot; palette</span>
+    <span class="n">country_color</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">&quot;tab10&quot;</span><span class="p">)[</span><span class="nb">list</span><span class="p">(</span><span class="n">df_filtered</span><span class="p">[</span><span class="s2">&quot;Country&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">country</span><span class="p">)]</span>
+
+    <span class="c1"># Sort data by Year to ensure proper time series plotting</span>
+    <span class="n">country_data</span> <span class="o">=</span> <span class="n">country_data</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;Year&quot;</span><span class="p">)</span>
+    <span class="n">years</span> <span class="o">=</span> <span class="n">country_data</span><span class="p">[</span><span class="s2">&quot;Year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">resistances</span> <span class="o">=</span> <span class="n">country_data</span><span class="p">[</span><span class="s2">&quot;Resistant Proportion&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+    <span class="c1"># Determine the line style: solid for consecutive years, dashed if there&#39;s a gap</span>
+    <span class="n">line_styles</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">years</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">years</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">years</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>  <span class="c1"># If there is a gap of more than 1 year</span>
+            <span class="n">line_styles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)</span>  <span class="c1"># Dashed line</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">line_styles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)</span>  <span class="c1"># Solid line</span>
+
+    <span class="c1"># Plot data points and connect them with appropriate line styles</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">years</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+            <span class="p">[</span><span class="n">years</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">years</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]],</span>  <span class="c1"># X-axis values (Years)</span>
+            <span class="p">[</span><span class="n">resistances</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">resistances</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]],</span>  <span class="c1"># Y-axis values (Resistance proportion)</span>
+            <span class="n">linestyle</span><span class="o">=</span><span class="n">line_styles</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>  <span class="c1"># Apply solid or dashed line</span>
+            <span class="n">color</span><span class="o">=</span><span class="n">country_color</span><span class="p">,</span>  <span class="c1"># Use country-specific color</span>
+            <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span>  <span class="c1"># Set line width</span>
+            <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span>  <span class="c1"># Use circles for data points</span>
+            <span class="n">markersize</span><span class="o">=</span><span class="mf">6.5</span>  <span class="c1"># Size of data point markers</span>
+        <span class="p">)</span>
+
+    <span class="c1"># Add error bars representing the standard error of resistance estimates</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span>
+        <span class="n">country_data</span><span class="p">[</span><span class="s2">&quot;Year&quot;</span><span class="p">],</span>  <span class="c1"># X-axis: Years</span>
+        <span class="n">country_data</span><span class="p">[</span><span class="s2">&quot;Resistant Proportion&quot;</span><span class="p">],</span>  <span class="c1"># Y-axis: Resistance proportion</span>
+        <span class="n">yerr</span><span class="o">=</span><span class="n">country_data</span><span class="p">[</span><span class="s2">&quot;Standard Error&quot;</span><span class="p">],</span>  <span class="c1"># Error bar values</span>
+        <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">,</span>  <span class="c1"># Do not plot additional markers</span>
+        <span class="n">ecolor</span><span class="o">=</span><span class="n">country_color</span><span class="p">,</span>  <span class="c1"># Match error bar color to country color</span>
+        <span class="n">elinewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>  <span class="c1"># Error bar line width</span>
+        <span class="n">capsize</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>  <span class="c1"># Small horizontal caps at the ends of error bars</span>
+        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span>  <span class="c1"># Transparency for better visibility</span>
+    <span class="p">)</span>
+
+<span class="c1"># Set axis labels</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Year&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Inferred Resistance to Chloroquine (%)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="c1"># Configure x-axis ticks</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">x_ticks</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>  <span class="c1"># Rotate x-axis labels for better readability</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">)</span>  <span class="c1"># Set x-axis limits</span>
+
+<span class="c1"># Add gridlines for better readability</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">which</span><span class="o">=</span><span class="s2">&quot;major&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>  <span class="c1"># Major gridlines (dashed)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">which</span><span class="o">=</span><span class="s2">&quot;minor&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>  <span class="c1"># Minor gridlines (dotted)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">minorticks_on</span><span class="p">()</span>  <span class="c1"># Enable minor ticks</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_minor_locator</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">MultipleLocator</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>  <span class="c1"># Minor ticks for every year</span>
+
+<span class="c1"># Create a legend mapping colors to country names</span>
+<span class="n">handles</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">&quot;tab10&quot;</span><span class="p">)[</span><span class="n">i</span><span class="p">],</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">country</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">country</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">df_filtered</span><span class="p">[</span><span class="s2">&quot;Country&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+<span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="n">handles</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Country&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>  <span class="c1"># Adjust layout for better spacing</span>
+
+<span class="c1"># Save the figure as a high-resolution PNG file</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>  <span class="c1"># Display the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;line_resistance_trends_country_year.png&quot;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/drug_resistance_trends_48_0.png" src="../../_images/drug_resistance_trends_48_0.png" />
+</div>
+</div>
+<p><strong>Figure Legend</strong>: Inferred frequency of chloroquine resistance in five African countries.  Points represent years for which more than 25 samples were available for a given country, while error bars show the standard error for a given year. Solid lines connect consecutive time points, while dotted lines indicate gaps greater than one year between adjacent time points, where years in between each had fewer than 25 samples. Notably, resistance has declined in Ghana, Kenya, and Tanzania from 20-60% to less than 5% since 2010. In the Democratic Republic of the Congo, resistance remained high until 2016 before decreasing, though there was only a single observation available after 2016. In contrast, Gambia is an outlier; after a sharp increase between 1984-2001, resistance has remained stable (60-80%) since around 2001.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./pf8/evolution_malaria_control"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="table_dr_summary.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Drug Resistance Frequencies</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="cnv_fig.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Introduction</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By MalariaGEN<br/>
+    
+        &copy; Copyright 2023.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

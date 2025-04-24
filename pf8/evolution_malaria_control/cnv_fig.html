@@ -1,0 +1,1886 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction &#8212; MalariaGEN parasite data user guide</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="hrp2 and hrp3 Deletion Breakpoints" href="Figure_HRPDeletion.html" />
+    <link rel="prev" title="Introduction" href="drug_resistance_trends.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">MalariaGEN parasite data user guide</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../landing-page.html">
+   MalariaGEN parasite data user guide
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Malaria Parasite Google Cloud Data Access
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../cloud_data_access/parasite-cloud-data-access.html">
+   <strong>
+    Malaria Parasite Google Cloud Data Access
+   </strong>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Pf8
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Data_access.html">
+   <strong>
+    Pf8 Data Access
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../useful-how-tos.html">
+   <strong>
+    Pf8 Analysis Guides:
+   </strong>
+   Useful Genomics How-Tos
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../useful_genomics_howtos/igv_notebook.html">
+     Visualizing Genomic Regions of Pf8 Samples with IGV Plots
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../summarise-data.html">
+   <strong>
+    Pf7 Analysis Guides:
+   </strong>
+   Summarise Pf8 Data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../summarise_data/table_sample_summary.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../summarise_data/Visualising_sample_collections_over_time.html">
+     Visualising sample collections over time
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../summarise_data/SamplesByCountry_Barplot.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../summarise_data/table_variants_summary.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../summarise_data/figure1_samplemap.html">
+     Introduction
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../evolution-malaria-control.html">
+   <strong>
+    Pf8 Analysis Guides:
+   </strong>
+   Study Evolution Against Malaria Control Measures
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="table_dr_summary.html">
+     Drug Resistance Frequencies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="drug_resistance_trends.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Figure_HRPDeletion.html">
+     <em>
+      hrp2
+     </em>
+     and
+     <em>
+      hrp3
+     </em>
+     Deletion Breakpoints
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Drug_Resistance_Pf7_Pf8_Concordance.html">
+     Drug Resistance in Pf7 vs Pf8
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../popgen.html">
+   <strong>
+    Pf8 Analysis Guides:
+   </strong>
+   Population Structure and Selection
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../popgen/PCoA.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../popgen/njt_pf8_anjl.html">
+     Create a Neighbour Joining Tree
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../popgen/Pf8_fws_figure_public_notebook.html">
+     Display Fws Across Populations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../api.html">
+   <strong>
+    Pf8 API
+   </strong>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Pf7
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../pf7/Data_access.html">
+   <strong>
+    Pf7 Data Access
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../pf7/summarise-data.html">
+   <strong>
+    Pf7 Analysis Guides:
+   </strong>
+   Summarise Pf7 Data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/summarise_data/sample-summary-table.html">
+     Summarise Samples by Administrative Division
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/summarise_data/sample-collection-over-time.html">
+     Visualising sample collections over time
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/summarise_data/barplot-samples-by-country.html">
+     Barplot of Samples by Country
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/summarise_data/variant-summary-table.html">
+     Summarise Genetic Variants
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/summarise_data/global-sample-map.html">
+     Plot Global Map of Samples
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../pf7/evolution-malaria-control.html">
+   <strong>
+    Pf7 Analysis Guides:
+   </strong>
+   Study Evolution Against Malaria Control Measures
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/evolution_malaria_control/drug-resistance-summary.html">
+     Drug Resistance Frequencies Across Pf7
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/evolution_malaria_control/chloroquine-resistance-map.html">
+     Plot Map of Chloroquine Resistance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/evolution_malaria_control/summarise_hrp2_hrp3_deletions.html">
+     Summarise
+     <em>
+      hrp2
+     </em>
+     and
+     <em>
+      hrp3
+     </em>
+     Deletions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/evolution_malaria_control/visualise_hrp2_hrp3_deletions.html">
+     Visualise
+     <em>
+      hrp2
+     </em>
+     and
+     <em>
+      hrp3
+     </em>
+     Deletions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/evolution_malaria_control/csp-cterm-analysis.html">
+     Analyse csp C-Terminal Variation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../pf7/popgen.html">
+   <strong>
+    Pf7 Analysis Guides:
+   </strong>
+   Population Structure and Selection
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/popgen/PCoA.html">
+     Principal Coordinate Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/popgen/geographic-genetic-differentiation.html">
+     Geographic patterns of population differentiation and gene flow
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/popgen/neighbour-joining-tree-swga.html">
+     Neighbour Joining Tree for sWGA vs. gDNA
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/popgen/proportion-eba175.html">
+     Plot
+     <em>
+      eba175
+     </em>
+     C Allele Proportions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../pf7/api.html">
+   <strong>
+    Pf7 API
+   </strong>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Pv4
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../pv4/Data_access.html">
+   <strong>
+    Pv4 Data Access
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../pv4/api.html">
+   <strong>
+    Pv4 API
+   </strong>
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/pf8/evolution_malaria_control/cnv_fig.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/malariagen/parasite-data"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/malariagen/parasite-data/issues/new?title=Issue%20on%20page%20%2Fpf8/evolution_malaria_control/cnv_fig.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/malariagen/parasite-data/master?urlpath=lab/tree/docs/pf8/evolution_malaria_control/cnv_fig.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/malariagen/parasite-data/blob/master/docs/pf8/evolution_malaria_control/cnv_fig.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#access-pf8-data">
+   Access Pf8 Data
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cnv-calls">
+     CNV calls
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#figure-preperation">
+     Figure preperation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#save-the-figure">
+       Save the Figure
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#time-series-plots-of-cnv-prevalence">
+     Time-series plots of CNV prevalence
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Save the figure
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Introduction</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#access-pf8-data">
+   Access Pf8 Data
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cnv-calls">
+     CNV calls
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#figure-preperation">
+     Figure preperation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#save-the-figure">
+       Save the Figure
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#time-series-plots-of-cnv-prevalence">
+     Time-series plots of CNV prevalence
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Save the figure
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>This notebook will generate two figures: the first provides a population-level overview of the prevalence of copy number variations (CNV), while the second visualizes how CNV prevalence changes over time.</p>
+<p><strong>This notebook should take approximately two minutes to run.</strong></p>
+</div>
+<div class="section" id="setup">
+<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
+<p>Install and import the malariagen Python package:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>malariagen_data<span class="w"> </span>-q<span class="w"> </span>--no-warn-conflicts
+<span class="kn">import</span><span class="w"> </span><span class="nn">malariagen_data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Installing build dependencies ... ?25l?25hdone
+  Getting requirements to build wheel ... ?25l?25hdone
+  Preparing metadata (pyproject.toml) ... ?25l?25hdone
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">4.0/4.0 MB</span> <span class=" -Color -Color-Red">31.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h  Preparing metadata (setup.py) ... ?25l?25hdone
+  Preparing metadata (setup.py) ... ?25l?25hdone
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">71.7/71.7 kB</span> <span class=" -Color -Color-Red">6.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">775.9/775.9 kB</span> <span class=" -Color -Color-Red">52.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">25.9/25.9 MB</span> <span class=" -Color -Color-Red">65.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">8.7/8.7 MB</span> <span class=" -Color -Color-Red">96.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">210.6/210.6 kB</span> <span class=" -Color -Color-Red">20.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">6.3/6.3 MB</span> <span class=" -Color -Color-Red">55.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">3.3/3.3 MB</span> <span class=" -Color -Color-Red">84.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">7.8/7.8 MB</span> <span class=" -Color -Color-Red">97.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">78.1/78.1 kB</span> <span class=" -Color -Color-Red">8.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">101.7/101.7 kB</span> <span class=" -Color -Color-Red">11.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">8.9/8.9 MB</span> <span class=" -Color -Color-Red">95.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">228.0/228.0 kB</span> <span class=" -Color -Color-Red">22.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">13.4/13.4 MB</span> <span class=" -Color -Color-Red">27.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.6/1.6 MB</span> <span class=" -Color -Color-Red">70.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h  Building wheel for malariagen_data (pyproject.toml) ... ?25l?25hdone
+  Building wheel for dash-cytoscape (setup.py) ... ?25l?25hdone
+  Building wheel for asciitree (setup.py) ... ?25l?25hdone
+</pre></div>
+</div>
+</div>
+</div>
+<p>Import required python libraries installed at colab by default.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">itertools</span><span class="w"> </span><span class="kn">import</span> <span class="n">combinations</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">fisher_exact</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tqdm</span><span class="w"> </span><span class="kn">import</span> <span class="n">tqdm</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">drive</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="access-pf8-data">
+<h1>Access Pf8 Data<a class="headerlink" href="#access-pf8-data" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">release_data</span> <span class="o">=</span> <span class="n">malariagen_data</span><span class="o">.</span><span class="n">Pf8</span><span class="p">()</span>
+<span class="n">df_samples</span> <span class="o">=</span> <span class="n">release_data</span><span class="o">.</span><span class="n">sample_metadata</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We will use the QC pass samples from Pf8.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_samples_qc_pass</span> <span class="o">=</span> <span class="n">df_samples</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_samples</span><span class="p">[</span><span class="s2">&quot;QC pass&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="cnv-calls">
+<h2>CNV calls<a class="headerlink" href="#cnv-calls" title="Permalink to this headline">¶</a></h2>
+<p>CNV calls were made for six “call regions” of interest for each 24,409 QC-passed sample. Four of the CNV calls were performed for identifying gene amplifications (<em>mdr1</em>, <em>dhps</em>, <em>dhfr</em>, and plasmepsin2/3), and two were for identifying gene deletion (<em>hrp2</em> and <em>hrp3</em>). For more details on CNV calling, please check Pf8 publication supplementary.</p>
+<p>We can access the CNV calls through the Sanger’s cloud storage.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cnv_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://pf8-release.cog.sanger.ac.uk/Pf8_cnv_calls.tsv&quot;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">cnv_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-e1319102-dde0-4dd0-bc09-d1a6da81d14e" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sample</th>
+      <th>CRT_uncurated_coverage_only</th>
+      <th>CRT_curated_coverage_only</th>
+      <th>CRT_breakpoint</th>
+      <th>CRT_faceaway_only</th>
+      <th>CRT_final_amplification_call</th>
+      <th>GCH1_uncurated_coverage_only</th>
+      <th>GCH1_curated_coverage_only</th>
+      <th>GCH1_breakpoint</th>
+      <th>GCH1_faceaway_only</th>
+      <th>...</th>
+      <th>PM2_PM3_faceaway_only</th>
+      <th>PM2_PM3_final_amplification_call</th>
+      <th>HRP2_uncurated_coverage_only</th>
+      <th>HRP2_breakpoint</th>
+      <th>HRP2_deletion_type</th>
+      <th>HRP2_final_deletion_call</th>
+      <th>HRP3_uncurated_coverage_only</th>
+      <th>HRP3_breakpoint</th>
+      <th>HRP3_deletion_type</th>
+      <th>HRP3_final_deletion_call</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>FP0008-C</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-</td>
+      <td>-1</td>
+      <td>0</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>FP0009-C</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>FP0010-CW</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>FP0011-CW</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>FP0012-CW</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-1</td>
+      <td>0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 29 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-e1319102-dde0-4dd0-bc09-d1a6da81d14e')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-e1319102-dde0-4dd0-bc09-d1a6da81d14e button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-e1319102-dde0-4dd0-bc09-d1a6da81d14e');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-3ec9733c-074c-4cc4-837a-d99b62c2245f">
+  <button class="colab-df-quickchart" onclick="quickchart('df-3ec9733c-074c-4cc4-837a-d99b62c2245f')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-3ec9733c-074c-4cc4-837a-d99b62c2245f button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+<p>To access the data in one place, we will merge the datasets (<code class="docutils literal notranslate"><span class="pre">df_samples</span></code> and <code class="docutils literal notranslate"><span class="pre">cnv_df</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">merge_df</span> <span class="o">=</span> <span class="n">cnv_df</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_samples_qc_pass</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span> <span class="s2">&quot;Sample&quot;</span><span class="p">)</span>
+
+<span class="n">merge_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-af7f77e1-0f43-490e-b6c8-ae0db87b0dbd" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sample</th>
+      <th>CRT_uncurated_coverage_only</th>
+      <th>CRT_curated_coverage_only</th>
+      <th>CRT_breakpoint</th>
+      <th>CRT_faceaway_only</th>
+      <th>CRT_final_amplification_call</th>
+      <th>GCH1_uncurated_coverage_only</th>
+      <th>GCH1_curated_coverage_only</th>
+      <th>GCH1_breakpoint</th>
+      <th>GCH1_faceaway_only</th>
+      <th>...</th>
+      <th>Admin level 1 longitude</th>
+      <th>Year</th>
+      <th>ENA</th>
+      <th>All samples same case</th>
+      <th>Population</th>
+      <th>% callable</th>
+      <th>QC pass</th>
+      <th>Exclusion reason</th>
+      <th>Sample type</th>
+      <th>Sample was in Pf7</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>FP0008-C</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-</td>
+      <td>-1</td>
+      <td>0</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-</td>
+      <td>0</td>
+      <td>...</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR1081237</td>
+      <td>FP0008-C</td>
+      <td>AF-W</td>
+      <td>82.48</td>
+      <td>True</td>
+      <td>Analysis_set</td>
+      <td>gDNA</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>FP0009-C</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-</td>
+      <td>0</td>
+      <td>...</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR1081238</td>
+      <td>FP0009-C</td>
+      <td>AF-W</td>
+      <td>88.95</td>
+      <td>True</td>
+      <td>Analysis_set</td>
+      <td>gDNA</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>FP0010-CW</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-</td>
+      <td>0</td>
+      <td>...</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR2889621</td>
+      <td>FP0010-CW</td>
+      <td>AF-W</td>
+      <td>87.01</td>
+      <td>True</td>
+      <td>Analysis_set</td>
+      <td>sWGA</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+<p>3 rows × 45 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-af7f77e1-0f43-490e-b6c8-ae0db87b0dbd')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-af7f77e1-0f43-490e-b6c8-ae0db87b0dbd button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-af7f77e1-0f43-490e-b6c8-ae0db87b0dbd');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-b4569288-dbe5-4365-ba94-6a33a3c6844e">
+  <button class="colab-df-quickchart" onclick="quickchart('df-b4569288-dbe5-4365-ba94-6a33a3c6844e')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-b4569288-dbe5-4365-ba94-6a33a3c6844e button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+<p>For gene amplification calls, the genotype values could take one of three values: missing/uncallable (-1), not amplified (0), or amplified (1).</p>
+<p>Now, let’s check the number of calls for each gene.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">cnv_call</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;HRP2_final_deletion_call&quot;</span><span class="p">,</span> <span class="s2">&quot;CRT_final_amplification_call&quot;</span><span class="p">,</span>
+                 <span class="s2">&quot;HRP3_final_deletion_call&quot;</span><span class="p">,</span> <span class="s2">&quot;MDR1_final_amplification_call&quot;</span><span class="p">,</span>
+                 <span class="s2">&quot;PM2_PM3_final_amplification_call&quot;</span><span class="p">,</span> <span class="s2">&quot;GCH1_final_amplification_call&quot;</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">merge_df</span><span class="p">[</span><span class="n">cnv_call</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HRP2_final_deletion_call
+ 0    13512
+-1    10882
+ 1       15
+Name: count, dtype: int64
+CRT_final_amplification_call
+ 0    22321
+-1     2002
+ 1       86
+Name: count, dtype: int64
+HRP3_final_deletion_call
+ 0    13120
+-1    11074
+ 1      215
+Name: count, dtype: int64
+MDR1_final_amplification_call
+ 0    19512
+-1     4195
+ 1      702
+Name: count, dtype: int64
+PM2_PM3_final_amplification_call
+ 0    17610
+-1     4719
+ 1     2080
+Name: count, dtype: int64
+GCH1_final_amplification_call
+ 0    17631
+-1     4134
+ 1     2644
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="figure-preperation">
+<h2>Figure preperation<a class="headerlink" href="#figure-preperation" title="Permalink to this headline">¶</a></h2>
+<p>We start by defining descriptive labels for the columns that contain values for the call regions. These labels will be displayed in the figure to make the regions identifiable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cnv_call_ids</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;GCH1_final_amplification_call&quot;</span><span class="p">:</span> <span class="s2">&quot;$\it</span><span class="si">{gch1}</span><span class="s2">$ amplification&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;CRT_final_amplification_call&quot;</span><span class="p">:</span> <span class="s2">&quot;$\it</span><span class="si">{crt}</span><span class="s2">$ amplification&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;MDR1_final_amplification_call&quot;</span><span class="p">:</span> <span class="s2">&quot;$\it</span><span class="si">{mdr1}</span><span class="s2">$ amplification&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;PM2_PM3_final_amplification_call&quot;</span><span class="p">:</span> <span class="s2">&quot;$\it{plasmepsin2/3}$ amplification&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;HRP2_final_deletion_call&quot;</span><span class="p">:</span> <span class="s2">&quot;$\it</span><span class="si">{hrp2}</span><span class="s2">$ deletion&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;HRP3_final_deletion_call&quot;</span><span class="p">:</span> <span class="s2">&quot;$\it</span><span class="si">{hrp3}</span><span class="s2">$ deletion&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We define a dictionary which maps the codes for ten major sub-populations to a colour code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">population_colour_map</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;SA&#39;</span> <span class="p">:</span> <span class="s2">&quot;#4daf4a&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;AF-W&#39;</span> <span class="p">:</span> <span class="s2">&quot;#e31a1c&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;AF-C&#39;</span> <span class="p">:</span> <span class="s2">&quot;#fd8d3c&quot;</span> <span class="p">,</span>
+    <span class="s1">&#39;AF-NE&#39;</span> <span class="p">:</span> <span class="s2">&quot;#bb8129&quot;</span> <span class="p">,</span>
+    <span class="s1">&#39;AF-E&#39;</span> <span class="p">:</span> <span class="s2">&quot;#fecc5c&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;AS-S-E&#39;</span> <span class="p">:</span> <span class="s2">&quot;#dfc0eb&quot;</span> <span class="p">,</span>
+    <span class="s1">&#39;AS-S-FE&#39;</span> <span class="p">:</span> <span class="s2">&quot;#984ea3&quot;</span> <span class="p">,</span>
+    <span class="s1">&#39;AS-SE-W&#39;</span> <span class="p">:</span> <span class="s2">&quot;#9ecae1&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;AS-SE-E&#39;</span> <span class="p">:</span> <span class="s2">&quot;#3182bd&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;OC-NG&#39;</span> <span class="p">:</span> <span class="s2">&quot;#f781bf&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We are ready to generate our first figure, which will consist of six subplots, each corresponding to a different call region. The y-axis of each subplot will display the prevalence of copy number variations (CNVs), while the x-axis will represent the various subpopulations. This should allow for an easy comparison of CNV prevalence across populations for each call region.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Figure layout, 6 rows, 1 column, 9x9 inches</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+
+<span class="c1"># Iterate over each call region (gene)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">gene</span><span class="p">,</span> <span class="n">title</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cnv_call_ids</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+
+    <span class="c1"># Group the data by population and calculate the prevalence and counts of CNV calls</span>
+    <span class="n">by_population</span> <span class="o">=</span> <span class="n">merge_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Population&quot;</span><span class="p">)[</span><span class="n">gene</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+        <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+            <span class="s2">&quot;ratio&quot;</span><span class="p">:</span> <span class="p">[</span><span class="nb">sum</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)],</span>  <span class="c1"># Calculate ratio of CNV calls</span>
+            <span class="s2">&quot;cnv_gt_1&quot;</span><span class="p">:</span> <span class="p">[</span><span class="nb">sum</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)],</span>  <span class="c1"># Count samples with CNV call (1)</span>
+            <span class="s2">&quot;cnv_gt_0_1&quot;</span><span class="p">:</span> <span class="p">[</span><span class="nb">sum</span><span class="p">(</span><span class="n">x</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)]</span>  <span class="c1"># Count total samples with valid CNV calls (not -1)</span>
+        <span class="p">})</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># Set the population index as a categorical type for sorting purposes</span>
+    <span class="n">by_population</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">by_population</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">categories</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">population_colour_map</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span> <span class="n">ordered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">by_population</span> <span class="o">=</span> <span class="n">by_population</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+
+    <span class="c1"># Create a bar plot for each gene</span>
+    <span class="n">bars</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span>
+        <span class="n">by_population</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">by_population</span><span class="p">[</span><span class="s2">&quot;ratio&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span>  <span class="c1"># Convert ratio to percentage</span>
+        <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="n">population_colour_map</span><span class="p">[</span><span class="n">pop</span><span class="p">]</span> <span class="k">for</span> <span class="n">pop</span> <span class="ow">in</span> <span class="n">by_population</span><span class="o">.</span><span class="n">index</span><span class="p">]</span>  <span class="c1"># Color bars based on population</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Annotate each bar with the percentage and count of CNVs</span>
+    <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">bar</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">bars</span><span class="p">):</span>
+        <span class="n">height</span> <span class="o">=</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span>
+        <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
+            <span class="n">bar</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1"># Position the annotation at the center of the bar</span>
+            <span class="n">height</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">height</span><span class="si">:</span><span class="s2">.2g</span><span class="si">}</span><span class="s2">%</span><span class="se">\n</span><span class="s2">(</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">by_population</span><span class="p">[</span><span class="s1">&#39;cnv_gt_1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">j</span><span class="p">])</span><span class="si">}</span><span class="s2"> / </span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">by_population</span><span class="p">[</span><span class="s1">&#39;cnv_gt_0_1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">j</span><span class="p">])</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span>
+            <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;bottom&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span>  <span class="c1"># Set text alignment and font size</span>
+        <span class="p">)</span>
+
+    <span class="c1"># Set x-axis ticks to the population names and rotate the labels for better visibility</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">by_population</span><span class="o">.</span><span class="n">index</span><span class="p">)))</span>  <span class="c1"># Position the ticks at each population</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">by_population</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>  <span class="c1"># Set population names as labels, rotated by 30 degrees</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">0.75</span><span class="p">)</span>  <span class="c1"># Set the subplot title</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s2">&quot;top&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># Hide the top border of the subplot</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s2">&quot;right&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># Hide the right border of the subplot</span>
+
+    <span class="c1"># Add horizontal reference lines at 25% and 50% prevalence for visual guidance</span>
+    <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">50</span><span class="p">]:</span>
+        <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Add global labels for the y and x axes</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="s2">&quot;% Prevalence&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">=-</span><span class="mf">0.03</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>  <span class="c1"># y-axis label</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="s2">&quot;Population&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mf">0.46</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>  <span class="c1"># x-axis label</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="c1"># Vertical space between subplots</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">hspace</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/cnv_fig_25_0.png" src="../../_images/cnv_fig_25_0.png" />
+</div>
+</div>
+<p><strong>Figure Legend.</strong> Population-level overview of the prevalence of copy number variations. Each row shows a series of bars indicating the percentage prevalence of one of the six copy number variations called in Pf8 — CRT (<em>crt</em> amplification), HRP2 (<em>hrp</em> deletion), PM2_PM3 (plasmepsin 2/3 amplification), MDR1 (<em>mdr1</em> amplification), HRP3 (<em>hrp3</em> deletion), GCH1 (<em>gch1</em> amplification) — in each of the ten colour-coded populations. Each bar comprises the percentage prevalence, as well as the number of samples with the CNV (as the numerator) and the total number of samples with a non-missing CNV call (as the denominator).</p>
+<div class="section" id="save-the-figure">
+<h3>Save the Figure<a class="headerlink" href="#save-the-figure" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># You will need to authorise Google Colab access to Google Drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mounted at /content/drive
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;/content/drive/My Drive/pf8-cnv-population-breakdown.png&quot;</span><span class="p">,</span> <span class="n">dpi</span> <span class="o">=</span> <span class="mi">1200</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s2">&quot;tight&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="time-series-plots-of-cnv-prevalence">
+<h2>Time-series plots of CNV prevalence<a class="headerlink" href="#time-series-plots-of-cnv-prevalence" title="Permalink to this headline">¶</a></h2>
+<p>Now it is time to create a time-series plot. Each point will represent the prevalence for a given year in samples from the respective population.</p>
+<p>In addition to plotting prevalence, we will also compute the standard error of a proportion for each point using the formula:</p>
+<div class="math notranslate nohighlight">
+\[SE = \sqrt{\frac{p(1 - p)}{n}}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">p</span></code> is the observed proportion (prevalence).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">n</span></code> is the sample size for that year and population.</p></li>
+</ul>
+<p>This will help visualize the uncertainty in prevalence estimates over time.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">calculate_standard_error</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">):</span>
+    <span class="c1"># proportion</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">ratio</span>
+    <span class="c1"># sample size</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">cnv_gt_0_1</span>
+
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">p</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">p</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This plot consists of three subplots, one for each call region (<strong>GCH1</strong>, <strong>MDR1</strong>, and <strong>PM2_PM3</strong>). The logic of the following code is as follows:</p>
+<ol class="simple">
+<li><p>Loop over each population.</p></li>
+<li><p>Group samples per year to calculate prevalence and standard error.</p></li>
+<li><p>Plot the data points for each year and error bars for standard error.</p></li>
+</ol>
+<p>For time gaps in the dataset, such as in GCH1 amplification of West Africa samples, we connect data points with dotted lines to indicate missing intermediate data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the figure layout</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">gs</span>  <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_gridspec</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">height_ratios</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">width_ratios</span><span class="o">=</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">ax1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:])</span>
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">ax3</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+<span class="c1"># Set variables used when looping over populations</span>
+<span class="n">plotting_data</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s2">&quot;pop_of_interest&quot;</span><span class="p">:</span> <span class="s2">&quot;AF-W&quot;</span><span class="p">,</span> <span class="s2">&quot;pop_colour&quot;</span><span class="p">:</span> <span class="s2">&quot;#e31a1c&quot;</span><span class="p">,</span> <span class="s2">&quot;column_of_interest&quot;</span><span class="p">:</span> <span class="s2">&quot;GCH1_final_amplification_call&quot;</span><span class="p">,</span> <span class="s2">&quot;subplot_axis&quot;</span><span class="p">:</span> <span class="n">ax1</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;GCH1 amplification&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;pop_of_interest&quot;</span><span class="p">:</span> <span class="s2">&quot;AS-SE-W&quot;</span><span class="p">,</span> <span class="s2">&quot;pop_colour&quot;</span><span class="p">:</span> <span class="s2">&quot;#9ecae1&quot;</span><span class="p">,</span> <span class="s2">&quot;column_of_interest&quot;</span><span class="p">:</span> <span class="s2">&quot;GCH1_final_amplification_call&quot;</span><span class="p">,</span> <span class="s2">&quot;subplot_axis&quot;</span><span class="p">:</span> <span class="n">ax1</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;GCH1 amplification&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;pop_of_interest&quot;</span><span class="p">:</span> <span class="s2">&quot;AS-SE-E&quot;</span><span class="p">,</span> <span class="s2">&quot;pop_colour&quot;</span><span class="p">:</span> <span class="s2">&quot;#3182bd&quot;</span><span class="p">,</span> <span class="s2">&quot;column_of_interest&quot;</span><span class="p">:</span> <span class="s2">&quot;GCH1_final_amplification_call&quot;</span><span class="p">,</span> <span class="s2">&quot;subplot_axis&quot;</span><span class="p">:</span> <span class="n">ax1</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;GCH1 amplification&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;pop_of_interest&quot;</span><span class="p">:</span> <span class="s2">&quot;AS-SE-W&quot;</span><span class="p">,</span> <span class="s2">&quot;pop_colour&quot;</span><span class="p">:</span> <span class="s2">&quot;#9ecae1&quot;</span><span class="p">,</span> <span class="s2">&quot;column_of_interest&quot;</span><span class="p">:</span> <span class="s2">&quot;MDR1_final_amplification_call&quot;</span><span class="p">,</span> <span class="s2">&quot;subplot_axis&quot;</span><span class="p">:</span> <span class="n">ax2</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;MDR1 amplification&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;pop_of_interest&quot;</span><span class="p">:</span> <span class="s2">&quot;AS-SE-E&quot;</span><span class="p">,</span> <span class="s2">&quot;pop_colour&quot;</span><span class="p">:</span> <span class="s2">&quot;#3182bd&quot;</span><span class="p">,</span> <span class="s2">&quot;column_of_interest&quot;</span><span class="p">:</span> <span class="s2">&quot;MDR1_final_amplification_call&quot;</span><span class="p">,</span> <span class="s2">&quot;subplot_axis&quot;</span><span class="p">:</span> <span class="n">ax2</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;MDR1 amplification&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;pop_of_interest&quot;</span><span class="p">:</span> <span class="s2">&quot;AS-SE-E&quot;</span><span class="p">,</span> <span class="s2">&quot;pop_colour&quot;</span><span class="p">:</span> <span class="s2">&quot;#3182bd&quot;</span><span class="p">,</span> <span class="s2">&quot;column_of_interest&quot;</span><span class="p">:</span> <span class="s2">&quot;PM2_PM3_final_amplification_call&quot;</span><span class="p">,</span> <span class="s2">&quot;subplot_axis&quot;</span><span class="p">:</span> <span class="n">ax3</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;PM2_PM3 amplification&quot;</span><span class="p">},</span>
+<span class="p">]</span>
+
+<span class="c1"># Loop starts</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">plotting_data</span><span class="p">:</span>
+    <span class="n">pop_of_interest</span>    <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;pop_of_interest&quot;</span><span class="p">]</span>
+    <span class="n">pop_colour</span>         <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;pop_colour&quot;</span><span class="p">]</span>
+    <span class="n">column_of_interest</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;column_of_interest&quot;</span><span class="p">]</span>
+    <span class="n">subplot_axis</span>       <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;subplot_axis&quot;</span><span class="p">]</span>
+    <span class="n">title</span>              <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">]</span>
+
+    <span class="c1"># subset call-region and population specific dataset</span>
+    <span class="n">subset_df</span> <span class="o">=</span> <span class="n">merge_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
+        <span class="p">(</span><span class="n">merge_df</span><span class="p">[</span><span class="n">column_of_interest</span><span class="p">]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span>
+        <span class="p">(</span><span class="n">merge_df</span><span class="o">.</span><span class="n">Population</span> <span class="o">==</span> <span class="n">pop_of_interest</span><span class="p">)</span>
+    <span class="p">]</span>
+    <span class="c1"># calculate prevalence after grouping samples by year</span>
+    <span class="n">longitudinal_data</span> <span class="o">=</span> <span class="n">subset_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Year&quot;</span><span class="p">)[</span><span class="n">column_of_interest</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span>
+        <span class="s2">&quot;ratio&quot;</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+        <span class="s2">&quot;cnv_gt_1&quot;</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="p">),</span>
+        <span class="s2">&quot;cnv_gt_0_1&quot;</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="p">}))</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">astype</span><span class="p">({</span><span class="s2">&quot;Year&quot;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="s2">&quot;cnv_gt_1&quot;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="s2">&quot;cnv_gt_0_1&quot;</span><span class="p">:</span> <span class="nb">int</span><span class="p">})</span>
+
+    <span class="c1"># use only data points with sample size is &gt;25</span>
+    <span class="n">longitudinal_data</span> <span class="o">=</span> <span class="n">longitudinal_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">longitudinal_data</span><span class="o">.</span><span class="n">cnv_gt_0_1</span> <span class="o">&gt;=</span> <span class="mi">25</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">longitudinal_data</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="k">continue</span>
+
+    <span class="k">if</span> <span class="n">longitudinal_data</span><span class="o">.</span><span class="n">ratio</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mf">0.1</span><span class="p">:</span>
+        <span class="k">continue</span>
+
+    <span class="c1"># calculate standard error using our function</span>
+    <span class="n">longitudinal_data</span><span class="p">[</span><span class="s2">&quot;standard_error&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">longitudinal_data</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">calculate_standard_error</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># plot data points and error bars</span>
+    <span class="n">subplot_axis</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span>
+        <span class="n">longitudinal_data</span><span class="o">.</span><span class="n">Year</span><span class="p">,</span> <span class="n">longitudinal_data</span><span class="o">.</span><span class="n">ratio</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="n">yerr</span><span class="o">=</span><span class="n">longitudinal_data</span><span class="o">.</span><span class="n">standard_error</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">capsize</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">pop_colour</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="n">pop_of_interest</span>
+    <span class="p">)</span>
+
+  <span class="c1"># CONNECTION LINES</span>
+    <span class="c1"># Sort data for consistent line drawing</span>
+    <span class="n">longitudinal_data</span> <span class="o">=</span> <span class="n">longitudinal_data</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;Year&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Iterate over consecutive points to apply different line styles</span>
+    <span class="n">gap_threshold</span>  <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">longitudinal_data</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span> <span class="o">=</span> <span class="n">longitudinal_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;Year&quot;</span><span class="p">],</span> <span class="n">longitudinal_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">][</span><span class="s2">&quot;Year&quot;</span><span class="p">]</span>
+        <span class="n">y1</span><span class="p">,</span> <span class="n">y2</span> <span class="o">=</span> <span class="n">longitudinal_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;ratio&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="n">longitudinal_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">][</span><span class="s2">&quot;ratio&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span>
+
+        <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;-&quot;</span> <span class="k">if</span> <span class="p">(</span><span class="n">x2</span> <span class="o">-</span> <span class="n">x1</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">gap_threshold</span> <span class="k">else</span> <span class="s2">&quot;:&quot;</span>  <span class="c1"># Solid if close, dotted if far</span>
+        <span class="n">subplot_axis</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">],</span> <span class="p">[</span><span class="n">y1</span><span class="p">,</span> <span class="n">y2</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">pop_colour</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="n">linestyle</span><span class="p">)</span>
+
+
+
+  <span class="c1"># SUBPLOT LAYOUT</span>
+    <span class="c1"># Labels</span>
+    <span class="n">subplot_axis</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">14</span><span class="p">)</span>
+    <span class="n">subplot_axis</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Year&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">)</span>
+    <span class="n">subplot_axis</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Percentage Prevalence (%)&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">)</span>
+    <span class="c1"># y-axis limits</span>
+    <span class="n">subplot_axis</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span> <span class="o">=</span> <span class="n">subplot_axis</span><span class="o">.</span><span class="n">get_xlim</span><span class="p">()</span>
+
+    <span class="c1"># display every two year</span>
+    <span class="n">x_tick_interval</span> <span class="o">=</span> <span class="mi">2</span>
+
+    <span class="c1"># position of ticks</span>
+    <span class="n">xticks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span>
+        <span class="n">x_min</span> <span class="o">//</span> <span class="n">x_tick_interval</span> <span class="o">*</span> <span class="n">x_tick_interval</span> <span class="o">+</span> <span class="n">x_tick_interval</span><span class="p">,</span>
+        <span class="n">x_max</span> <span class="o">//</span> <span class="n">x_tick_interval</span> <span class="o">*</span> <span class="n">x_tick_interval</span> <span class="o">+</span> <span class="n">x_tick_interval</span><span class="p">,</span>
+        <span class="n">x_tick_interval</span>
+    <span class="p">)</span>
+    <span class="c1"># plot tick labels</span>
+    <span class="n">subplot_axis</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">xticks</span><span class="p">)</span>
+    <span class="n">subplot_axis</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">year</span><span class="p">))</span> <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">xticks</span><span class="p">])</span>
+
+<span class="k">for</span> <span class="n">subplot_axis</span> <span class="ow">in</span> <span class="p">[</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">,</span> <span class="n">ax3</span><span class="p">]:</span>
+  <span class="c1"># plot y-axis ticks</span>
+    <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">):</span>
+        <span class="n">subplot_axis</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+  <span class="c1"># plot x-axis ticks</span>
+    <span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span> <span class="o">=</span> <span class="n">subplot_axis</span><span class="o">.</span><span class="n">get_xlim</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">x_min</span> <span class="o">+</span> <span class="n">x_tick_interval</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">x_max</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">):</span>
+        <span class="n">subplot_axis</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+  <span class="c1"># adjust legend position</span>
+    <span class="n">subplot_axis</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">hspace</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/cnv_fig_34_0.png" src="../../_images/cnv_fig_34_0.png" />
+</div>
+</div>
+<p><strong>Figure Legend</strong>. Time-series plots of CNV prevalence in selected populations. Points represent years for which more than 25 calls were available for a given country, while error bars show the standard error for each resistance estimate for any given year. Solid lines connect consecutive time points, while dotted lines indicate gaps greater than one year between adjacent time points. Percentage prevalences were computed using samples with non-missing CNV calls for the gene.</p>
+<div class="section" id="id1">
+<h3>Save the figure<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;/content/drive/My Drive/pf8_temporal_cnv.png&quot;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">1200</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./pf8/evolution_malaria_control"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="drug_resistance_trends.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Introduction</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Figure_HRPDeletion.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><em>hrp2</em> and <em>hrp3</em> Deletion Breakpoints</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By MalariaGEN<br/>
+    
+        &copy; Copyright 2023.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

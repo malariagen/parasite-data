@@ -1,0 +1,1726 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drug Resistance in Pf7 vs Pf8 &#8212; MalariaGEN parasite data user guide</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Pf8 Analysis Guides: Population Structure and Selection" href="../popgen.html" />
+    <link rel="prev" title="hrp2 and hrp3 Deletion Breakpoints" href="Figure_HRPDeletion.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">MalariaGEN parasite data user guide</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../landing-page.html">
+   MalariaGEN parasite data user guide
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Malaria Parasite Google Cloud Data Access
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../cloud_data_access/parasite-cloud-data-access.html">
+   <strong>
+    Malaria Parasite Google Cloud Data Access
+   </strong>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Pf8
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Data_access.html">
+   <strong>
+    Pf8 Data Access
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../useful-how-tos.html">
+   <strong>
+    Pf8 Analysis Guides:
+   </strong>
+   Useful Genomics How-Tos
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../useful_genomics_howtos/igv_notebook.html">
+     Visualizing Genomic Regions of Pf8 Samples with IGV Plots
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../summarise-data.html">
+   <strong>
+    Pf7 Analysis Guides:
+   </strong>
+   Summarise Pf8 Data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../summarise_data/table_sample_summary.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../summarise_data/Visualising_sample_collections_over_time.html">
+     Visualising sample collections over time
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../summarise_data/SamplesByCountry_Barplot.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../summarise_data/table_variants_summary.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../summarise_data/figure1_samplemap.html">
+     Introduction
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../evolution-malaria-control.html">
+   <strong>
+    Pf8 Analysis Guides:
+   </strong>
+   Study Evolution Against Malaria Control Measures
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="table_dr_summary.html">
+     Drug Resistance Frequencies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="drug_resistance_trends.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cnv_fig.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Figure_HRPDeletion.html">
+     <em>
+      hrp2
+     </em>
+     and
+     <em>
+      hrp3
+     </em>
+     Deletion Breakpoints
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Drug Resistance in Pf7 vs Pf8
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../popgen.html">
+   <strong>
+    Pf8 Analysis Guides:
+   </strong>
+   Population Structure and Selection
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../popgen/PCoA.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../popgen/njt_pf8_anjl.html">
+     Create a Neighbour Joining Tree
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../popgen/Pf8_fws_figure_public_notebook.html">
+     Display Fws Across Populations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../api.html">
+   <strong>
+    Pf8 API
+   </strong>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Pf7
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../pf7/Data_access.html">
+   <strong>
+    Pf7 Data Access
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../pf7/summarise-data.html">
+   <strong>
+    Pf7 Analysis Guides:
+   </strong>
+   Summarise Pf7 Data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/summarise_data/sample-summary-table.html">
+     Summarise Samples by Administrative Division
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/summarise_data/sample-collection-over-time.html">
+     Visualising sample collections over time
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/summarise_data/barplot-samples-by-country.html">
+     Barplot of Samples by Country
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/summarise_data/variant-summary-table.html">
+     Summarise Genetic Variants
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/summarise_data/global-sample-map.html">
+     Plot Global Map of Samples
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../pf7/evolution-malaria-control.html">
+   <strong>
+    Pf7 Analysis Guides:
+   </strong>
+   Study Evolution Against Malaria Control Measures
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/evolution_malaria_control/drug-resistance-summary.html">
+     Drug Resistance Frequencies Across Pf7
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/evolution_malaria_control/chloroquine-resistance-map.html">
+     Plot Map of Chloroquine Resistance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/evolution_malaria_control/summarise_hrp2_hrp3_deletions.html">
+     Summarise
+     <em>
+      hrp2
+     </em>
+     and
+     <em>
+      hrp3
+     </em>
+     Deletions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/evolution_malaria_control/visualise_hrp2_hrp3_deletions.html">
+     Visualise
+     <em>
+      hrp2
+     </em>
+     and
+     <em>
+      hrp3
+     </em>
+     Deletions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/evolution_malaria_control/csp-cterm-analysis.html">
+     Analyse csp C-Terminal Variation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../pf7/popgen.html">
+   <strong>
+    Pf7 Analysis Guides:
+   </strong>
+   Population Structure and Selection
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/popgen/PCoA.html">
+     Principal Coordinate Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/popgen/geographic-genetic-differentiation.html">
+     Geographic patterns of population differentiation and gene flow
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/popgen/neighbour-joining-tree-swga.html">
+     Neighbour Joining Tree for sWGA vs. gDNA
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/popgen/proportion-eba175.html">
+     Plot
+     <em>
+      eba175
+     </em>
+     C Allele Proportions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../pf7/api.html">
+   <strong>
+    Pf7 API
+   </strong>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Pv4
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../pv4/Data_access.html">
+   <strong>
+    Pv4 Data Access
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../pv4/api.html">
+   <strong>
+    Pv4 API
+   </strong>
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/pf8/evolution_malaria_control/Drug_Resistance_Pf7_Pf8_Concordance.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/malariagen/parasite-data"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/malariagen/parasite-data/issues/new?title=Issue%20on%20page%20%2Fpf8/evolution_malaria_control/Drug_Resistance_Pf7_Pf8_Concordance.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/malariagen/parasite-data/master?urlpath=lab/tree/docs/pf8/evolution_malaria_control/Drug_Resistance_Pf7_Pf8_Concordance.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/malariagen/parasite-data/blob/master/docs/pf8/evolution_malaria_control/Drug_Resistance_Pf7_Pf8_Concordance.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Drug Resistance in Pf7 vs Pf8
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#access-pf8-inferred-resistance-status-of-pf7-and-pf8-samples">
+     Access Pf8 Inferred Resistance Status of Pf7 and Pf8 Samples
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#figure-preparations">
+       Figure Preparations
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bar-plot-total-number-of-changes-in-resistance-status-between-pf7-and-pf8">
+   Bar Plot: Total number of changes in resistance status between Pf7 and Pf8
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#save-figure">
+     Save Figure
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pf7-vs-pf8-drug-resistance-status-concordance-heatmaps">
+     Pf7 vs Pf8 Drug Resistance Status Concordance Heatmaps
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Save Figure
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#percentage-of-resistant-samples-in-pf7-and-pf8">
+     Percentage of resistant samples in Pf7 and Pf8
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Save Figure
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Drug Resistance in Pf7 vs Pf8</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Drug Resistance in Pf7 vs Pf8
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#access-pf8-inferred-resistance-status-of-pf7-and-pf8-samples">
+     Access Pf8 Inferred Resistance Status of Pf7 and Pf8 Samples
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#figure-preparations">
+       Figure Preparations
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bar-plot-total-number-of-changes-in-resistance-status-between-pf7-and-pf8">
+   Bar Plot: Total number of changes in resistance status between Pf7 and Pf8
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#save-figure">
+     Save Figure
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pf7-vs-pf8-drug-resistance-status-concordance-heatmaps">
+     Pf7 vs Pf8 Drug Resistance Status Concordance Heatmaps
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Save Figure
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#percentage-of-resistant-samples-in-pf7-and-pf8">
+     Percentage of resistant samples in Pf7 and Pf8
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Save Figure
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="drug-resistance-in-pf7-vs-pf8">
+<h1>Drug Resistance in Pf7 vs Pf8<a class="headerlink" href="#drug-resistance-in-pf7-vs-pf8" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>In Pf8, drug resistance phenotypes inferred with a heuristic framework linking genetic variation in <em>crt</em>, <em>mdr1</em>, <em>dhfr</em>, <em>dhps</em>, <em>pm2</em>, <em>pm3</em> and <em>kelch13</em> to ‘Resistant’, ‘Sensitive’, or ‘Undetermined’ status for major antimalarials. The rules are based on current understanding and available data on the molecular mechanisms of drug resistance in <em>P. falciparum</em>  (rules can be accessed <a class="reference external" href="https://pf8-release.cog.sanger.ac.uk/Pf8_resistance_classification.pdf">here</a>).</p>
+<p>Updates to the coverage-based method in the Pf8 copy-number variation (CNV) calling pipeline have led to changes in the inferred resistance status of some Pf7 samples (see Pf8 supplementary for details). This notebook quantifies these changes and compares the overall prevalence of resistant samples across Pf7 and Pf8 data resources.</p>
+<p>This notebook will generate the following three figures:</p>
+<ul class="simple">
+<li><p>A bar plot showing number of samples with any change in inferred drug resistance status from Pf7 to Pf8</p></li>
+<li><p>Heatmaps showing number of samples with inferred drug resistance status between Pf7 and Pf8, across the 15,999 overlapping samples</p></li>
+<li><p>A grouped bar plot showing percentage of parasites with inferred ‘Resistant’ status in Pf7 and Pf8, for each drug in the collection.</p></li>
+</ul>
+<p><strong>This notebook should take approximately two minutes to run.</strong></p>
+</div>
+<div class="section" id="setup">
+<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
+<p>Import required python libraries installed at colab by default.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">drive</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">collections</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">scipy</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">drive</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="access-pf8-inferred-resistance-status-of-pf7-and-pf8-samples">
+<h2>Access Pf8 Inferred Resistance Status of Pf7 and Pf8 Samples<a class="headerlink" href="#access-pf8-inferred-resistance-status-of-pf7-and-pf8-samples" title="Permalink to this headline">¶</a></h2>
+<p>We can access the Pf7 resistance status file on MalariaGEN website and Pf8 version of this file on Sanger’s cloud.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_pf7</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://www.malariagen.net/wp-content/uploads/2023/11/Pf7_inferred_resistance_status_classification.txt&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_pf7</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="n">df_pf8</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://pf8-release.cog.sanger.ac.uk/Pf8_inferred_resistance_status_classification.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_pf8</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(16203, 14)
+(24409, 11)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Only QC-pass samples were used for prediction of resistance status. Let’s look how the dataset looks like.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_pf8</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-e07ad5d3-af31-4d56-a161-85a5fd28905f" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sample</th>
+      <th>Chloroquine</th>
+      <th>Pyrimethamine</th>
+      <th>Sulfadoxine</th>
+      <th>Mefloquine</th>
+      <th>Artemisinin</th>
+      <th>Piperaquine</th>
+      <th>SP (uncomplicated)</th>
+      <th>SP (IPTp)</th>
+      <th>AS-MQ</th>
+      <th>DHA-PPQ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>FP0008-C</td>
+      <td>Undetermined</td>
+      <td>Undetermined</td>
+      <td>Undetermined</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>FP0009-C</td>
+      <td>Resistant</td>
+      <td>Resistant</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Resistant</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>FP0010-CW</td>
+      <td>Undetermined</td>
+      <td>Resistant</td>
+      <td>Resistant</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Resistant</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>FP0011-CW</td>
+      <td>Undetermined</td>
+      <td>Resistant</td>
+      <td>Undetermined</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Resistant</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>FP0012-CW</td>
+      <td>Resistant</td>
+      <td>Resistant</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Resistant</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-e07ad5d3-af31-4d56-a161-85a5fd28905f')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-e07ad5d3-af31-4d56-a161-85a5fd28905f button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-e07ad5d3-af31-4d56-a161-85a5fd28905f');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-a5bead8b-416c-4e38-9fb9-8b8b85ea6f20">
+  <button class="colab-df-quickchart" onclick="quickchart('df-a5bead8b-416c-4e38-9fb9-8b8b85ea6f20')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-a5bead8b-416c-4e38-9fb9-8b8b85ea6f20 button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="section" id="figure-preparations">
+<h3>Figure Preparations<a class="headerlink" href="#figure-preparations" title="Permalink to this headline">¶</a></h3>
+<p>To prepare the dataset for the figure, we will start with doing some minor adjustments in the column names.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Rename SP (uncomplicated) to SP (treatment)</span>
+<span class="n">df_pf8</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;SP (uncomplicated)&quot;</span><span class="p">:</span> <span class="s2">&quot;SP (treatment)&quot;</span><span class="p">,</span> <span class="s2">&quot;sample&quot;</span><span class="p">:</span><span class="s2">&quot;Sample&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_pf7</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;SP (uncomplicated)&quot;</span><span class="p">:</span> <span class="s2">&quot;SP (treatment)&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, let’s make sure column names between the Pf7 and Pf8 datasets are consistent. This will allow succesful merging of these datasets in the next step.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Identify columns common to both Pf7 and Pf8 datasets (excluding &#39;sample&#39;)</span>
+<span class="n">common_columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df_pf8</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df_pf7</span><span class="o">.</span><span class="n">columns</span> <span class="ow">and</span> <span class="n">col</span> <span class="o">!=</span> <span class="s2">&quot;Sample&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Merging the data will allow easier access when plotting. The suffixes <code class="docutils literal notranslate"><span class="pre">_Pf8</span></code> and <code class="docutils literal notranslate"><span class="pre">_Pf7</span></code> will help differentiate columns for each dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Merge the datasets on the &#39;sample&#39; column</span>
+<span class="n">merged_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_pf8</span><span class="p">,</span> <span class="n">df_pf7</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;Sample&quot;</span><span class="p">,</span> <span class="n">suffixes</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;_Pf8&#39;</span><span class="p">,</span> <span class="s1">&#39;_Pf7&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finally, we will find out the number of samples which have changed inferred resistance status for each drug. In addition to shifts between “Resistant” to “Sensitive”, we will also count shifts involving “Undetermined” status such as “Undetermined” to “Sensitive”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize statistics</span>
+<span class="n">change_counts</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">total_samples</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">merged_df</span><span class="p">)</span>
+
+<span class="c1"># Compute change statistics for each column</span>
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df_pf8</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">col</span> <span class="o">==</span> <span class="s2">&quot;Sample&quot;</span><span class="p">:</span>  <span class="c1"># Skip the &#39;sample&#39; column</span>
+        <span class="k">continue</span>
+    <span class="k">if</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df_pf7</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>  <span class="c1"># Only compare columns present in both datasets</span>
+        <span class="n">col1</span> <span class="o">=</span> <span class="n">merged_df</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s2">_Pf8&quot;</span><span class="p">]</span>
+        <span class="n">col2</span> <span class="o">=</span> <span class="n">merged_df</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s2">_Pf7&quot;</span><span class="p">]</span>
+
+        <span class="c1"># Count changes between Resistant and Sensitive</span>
+        <span class="n">resistance_changes</span> <span class="o">=</span> <span class="p">((</span><span class="n">col1</span> <span class="o">==</span> <span class="s2">&quot;Resistant&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">col2</span> <span class="o">==</span> <span class="s2">&quot;Sensitive&quot;</span><span class="p">))</span> <span class="o">|</span> <span class="p">((</span><span class="n">col1</span> <span class="o">==</span> <span class="s2">&quot;Sensitive&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">col2</span> <span class="o">==</span> <span class="s2">&quot;Resistant&quot;</span><span class="p">))</span>
+        <span class="n">resistance_changes_count</span> <span class="o">=</span> <span class="n">resistance_changes</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+        <span class="c1"># Count changes involving &#39;Undetermined&#39;</span>
+        <span class="n">undetermined_changes</span> <span class="o">=</span> <span class="p">((</span><span class="n">col1</span> <span class="o">==</span> <span class="s2">&quot;Undetermined&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">col2</span> <span class="o">!=</span> <span class="s2">&quot;Undetermined&quot;</span><span class="p">))</span> <span class="o">|</span> <span class="p">((</span><span class="n">col1</span> <span class="o">!=</span> <span class="s2">&quot;Undetermined&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">col2</span> <span class="o">==</span> <span class="s2">&quot;Undetermined&quot;</span><span class="p">))</span>
+        <span class="n">undetermined_changes_count</span> <span class="o">=</span> <span class="n">undetermined_changes</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+        <span class="n">change_counts</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+            <span class="s2">&quot;Drug&quot;</span><span class="p">:</span> <span class="n">col</span><span class="p">,</span>
+            <span class="s2">&quot;Changes in Resistance status&quot;</span><span class="p">:</span> <span class="n">resistance_changes_count</span><span class="p">,</span>
+            <span class="s2">&quot;Callable to Uncallable&quot;</span><span class="p">:</span> <span class="n">undetermined_changes_count</span><span class="p">,</span>
+            <span class="s2">&quot;Total Samples&quot;</span><span class="p">:</span> <span class="n">total_samples</span>
+        <span class="p">})</span>
+
+<span class="c1"># Convert to DataFrame</span>
+<span class="n">change_counts_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">change_counts</span><span class="p">)</span>
+<span class="n">change_counts_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-ccaa1aab-8570-4d76-b4b2-0469c3237ba1" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Drug</th>
+      <th>Changes in Resistance status</th>
+      <th>Callable to Uncallable</th>
+      <th>Total Samples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Chloroquine</td>
+      <td>0</td>
+      <td>130</td>
+      <td>15999</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Pyrimethamine</td>
+      <td>0</td>
+      <td>63</td>
+      <td>15999</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Sulfadoxine</td>
+      <td>0</td>
+      <td>72</td>
+      <td>15999</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-ccaa1aab-8570-4d76-b4b2-0469c3237ba1')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-ccaa1aab-8570-4d76-b4b2-0469c3237ba1 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-ccaa1aab-8570-4d76-b4b2-0469c3237ba1');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-51f2cb26-e3e9-4c41-b280-65dd40b7b2a3">
+  <button class="colab-df-quickchart" onclick="quickchart('df-51f2cb26-e3e9-4c41-b280-65dd40b7b2a3')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-51f2cb26-e3e9-4c41-b280-65dd40b7b2a3 button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="bar-plot-total-number-of-changes-in-resistance-status-between-pf7-and-pf8">
+<h1>Bar Plot: Total number of changes in resistance status between Pf7 and Pf8<a class="headerlink" href="#bar-plot-total-number-of-changes-in-resistance-status-between-pf7-and-pf8" title="Permalink to this headline">¶</a></h1>
+<p>We will create a grouped bar plot where there will be one bar showing the number of changes in resistance status and changes in callable status (Undetermined ⇆) for each drug.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot the changes with labels inside white boxes</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Define bar positions</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">change_counts_df</span><span class="p">))</span>
+<span class="n">bar_width</span> <span class="o">=</span> <span class="mf">0.4</span>
+
+<span class="c1"># Plot bars</span>
+<span class="n">bars1</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">([</span><span class="n">pos</span> <span class="o">-</span> <span class="n">bar_width</span><span class="o">/</span><span class="mi">2</span> <span class="k">for</span> <span class="n">pos</span> <span class="ow">in</span> <span class="n">x</span><span class="p">],</span> <span class="n">change_counts_df</span><span class="p">[</span><span class="s2">&quot;Changes in Resistance status&quot;</span><span class="p">],</span> <span class="n">width</span><span class="o">=</span><span class="n">bar_width</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Changes in Resistance status&quot;</span><span class="p">)</span>
+<span class="n">bars2</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">([</span><span class="n">pos</span> <span class="o">+</span> <span class="n">bar_width</span><span class="o">/</span><span class="mi">2</span> <span class="k">for</span> <span class="n">pos</span> <span class="ow">in</span> <span class="n">x</span><span class="p">],</span> <span class="n">change_counts_df</span><span class="p">[</span><span class="s2">&quot;Callable to Uncallable&quot;</span><span class="p">],</span> <span class="n">width</span><span class="o">=</span><span class="n">bar_width</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Callable ⇆ Uncallable&quot;</span><span class="p">)</span>
+
+<span class="c1"># Extend y-axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">change_counts_df</span><span class="p">[[</span><span class="s2">&quot;Changes in Resistance status&quot;</span><span class="p">,</span> <span class="s2">&quot;Callable to Uncallable&quot;</span> <span class="p">]]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span> <span class="o">+</span> <span class="mi">50</span><span class="p">)</span>
+
+<span class="c1"># Add labels above each bar</span>
+<span class="k">for</span> <span class="n">bars</span> <span class="ow">in</span> <span class="p">[</span><span class="n">bars1</span><span class="p">,</span> <span class="n">bars2</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">bar</span> <span class="ow">in</span> <span class="n">bars</span><span class="p">:</span>
+        <span class="n">height</span> <span class="o">=</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
+            <span class="n">bar</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">height</span> <span class="o">+</span> <span class="mi">10</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">height</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;bottom&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">,</span>
+            <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">boxstyle</span><span class="o">=</span><span class="s2">&quot;round,pad=0.3&quot;</span><span class="p">)</span>
+        <span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">change_counts_df</span><span class="p">[</span><span class="s2">&quot;Drug&quot;</span><span class="p">],</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Total Number of Changes&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Drug&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/Drug_Resistance_Pf7_Pf8_Concordance_23_0.png" src="../../_images/Drug_Resistance_Pf7_Pf8_Concordance_23_0.png" />
+</div>
+</div>
+<p><strong>Figure Legend. Total number of samples with any change in inferred drug resistance status from Pf7 to Pf8.</strong> Blue bars to the left show changes in resistance status (i.e. Resistant to Sensitive or vice versa). Yellow bars to the right show changes between Uncallable to Resistant/Sensitive or vice versa.</p>
+<div class="section" id="save-figure">
+<h2>Save Figure<a class="headerlink" href="#save-figure" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># You will need to authorise Google Colab access to Google Drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount(&quot;/content/drive&quot;, force_remount=True).
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;/content/drive/My Drive/pf8-barplot-drug-resistance-change.png&quot;</span><span class="p">,</span> <span class="n">dpi</span> <span class="o">=</span> <span class="mi">500</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="pf7-vs-pf8-drug-resistance-status-concordance-heatmaps">
+<h2>Pf7 vs Pf8 Drug Resistance Status Concordance Heatmaps<a class="headerlink" href="#pf7-vs-pf8-drug-resistance-status-concordance-heatmaps" title="Permalink to this headline">¶</a></h2>
+<p>It is time to visualise the changes in resistance status between the Pf7 and Pf8 datasets on a more granular level by creating heatmaps for each drug. The x-axis will represent the resistance status from the Pf7 dataset, while the y-axis Pf8. The heatmaps will display the how many samples moved between different status categories (e.g., “Resistant” to “Sensitive” or “Undetermined” to “Sensitive”).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize variables</span>
+<span class="n">heatmaps</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">change_summary</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Compute transition counts for each column</span>
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">common_columns</span><span class="p">:</span>
+    <span class="n">col_pf7</span> <span class="o">=</span> <span class="n">merged_df</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s2">_Pf7&quot;</span><span class="p">]</span>
+    <span class="n">col_pf8</span> <span class="o">=</span> <span class="n">merged_df</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s2">_Pf8&quot;</span><span class="p">]</span>
+
+    <span class="c1"># Create a transition column</span>
+    <span class="n">merged_df</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s2">_transition&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">col_pf7</span> <span class="o">+</span> <span class="s2">&quot; -&gt; &quot;</span> <span class="o">+</span> <span class="n">col_pf8</span>
+
+    <span class="c1"># Count transitions</span>
+    <span class="n">transitions</span> <span class="o">=</span> <span class="n">merged_df</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s2">_transition&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+
+    <span class="c1"># Create confusion matrix-like structure</span>
+    <span class="n">categories</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">col_pf7</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">col_pf8</span><span class="o">.</span><span class="n">unique</span><span class="p">()))))</span>
+    <span class="n">confusion_matrix</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">categories</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">categories</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">transition</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">transitions</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">from_cat</span><span class="p">,</span> <span class="n">to_cat</span> <span class="o">=</span> <span class="n">transition</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; -&gt; &quot;</span><span class="p">)</span>
+        <span class="n">confusion_matrix</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">from_cat</span><span class="p">,</span> <span class="n">to_cat</span><span class="p">]</span> <span class="o">=</span> <span class="n">count</span>
+
+    <span class="c1"># Transpose the matrix to have Pf8 on rows and Pf7 on columns</span>
+    <span class="n">confusion_matrix</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="o">.</span><span class="n">T</span>
+
+    <span class="c1"># Calculate total changes (non-diagonal elements)</span>
+    <span class="n">total_changes</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">trace</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+    <span class="n">change_summary</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;Drug&quot;</span><span class="p">:</span> <span class="n">col</span><span class="p">,</span> <span class="s2">&quot;Total Changes&quot;</span><span class="p">:</span> <span class="n">total_changes</span><span class="p">})</span>
+
+    <span class="c1"># Append data for plotting</span>
+    <span class="n">heatmaps</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">col</span><span class="p">,</span> <span class="n">confusion_matrix</span><span class="p">))</span>
+
+<span class="c1"># Plot all heatmaps in a multipanel figure</span>
+<span class="n">n_cols</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># Adjust this for the number of columns in the figure</span>
+<span class="n">n_rows</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">heatmaps</span><span class="p">)</span> <span class="o">//</span> <span class="n">n_cols</span><span class="p">)</span>  <span class="c1"># Calculate rows required</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">n_rows</span><span class="p">,</span> <span class="n">n_cols</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">n_rows</span><span class="p">))</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">confusion_matrix</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">heatmaps</span><span class="p">):</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
+        <span class="n">confusion_matrix</span><span class="p">,</span>
+        <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;d&quot;</span><span class="p">,</span>
+        <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;coolwarm&quot;</span><span class="p">,</span>
+        <span class="n">cbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">square</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+        <span class="n">annot_kws</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">16</span><span class="p">},</span>  <span class="c1"># Increase font size for annotations</span>
+    <span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Pf7&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>  <span class="c1"># Source: Pf7 dataset</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Pf8&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>  <span class="c1"># Destination: Pf8 dataset</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s2">&quot;both&quot;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="c1"># Remove unused subplots</span>
+<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">axes</span><span class="p">)):</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">delaxes</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/Drug_Resistance_Pf7_Pf8_Concordance_30_0.png" src="../../_images/Drug_Resistance_Pf7_Pf8_Concordance_30_0.png" />
+</div>
+</div>
+<p><strong>Figure Legend. Total number of changes in inferred drug resistance status between Pf7 and Pf8, across the 15,999 overlapping samples.</strong> Number and colour shading indicate the total number of samples for each category change. For example 43 samples had ‘Undetermined’ resistance status to Sulfadoxine in Pf7, but were ‘Resistant’ in Pf8. Samples on the diagonal therefore represent those with unchanged status between the two datasets.</p>
+<div class="section" id="id1">
+<h3>Save Figure<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;/content/drive/My Drive/all_confusion_matrices.png&#39;</span><span class="p">,</span> <span class="n">dpi</span> <span class="o">=</span> <span class="mi">500</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="percentage-of-resistant-samples-in-pf7-and-pf8">
+<h2>Percentage of resistant samples in Pf7 and Pf8<a class="headerlink" href="#percentage-of-resistant-samples-in-pf7-and-pf8" title="Permalink to this headline">¶</a></h2>
+<p>So far, we have observed changes in the <strong>overlapping samples</strong> between Pf7 and Pf8. What impact does this change in the status of some samples have on the <strong>overall</strong> prevalence of resistance? We are now focused on examining the prevalence of resistance in Pf7/Pf8. This will require calculating the prevalence of resistant samples first.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate resistance proportions for Pf8</span>
+<span class="n">pf8_resistance_data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">drug</span> <span class="ow">in</span> <span class="n">common_columns</span><span class="p">:</span>
+    <span class="n">filtered_pf8</span> <span class="o">=</span> <span class="n">df_pf8</span><span class="p">[</span><span class="n">df_pf8</span><span class="p">[</span><span class="n">drug</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">&quot;Resistant&quot;</span><span class="p">,</span> <span class="s2">&quot;Sensitive&quot;</span><span class="p">])]</span>
+    <span class="n">total_samples_pf8</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">filtered_pf8</span><span class="p">)</span>
+    <span class="n">resistant_samples_pf8</span> <span class="o">=</span> <span class="n">filtered_pf8</span><span class="p">[</span><span class="n">filtered_pf8</span><span class="p">[</span><span class="n">drug</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Resistant&quot;</span><span class="p">]</span>
+    <span class="n">resistant_proportion_pf8</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">resistant_samples_pf8</span><span class="p">)</span> <span class="o">/</span> <span class="n">total_samples_pf8</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="k">if</span> <span class="n">total_samples_pf8</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span>
+    <span class="n">pf8_resistance_data</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;Drug&quot;</span><span class="p">:</span> <span class="n">drug</span><span class="p">,</span> <span class="s2">&quot;Pf&quot;</span><span class="p">:</span> <span class="s2">&quot;Pf8&quot;</span><span class="p">,</span> <span class="s2">&quot;Resistant Proportion&quot;</span><span class="p">:</span> <span class="n">resistant_proportion_pf8</span><span class="p">})</span>
+
+<span class="c1"># Calculate resistance proportions for Pf7</span>
+<span class="n">pf7_resistance_data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">drug</span> <span class="ow">in</span> <span class="n">common_columns</span><span class="p">:</span>
+    <span class="n">filtered_pf7</span> <span class="o">=</span> <span class="n">df_pf7</span><span class="p">[</span><span class="n">df_pf7</span><span class="p">[</span><span class="n">drug</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">&quot;Resistant&quot;</span><span class="p">,</span> <span class="s2">&quot;Sensitive&quot;</span><span class="p">])]</span>
+    <span class="n">total_samples_pf7</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">filtered_pf7</span><span class="p">)</span>
+    <span class="n">resistant_samples_pf7</span> <span class="o">=</span> <span class="n">filtered_pf7</span><span class="p">[</span><span class="n">filtered_pf7</span><span class="p">[</span><span class="n">drug</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Resistant&quot;</span><span class="p">]</span>
+    <span class="n">resistant_proportion_pf7</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">resistant_samples_pf7</span><span class="p">)</span> <span class="o">/</span> <span class="n">total_samples_pf7</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="k">if</span> <span class="n">total_samples_pf7</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span>
+    <span class="n">pf7_resistance_data</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;Drug&quot;</span><span class="p">:</span> <span class="n">drug</span><span class="p">,</span> <span class="s2">&quot;Pf&quot;</span><span class="p">:</span> <span class="s2">&quot;Pf7&quot;</span><span class="p">,</span> <span class="s2">&quot;Resistant Proportion&quot;</span><span class="p">:</span> <span class="n">resistant_proportion_pf7</span><span class="p">})</span>
+
+<span class="c1"># Combine the results</span>
+<span class="n">resistance_data</span> <span class="o">=</span> <span class="n">pf8_resistance_data</span> <span class="o">+</span> <span class="n">pf7_resistance_data</span>
+<span class="n">resistance_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">resistance_data</span><span class="p">)</span>
+
+<span class="c1"># Explicitly order the hue categories so Pf7 is always first</span>
+<span class="n">resistance_df</span><span class="p">[</span><span class="s2">&quot;Pf&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">resistance_df</span><span class="p">[</span><span class="s2">&quot;Pf&quot;</span><span class="p">],</span> <span class="n">categories</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Pf7&quot;</span><span class="p">,</span> <span class="s2">&quot;Pf8&quot;</span><span class="p">],</span> <span class="n">ordered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We will create a grouped bar plot, with one bar representing Pf7 and another representing Pf8 for each drug.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> <span class="c1"># Plot bar chart of resistance proportions for Pf8 and Pf7</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">resistance_df</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Drug&quot;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Resistant Proportion&quot;</span><span class="p">,</span>
+    <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Pf&quot;</span><span class="p">,</span>
+    <span class="n">dodge</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;viridis&quot;</span><span class="p">,</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span>
+<span class="p">)</span>
+
+<span class="c1"># Add labels to each bar</span>
+<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">patches</span><span class="p">:</span>
+    <span class="n">height</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">height</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># Avoid placing labels on zero-value bars</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">height</span><span class="p">)</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">,</span>  <span class="c1"># Add &#39;%&#39; to each label</span>
+                    <span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">height</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>  <span class="c1"># Offset label slightly above bar</span>
+                    <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">,</span>  <span class="c1"># Reduce font size slightly</span>
+                    <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">boxstyle</span><span class="o">=</span><span class="s2">&quot;round,pad=0.3&quot;</span><span class="p">))</span>
+
+<span class="c1"># Configure plot aesthetics with larger tick fonts</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Drug&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Percentage Resistant (%)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>  <span class="c1"># Increased tick font size</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>  <span class="c1"># Increased y-axis tick font size</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Dataset&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>  <span class="c1"># Ensure space for labels at the top</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/Drug_Resistance_Pf7_Pf8_Concordance_38_0.png" src="../../_images/Drug_Resistance_Pf7_Pf8_Concordance_38_0.png" />
+</div>
+</div>
+<p><strong>Figure Legend. Percentage of parasites with inferred ‘Resistant’ status in Pf7 and Pf8, for each drug in the collection, aggregated across all populations.</strong> Note, samples with ‘Undetermined’ resistance status were excluded before calculating the relative proportion of ‘Resistant’ samples.</p>
+<div class="section" id="id2">
+<h3>Save Figure<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save the plot</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;/content/drive/My Drive/resistant_proportion_comparison_bar_chart_corrected.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./pf8/evolution_malaria_control"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Figure_HRPDeletion.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><em>hrp2</em> and <em>hrp3</em> Deletion Breakpoints</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../popgen.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>Pf8 Analysis Guides:</strong> Population Structure and Selection</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By MalariaGEN<br/>
+    
+        &copy; Copyright 2023.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

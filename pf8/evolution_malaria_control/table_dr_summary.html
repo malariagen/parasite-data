@@ -1,0 +1,3508 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drug Resistance Frequencies &#8212; MalariaGEN parasite data user guide</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Introduction" href="drug_resistance_trends.html" />
+    <link rel="prev" title="Pf8 Analysis Guides: Study Evolution Against Malaria Control Measures" href="../evolution-malaria-control.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">MalariaGEN parasite data user guide</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../landing-page.html">
+   MalariaGEN parasite data user guide
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Malaria Parasite Google Cloud Data Access
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../cloud_data_access/parasite-cloud-data-access.html">
+   <strong>
+    Malaria Parasite Google Cloud Data Access
+   </strong>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Pf8
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Data_access.html">
+   <strong>
+    Pf8 Data Access
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../useful-how-tos.html">
+   <strong>
+    Pf8 Analysis Guides:
+   </strong>
+   Useful Genomics How-Tos
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../useful_genomics_howtos/igv_notebook.html">
+     Visualizing Genomic Regions of Pf8 Samples with IGV Plots
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../summarise-data.html">
+   <strong>
+    Pf7 Analysis Guides:
+   </strong>
+   Summarise Pf8 Data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../summarise_data/table_sample_summary.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../summarise_data/Visualising_sample_collections_over_time.html">
+     Visualising sample collections over time
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../summarise_data/SamplesByCountry_Barplot.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../summarise_data/table_variants_summary.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../summarise_data/figure1_samplemap.html">
+     Introduction
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../evolution-malaria-control.html">
+   <strong>
+    Pf8 Analysis Guides:
+   </strong>
+   Study Evolution Against Malaria Control Measures
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Drug Resistance Frequencies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="drug_resistance_trends.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cnv_fig.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Figure_HRPDeletion.html">
+     <em>
+      hrp2
+     </em>
+     and
+     <em>
+      hrp3
+     </em>
+     Deletion Breakpoints
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Drug_Resistance_Pf7_Pf8_Concordance.html">
+     Drug Resistance in Pf7 vs Pf8
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../popgen.html">
+   <strong>
+    Pf8 Analysis Guides:
+   </strong>
+   Population Structure and Selection
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../popgen/PCoA.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../popgen/njt_pf8_anjl.html">
+     Create a Neighbour Joining Tree
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../popgen/Pf8_fws_figure_public_notebook.html">
+     Display Fws Across Populations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../api.html">
+   <strong>
+    Pf8 API
+   </strong>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Pf7
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../pf7/Data_access.html">
+   <strong>
+    Pf7 Data Access
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../pf7/summarise-data.html">
+   <strong>
+    Pf7 Analysis Guides:
+   </strong>
+   Summarise Pf7 Data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/summarise_data/sample-summary-table.html">
+     Summarise Samples by Administrative Division
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/summarise_data/sample-collection-over-time.html">
+     Visualising sample collections over time
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/summarise_data/barplot-samples-by-country.html">
+     Barplot of Samples by Country
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/summarise_data/variant-summary-table.html">
+     Summarise Genetic Variants
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/summarise_data/global-sample-map.html">
+     Plot Global Map of Samples
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../pf7/evolution-malaria-control.html">
+   <strong>
+    Pf7 Analysis Guides:
+   </strong>
+   Study Evolution Against Malaria Control Measures
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/evolution_malaria_control/drug-resistance-summary.html">
+     Drug Resistance Frequencies Across Pf7
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/evolution_malaria_control/chloroquine-resistance-map.html">
+     Plot Map of Chloroquine Resistance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/evolution_malaria_control/summarise_hrp2_hrp3_deletions.html">
+     Summarise
+     <em>
+      hrp2
+     </em>
+     and
+     <em>
+      hrp3
+     </em>
+     Deletions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/evolution_malaria_control/visualise_hrp2_hrp3_deletions.html">
+     Visualise
+     <em>
+      hrp2
+     </em>
+     and
+     <em>
+      hrp3
+     </em>
+     Deletions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/evolution_malaria_control/csp-cterm-analysis.html">
+     Analyse csp C-Terminal Variation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../pf7/popgen.html">
+   <strong>
+    Pf7 Analysis Guides:
+   </strong>
+   Population Structure and Selection
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/popgen/PCoA.html">
+     Principal Coordinate Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/popgen/geographic-genetic-differentiation.html">
+     Geographic patterns of population differentiation and gene flow
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/popgen/neighbour-joining-tree-swga.html">
+     Neighbour Joining Tree for sWGA vs. gDNA
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/popgen/proportion-eba175.html">
+     Plot
+     <em>
+      eba175
+     </em>
+     C Allele Proportions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../pf7/api.html">
+   <strong>
+    Pf7 API
+   </strong>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Pv4
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../pv4/Data_access.html">
+   <strong>
+    Pv4 Data Access
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../pv4/api.html">
+   <strong>
+    Pv4 API
+   </strong>
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/pf8/evolution_malaria_control/table_dr_summary.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/malariagen/parasite-data"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/malariagen/parasite-data/issues/new?title=Issue%20on%20page%20%2Fpf8/evolution_malaria_control/table_dr_summary.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/malariagen/parasite-data/master?urlpath=lab/tree/docs/pf8/evolution_malaria_control/table_dr_summary.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/malariagen/parasite-data/blob/master/docs/pf8/evolution_malaria_control/table_dr_summary.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#access-pf8-data">
+   Access Pf8 Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#access-dr-classification-and-genotype-data">
+   Access DR Classification and Genotype Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-all-data-into-single-dataframe">
+   Load all data into single DataFrame
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-setups">
+   Table setups
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary-of-dr-sample-sizes-across-populations">
+   Summary of DR sample sizes across populations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary-of-dr-frequencies-across-populations">
+   Summary of DR frequencies across populations
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Drug Resistance Frequencies</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#access-pf8-data">
+   Access Pf8 Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#access-dr-classification-and-genotype-data">
+   Access DR Classification and Genotype Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-all-data-into-single-dataframe">
+   Load all data into single DataFrame
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-setups">
+   Table setups
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary-of-dr-sample-sizes-across-populations">
+   Summary of DR sample sizes across populations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary-of-dr-frequencies-across-populations">
+   Summary of DR frequencies across populations
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="drug-resistance-frequencies">
+<h1>Drug Resistance Frequencies<a class="headerlink" href="#drug-resistance-frequencies" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This notebook creates a table summarising the number of samples with inferred antimalarial drug resistance (DR) in different populations using the data from <em>Plasmodium falciparum</em> version 8 (Pf8) project.</p>
+<p><strong>This notebook takes 1 minute to run.</strong></p>
+</div>
+<div class="section" id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<p>Install and import the malariagen Python package:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>malariagen_data<span class="w"> </span>-q<span class="w"> </span>--no-warn-conflicts
+<span class="kn">import</span><span class="w"> </span><span class="nn">malariagen_data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Installing build dependencies ... ?25l?25hdone
+  Getting requirements to build wheel ... ?25l?25hdone
+  Preparing metadata (pyproject.toml) ... ?25l?25hdone
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">4.0/4.0 MB</span> <span class=" -Color -Color-Red">19.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h  Preparing metadata (setup.py) ... ?25l?25hdone
+  Preparing metadata (setup.py) ... ?25l?25hdone
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">71.7/71.7 kB</span> <span class=" -Color -Color-Red">5.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">775.9/775.9 kB</span> <span class=" -Color -Color-Red">42.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">25.9/25.9 MB</span> <span class=" -Color -Color-Red">66.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">8.7/8.7 MB</span> <span class=" -Color -Color-Red">94.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">210.6/210.6 kB</span> <span class=" -Color -Color-Red">15.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">6.3/6.3 MB</span> <span class=" -Color -Color-Red">94.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">3.3/3.3 MB</span> <span class=" -Color -Color-Red">81.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">7.8/7.8 MB</span> <span class=" -Color -Color-Red">82.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">78.3/78.3 kB</span> <span class=" -Color -Color-Red">5.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">101.7/101.7 kB</span> <span class=" -Color -Color-Red">7.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">8.9/8.9 MB</span> <span class=" -Color -Color-Red">91.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">228.0/228.0 kB</span> <span class=" -Color -Color-Red">16.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">13.4/13.4 MB</span> <span class=" -Color -Color-Red">89.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.6/1.6 MB</span> <span class=" -Color -Color-Red">60.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h  Building wheel for malariagen_data (pyproject.toml) ... ?25l?25hdone
+  Building wheel for dash-cytoscape (setup.py) ... ?25l?25hdone
+  Building wheel for asciitree (setup.py) ... ?25l?25hdone
+</pre></div>
+</div>
+</div>
+</div>
+<p>Import required python libraries that are installed at colab by default.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">collections</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">scipy</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="access-pf8-data">
+<h2>Access Pf8 Data<a class="headerlink" href="#access-pf8-data" title="Permalink to this headline">¶</a></h2>
+<p>We use the malariagen data package to load the release data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">release_data</span> <span class="o">=</span> <span class="n">malariagen_data</span><span class="o">.</span><span class="n">Pf8</span><span class="p">()</span>
+<span class="n">sample_metadata</span> <span class="o">=</span> <span class="n">release_data</span><span class="o">.</span><span class="n">sample_metadata</span><span class="p">()</span>
+
+<span class="c1"># take a glance at the metadata dataframe</span>
+<span class="n">sample_metadata</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-87348608-f7d3-4f00-9988-c2f489f94d87" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sample</th>
+      <th>Study</th>
+      <th>Country</th>
+      <th>Admin level 1</th>
+      <th>Country latitude</th>
+      <th>Country longitude</th>
+      <th>Admin level 1 latitude</th>
+      <th>Admin level 1 longitude</th>
+      <th>Year</th>
+      <th>ENA</th>
+      <th>All samples same case</th>
+      <th>Population</th>
+      <th>% callable</th>
+      <th>QC pass</th>
+      <th>Exclusion reason</th>
+      <th>Sample type</th>
+      <th>Sample was in Pf7</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>FP0008-C</td>
+      <td>1147-PF-MR-CONWAY</td>
+      <td>Mauritania</td>
+      <td>Hodh el Gharbi</td>
+      <td>20.265149</td>
+      <td>-10.337093</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR1081237</td>
+      <td>FP0008-C</td>
+      <td>AF-W</td>
+      <td>82.48</td>
+      <td>True</td>
+      <td>Analysis_set</td>
+      <td>gDNA</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>FP0009-C</td>
+      <td>1147-PF-MR-CONWAY</td>
+      <td>Mauritania</td>
+      <td>Hodh el Gharbi</td>
+      <td>20.265149</td>
+      <td>-10.337093</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR1081238</td>
+      <td>FP0009-C</td>
+      <td>AF-W</td>
+      <td>88.95</td>
+      <td>True</td>
+      <td>Analysis_set</td>
+      <td>gDNA</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>FP0010-CW</td>
+      <td>1147-PF-MR-CONWAY</td>
+      <td>Mauritania</td>
+      <td>Hodh el Gharbi</td>
+      <td>20.265149</td>
+      <td>-10.337093</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR2889621</td>
+      <td>FP0010-CW</td>
+      <td>AF-W</td>
+      <td>87.01</td>
+      <td>True</td>
+      <td>Analysis_set</td>
+      <td>sWGA</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-87348608-f7d3-4f00-9988-c2f489f94d87')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-87348608-f7d3-4f00-9988-c2f489f94d87 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-87348608-f7d3-4f00-9988-c2f489f94d87');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-7cec3fe3-5757-4835-9e44-bb5c944d89fa">
+  <button class="colab-df-quickchart" onclick="quickchart('df-7cec3fe3-5757-4835-9e44-bb5c944d89fa')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-7cec3fe3-5757-4835-9e44-bb5c944d89fa button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+<p>We will only examine the QC pass samples in the analysis of these notebooks.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Retain QC pass samples</span>
+<span class="n">qc_sample_metadata</span> <span class="o">=</span> <span class="n">sample_metadata</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;QC pass&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="access-dr-classification-and-genotype-data">
+<h2>Access DR Classification and Genotype Data<a class="headerlink" href="#access-dr-classification-and-genotype-data" title="Permalink to this headline">¶</a></h2>
+<p>We can access inferred resistance status classifications of QC-pass Pf8 samples from the Sanger’s cloud storage.</p>
+<p>This dataset includes the samples that are predicted to be resistant to 10 drugs or combinations of drugs and to rapid diagnostic tests (RDT) detection: chloroquine, pyrimethamine, sulfadoxine, mefloquine, artemisinin, piperaquine, sulfadoxine- pyrimethamine for treatment of uncomplicated malaria, sulfadoxine- pyrimethamine for intermittent preventive treatment in pregnancy, artesunate-mefloquine, dihydroartemisinin-piperaquine, <em>hrp2</em> and <em>hrp3</em> gene deletions.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read the data</span>
+<span class="n">resistance_classification_fn</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://pf8-release.cog.sanger.ac.uk/Pf8_inferred_resistance_status_classification.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Rename the first column as &#39;Sample&#39;</span>
+<span class="n">resistance_classification_fn</span> <span class="o">=</span> <span class="n">resistance_classification_fn</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="n">resistance_classification_fn</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="s1">&#39;Sample&#39;</span><span class="p">})</span>
+
+<span class="c1"># Print the first rows</span>
+<span class="n">resistance_classification_fn</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sample</th>
+      <th>Chloroquine</th>
+      <th>Pyrimethamine</th>
+      <th>Sulfadoxine</th>
+      <th>Mefloquine</th>
+      <th>Artemisinin</th>
+      <th>Piperaquine</th>
+      <th>SP (uncomplicated)</th>
+      <th>SP (IPTp)</th>
+      <th>AS-MQ</th>
+      <th>DHA-PPQ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>FP0008-C</td>
+      <td>Undetermined</td>
+      <td>Undetermined</td>
+      <td>Undetermined</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>FP0009-C</td>
+      <td>Resistant</td>
+      <td>Resistant</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Resistant</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>FP0010-CW</td>
+      <td>Undetermined</td>
+      <td>Resistant</td>
+      <td>Resistant</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Resistant</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>FP0011-CW</td>
+      <td>Undetermined</td>
+      <td>Resistant</td>
+      <td>Undetermined</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Resistant</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>FP0012-CW</td>
+      <td>Resistant</td>
+      <td>Resistant</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Resistant</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>We will also use the genotypes utilised in drug resistance status classification containing amino acid and copy number genotypes at six loci: <em>crt</em>, <em>dhfr</em>, <em>dhps</em>, <em>mdr1</em>, <em>kelch13</em>, <em>plasmepsin</em> <em>2-3</em>. This dataset is also available from the Sanger’s cloud storage.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read the data</span>
+<span class="n">drm_calls_fn</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://pf8-release.cog.sanger.ac.uk/Pf8_drug_resistance_marker_genotypes.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="p">)</span>
+
+<span class="c1"># Rename the first column as &#39;Sample&#39;</span>
+<span class="n">drm_calls_fn</span> <span class="o">=</span> <span class="n">drm_calls_fn</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="n">drm_calls_fn</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="s1">&#39;Sample&#39;</span><span class="p">})</span>
+
+<span class="c1"># Print the first rows</span>
+<span class="n">drm_calls_fn</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sample</th>
+      <th>crt_72[C]</th>
+      <th>crt_74[M]</th>
+      <th>crt_75[N]</th>
+      <th>crt_76[K]</th>
+      <th>crt_72-76[CVMNK]</th>
+      <th>crt_93[T]</th>
+      <th>crt_97[H]</th>
+      <th>crt_218[I]</th>
+      <th>crt_220[A]</th>
+      <th>...</th>
+      <th>mdr1_1034[S]</th>
+      <th>mdr1_1042[N]</th>
+      <th>mdr1_1226[F]</th>
+      <th>mdr1_1246[D]</th>
+      <th>arps10_127-128[VD]</th>
+      <th>fd_193[D]</th>
+      <th>mdr2_484[T]</th>
+      <th>kelch13_349-726_ns_changes</th>
+      <th>mdr1_dup_call</th>
+      <th>pm2_dup_call</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>FP0008-C</td>
+      <td>C</td>
+      <td>I,M</td>
+      <td>E,N</td>
+      <td>T,K</td>
+      <td>CVIET,CVMNK</td>
+      <td>T</td>
+      <td>H</td>
+      <td>I</td>
+      <td>S,A</td>
+      <td>...</td>
+      <td>S</td>
+      <td>N</td>
+      <td>F</td>
+      <td>D</td>
+      <td>VD</td>
+      <td>D</td>
+      <td>T</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>FP0009-C</td>
+      <td>C</td>
+      <td>I</td>
+      <td>E</td>
+      <td>T</td>
+      <td>CVIET</td>
+      <td>T</td>
+      <td>H</td>
+      <td>I</td>
+      <td>S</td>
+      <td>...</td>
+      <td>S</td>
+      <td>N</td>
+      <td>F</td>
+      <td>Y</td>
+      <td>VD</td>
+      <td>D</td>
+      <td>T</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>FP0010-CW</td>
+      <td>C</td>
+      <td>I,M</td>
+      <td>E,N</td>
+      <td>T,K</td>
+      <td>CVIET,CVMNK</td>
+      <td>T</td>
+      <td>H</td>
+      <td>I</td>
+      <td>S,A</td>
+      <td>...</td>
+      <td>S</td>
+      <td>N</td>
+      <td>F</td>
+      <td>D</td>
+      <td>VD</td>
+      <td>D</td>
+      <td>T</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>FP0011-CW</td>
+      <td>C</td>
+      <td>I,M</td>
+      <td>E,N</td>
+      <td>T,K</td>
+      <td>CVIET,CVMNK</td>
+      <td>T</td>
+      <td>H</td>
+      <td>I</td>
+      <td>S,A</td>
+      <td>...</td>
+      <td>S</td>
+      <td>N</td>
+      <td>F</td>
+      <td>D</td>
+      <td>VD</td>
+      <td>D</td>
+      <td>T</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>FP0012-CW</td>
+      <td>C</td>
+      <td>I</td>
+      <td>E</td>
+      <td>T</td>
+      <td>CVIET</td>
+      <td>T</td>
+      <td>H</td>
+      <td>I</td>
+      <td>S</td>
+      <td>...</td>
+      <td>S</td>
+      <td>N</td>
+      <td>F</td>
+      <td>D</td>
+      <td>VD</td>
+      <td>D</td>
+      <td>T</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 40 columns</p>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="load-all-data-into-single-dataframe">
+<h2>Load all data into single DataFrame<a class="headerlink" href="#load-all-data-into-single-dataframe" title="Permalink to this headline">¶</a></h2>
+<p>We can merge these 3 datasets (metadata, drug resistance genotype and classification) to facilitate streamlined analysis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">qc_sample_metadata</span><span class="p">,</span><span class="n">drm_calls_fn</span><span class="p">,</span><span class="n">on</span><span class="o">=</span><span class="s1">&#39;Sample&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-55dc2711-14a3-4f53-b436-6f0ad7b8d4e4" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sample</th>
+      <th>Study</th>
+      <th>Country</th>
+      <th>Admin level 1</th>
+      <th>Country latitude</th>
+      <th>Country longitude</th>
+      <th>Admin level 1 latitude</th>
+      <th>Admin level 1 longitude</th>
+      <th>Year</th>
+      <th>ENA</th>
+      <th>...</th>
+      <th>mdr1_1034[S]</th>
+      <th>mdr1_1042[N]</th>
+      <th>mdr1_1226[F]</th>
+      <th>mdr1_1246[D]</th>
+      <th>arps10_127-128[VD]</th>
+      <th>fd_193[D]</th>
+      <th>mdr2_484[T]</th>
+      <th>kelch13_349-726_ns_changes</th>
+      <th>mdr1_dup_call</th>
+      <th>pm2_dup_call</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>FP0008-C</td>
+      <td>1147-PF-MR-CONWAY</td>
+      <td>Mauritania</td>
+      <td>Hodh el Gharbi</td>
+      <td>20.265149</td>
+      <td>-10.337093</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR1081237</td>
+      <td>...</td>
+      <td>S</td>
+      <td>N</td>
+      <td>F</td>
+      <td>D</td>
+      <td>VD</td>
+      <td>D</td>
+      <td>T</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>FP0009-C</td>
+      <td>1147-PF-MR-CONWAY</td>
+      <td>Mauritania</td>
+      <td>Hodh el Gharbi</td>
+      <td>20.265149</td>
+      <td>-10.337093</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR1081238</td>
+      <td>...</td>
+      <td>S</td>
+      <td>N</td>
+      <td>F</td>
+      <td>Y</td>
+      <td>VD</td>
+      <td>D</td>
+      <td>T</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>FP0010-CW</td>
+      <td>1147-PF-MR-CONWAY</td>
+      <td>Mauritania</td>
+      <td>Hodh el Gharbi</td>
+      <td>20.265149</td>
+      <td>-10.337093</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR2889621</td>
+      <td>...</td>
+      <td>S</td>
+      <td>N</td>
+      <td>F</td>
+      <td>D</td>
+      <td>VD</td>
+      <td>D</td>
+      <td>T</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>FP0011-CW</td>
+      <td>1147-PF-MR-CONWAY</td>
+      <td>Mauritania</td>
+      <td>Hodh el Gharbi</td>
+      <td>20.265149</td>
+      <td>-10.337093</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR2889624</td>
+      <td>...</td>
+      <td>S</td>
+      <td>N</td>
+      <td>F</td>
+      <td>D</td>
+      <td>VD</td>
+      <td>D</td>
+      <td>T</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>FP0012-CW</td>
+      <td>1147-PF-MR-CONWAY</td>
+      <td>Mauritania</td>
+      <td>Hodh el Gharbi</td>
+      <td>20.265149</td>
+      <td>-10.337093</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR2889627</td>
+      <td>...</td>
+      <td>S</td>
+      <td>N</td>
+      <td>F</td>
+      <td>D</td>
+      <td>VD</td>
+      <td>D</td>
+      <td>T</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>24404</th>
+      <td>SPT92049</td>
+      <td>1306-PF-NG-NGWA-SM</td>
+      <td>Nigeria</td>
+      <td>Oyo</td>
+      <td>9.592268</td>
+      <td>8.097575</td>
+      <td>8.143664</td>
+      <td>3.618846</td>
+      <td>2019.0</td>
+      <td>ERR10893258</td>
+      <td>...</td>
+      <td>S</td>
+      <td>N</td>
+      <td>F</td>
+      <td>-</td>
+      <td>VD</td>
+      <td>D</td>
+      <td>T</td>
+      <td>-</td>
+      <td>-1</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>24405</th>
+      <td>SPT92054</td>
+      <td>1306-PF-NG-NGWA-SM</td>
+      <td>Nigeria</td>
+      <td>Oyo</td>
+      <td>9.592268</td>
+      <td>8.097575</td>
+      <td>8.143664</td>
+      <td>3.618846</td>
+      <td>2019.0</td>
+      <td>ERR10893326</td>
+      <td>...</td>
+      <td>S</td>
+      <td>N</td>
+      <td>F</td>
+      <td>D</td>
+      <td>VD</td>
+      <td>D</td>
+      <td>T</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>24406</th>
+      <td>SPT92057</td>
+      <td>1306-PF-NG-NGWA-SM</td>
+      <td>Nigeria</td>
+      <td>Oyo</td>
+      <td>9.592268</td>
+      <td>8.097575</td>
+      <td>8.143664</td>
+      <td>3.618846</td>
+      <td>2019.0</td>
+      <td>ERR10893333</td>
+      <td>...</td>
+      <td>S</td>
+      <td>N</td>
+      <td>F</td>
+      <td>D</td>
+      <td>VD</td>
+      <td>D</td>
+      <td>T</td>
+      <td>-</td>
+      <td>-1</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>24407</th>
+      <td>SPT94772</td>
+      <td>1268-PF-MULTI-PAMGEN-SM</td>
+      <td>Gambia</td>
+      <td>Western</td>
+      <td>13.451482</td>
+      <td>-15.372910</td>
+      <td>13.245396</td>
+      <td>-16.401559</td>
+      <td>2017.0</td>
+      <td>ERR10789456</td>
+      <td>...</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>VD</td>
+      <td>D</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-1</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>24408</th>
+      <td>SPT94773</td>
+      <td>1268-PF-MULTI-PAMGEN-SM</td>
+      <td>Gambia</td>
+      <td>Western</td>
+      <td>13.451482</td>
+      <td>-15.372910</td>
+      <td>13.245396</td>
+      <td>-16.401559</td>
+      <td>2017.0</td>
+      <td>ERR10789457</td>
+      <td>...</td>
+      <td>S</td>
+      <td>N</td>
+      <td>F</td>
+      <td>D</td>
+      <td>VD</td>
+      <td>D</td>
+      <td>T</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>24409 rows × 56 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-55dc2711-14a3-4f53-b436-6f0ad7b8d4e4')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-55dc2711-14a3-4f53-b436-6f0ad7b8d4e4 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-55dc2711-14a3-4f53-b436-6f0ad7b8d4e4');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-b34bfd7d-3117-42b0-89bf-d15791018355">
+  <button class="colab-df-quickchart" onclick="quickchart('df-b34bfd7d-3117-42b0-89bf-d15791018355')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-b34bfd7d-3117-42b0-89bf-d15791018355 button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Merge the dataframes on &quot;Sample&quot; column</span>
+<span class="n">df_all_sample_metadata</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">qc_sample_metadata</span><span class="p">,</span><span class="n">drm_calls_fn</span><span class="p">,</span><span class="n">on</span><span class="o">=</span><span class="s1">&#39;Sample&#39;</span><span class="p">),</span><span class="n">resistance_classification_fn</span><span class="p">,</span><span class="n">on</span><span class="o">=</span><span class="s1">&#39;Sample&#39;</span><span class="p">)</span>
+
+<span class="c1"># Print first 3 rows</span>
+<span class="n">df_all_sample_metadata</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-d9434466-e6cc-488b-9077-25e478f02d2c" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sample</th>
+      <th>Study</th>
+      <th>Country</th>
+      <th>Admin level 1</th>
+      <th>Country latitude</th>
+      <th>Country longitude</th>
+      <th>Admin level 1 latitude</th>
+      <th>Admin level 1 longitude</th>
+      <th>Year</th>
+      <th>ENA</th>
+      <th>...</th>
+      <th>Chloroquine</th>
+      <th>Pyrimethamine</th>
+      <th>Sulfadoxine</th>
+      <th>Mefloquine</th>
+      <th>Artemisinin</th>
+      <th>Piperaquine</th>
+      <th>SP (uncomplicated)</th>
+      <th>SP (IPTp)</th>
+      <th>AS-MQ</th>
+      <th>DHA-PPQ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>FP0008-C</td>
+      <td>1147-PF-MR-CONWAY</td>
+      <td>Mauritania</td>
+      <td>Hodh el Gharbi</td>
+      <td>20.265149</td>
+      <td>-10.337093</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR1081237</td>
+      <td>...</td>
+      <td>Undetermined</td>
+      <td>Undetermined</td>
+      <td>Undetermined</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>FP0009-C</td>
+      <td>1147-PF-MR-CONWAY</td>
+      <td>Mauritania</td>
+      <td>Hodh el Gharbi</td>
+      <td>20.265149</td>
+      <td>-10.337093</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR1081238</td>
+      <td>...</td>
+      <td>Resistant</td>
+      <td>Resistant</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Resistant</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>FP0010-CW</td>
+      <td>1147-PF-MR-CONWAY</td>
+      <td>Mauritania</td>
+      <td>Hodh el Gharbi</td>
+      <td>20.265149</td>
+      <td>-10.337093</td>
+      <td>16.565426</td>
+      <td>-9.832345</td>
+      <td>2014.0</td>
+      <td>ERR2889621</td>
+      <td>...</td>
+      <td>Undetermined</td>
+      <td>Resistant</td>
+      <td>Resistant</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Resistant</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+      <td>Sensitive</td>
+    </tr>
+  </tbody>
+</table>
+<p>3 rows × 66 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-d9434466-e6cc-488b-9077-25e478f02d2c')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-d9434466-e6cc-488b-9077-25e478f02d2c button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-d9434466-e6cc-488b-9077-25e478f02d2c');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-72297905-68ab-4a2b-b4c0-c9b158743a44">
+  <button class="colab-df-quickchart" onclick="quickchart('df-72297905-68ab-4a2b-b4c0-c9b158743a44')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-72297905-68ab-4a2b-b4c0-c9b158743a44 button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+<p>Sulfadoxine-Pyrimethamine (SP) is used for the treatment of uncomplicated cases and Intermittent Preventive Treatment in Pregnancy (IPTp). To make these two status clear in the dataset, we rename the columns.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define a dictionary of old&amp;new column names</span>
+<span class="n">column_name_changes</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
+<span class="n">column_name_changes</span><span class="p">[</span><span class="s1">&#39;SP (uncomplicated)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;SP (treatment)&#39;</span>
+<span class="n">column_name_changes</span><span class="p">[</span><span class="s1">&#39;SP-IPTp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;SP (IPTp)&#39;</span>
+
+<span class="c1"># Rename the columns using the dictionary</span>
+<span class="n">df_all_sample_metadata</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">column_name_changes</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="table-setups">
+<h2>Table setups<a class="headerlink" href="#table-setups" title="Permalink to this headline">¶</a></h2>
+<p>We proceed by defining a dictionary where each key represents a drug along with its associated gene, mutation, column name in the dataset, and sensitivity/resistance indicators.</p>
+<p>For details on the heuristics employed to map genetic markers to resistance status classification, please refer to <a class="reference external" href="https://pf8-release.cog.sanger.ac.uk/Pf8_resistance_classification.pdf">here</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">drm_dict</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
+
+<span class="n">drm_dict</span><span class="p">[</span><span class="s1">&#39;Chloroquine&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;gene&#39;</span><span class="p">:</span> <span class="s1">&#39;crt&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;mutation&#39;</span><span class="p">:</span> <span class="s1">&#39;76T&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;column_name&#39;</span><span class="p">:</span> <span class="s1">&#39;crt_76[K]&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sensitive&#39;</span><span class="p">:</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;resistant&#39;</span><span class="p">:</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">drm_dict</span><span class="p">[</span><span class="s1">&#39;Pyrimethamine&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;gene&#39;</span><span class="p">:</span> <span class="s1">&#39;dhfr&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;mutation&#39;</span><span class="p">:</span> <span class="s1">&#39;108N&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;column_name&#39;</span><span class="p">:</span> <span class="s1">&#39;dhfr_108[S]&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sensitive&#39;</span><span class="p">:</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;resistant&#39;</span><span class="p">:</span> <span class="s1">&#39;N&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">drm_dict</span><span class="p">[</span><span class="s1">&#39;Sulfadoxine&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;gene&#39;</span><span class="p">:</span> <span class="s1">&#39;dhps&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;mutation&#39;</span><span class="p">:</span> <span class="s1">&#39;437G&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;column_name&#39;</span><span class="p">:</span> <span class="s1">&#39;dhps_437[G]&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sensitive&#39;</span><span class="p">:</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;resistant&#39;</span><span class="p">:</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">drm_dict</span><span class="p">[</span><span class="s1">&#39;Mefloquine&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;gene&#39;</span><span class="p">:</span> <span class="s1">&#39;mdr1&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;mutation&#39;</span><span class="p">:</span> <span class="s1">&#39;2+ copies&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;column_name&#39;</span><span class="p">:</span> <span class="s1">&#39;dup_mdr1&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sensitive&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s1">&#39;resistant&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">drm_dict</span><span class="p">[</span><span class="s1">&#39;Artemisinin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;gene&#39;</span><span class="p">:</span> <span class="s1">&#39;kelch13&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;mutation&#39;</span><span class="p">:</span> <span class="s1">&#39;WHO list&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;column_name&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">drm_dict</span><span class="p">[</span><span class="s1">&#39;Piperaquine&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;gene&#39;</span><span class="p">:</span> <span class="s1">&#39;plasmepsin 2-3&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;mutation&#39;</span><span class="p">:</span> <span class="s1">&#39;2+ copies&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;column_name&#39;</span><span class="p">:</span> <span class="s1">&#39;dup_pm2&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sensitive&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s1">&#39;resistant&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">drm_dict</span><span class="p">[</span><span class="s1">&#39;SP (treatment)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;gene&#39;</span><span class="p">:</span> <span class="s1">&#39;dhfr&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;mutation&#39;</span><span class="p">:</span> <span class="s1">&#39;triple mutant&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;column_name&#39;</span><span class="p">:</span> <span class="kc">None</span>
+<span class="p">}</span>
+
+<span class="n">drm_dict</span><span class="p">[</span><span class="s1">&#39;SP (IPTp)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;gene&#39;</span><span class="p">:</span> <span class="s1">&#39;dhfr and dhps&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;mutation&#39;</span><span class="p">:</span> <span class="s1">&#39;sextuple mutant&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;column_name&#39;</span><span class="p">:</span> <span class="kc">None</span>
+<span class="p">}</span>
+
+<span class="n">drm_dict</span><span class="p">[</span><span class="s1">&#39;AS-MQ&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;gene&#39;</span><span class="p">:</span> <span class="s1">&#39;kelch13 and mdr1&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;mutation&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;column_name&#39;</span><span class="p">:</span> <span class="kc">None</span>
+<span class="p">}</span>
+
+<span class="n">drm_dict</span><span class="p">[</span><span class="s1">&#39;DHA-PPQ&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;gene&#39;</span><span class="p">:</span> <span class="s1">&#39;kelch13 and plasmepsin 2-3&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;mutation&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;column_name&#39;</span><span class="p">:</span> <span class="kc">None</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To elaborate on population names in the final table, we define a dictionary listing ten populations with the following abbreviations:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">populations</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;SA&#39;</span><span class="p">]</span>       <span class="o">=</span> <span class="s2">&quot;South America&quot;</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AF-W&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">&quot;Africa - West&quot;</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AF-C&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">&quot;Africa - Central&quot;</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AF-NE&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">&quot;Africa - Northeast&quot;</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AF-E&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">&quot;Africa - East&quot;</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AS-S-E&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">&quot;Asia - South - East&quot;</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AS-S-FE&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">&quot;Asia - South - Far East&quot;</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AS-SE-W&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Asia - Southeast - West&quot;</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AS-SE-E&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Asia - Southeast - East&quot;</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;OC-NG&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">&quot;Oceania - New Guinea&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="summary-of-dr-sample-sizes-across-populations">
+<h2>Summary of DR sample sizes across populations<a class="headerlink" href="#summary-of-dr-sample-sizes-across-populations" title="Permalink to this headline">¶</a></h2>
+<p>We want to create a table summarizing the number of samples by population.</p>
+<p>To do this, we will write a function that counts number of samples that are resistant and sensitive for a given drug.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">n_agg</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Aggregate function to calculate the count of non-undetermined samples for each drug in a given population.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    - x: DataFrame</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    - pd.Series: Counts of sensitive samples that are resistant to each drug.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Initialize an ordered dictionary to store drug names and their corresponding counts</span>
+    <span class="n">names</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
+
+    <span class="c1"># Iterate through each drug in drm_dict</span>
+    <span class="k">for</span> <span class="n">drug</span> <span class="ow">in</span> <span class="n">drm_dict</span><span class="p">:</span>
+        <span class="c1"># Count the number of non-undetermined samples for the current drug</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">((</span><span class="n">x</span><span class="p">[</span><span class="n">drug</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;Undetermined&#39;</span><span class="p">))</span>
+
+        <span class="c1"># Store the drug name and its count in the dictionary</span>
+        <span class="n">names</span><span class="p">[</span><span class="n">drug</span><span class="p">]</span> <span class="o">=</span> <span class="n">n</span>
+
+    <span class="c1"># Return the result as a pandas Series</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">names</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>As an addition to table, we would like to include minimum and maximum drug resistance sample size in the population names.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate counts of non-undetermined samples for each drug in each population</span>
+<span class="n">df_drm_n_table</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">df_all_sample_metadata</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Population&#39;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">n_agg</span><span class="p">,</span> <span class="n">include_groups</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">rename_axis</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="n">populations</span><span class="o">.</span><span class="n">keys</span><span class="p">()]</span>
+    <span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="c1"># Calculate the minimum and maximum sample sizes across populations</span>
+<span class="n">min_n</span> <span class="o">=</span> <span class="n">df_drm_n_table</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">max_n</span> <span class="o">=</span> <span class="n">df_drm_n_table</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+
+<span class="c1"># Customize the index to include gene and mutation information for each drug</span>
+<span class="n">df_drm_n_table</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">drm_dict</span><span class="p">[</span><span class="n">drug</span><span class="p">][</span><span class="s1">&#39;gene&#39;</span><span class="p">],</span> <span class="n">drm_dict</span><span class="p">[</span><span class="n">drug</span><span class="p">][</span><span class="s1">&#39;mutation&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">drug</span> <span class="ow">in</span> <span class="n">drm_dict</span><span class="p">]</span>
+<span class="n">df_drm_n_table</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Marker&#39;</span><span class="p">]</span>
+
+<span class="c1"># Rename the columns to indicate their association with drug resistance and sample counts</span>
+<span class="n">df_drm_n_table</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;index&#39;</span><span class="p">:</span> <span class="s1">&#39;Associated with resistance to&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Update column names to include population names and corresponding sample size ranges</span>
+<span class="k">for</span> <span class="n">population</span> <span class="ow">in</span> <span class="n">populations</span><span class="p">:</span>
+    <span class="n">new_column_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">populations</span><span class="p">[</span><span class="n">population</span><span class="p">]</span><span class="si">}</span><span class="s1"> (n=</span><span class="si">{</span><span class="n">min_n</span><span class="p">[</span><span class="n">population</span><span class="p">]</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">max_n</span><span class="p">[</span><span class="n">population</span><span class="p">]</span><span class="si">}</span><span class="s1">)&#39;</span>
+    <span class="n">df_drm_n_table</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="n">population</span><span class="p">:</span> <span class="n">new_column_name</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Display the final drug resistance count table</span>
+<span class="n">df_drm_n_table</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-f63de62e-3ff3-42bb-88f4-5509dd5a60e8" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Associated with resistance to</th>
+      <th>South America (n=177-224)</th>
+      <th>Africa - West (n=6648-8837)</th>
+      <th>Africa - Central (n=870-1184)</th>
+      <th>Africa - Northeast (n=122-204)</th>
+      <th>Africa - East (n=3599-4000)</th>
+      <th>Asia - South - East (n=81-188)</th>
+      <th>Asia - South - Far East (n=1209-1369)</th>
+      <th>Asia - Southeast - West (n=1665-1884)</th>
+      <th>Asia - Southeast - East (n=2910-5798)</th>
+      <th>Oceania - New Guinea (n=293-340)</th>
+    </tr>
+    <tr>
+      <th>Marker</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>crt 76T</th>
+      <td>Chloroquine</td>
+      <td>223</td>
+      <td>8284</td>
+      <td>1039</td>
+      <td>196</td>
+      <td>3944</td>
+      <td>178</td>
+      <td>1330</td>
+      <td>1877</td>
+      <td>5798</td>
+      <td>331</td>
+    </tr>
+    <tr>
+      <th>dhfr 108N</th>
+      <td>Pyrimethamine</td>
+      <td>217</td>
+      <td>8035</td>
+      <td>1184</td>
+      <td>200</td>
+      <td>4000</td>
+      <td>162</td>
+      <td>1369</td>
+      <td>1884</td>
+      <td>5796</td>
+      <td>332</td>
+    </tr>
+    <tr>
+      <th>dhps 437G</th>
+      <td>Sulfadoxine</td>
+      <td>224</td>
+      <td>8007</td>
+      <td>1155</td>
+      <td>196</td>
+      <td>3871</td>
+      <td>179</td>
+      <td>1296</td>
+      <td>1884</td>
+      <td>5728</td>
+      <td>331</td>
+    </tr>
+    <tr>
+      <th>mdr1 2+ copies</th>
+      <td>Mefloquine</td>
+      <td>177</td>
+      <td>6936</td>
+      <td>923</td>
+      <td>125</td>
+      <td>3707</td>
+      <td>93</td>
+      <td>1241</td>
+      <td>1739</td>
+      <td>4966</td>
+      <td>307</td>
+    </tr>
+    <tr>
+      <th>kelch13 WHO list</th>
+      <td>Artemisinin</td>
+      <td>180</td>
+      <td>7220</td>
+      <td>938</td>
+      <td>151</td>
+      <td>3712</td>
+      <td>144</td>
+      <td>1335</td>
+      <td>1775</td>
+      <td>5295</td>
+      <td>302</td>
+    </tr>
+    <tr>
+      <th>plasmepsin 2-3 2+ copies</th>
+      <td>Piperaquine</td>
+      <td>182</td>
+      <td>6648</td>
+      <td>870</td>
+      <td>122</td>
+      <td>3599</td>
+      <td>81</td>
+      <td>1248</td>
+      <td>1779</td>
+      <td>4868</td>
+      <td>293</td>
+    </tr>
+    <tr>
+      <th>dhfr triple mutant</th>
+      <td>SP (treatment)</td>
+      <td>224</td>
+      <td>7474</td>
+      <td>1058</td>
+      <td>201</td>
+      <td>3646</td>
+      <td>186</td>
+      <td>1209</td>
+      <td>1837</td>
+      <td>5689</td>
+      <td>338</td>
+    </tr>
+    <tr>
+      <th>dhfr and dhps sextuple mutant</th>
+      <td>SP (IPTp)</td>
+      <td>224</td>
+      <td>8837</td>
+      <td>1138</td>
+      <td>204</td>
+      <td>3980</td>
+      <td>188</td>
+      <td>1216</td>
+      <td>1665</td>
+      <td>2910</td>
+      <td>340</td>
+    </tr>
+    <tr>
+      <th>kelch13 and mdr1</th>
+      <td>AS-MQ</td>
+      <td>199</td>
+      <td>7846</td>
+      <td>1059</td>
+      <td>160</td>
+      <td>3940</td>
+      <td>157</td>
+      <td>1350</td>
+      <td>1795</td>
+      <td>5087</td>
+      <td>320</td>
+    </tr>
+    <tr>
+      <th>kelch13 and plasmepsin 2-3</th>
+      <td>DHA-PPQ</td>
+      <td>190</td>
+      <td>7524</td>
+      <td>981</td>
+      <td>157</td>
+      <td>3804</td>
+      <td>149</td>
+      <td>1350</td>
+      <td>1824</td>
+      <td>4949</td>
+      <td>313</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-f63de62e-3ff3-42bb-88f4-5509dd5a60e8')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-f63de62e-3ff3-42bb-88f4-5509dd5a60e8 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-f63de62e-3ff3-42bb-88f4-5509dd5a60e8');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-aabe1650-1de4-4d7f-b245-8ee458530b2e">
+  <button class="colab-df-quickchart" onclick="quickchart('df-aabe1650-1de4-4d7f-b245-8ee458530b2e')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-aabe1650-1de4-4d7f-b245-8ee458530b2e button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+
+  <div id="id_6cb66345-cb18-4301-bc6c-742f08fc91a6">
+    <style>
+      .colab-df-generate {
+        background-color: #E8F0FE;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        fill: #1967D2;
+        height: 32px;
+        padding: 0 0 0 0;
+        width: 32px;
+      }
+
+      .colab-df-generate:hover {
+        background-color: #E2EBFA;
+        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+        fill: #174EA6;
+      }
+
+      [theme=dark] .colab-df-generate {
+        background-color: #3B4455;
+        fill: #D2E3FC;
+      }
+
+      [theme=dark] .colab-df-generate:hover {
+        background-color: #434B5C;
+        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+        fill: #FFFFFF;
+      }
+    </style>
+    <button class="colab-df-generate" onclick="generateWithVariable('df_drm_n_table')"
+            title="Generate code using this dataframe."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z"/>
+  </svg>
+    </button>
+    <script>
+      (() => {
+      const buttonEl =
+        document.querySelector('#id_6cb66345-cb18-4301-bc6c-742f08fc91a6 button.colab-df-generate');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      buttonEl.onclick = () => {
+        google.colab.notebook.generateWithVariable('df_drm_n_table');
+      }
+      })();
+    </script>
+  </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+<p><strong>Table 1.</strong> Numbers of samples used to determine proportions in Table 2.</p>
+<p>To save the table:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_drm_n_table</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;DRM_table_sample_numbers.xlsx&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="summary-of-dr-frequencies-across-populations">
+<h2>Summary of DR frequencies across populations<a class="headerlink" href="#summary-of-dr-frequencies-across-populations" title="Permalink to this headline">¶</a></h2>
+<p>Now, we would like to calculate drug resistance proportions in each population.</p>
+<p>We can easily adjust the function to count number of samples that are resistant and sensitive for a given drug, and calculate the proportion.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">proportion_agg</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Aggregate function to calculate the proportion of resistance for each drug in a given population.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    - x: DataFrame</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    - pd.Series: Proportions of resistance for each drug.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Initialize an ordered dictionary to store drug names and their corresponding proportions</span>
+    <span class="n">names</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
+
+    <span class="c1"># Iterate through each drug in drm_dict</span>
+    <span class="k">for</span> <span class="n">drug</span> <span class="ow">in</span> <span class="n">drm_dict</span><span class="p">:</span>
+        <span class="c1"># Count the number of non-undetermined samples for the current drug</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">((</span><span class="n">x</span><span class="p">[</span><span class="n">drug</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;Undetermined&#39;</span><span class="p">))</span>
+
+        <span class="c1"># Check if there are no non-undetermined samples for the drug</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">proportion</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>  <span class="c1"># Set proportion to NaN to avoid division by zero</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Calculate the proportion of resistant samples for the drug</span>
+            <span class="n">proportion</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span>
+                <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">drug</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Resistant&#39;</span><span class="p">)</span>
+            <span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span>
+                <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">drug</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;Undetermined&#39;</span><span class="p">)</span>
+            <span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
+
+        <span class="c1"># Store the drug name and its proportion in the dictionary</span>
+        <span class="n">names</span><span class="p">[</span><span class="n">drug</span><span class="p">]</span> <span class="o">=</span> <span class="n">proportion</span>
+
+    <span class="c1"># Return the result as a pandas Series</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">names</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s apply this function and create a table summarizing drug resistance proportions by population.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a table summarizing drug resistance proportions by population</span>
+
+<span class="c1"># Group the DataFrame by &#39;Population&#39; and apply the &#39;proportion_agg&#39; function to calculate resistance proportions</span>
+<span class="n">df_drm_table</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">df_all_sample_metadata</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Population&#39;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">proportion_agg</span><span class="p">,</span> <span class="n">include_groups</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">rename_axis</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="n">populations</span><span class="o">.</span><span class="n">keys</span><span class="p">()]</span>
+    <span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="c1"># Customize the index to include gene and mutation information for each drug</span>
+<span class="n">df_drm_table</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">drm_dict</span><span class="p">[</span><span class="n">drug</span><span class="p">][</span><span class="s1">&#39;gene&#39;</span><span class="p">],</span> <span class="n">drm_dict</span><span class="p">[</span><span class="n">drug</span><span class="p">][</span><span class="s1">&#39;mutation&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">drug</span> <span class="ow">in</span> <span class="n">drm_dict</span><span class="p">]</span>
+<span class="n">df_drm_table</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Marker&#39;</span><span class="p">]</span>
+
+<span class="c1"># Rename the columns to indicate their association with drug resistance</span>
+<span class="n">df_drm_table</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;index&#39;</span><span class="p">:</span> <span class="s1">&#39;Associated with resistance to&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Update column names to include population names and corresponding sample size ranges</span>
+<span class="k">for</span> <span class="n">population</span> <span class="ow">in</span> <span class="n">populations</span><span class="p">:</span>
+    <span class="n">new_column_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">populations</span><span class="p">[</span><span class="n">population</span><span class="p">]</span><span class="si">}</span><span class="s1"> (n=</span><span class="si">{</span><span class="n">min_n</span><span class="p">[</span><span class="n">population</span><span class="p">]</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">max_n</span><span class="p">[</span><span class="n">population</span><span class="p">]</span><span class="si">}</span><span class="s1">)&#39;</span>
+    <span class="n">df_drm_table</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="n">population</span><span class="p">:</span> <span class="n">new_column_name</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Add &#39;%&#39; symbol to all values in the table</span>
+<span class="n">df_drm_table</span> <span class="o">=</span> <span class="n">df_drm_table</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">%&quot;</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">))</span> <span class="k">else</span> <span class="n">x</span><span class="p">)</span>
+
+<span class="c1"># Display the final drug resistance table</span>
+<span class="n">df_drm_table</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-53c37be1-c09f-4f91-bbb2-de3c4ee83162" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Associated with resistance to</th>
+      <th>South America (n=177-224)</th>
+      <th>Africa - West (n=6648-8837)</th>
+      <th>Africa - Central (n=870-1184)</th>
+      <th>Africa - Northeast (n=122-204)</th>
+      <th>Africa - East (n=3599-4000)</th>
+      <th>Asia - South - East (n=81-188)</th>
+      <th>Asia - South - Far East (n=1209-1369)</th>
+      <th>Asia - Southeast - West (n=1665-1884)</th>
+      <th>Asia - Southeast - East (n=2910-5798)</th>
+      <th>Oceania - New Guinea (n=293-340)</th>
+    </tr>
+    <tr>
+      <th>Marker</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>crt 76T</th>
+      <td>Chloroquine</td>
+      <td>100%</td>
+      <td>26%</td>
+      <td>35%</td>
+      <td>48%</td>
+      <td>14%</td>
+      <td>33%</td>
+      <td>94%</td>
+      <td>99%</td>
+      <td>96%</td>
+      <td>96%</td>
+    </tr>
+    <tr>
+      <th>dhfr 108N</th>
+      <td>Pyrimethamine</td>
+      <td>74%</td>
+      <td>89%</td>
+      <td>99%</td>
+      <td>98%</td>
+      <td>97%</td>
+      <td>62%</td>
+      <td>100%</td>
+      <td>100%</td>
+      <td>99%</td>
+      <td>99%</td>
+    </tr>
+    <tr>
+      <th>dhps 437G</th>
+      <td>Sulfadoxine</td>
+      <td>71%</td>
+      <td>81%</td>
+      <td>96%</td>
+      <td>79%</td>
+      <td>86%</td>
+      <td>9%</td>
+      <td>89%</td>
+      <td>100%</td>
+      <td>83%</td>
+      <td>69%</td>
+    </tr>
+    <tr>
+      <th>mdr1 2+ copies</th>
+      <td>Mefloquine</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>30%</td>
+      <td>4%</td>
+      <td>1%</td>
+    </tr>
+    <tr>
+      <th>kelch13 WHO list</th>
+      <td>Artemisinin</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>36%</td>
+      <td>62%</td>
+      <td>1%</td>
+    </tr>
+    <tr>
+      <th>plasmepsin 2-3 2+ copies</th>
+      <td>Piperaquine</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>43%</td>
+      <td>0%</td>
+    </tr>
+    <tr>
+      <th>dhfr triple mutant</th>
+      <td>SP (treatment)</td>
+      <td>0%</td>
+      <td>79%</td>
+      <td>88%</td>
+      <td>51%</td>
+      <td>83%</td>
+      <td>2%</td>
+      <td>46%</td>
+      <td>86%</td>
+      <td>87%</td>
+      <td>0%</td>
+    </tr>
+    <tr>
+      <th>dhfr and dhps sextuple mutant</th>
+      <td>SP (IPTp)</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>5%</td>
+      <td>2%</td>
+      <td>4%</td>
+      <td>0%</td>
+      <td>13%</td>
+      <td>79%</td>
+      <td>12%</td>
+      <td>0%</td>
+    </tr>
+    <tr>
+      <th>kelch13 and mdr1</th>
+      <td>AS-MQ</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>10%</td>
+      <td>3%</td>
+      <td>0%</td>
+    </tr>
+    <tr>
+      <th>kelch13 and plasmepsin 2-3</th>
+      <td>DHA-PPQ</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>39%</td>
+      <td>0%</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-53c37be1-c09f-4f91-bbb2-de3c4ee83162')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-53c37be1-c09f-4f91-bbb2-de3c4ee83162 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-53c37be1-c09f-4f91-bbb2-de3c4ee83162');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-254c29df-16d7-442c-a848-62d834a8fb27">
+  <button class="colab-df-quickchart" onclick="quickchart('df-254c29df-16d7-442c-a848-62d834a8fb27')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-254c29df-16d7-442c-a848-62d834a8fb27 button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+
+  <div id="id_1de2157e-1c45-4857-b591-a89d54563799">
+    <style>
+      .colab-df-generate {
+        background-color: #E8F0FE;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        fill: #1967D2;
+        height: 32px;
+        padding: 0 0 0 0;
+        width: 32px;
+      }
+
+      .colab-df-generate:hover {
+        background-color: #E2EBFA;
+        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+        fill: #174EA6;
+      }
+
+      [theme=dark] .colab-df-generate {
+        background-color: #3B4455;
+        fill: #D2E3FC;
+      }
+
+      [theme=dark] .colab-df-generate:hover {
+        background-color: #434B5C;
+        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+        fill: #FFFFFF;
+      }
+    </style>
+    <button class="colab-df-generate" onclick="generateWithVariable('df_drm_table')"
+            title="Generate code using this dataframe."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z"/>
+  </svg>
+    </button>
+    <script>
+      (() => {
+      const buttonEl =
+        document.querySelector('#id_1de2157e-1c45-4857-b591-a89d54563799 button.colab-df-generate');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      buttonEl.onclick = () => {
+        google.colab.notebook.generateWithVariable('df_drm_table');
+      }
+      })();
+    </script>
+  </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+<p><strong>Table 2.</strong> Frequency of different sets of polymorphisms associated with drug resistance in samples from different geographical regions.
+All samples were classified into different types of drug resistance based on published genetic markers, and represent best attempt based on the available data. Each type of resistance was considered to be either present, absent or unknown for a given sample. For each resistance type, the table reports: the genetic markers considered; the drug they are associated with; the proportion of samples in each major sub-population classified as resistant out of the samples where the type was not unknown. The number of samples classified as either resistant or not resistant varies for each type of resistance considered (e.g. due to different levels of genomic accessibility); numbers in brackets report the minimum and maximum number analysed while the exact numbers considered are reported in Table 1 of this notebook. SP: sulfadoxine-pyrimethamine; treatment: SP used for the clinical treatment of uncomplicated malaria; IPTp: SP used for intermittent preventive treatment in pregnancy; AS-MQ: artesunate + mefloquine combination therapy; DHA-PPQ: dihydroartemisinin + piperaquine combination therapy. <em>dhfr</em> triple mutant refers to having all three of 51I, 59R and 108N in <em>dhfr</em>. <em>dhfr</em> and <em>dhps</em> sextuple mutant refers to having all five of 51I, 59R and 108N in <em>dhfr</em> and 437G and 540E in <em>dhps</em>, plus one of <em>dhfr</em>:164L, <em>dhps</em>:581G, <em>dhps</em>:613S or <em>dhps</em>:613T. Full details of the rules used to infer resistance status from genetic markers can be found <a class="reference external" href="https://pf8-release.cog.sanger.ac.uk/Pf8_resistance_classification.pdf">here</a>.</p>
+<p>To save the table:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_drm_table</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;DRM_table.xlsx&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./pf8/evolution_malaria_control"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../evolution-malaria-control.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><strong>Pf8 Analysis Guides:</strong> Study Evolution Against Malaria Control Measures</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="drug_resistance_trends.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Introduction</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By MalariaGEN<br/>
+    
+        &copy; Copyright 2023.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

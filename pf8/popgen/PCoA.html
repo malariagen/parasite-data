@@ -1,0 +1,2213 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction &#8212; MalariaGEN parasite data user guide</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Create a Neighbour Joining Tree" href="njt_pf8_anjl.html" />
+    <link rel="prev" title="Pf8 Analysis Guides: Population Structure and Selection" href="../popgen.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">MalariaGEN parasite data user guide</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../landing-page.html">
+   MalariaGEN parasite data user guide
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Malaria Parasite Google Cloud Data Access
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../cloud_data_access/parasite-cloud-data-access.html">
+   <strong>
+    Malaria Parasite Google Cloud Data Access
+   </strong>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Pf8
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Data_access.html">
+   <strong>
+    Pf8 Data Access
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../useful-how-tos.html">
+   <strong>
+    Pf8 Analysis Guides:
+   </strong>
+   Useful Genomics How-Tos
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../useful_genomics_howtos/igv_notebook.html">
+     Visualizing Genomic Regions of Pf8 Samples with IGV Plots
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../summarise-data.html">
+   <strong>
+    Pf7 Analysis Guides:
+   </strong>
+   Summarise Pf8 Data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../summarise_data/table_sample_summary.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../summarise_data/Visualising_sample_collections_over_time.html">
+     Visualising sample collections over time
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../summarise_data/SamplesByCountry_Barplot.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../summarise_data/table_variants_summary.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../summarise_data/figure1_samplemap.html">
+     Introduction
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../evolution-malaria-control.html">
+   <strong>
+    Pf8 Analysis Guides:
+   </strong>
+   Study Evolution Against Malaria Control Measures
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../evolution_malaria_control/table_dr_summary.html">
+     Drug Resistance Frequencies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../evolution_malaria_control/drug_resistance_trends.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../evolution_malaria_control/cnv_fig.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../evolution_malaria_control/Figure_HRPDeletion.html">
+     <em>
+      hrp2
+     </em>
+     and
+     <em>
+      hrp3
+     </em>
+     Deletion Breakpoints
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../evolution_malaria_control/Drug_Resistance_Pf7_Pf8_Concordance.html">
+     Drug Resistance in Pf7 vs Pf8
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../popgen.html">
+   <strong>
+    Pf8 Analysis Guides:
+   </strong>
+   Population Structure and Selection
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="njt_pf8_anjl.html">
+     Create a Neighbour Joining Tree
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Pf8_fws_figure_public_notebook.html">
+     Display Fws Across Populations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../api.html">
+   <strong>
+    Pf8 API
+   </strong>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Pf7
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../pf7/Data_access.html">
+   <strong>
+    Pf7 Data Access
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../pf7/summarise-data.html">
+   <strong>
+    Pf7 Analysis Guides:
+   </strong>
+   Summarise Pf7 Data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/summarise_data/sample-summary-table.html">
+     Summarise Samples by Administrative Division
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/summarise_data/sample-collection-over-time.html">
+     Visualising sample collections over time
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/summarise_data/barplot-samples-by-country.html">
+     Barplot of Samples by Country
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/summarise_data/variant-summary-table.html">
+     Summarise Genetic Variants
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/summarise_data/global-sample-map.html">
+     Plot Global Map of Samples
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../pf7/evolution-malaria-control.html">
+   <strong>
+    Pf7 Analysis Guides:
+   </strong>
+   Study Evolution Against Malaria Control Measures
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/evolution_malaria_control/drug-resistance-summary.html">
+     Drug Resistance Frequencies Across Pf7
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/evolution_malaria_control/chloroquine-resistance-map.html">
+     Plot Map of Chloroquine Resistance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/evolution_malaria_control/summarise_hrp2_hrp3_deletions.html">
+     Summarise
+     <em>
+      hrp2
+     </em>
+     and
+     <em>
+      hrp3
+     </em>
+     Deletions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/evolution_malaria_control/visualise_hrp2_hrp3_deletions.html">
+     Visualise
+     <em>
+      hrp2
+     </em>
+     and
+     <em>
+      hrp3
+     </em>
+     Deletions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/evolution_malaria_control/csp-cterm-analysis.html">
+     Analyse csp C-Terminal Variation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../pf7/popgen.html">
+   <strong>
+    Pf7 Analysis Guides:
+   </strong>
+   Population Structure and Selection
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/popgen/PCoA.html">
+     Principal Coordinate Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/popgen/geographic-genetic-differentiation.html">
+     Geographic patterns of population differentiation and gene flow
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/popgen/neighbour-joining-tree-swga.html">
+     Neighbour Joining Tree for sWGA vs. gDNA
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pf7/popgen/proportion-eba175.html">
+     Plot
+     <em>
+      eba175
+     </em>
+     C Allele Proportions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../pf7/api.html">
+   <strong>
+    Pf7 API
+   </strong>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Pv4
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../pv4/Data_access.html">
+   <strong>
+    Pv4 Data Access
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../pv4/api.html">
+   <strong>
+    Pv4 API
+   </strong>
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/pf8/popgen/PCoA.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/malariagen/parasite-data"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/malariagen/parasite-data/issues/new?title=Issue%20on%20page%20%2Fpf8/popgen/PCoA.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/malariagen/parasite-data/master?urlpath=lab/tree/docs/pf8/popgen/PCoA.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/malariagen/parasite-data/blob/master/docs/pf8/popgen/PCoA.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Introduction
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#principal-coordinate-analysis-pcoa">
+     <strong>
+      Principal Coordinate Analysis - PCoA
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-access">
+   Data Access
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subset-data">
+   Subset data
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#perform-pcoa">
+   Perform PCoA
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#assign-colours-to-sub-populations">
+   Assign colours to sub-populations
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plot-the-pcoa">
+   Plot the PCoA
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pc1-vs-pc2">
+   PC1 vs. PC2
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pc1-vs-pc8">
+   PC1 vs. PC8
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#additional-plot-1-pc1-vs-pc3">
+   <strong>
+    Additional Plot 1
+   </strong>
+   : PC1 vs. PC3
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#additional-plot-2-pc2-vs-pc3">
+   <strong>
+    Additional Plot 2
+   </strong>
+   : PC2 vs. PC3
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Introduction</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Introduction
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#principal-coordinate-analysis-pcoa">
+     <strong>
+      Principal Coordinate Analysis - PCoA
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-access">
+   Data Access
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subset-data">
+   Subset data
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#perform-pcoa">
+   Perform PCoA
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#assign-colours-to-sub-populations">
+   Assign colours to sub-populations
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plot-the-pcoa">
+   Plot the PCoA
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pc1-vs-pc2">
+   PC1 vs. PC2
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pc1-vs-pc8">
+   PC1 vs. PC8
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#additional-plot-1-pc1-vs-pc3">
+   <strong>
+    Additional Plot 1
+   </strong>
+   : PC1 vs. PC3
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#additional-plot-2-pc2-vs-pc3">
+   <strong>
+    Additional Plot 2
+   </strong>
+   : PC2 vs. PC3
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>In this notebook we will perform <strong>Principal Coordinate Analysis</strong> to identify patterns of geographic and genetic structure within the Pf8 dataset.</p>
+<p><strong>This notebook should take approximately 50 minutes to run</strong></p>
+<div class="section" id="principal-coordinate-analysis-pcoa">
+<h2><strong>Principal Coordinate Analysis - PCoA</strong><a class="headerlink" href="#principal-coordinate-analysis-pcoa" title="Permalink to this headline">¶</a></h2>
+<p>PCoA falls into a category of analyses which focus on “<em>dimensionality reduction</em>”. Dimensionality reduction is used in data analysis to simplify complex data by reducing the number of variables while still retaining meaningful properties from the original dataset.</p>
+<p>The PCoA we will calculate is based on a large distance matrix of pairwise genetic distances between 24,409 <em>Plasmodium falciparum</em> samples. The distances were generated using high-quality, bi-allelic coding single nucleotide polymorphisms (SNPs) from throughout the Pf genome.</p>
+<p>The PCoA seeks to represent these pairwise distances in a lower-dimensional space, while preserving their relative distances as accurately as possible.</p>
+<p>Thus, we can simply view relative genetic distances between samples from different geographical locations.</p>
+</div>
+</div>
+<div class="section" id="setup">
+<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
+<p>Install the MalariaGEN data package:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>malariagen_data<span class="w"> </span>-q<span class="w"> </span>--no-warn-conflicts
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Installing build dependencies ... ?25l?25hdone
+  Getting requirements to build wheel ... ?25l?25hdone
+  Preparing metadata (pyproject.toml) ... ?25l?25hdone
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">4.0/4.0 MB</span> <span class=" -Color -Color-Red">31.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h  Preparing metadata (setup.py) ... ?25l?25hdone
+  Preparing metadata (setup.py) ... ?25l?25hdone
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">71.7/71.7 kB</span> <span class=" -Color -Color-Red">5.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">765.4/765.4 kB</span> <span class=" -Color -Color-Red">40.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">24.4/24.4 MB</span> <span class=" -Color -Color-Red">2.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">8.1/8.1 MB</span> <span class=" -Color -Color-Red">6.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">210.7/210.7 kB</span> <span class=" -Color -Color-Red">14.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">6.3/6.3 MB</span> <span class=" -Color -Color-Red">3.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">3.2/3.2 MB</span> <span class=" -Color -Color-Red">52.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">7.8/7.8 MB</span> <span class=" -Color -Color-Red">85.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.0/1.0 MB</span> <span class=" -Color -Color-Red">47.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">77.8/77.8 kB</span> <span class=" -Color -Color-Red">5.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">101.7/101.7 kB</span> <span class=" -Color -Color-Red">7.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">8.6/8.6 MB</span> <span class=" -Color -Color-Red">87.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">228.0/228.0 kB</span> <span class=" -Color -Color-Red">15.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">43.3/43.3 kB</span> <span class=" -Color -Color-Red">3.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">13.3/13.3 MB</span> <span class=" -Color -Color-Red">83.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.6/1.6 MB</span> <span class=" -Color -Color-Red">61.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h  Building wheel for malariagen_data (pyproject.toml) ... ?25l?25hdone
+  Building wheel for dash-cytoscape (setup.py) ... ?25l?25hdone
+  Building wheel for asciitree (setup.py) ... ?25l?25hdone
+</pre></div>
+</div>
+</div>
+</div>
+<p>Install another required packages, scikit-bio and s3fs:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>-q<span class="w"> </span>--no-warn-conflicts<span class="w"> </span>scikit-bio<span class="w"> </span>s3fs
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2.7/2.7 MB</span> <span class=" -Color -Color-Red">24.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>00:0100:01
+?25h  Installing build dependencies ... ?25l?25hdone
+  Getting requirements to build wheel ... ?25l?25hdone
+  Preparing metadata (pyproject.toml) ... ?25l?25hdone
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">11.7/11.7 MB</span> <span class=" -Color -Color-Red">79.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+</div>
+</div>
+<p>Load the required Python libraries:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">malariagen_data</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">s3fs</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">botocore.config</span><span class="w"> </span><span class="kn">import</span> <span class="n">Config</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ftplib</span><span class="w"> </span><span class="kn">import</span> <span class="n">FTP</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">scipy.stats</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">scipy.spatial.distance</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">collections</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">skbio.stats.ordination</span><span class="w"> </span><span class="kn">import</span> <span class="n">pcoa</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">drive</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="data-access">
+<h1>Data Access<a class="headerlink" href="#data-access" title="Permalink to this headline">¶</a></h1>
+<p>First load the Pf8 metadata:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load Pf8 data</span>
+<span class="n">release_data</span> <span class="o">=</span> <span class="n">malariagen_data</span><span class="o">.</span><span class="n">Pf8</span><span class="p">()</span>
+<span class="n">sample_metadata</span> <span class="o">=</span> <span class="n">release_data</span><span class="o">.</span><span class="n">sample_metadata</span><span class="p">()</span>
+<span class="n">sample_metadata</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># View the data</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Notice we have data for all 33,325 samples</span>
+<span class="n">sample_metadata</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(33325, 17)
+</pre></div>
+</div>
+</div>
+</div>
+<p>We then need to load the distance matrix, which is available from Sanger’s cloud storage.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cloud path to Pf8 distance matrix</span>
+<span class="n">s3_path</span> <span class="o">=</span> <span class="s2">&quot;s3://pf8-release/Pf8_mean_genotype_distance.npy&quot;</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;signature_version&#39;</span><span class="p">:</span> <span class="s1">&#39;s3&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;s3&#39;</span><span class="p">:</span> <span class="p">{</span> <span class="s1">&#39;addressing_style&#39;</span><span class="p">:</span> <span class="s1">&#39;virtual&#39;</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">fs</span> <span class="o">=</span> <span class="n">s3fs</span><span class="o">.</span><span class="n">S3FileSystem</span><span class="p">(</span>
+    <span class="n">anon</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">endpoint_url</span><span class="o">=</span><span class="s1">&#39;https://cog.sanger.ac.uk&#39;</span><span class="p">,</span>
+    <span class="n">config_kwargs</span><span class="o">=</span><span class="n">config</span>
+<span class="p">)</span>
+
+<span class="c1"># Open and load the .npy file</span>
+<span class="k">with</span> <span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">s3_path</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">mean_distance_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Distance matrix loaded successfully.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="subset-data">
+<h1>Subset data<a class="headerlink" href="#subset-data" title="Permalink to this headline">¶</a></h1>
+<p>We want to make sure we can rely on our results. To give the best chance of this, we select only samples which passed quality control (QC) filters.</p>
+<p>We need to subset the sample_metadata dataframe and the distance matrix so they only contain these samples.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Subset the metadata using the &#39;QC pass&#39; column</span>
+<span class="c1"># Select only rows where the value is &#39;True&#39;</span>
+<span class="n">sample_metadata_qc_pass</span> <span class="o">=</span> <span class="n">sample_metadata</span><span class="p">[</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;QC pass&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">]</span>
+<span class="n">sample_metadata_qc_pass</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We now have 24,409 samples in this dataframe.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Subset the distance matrix using the same column</span>
+<span class="n">mean_distance_matrix_qc_pass</span> <span class="o">=</span> <span class="n">mean_distance_matrix</span><span class="p">[</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;QC pass&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">][:,</span> <span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;QC pass&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">]</span>
+<span class="n">mean_distance_matrix_qc_pass</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(24409, 24409)
+</pre></div>
+</div>
+</div>
+</div>
+<p>And we have 24,409 samples in the distance matrix.</p>
+<p>To save space and stay within the Colab notebook’s memory limit, we must empty the distance matrix that includes non-QC values.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean_distance_matrix</span> <span class="o">=</span> <span class="kc">None</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="perform-pcoa">
+<h1>Perform PCoA<a class="headerlink" href="#perform-pcoa" title="Permalink to this headline">¶</a></h1>
+<p>Now we will perform the dimensionality reduction to pull out the most important components of variation in the dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The diagonal of the matrix, where each sample is compared to itself,</span>
+<span class="c1"># must be manually set to zero to avoid an error from pcoa</span>
+<span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">mean_distance_matrix_qc_pass</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Note:</strong> The following cell may take 45 minutes to complete while the Colab is up and running.</p>
+<p>We may see a warning message about negative eigenvalues. These values are small in magnitude, so please ignore the message.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This will produce the underlying values for the figure</span>
+<span class="n">pcoa_results</span> <span class="o">=</span> <span class="n">pcoa</span><span class="p">(</span><span class="n">mean_distance_matrix_qc_pass</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.10/dist-packages/skbio/stats/ordination/_principal_coordinate_analysis.py:146: RuntimeWarning: The result contains negative eigenvalues. Please compare their magnitude with the magnitude of some of the largest positive eigenvalues. If the negative ones are smaller, it&#39;s probably safe to ignore them, but if they are large in magnitude, the results won&#39;t be useful. See the Notes section for more details. The smallest eigenvalue is -0.0007589793531224132 and the largest is 0.003880083793774247.
+  warn(
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make sure the results are the size we expect (24,409)</span>
+<span class="n">pcoa_results</span><span class="o">.</span><span class="n">samples</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(24409, 24409)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pcoa_results</span><span class="o">.</span><span class="n">samples</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-9298710a-9c78-4f97-9ee5-674997036b61" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PC1</th>
+      <th>PC2</th>
+      <th>PC3</th>
+      <th>PC4</th>
+      <th>PC5</th>
+      <th>PC6</th>
+      <th>PC7</th>
+      <th>PC8</th>
+      <th>PC9</th>
+      <th>PC10</th>
+      <th>...</th>
+      <th>PC24400</th>
+      <th>PC24401</th>
+      <th>PC24402</th>
+      <th>PC24403</th>
+      <th>PC24404</th>
+      <th>PC24405</th>
+      <th>PC24406</th>
+      <th>PC24407</th>
+      <th>PC24408</th>
+      <th>PC24409</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-0.000366</td>
+      <td>0.000005</td>
+      <td>-0.000095</td>
+      <td>4.664460e-05</td>
+      <td>-0.000038</td>
+      <td>0.000012</td>
+      <td>-0.000008</td>
+      <td>0.000025</td>
+      <td>3.314548e-05</td>
+      <td>-1.353946e-07</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-0.000367</td>
+      <td>-0.000035</td>
+      <td>-0.000131</td>
+      <td>5.729959e-05</td>
+      <td>0.000017</td>
+      <td>-0.000019</td>
+      <td>-0.000092</td>
+      <td>0.000085</td>
+      <td>-4.657099e-05</td>
+      <td>4.012898e-05</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-0.000281</td>
+      <td>0.000003</td>
+      <td>0.000048</td>
+      <td>2.021483e-05</td>
+      <td>-0.000003</td>
+      <td>-0.000004</td>
+      <td>-0.000041</td>
+      <td>-0.000026</td>
+      <td>-3.138813e-05</td>
+      <td>-1.981967e-05</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>-0.000302</td>
+      <td>-0.000018</td>
+      <td>-0.000012</td>
+      <td>4.239124e-06</td>
+      <td>0.000019</td>
+      <td>-0.000014</td>
+      <td>-0.000005</td>
+      <td>-0.000011</td>
+      <td>-4.058877e-05</td>
+      <td>-4.042525e-05</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-0.000347</td>
+      <td>-0.000020</td>
+      <td>-0.000069</td>
+      <td>-6.216652e-05</td>
+      <td>0.000047</td>
+      <td>-0.000006</td>
+      <td>-0.000077</td>
+      <td>0.000066</td>
+      <td>-3.696777e-05</td>
+      <td>-2.735753e-06</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>24404</th>
+      <td>-0.000243</td>
+      <td>0.000015</td>
+      <td>-0.000052</td>
+      <td>7.995157e-06</td>
+      <td>0.000046</td>
+      <td>0.000001</td>
+      <td>0.000073</td>
+      <td>-0.000047</td>
+      <td>-2.684649e-05</td>
+      <td>2.814960e-06</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>24405</th>
+      <td>-0.000319</td>
+      <td>-0.000059</td>
+      <td>-0.000057</td>
+      <td>5.662256e-06</td>
+      <td>0.000009</td>
+      <td>-0.000022</td>
+      <td>0.000041</td>
+      <td>-0.000011</td>
+      <td>-9.411604e-07</td>
+      <td>7.857020e-06</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>24406</th>
+      <td>-0.000274</td>
+      <td>-0.000003</td>
+      <td>-0.000037</td>
+      <td>4.314590e-06</td>
+      <td>0.000027</td>
+      <td>0.000005</td>
+      <td>0.000061</td>
+      <td>-0.000010</td>
+      <td>-5.066524e-05</td>
+      <td>5.229774e-06</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>24407</th>
+      <td>-0.000265</td>
+      <td>0.000012</td>
+      <td>-0.000034</td>
+      <td>-9.872398e-07</td>
+      <td>0.000051</td>
+      <td>0.000002</td>
+      <td>-0.000002</td>
+      <td>0.000006</td>
+      <td>-6.517883e-05</td>
+      <td>-2.840834e-05</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>24408</th>
+      <td>-0.000344</td>
+      <td>-0.000043</td>
+      <td>-0.000076</td>
+      <td>6.315483e-05</td>
+      <td>0.000011</td>
+      <td>-0.000027</td>
+      <td>-0.000096</td>
+      <td>0.000099</td>
+      <td>-1.382476e-05</td>
+      <td>5.280112e-05</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>24409 rows × 24409 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-9298710a-9c78-4f97-9ee5-674997036b61')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-9298710a-9c78-4f97-9ee5-674997036b61 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-9298710a-9c78-4f97-9ee5-674997036b61');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-d322e2eb-9470-41e5-b247-468f4dbfa42e">
+  <button class="colab-df-quickchart" onclick="quickchart('df-d322e2eb-9470-41e5-b247-468f4dbfa42e')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-d322e2eb-9470-41e5-b247-468f4dbfa42e button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+<p>Now dimensionality reduction has been applied, we are given a list of <strong>Principal Coordinates (PC)</strong> and information on the proportion of total data variation explained by each PC.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># View proportion of variation explained by each PC</span>
+<span class="n">pcoa_results</span><span class="o">.</span><span class="n">proportion_explained</span><span class="o">*</span><span class="mi">100</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>PC1</th>
+      <td>15.324158</td>
+    </tr>
+    <tr>
+      <th>PC2</th>
+      <td>2.223303</td>
+    </tr>
+    <tr>
+      <th>PC3</th>
+      <td>0.841966</td>
+    </tr>
+    <tr>
+      <th>PC4</th>
+      <td>0.668389</td>
+    </tr>
+    <tr>
+      <th>PC5</th>
+      <td>0.585150</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>PC24405</th>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>PC24406</th>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>PC24407</th>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>PC24408</th>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>PC24409</th>
+      <td>0.000000</td>
+    </tr>
+  </tbody>
+</table>
+<p>24409 rows × 1 columns</p>
+</div><br><label><b>dtype:</b> float32</label></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">0.004103</span><span class="o">*</span><span class="mi">100</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.4103
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>The most useful PCs for explaining sample similarity/dissimilarity are those which explain most of the variation</strong></p>
+<p>You can see that the 1st PC, <strong>PC1</strong>, explains the most variation, at around 15.3% of the total variation.</p>
+<p><strong>PC2</strong> explains 2.2x less variation, at around 2%.</p>
+<p><strong>PC3</strong> explains even less, at 0.8%.</p>
+<p>Eventually the PCs become useless, explaining 0% of variation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># View a preliminary PCoA plot from these results</span>
+<span class="c1"># This plot shows sample relatedness along three PCs: PC1,PC2,PC3</span>
+<span class="n">pcoa_results</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/PCoA_29_0.svg" src="../../_images/PCoA_29_0.svg" /></div>
+</div>
+<p>It looks like there might be distinct clusters of samples emerging along the first three PCs. At the moment, we can’t say more than that because we have not assigned any information to the points (samples) in the plot.</p>
+<p>We want to know whether samples show geographical genetic structure, so we need to give each major sub-population a distinguishing factor. In this case, we will use different colours for each sub-population.</p>
+</div>
+<div class="section" id="assign-colours-to-sub-populations">
+<h1>Assign colours to sub-populations<a class="headerlink" href="#assign-colours-to-sub-populations" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># View subpopulations in dataset</span>
+<span class="n">sample_metadata_qc_pass</span><span class="p">[</span><span class="s1">&#39;Population&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+    </tr>
+    <tr>
+      <th>Population</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>AF-W</th>
+      <td>8914</td>
+    </tr>
+    <tr>
+      <th>AS-SE-E</th>
+      <td>5880</td>
+    </tr>
+    <tr>
+      <th>AF-E</th>
+      <td>4173</td>
+    </tr>
+    <tr>
+      <th>AS-SE-W</th>
+      <td>1888</td>
+    </tr>
+    <tr>
+      <th>AS-S-FE</th>
+      <td>1377</td>
+    </tr>
+    <tr>
+      <th>AF-C</th>
+      <td>1212</td>
+    </tr>
+    <tr>
+      <th>OC-NG</th>
+      <td>341</td>
+    </tr>
+    <tr>
+      <th>SA</th>
+      <td>227</td>
+    </tr>
+    <tr>
+      <th>AF-NE</th>
+      <td>209</td>
+    </tr>
+    <tr>
+      <th>AS-S-E</th>
+      <td>188</td>
+    </tr>
+  </tbody>
+</table>
+</div><br><label><b>dtype:</b> int64</label></div></div>
+</div>
+<p>We will use an ordered dictionary to assign colours (designated with a HEX code) to major sub-populations.</p>
+<p>Use of an ordered dictionary, rather than a regular dictionary, allows us to keep sub-populations in order from west to east.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define ordered dictionary to map colours to sub-populations</span>
+<span class="n">colourings</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
+<span class="n">colourings</span><span class="p">[</span><span class="s1">&#39;Population&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
+
+<span class="c1"># We nest a regular dictionary within the ordered dictionary which contains the</span>
+<span class="c1"># colour-subpopulation associations</span>
+<span class="n">population_colours</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;SA&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">&quot;#4daf4a&quot;</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AF-W&#39;</span><span class="p">]</span><span class="o">=</span> <span class="s2">&quot;#e31a1c&quot;</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AF-C&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;#fd8d3c&quot;</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AF-NE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;#bb8129&quot;</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AF-E&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;#fecc5c&quot;</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AS-S-E&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;#dfc0eb&quot;</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AS-S-FE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;#984ea3&quot;</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AS-SE-W&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;#9ecae1&quot;</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AS-SE-E&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;#3182bd&quot;</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;OC-NG&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;#f781bf&quot;</span>
+
+<span class="c1"># Assign the population_colours dictionary to the &#39;Population&#39; key within the colourings ordered dictionary.</span>
+<span class="n">colourings</span><span class="p">[</span><span class="s1">&#39;Population&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">population_colours</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check all associations are as expected</span>
+<span class="n">colourings</span><span class="p">[</span><span class="s1">&#39;Population&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;SA&#39;: &#39;#4daf4a&#39;,
+ &#39;AF-W&#39;: &#39;#e31a1c&#39;,
+ &#39;AF-C&#39;: &#39;#fd8d3c&#39;,
+ &#39;AF-NE&#39;: &#39;#bb8129&#39;,
+ &#39;AF-E&#39;: &#39;#fecc5c&#39;,
+ &#39;AS-S-E&#39;: &#39;#dfc0eb&#39;,
+ &#39;AS-S-FE&#39;: &#39;#984ea3&#39;,
+ &#39;AS-SE-W&#39;: &#39;#9ecae1&#39;,
+ &#39;AS-SE-E&#39;: &#39;#3182bd&#39;,
+ &#39;OC-NG&#39;: &#39;#f781bf&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="plot-the-pcoa">
+<h1>Plot the PCoA<a class="headerlink" href="#plot-the-pcoa" title="Permalink to this headline">¶</a></h1>
+<p>We will define two functions that will build the PCoA plot:</p>
+<p><strong>1. plot_pca_coords</strong>: This function takes the pcoa results and the sample metadata as input, while also having several other parameters to customise the plot appearance.</p>
+<p>An important parameter to note is <code class="docutils literal notranslate"><span class="pre">sample_populations</span></code>. The ordering of populations in the plot determines the order that points are layered on the plot. So if Central Africa is plotted before the larger, closely related populations of West Africa and East Africa, then Central Africa becomes covered by the larger populations’ points. This parameter lets us tweak the order of populations so that plot clarity is enhanced.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the function and its input parameters</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">plot_pca_coords</span><span class="p">(</span><span class="n">pcoa_results</span><span class="p">,</span> <span class="n">pc1</span><span class="p">,</span> <span class="n">pc2</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">df_samples</span><span class="o">=</span><span class="n">sample_metadata_qc_pass</span><span class="p">,</span>
+                    <span class="n">sample_populations</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                    <span class="n">population_column</span><span class="o">=</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span>
+                    <span class="n">xlim</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ylim</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                    <span class="n">include_n_in_legend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                    <span class="n">include_prop_explain</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                    <span class="n">is_label_sample</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                    <span class="n">legend_loc</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                    <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                    <span class="n">is_randomize</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                    <span class="n">legend_order</span><span class="o">=</span><span class="kc">None</span>
+                   <span class="p">):</span>
+
+    <span class="c1"># A note on ordering populations</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Parameters:</span>
+<span class="sd">     - sample_populations: array-like (str)</span>
+<span class="sd">         populations to display.</span>
+<span class="sd">         If target_populations is None, then displays all populations in the order they appear</span>
+<span class="sd">         in the df_samples DataFrame</span>
+<span class="sd">    - legend_order:  array-like (str)</span>
+<span class="sd">        order of populations in the legend.  If None, and sample_populations is None,</span>
+<span class="sd">        then uses the order they appear in df_samples.</span>
+<span class="sd">        If None and sample_populations is filled, then uses the order in sample_populations.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Remove the upper and right-hand borders from the plot to ensure points are not obscured</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">despine</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+    <span class="c1"># Determine which population ordering to use</span>
+    <span class="k">if</span> <span class="n">sample_populations</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">target_populations</span> <span class="o">=</span> <span class="n">df_samples</span><span class="p">[</span><span class="n">population_column</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">target_populations</span> <span class="o">=</span> <span class="n">sample_populations</span>
+
+    <span class="c1"># This condition deals with randomising the plotting of population points</span>
+    <span class="c1"># If the parameter is set to &#39;True&#39; then points are plotted randomly</span>
+    <span class="c1"># If it is set to &#39;False&#39; then populations are plotted in order.</span>
+    <span class="k">if</span> <span class="n">is_randomize</span><span class="p">:</span>
+
+        <span class="c1"># Filter samples according to the target populations</span>
+        <span class="n">df_samples_filt</span> <span class="o">=</span> <span class="n">df_samples</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_samples</span><span class="p">[</span><span class="n">population_column</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">target_populations</span><span class="p">),</span>
+                                    <span class="p">[</span><span class="n">population_column</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+        <span class="c1"># Select and apply their corresponding subpopulation colour</span>
+        <span class="n">colourings_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">colourings</span><span class="p">[</span><span class="n">population_column</span><span class="p">],</span> <span class="n">orient</span><span class="o">=</span><span class="s2">&quot;index&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">])</span>
+        <span class="n">colourings_df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">population_column</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">colourings_df</span> <span class="o">=</span> <span class="n">colourings_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">df_samples_filt</span> <span class="o">=</span> <span class="n">df_samples_filt</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">colourings_df</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span>
+                                                <span class="n">left_on</span><span class="o">=</span><span class="n">population_column</span><span class="p">,</span>
+                                               <span class="n">right_on</span><span class="o">=</span><span class="n">population_column</span><span class="p">)</span>
+
+        <span class="c1"># Select corresponding values from pcoa results</span>
+        <span class="n">filt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">df_samples</span><span class="p">[</span><span class="n">population_column</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">target_populations</span><span class="p">)</span>
+        <span class="n">x_filt</span> <span class="o">=</span> <span class="n">pcoa_results</span><span class="o">.</span><span class="n">samples</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">filt</span><span class="p">,</span> <span class="n">pc1</span><span class="p">]</span>
+        <span class="n">y_filt</span> <span class="o">=</span> <span class="n">pcoa_results</span><span class="o">.</span><span class="n">samples</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">filt</span><span class="p">,</span> <span class="n">pc2</span><span class="p">]</span>
+        <span class="n">color</span> <span class="o">=</span> <span class="n">df_samples_filt</span><span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+        <span class="c1"># Randomly reorder the data points using a permutation of indices.</span>
+        <span class="n">plot_idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="n">df_samples_filt</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">x_filt</span> <span class="o">=</span> <span class="n">x_filt</span><span class="p">[</span><span class="n">plot_idx</span><span class="p">]</span>
+        <span class="n">y_filt</span> <span class="o">=</span> <span class="n">y_filt</span><span class="p">[</span><span class="n">plot_idx</span><span class="p">]</span>
+        <span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="p">[</span><span class="n">plot_idx</span><span class="p">]</span>
+
+        <span class="c1"># Finally, scatter plot the randomized data points onto the plot</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+            <span class="n">x_filt</span><span class="p">,</span>
+            <span class="n">y_filt</span><span class="p">,</span>
+            <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span>
+            <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span>
+            <span class="n">s</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+            <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span>
+            <span class="n">linewidths</span><span class="o">=</span><span class="mf">.5</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Plot each population in order</span>
+        <span class="k">for</span> <span class="n">target_popn</span> <span class="ow">in</span> <span class="n">target_populations</span><span class="p">:</span>
+            <span class="n">x_filt</span> <span class="o">=</span> <span class="n">pcoa_results</span><span class="o">.</span><span class="n">samples</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_samples</span><span class="p">[</span><span class="n">population_column</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="o">==</span> <span class="n">target_popn</span><span class="p">,</span> <span class="n">pc1</span><span class="p">]</span>
+            <span class="n">y_filt</span> <span class="o">=</span> <span class="n">pcoa_results</span><span class="o">.</span><span class="n">samples</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_samples</span><span class="p">[</span><span class="n">population_column</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="o">==</span> <span class="n">target_popn</span><span class="p">,</span> <span class="n">pc2</span><span class="p">]</span>
+            <span class="n">color</span> <span class="o">=</span> <span class="n">colourings</span><span class="p">[</span><span class="n">population_column</span><span class="p">][</span><span class="n">target_popn</span><span class="p">]</span>
+
+            <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+                <span class="n">x_filt</span><span class="p">,</span>
+                <span class="n">y_filt</span><span class="p">,</span>
+                <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span>
+                <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span>
+                <span class="n">s</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+                <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span>
+                <span class="n">linewidths</span><span class="o">=</span><span class="mf">.5</span><span class="p">,</span>
+            <span class="p">)</span>
+
+    <span class="c1"># Code for creating the legend</span>
+    <span class="c1"># Generate empty lists to receive data</span>
+    <span class="c1"># These will form key components of the legend</span>
+    <span class="n">handles</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">target_legend_order</span> <span class="o">=</span> <span class="n">legend_order</span>
+
+    <span class="c1"># If `legend_order` is set to &quot;None&quot;, write legend in same order as `target_populations`</span>
+    <span class="k">if</span> <span class="n">target_legend_order</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">target_legend_order</span> <span class="o">=</span> <span class="n">target_populuations</span>
+
+    <span class="k">for</span> <span class="n">target_pop</span> <span class="ow">in</span> <span class="n">target_legend_order</span><span class="p">:</span>
+        <span class="c1"># Generate a coloured marker to link population names to point colours on the plot</span>
+        <span class="c1"># The marker has a circular shape (&#39;o&#39;),</span>
+        <span class="c1"># a black edge (&#39;mec=&quot;k&quot;&#39;), and a color from the population colourings dictionary.</span>
+        <span class="n">handle</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">Line2D</span><span class="p">([],</span> <span class="p">[],</span>
+                            <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span>
+                            <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span>
+                            <span class="n">mec</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span>
+                            <span class="n">markerfacecolor</span><span class="o">=</span><span class="n">colourings</span><span class="p">[</span><span class="n">population_column</span><span class="p">][</span><span class="n">target_pop</span><span class="p">])</span>
+        <span class="n">handles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span> <span class="c1"># add to handles list</span>
+
+        <span class="c1"># An option to include population size within the legend text</span>
+        <span class="c1"># Otherwise, just write the population name</span>
+        <span class="k">if</span> <span class="n">include_n_in_legend</span><span class="p">:</span>
+            <span class="n">label</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">target_pop</span><span class="si">}</span><span class="s2"> (n=</span><span class="si">{</span><span class="n">df_samples</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">population_column</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">target_pop</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">)&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">label</span> <span class="o">=</span> <span class="n">target_pop</span>
+        <span class="n">labels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+
+    <span class="c1"># Define the legend using handles, labels, &#39;loc&#39; where to place in the plot,</span>
+    <span class="c1"># and bbox_to_anchor which sets the position of the legend box border</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="n">handles</span><span class="p">,</span>
+            <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span>
+            <span class="n">loc</span><span class="o">=</span><span class="n">legend_loc</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="n">bbox_to_anchor</span><span class="p">)</span>
+
+    <span class="c1"># An option for labelling individual points on the plot with their sample ID</span>
+    <span class="k">if</span> <span class="n">is_label_sample</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">sample_label</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">df_samples</span><span class="p">[</span><span class="n">plot_idx</span><span class="p">][</span><span class="s2">&quot;Sample&quot;</span><span class="p">]):</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">sample_label</span><span class="p">,</span> <span class="p">(</span><span class="n">x_filt</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">y_filt</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+
+    <span class="c1"># Option to include the proportion of variance explained by each PC</span>
+    <span class="k">if</span> <span class="n">include_prop_explain</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> (</span><span class="si">%.1f%%</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">pc1</span><span class="p">,</span> <span class="n">pcoa_results</span><span class="o">.</span><span class="n">proportion_explained</span><span class="p">[</span><span class="n">pc1</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> (</span><span class="si">%.1f%%</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">pc2</span><span class="p">,</span> <span class="n">pcoa_results</span><span class="o">.</span><span class="n">proportion_explained</span><span class="p">[</span><span class="n">pc2</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
+    <span class="c1"># Otherwise, just use PC values</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">pc1</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">pc2</span><span class="p">)</span>
+
+    <span class="c1"># Deal with x and y axis limits</span>
+    <span class="k">if</span> <span class="n">xlim</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">xlim</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ylim</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">ylim</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>2. fig_pca</strong>: This function contains the <code class="docutils literal notranslate"><span class="pre">plot_pca_coords</span></code> function defined in the previous code block.</p>
+<p>In addtion to the funtionality of <code class="docutils literal notranslate"><span class="pre">plot_pca_coords</span></code>, this function contains specifications for the plot font size, whether to plot multiple subplots, and the possibility of adding a title.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the function and its input parameters</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">fig_pca</span><span class="p">(</span><span class="n">pcoa_results</span><span class="p">,</span> <span class="n">pc1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">pc2</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+            <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">df_samples</span><span class="o">=</span><span class="n">sample_metadata_qc_pass</span><span class="p">,</span>
+            <span class="n">sample_populations</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">population_column</span><span class="o">=</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span>
+            <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span>
+            <span class="n">legend_loc</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">xlim</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">ylim</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">include_n_in_legend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">xtick_stepsize</span><span class="o">=</span><span class="mf">0.001</span><span class="p">,</span>
+            <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">is_label_sample</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">is_randomize</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">legend_order</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+           <span class="n">include_prop_explain</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+
+<span class="c1"># Specify the size of the plot font</span>
+    <span class="n">rcParams</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span>
+    <span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span>
+    <span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.labelsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span>
+
+<span class="c1"># Specify the size of the axes tick label sizes</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;xtick.labelsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">12</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;ytick.labelsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">12</span>
+
+<span class="c1"># If no population order is specified, just plot populations</span>
+<span class="c1"># in the same order as df_samples</span>
+    <span class="k">if</span> <span class="n">sample_populations</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">sample_populations</span> <span class="o">=</span> <span class="n">df_samples</span><span class="p">[</span><span class="n">population_column</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+
+    <span class="c1"># Plot coords for two PCs</span>
+    <span class="c1"># This part contains the previously defined function plot_pca_coords</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">)</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">plot_pca_coords</span><span class="p">(</span><span class="n">pcoa_results</span><span class="p">,</span>
+                    <span class="n">pc1</span><span class="p">,</span> <span class="n">pc2</span><span class="p">,</span>
+                    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+                    <span class="n">df_samples</span><span class="o">=</span><span class="n">df_samples</span><span class="p">,</span>
+                    <span class="n">sample_populations</span><span class="o">=</span><span class="n">sample_populations</span><span class="p">,</span>
+                    <span class="n">population_column</span><span class="o">=</span><span class="n">population_column</span><span class="p">,</span>
+                    <span class="n">xlim</span><span class="o">=</span><span class="n">xlim</span><span class="p">,</span>
+                    <span class="n">ylim</span><span class="o">=</span><span class="n">ylim</span><span class="p">,</span>
+                    <span class="n">include_n_in_legend</span><span class="o">=</span><span class="n">include_n_in_legend</span><span class="p">,</span>
+                    <span class="n">is_label_sample</span><span class="o">=</span><span class="n">is_label_sample</span><span class="p">,</span>
+                    <span class="n">legend_loc</span><span class="o">=</span><span class="n">legend_loc</span><span class="p">,</span>
+                   <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="n">bbox_to_anchor</span><span class="p">,</span>
+                   <span class="n">is_randomize</span><span class="o">=</span><span class="n">is_randomize</span><span class="p">,</span>
+                   <span class="n">legend_order</span><span class="o">=</span><span class="n">legend_order</span><span class="p">,</span>
+                   <span class="n">include_prop_explain</span><span class="o">=</span><span class="n">include_prop_explain</span><span class="p">)</span>
+
+    <span class="c1"># Setting a title</span>
+    <span class="k">if</span> <span class="n">title</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.02</span><span class="p">)</span>
+
+    <span class="c1"># Customise the x-axis tick marks</span>
+    <span class="c1"># Ensure tick marks are spaced appropriately to the current x-axis range</span>
+    <span class="k">if</span> <span class="n">xtick_stepsize</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">start</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_xlim</span><span class="p">()</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">start</span> <span class="o">/</span> <span class="n">xtick_stepsize</span><span class="p">)</span> <span class="o">*</span> <span class="n">xtick_stepsize</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">xtick_stepsize</span><span class="p">))</span>
+
+    <span class="c1"># Set a tight_layout() to ensure subplots fit within the figure&#39;s boundaries</span>
+    <span class="c1"># without overlapping or getting cut off</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+    <span class="c1"># Return the final PCoA figure</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="pc1-vs-pc2">
+<h1>PC1 vs. PC2<a class="headerlink" href="#pc1-vs-pc2" title="Permalink to this headline">¶</a></h1>
+<p>This plot represents the first two components of a genome-wide principal coordinate analysis. The first axis (PC1, 15.3% of variance explained) captures the separation of African and South American from Asian and Oceanian samples. The second axis (PC2, 2.2% of variance explained) captures finer levels of population structure particularly in the eastern SE Asia population.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">fig_pca</span><span class="p">(</span>
+    <span class="n">pcoa_results</span><span class="p">,</span>
+    <span class="s1">&#39;PC1&#39;</span><span class="p">,</span> <span class="s1">&#39;PC2&#39;</span><span class="p">,</span>
+    <span class="kc">None</span><span class="p">,</span>
+    <span class="n">sample_metadata_qc_pass</span><span class="p">,</span>
+    <span class="n">sample_populations</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;AF-W&quot;</span><span class="p">,</span> <span class="s2">&quot;AF-NE&quot;</span><span class="p">,</span> <span class="s2">&quot;AF-E&quot;</span><span class="p">,</span> <span class="s2">&quot;AF-C&quot;</span><span class="p">,</span> <span class="s2">&quot;SA&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;AS-SE-E&quot;</span><span class="p">,</span> <span class="s2">&quot;AS-S-E&quot;</span><span class="p">,</span> <span class="s2">&quot;AS-S-FE&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;AS-SE-W&quot;</span><span class="p">,</span> <span class="s2">&quot;OC-NG&quot;</span><span class="p">],</span>
+    <span class="n">population_column</span><span class="o">=</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span>
+    <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span>
+    <span class="n">legend_loc</span><span class="o">=</span><span class="s2">&quot;best&quot;</span><span class="p">,</span>
+    <span class="n">xtick_stepsize</span><span class="o">=</span><span class="mf">4e-4</span><span class="p">,</span>
+    <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="n">is_randomize</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">legend_order</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">colourings</span><span class="p">[</span><span class="s2">&quot;Population&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/PCoA_42_0.png" src="../../_images/PCoA_42_0.png" />
+</div>
+</div>
+<p><strong>Save the figure:</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mount Google Drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount(&quot;/content/drive&quot;, force_remount=True).
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save PCoA plot</span>
+<span class="c1"># This will send the file to your Google Drive, where you can download it from if needed</span>
+<span class="c1"># Change the file path if you wish to send the file to a specific location</span>
+<span class="c1"># Change the file name if you wish to call it something else</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;/content/drive/My Drive/&#39;</span>
+<span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;PCoA_1_vs_2&#39;</span>
+
+<span class="c1"># We save as both .png and .PDF files</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">240</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s2">&quot;tight&quot;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.pdf&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="pc1-vs-pc8">
+<h1>PC1 vs. PC8<a class="headerlink" href="#pc1-vs-pc8" title="Permalink to this headline">¶</a></h1>
+<p>This plot shows the first and eighth components of the genome-wide principal coordinate analysis. It depicts the genetic differentiation between the 10 global subpopulations.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">fig_pca</span><span class="p">(</span>
+    <span class="n">pcoa_results</span><span class="p">,</span>
+    <span class="s1">&#39;PC1&#39;</span><span class="p">,</span> <span class="s1">&#39;PC8&#39;</span><span class="p">,</span>
+    <span class="kc">None</span><span class="p">,</span>
+    <span class="n">sample_metadata_qc_pass</span><span class="p">,</span>
+    <span class="n">sample_populations</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;AF-W&quot;</span><span class="p">,</span> <span class="s2">&quot;AF-NE&quot;</span><span class="p">,</span> <span class="s2">&quot;AF-E&quot;</span><span class="p">,</span> <span class="s2">&quot;AF-C&quot;</span><span class="p">,</span> <span class="s2">&quot;SA&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;AS-SE-E&quot;</span><span class="p">,</span> <span class="s2">&quot;AS-S-E&quot;</span><span class="p">,</span> <span class="s2">&quot;AS-S-FE&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;AS-SE-W&quot;</span><span class="p">,</span> <span class="s2">&quot;OC-NG&quot;</span><span class="p">],</span>
+    <span class="n">population_column</span><span class="o">=</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span>
+    <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span>
+    <span class="n">legend_loc</span><span class="o">=</span><span class="s2">&quot;best&quot;</span><span class="p">,</span>
+    <span class="n">xtick_stepsize</span><span class="o">=</span><span class="mf">4e-4</span><span class="p">,</span>
+    <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="n">legend_order</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">colourings</span><span class="p">[</span><span class="s2">&quot;Population&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span>
+    <span class="n">include_prop_explain</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/PCoA_47_0.png" src="../../_images/PCoA_47_0.png" />
+</div>
+</div>
+<p><strong>Save the figure:</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save PCoA plot</span>
+<span class="c1"># This will send the file to your Google Drive, where you can download it from if needed</span>
+<span class="c1"># Change the file path if you wish to send the file to a specific location</span>
+<span class="c1"># Change the file name if you wish to call it something else</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;/content/drive/My Drive/&#39;</span>
+<span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;PCoA_1_vs_8&#39;</span>
+
+<span class="c1"># We save as both .png and .PDF files</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">240</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s2">&quot;tight&quot;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.pdf&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="additional-plot-1-pc1-vs-pc3">
+<h1><strong>Additional Plot 1</strong>: PC1 vs. PC3<a class="headerlink" href="#additional-plot-1-pc1-vs-pc3" title="Permalink to this headline">¶</a></h1>
+<p>For completeness, we can also look at the PCoA when the PCs which explain most variation are plotted. Here we see PC1 vs PC3, the plot shows the four African populations as looking quite distinct from each other, with there being something of a separation between AF-W and the other three.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">fig_pca</span><span class="p">(</span>
+    <span class="n">pcoa_results</span><span class="p">,</span>
+    <span class="s1">&#39;PC1&#39;</span><span class="p">,</span> <span class="s1">&#39;PC3&#39;</span><span class="p">,</span>
+    <span class="kc">None</span><span class="p">,</span>
+    <span class="n">sample_metadata_qc_pass</span><span class="p">,</span>
+    <span class="n">sample_populations</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;AF-W&quot;</span><span class="p">,</span> <span class="s2">&quot;AF-NE&quot;</span><span class="p">,</span> <span class="s2">&quot;AF-E&quot;</span><span class="p">,</span> <span class="s2">&quot;AF-C&quot;</span><span class="p">,</span> <span class="s2">&quot;SA&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;AS-SE-E&quot;</span><span class="p">,</span> <span class="s2">&quot;AS-S-E&quot;</span><span class="p">,</span> <span class="s2">&quot;AS-S-FE&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;AS-SE-W&quot;</span><span class="p">,</span> <span class="s2">&quot;OC-NG&quot;</span><span class="p">],</span>
+    <span class="n">population_column</span><span class="o">=</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span>
+    <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span>
+    <span class="n">legend_loc</span><span class="o">=</span><span class="s2">&quot;best&quot;</span><span class="p">,</span>
+    <span class="n">xtick_stepsize</span><span class="o">=</span><span class="mf">4e-4</span><span class="p">,</span>
+    <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="n">legend_order</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">colourings</span><span class="p">[</span><span class="s2">&quot;Population&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/PCoA_51_0.png" src="../../_images/PCoA_51_0.png" />
+</div>
+</div>
+<p><strong>Save the figure:</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save PCoA plot</span>
+<span class="c1"># This will send the file to your Google Drive, where you can download it from if needed</span>
+<span class="c1"># Change the file path if you wish to send the file to a specific location</span>
+<span class="c1"># Change the file name if you wish to call it something else</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;/content/drive/My Drive/&#39;</span>
+<span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;PCoA_1_vs_3&#39;</span>
+
+<span class="c1"># We save as both .png and .PDF files</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">240</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s2">&quot;tight&quot;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.pdf&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="additional-plot-2-pc2-vs-pc3">
+<h1><strong>Additional Plot 2</strong>: PC2 vs. PC3<a class="headerlink" href="#additional-plot-2-pc2-vs-pc3" title="Permalink to this headline">¶</a></h1>
+<p>As the variation explained by PC2 (2.2%) and PC3 (0.8%) is not much, the separation between the Asian populations gets less distinct.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">fig_pca</span><span class="p">(</span>
+    <span class="n">pcoa_results</span><span class="p">,</span>
+    <span class="s1">&#39;PC2&#39;</span><span class="p">,</span> <span class="s1">&#39;PC3&#39;</span><span class="p">,</span>
+    <span class="kc">None</span><span class="p">,</span>
+    <span class="n">sample_metadata_qc_pass</span><span class="p">,</span>
+    <span class="n">sample_populations</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;AF-W&quot;</span><span class="p">,</span> <span class="s2">&quot;AF-NE&quot;</span><span class="p">,</span> <span class="s2">&quot;AF-E&quot;</span><span class="p">,</span> <span class="s2">&quot;AF-C&quot;</span><span class="p">,</span> <span class="s2">&quot;SA&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;AS-SE-E&quot;</span><span class="p">,</span> <span class="s2">&quot;AS-S-E&quot;</span><span class="p">,</span> <span class="s2">&quot;AS-S-FE&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;AS-SE-W&quot;</span><span class="p">,</span> <span class="s2">&quot;OC-NG&quot;</span><span class="p">],</span>
+    <span class="n">population_column</span><span class="o">=</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span>
+    <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span>
+    <span class="n">legend_loc</span><span class="o">=</span><span class="s2">&quot;best&quot;</span><span class="p">,</span>
+    <span class="n">xtick_stepsize</span><span class="o">=</span><span class="mf">4e-4</span><span class="p">,</span>
+    <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="n">legend_order</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">colourings</span><span class="p">[</span><span class="s2">&quot;Population&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="p">)</span>
+
+<span class="c1">#fig.savefig(&#39;figures/PCoA_2_vs_3.pdf&#39;)</span>
+<span class="c1">#fig.savefig(&#39;figures/PCoA_2_vs_3.png&#39;, dpi=600)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/PCoA_56_0.png" src="../../_images/PCoA_56_0.png" />
+</div>
+</div>
+<p><strong>Save the figure:</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save PCoA plot</span>
+<span class="c1"># This will send the file to your Google Drive, where you can download it from if needed</span>
+<span class="c1"># Change the file path if you wish to send the file to a specific location</span>
+<span class="c1"># Change the file name if you wish to call it something else</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;/content/drive/My Drive/&#39;</span>
+<span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;PCoA_2_vs_3&#39;</span>
+
+<span class="c1"># We save as both .png and .PDF files</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">240</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s2">&quot;tight&quot;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.pdf&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Notebook Complete!</strong></p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./pf8/popgen"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../popgen.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><strong>Pf8 Analysis Guides:</strong> Population Structure and Selection</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="njt_pf8_anjl.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Create a Neighbour Joining Tree</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By MalariaGEN<br/>
+    
+        &copy; Copyright 2023.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
