@@ -1,852 +1,520 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Analyse csp C-Terminal Variation &#8212; MalariaGEN parasite data user guide</title>
-    
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pf7/evolution_malaria_control/csp-cterm-analysis';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Pf7 Analysis Guides: Population Structure and Selection" href="../popgen.html" />
     <link rel="prev" title="Visualise hrp2 and hrp3 Deletions" href="visualise_hrp2_hrp3_deletions.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../landing-page.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">MalariaGEN parasite data user guide</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../landing-page.html">
-   MalariaGEN parasite data user guide
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Malaria Parasite Google Cloud Data Access
- </span>
-</p>
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="MalariaGEN parasite data user guide - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="MalariaGEN parasite data user guide - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../landing-page.html">
+                    MalariaGEN parasite data user guide
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Malaria Parasite Google Cloud Data Access</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../cloud_data_access/parasite-cloud-data-access.html">
-   <strong>
-    Malaria Parasite Google Cloud Data Access
-   </strong>
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../cloud_data_access/parasite-cloud-data-access.html"><strong>Malaria Parasite Google Cloud Data Access</strong></a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Pf8
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Pf8</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../pf8/Data_access.html">
-   <strong>
-    Pf8 Data Access
-   </strong>
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../pf8/useful-how-tos.html">
-   <strong>
-    Pf8 Analysis Guides:
-   </strong>
-   Useful Genomics How-Tos
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../pf8/useful_genomics_howtos/igv_notebook.html">
-     Visualizing genomic regions of Pf8 samples with IGV-notebook
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../pf8/summarise-data.html">
-   <strong>
-    Pf8 Analysis Guides:
-   </strong>
-   Summarise Pf8 Data
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../pf8/summarise_data/table_sample_summary.html">
-     Create sample location summary table
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../pf8/summarise_data/Visualising_sample_collections_over_time.html">
-     Visualising sample collections over time
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../pf8/summarise_data/SamplesByCountry_Barplot.html">
-     Plot sample collection per country
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../pf8/summarise_data/table_variants_summary.html">
-     Summarise genetic variant types
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../pf8/summarise_data/figure1_samplemap.html">
-     Create map of sample collection locations
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../pf8/evolution-malaria-control.html">
-   <strong>
-    Pf8 Analysis Guides:
-   </strong>
-   Study Evolution Against Malaria Control Measures
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../pf8/evolution_malaria_control/table_dr_summary.html">
-     Plot drug resistance frequencies
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../pf8/evolution_malaria_control/drug_resistance_trends.html">
-     Explore drug resistance trends in Africa
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../pf8/evolution_malaria_control/cnv_fig.html">
-     View Copy Number Variations (CNV) in Pf8
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../pf8/evolution_malaria_control/Figure_HRPDeletion.html">
-     Explore
-     <em>
-      hrp2
-     </em>
-     and
-     <em>
-      hrp3
-     </em>
-     deletion breakpoints
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../pf8/evolution_malaria_control/Drug_Resistance_Pf7_Pf8_Concordance.html">
-     Drug Resistance in Pf7 vs Pf8
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../pf8/popgen.html">
-   <strong>
-    Pf8 Analysis Guides:
-   </strong>
-   Population Structure and Selection
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../pf8/popgen/PCoA.html">
-     Principal Coordinate Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../pf8/popgen/njt_pf8_anjl.html">
-     Create a Neighbour Joining Tree
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../pf8/popgen/Pf8_fws_figure_public_notebook.html">
-     Explore Fws across populations
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../pf8/api.html">
-   <strong>
-    Pf8 API
-   </strong>
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../pf8/Data_access.html"><strong>Pf8 Data Access</strong></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../pf8/useful-how-tos.html"><strong>Pf8 Analysis Guides:</strong> Useful Genomics How-Tos</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../pf8/useful_genomics_howtos/igv_notebook.html">Visualizing genomic regions of Pf8 samples with IGV-notebook</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Pf7
- </span>
-</p>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../pf8/summarise-data.html"><strong>Pf8 Analysis Guides:</strong> Summarise Pf8 Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../pf8/summarise_data/table_sample_summary.html">Create sample location summary table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pf8/summarise_data/Visualising_sample_collections_over_time.html">Visualising sample collections over time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pf8/summarise_data/SamplesByCountry_Barplot.html">Plot sample collection per country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pf8/summarise_data/table_variants_summary.html">Summarise genetic variant types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pf8/summarise_data/figure1_samplemap.html">Create map of sample collection locations</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../pf8/evolution-malaria-control.html"><strong>Pf8 Analysis Guides:</strong> Study Evolution Against Malaria Control Measures</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../pf8/evolution_malaria_control/table_dr_summary.html">Plot drug resistance frequencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pf8/evolution_malaria_control/drug_resistance_trends.html">Explore drug resistance trends in Africa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pf8/evolution_malaria_control/cnv_fig.html">View Copy Number Variations (CNV) in Pf8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pf8/evolution_malaria_control/Figure_HRPDeletion.html">Explore <em>hrp2</em> and <em>hrp3</em> deletion breakpoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pf8/evolution_malaria_control/Drug_Resistance_Pf7_Pf8_Concordance.html">Drug Resistance in Pf7 vs Pf8</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../pf8/popgen.html"><strong>Pf8 Analysis Guides:</strong> Population Structure and Selection</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../pf8/popgen/PCoA.html">Principal Coordinate Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pf8/popgen/njt_pf8_anjl.html">Create a Neighbour Joining Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pf8/popgen/Pf8_fws_figure_public_notebook.html">Explore Fws across populations</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pf8/api.html"><strong>Pf8 API</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Pf7</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Data_access.html">
-   <strong>
-    Pf7 Data Access
-   </strong>
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../summarise-data.html">
-   <strong>
-    Pf7 Analysis Guides:
-   </strong>
-   Summarise Pf7 Data
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../summarise_data/sample-summary-table.html">
-     Summarise Samples by Administrative Division
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../summarise_data/sample-collection-over-time.html">
-     Visualising sample collections over time
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../summarise_data/barplot-samples-by-country.html">
-     Barplot of Samples by Country
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../summarise_data/variant-summary-table.html">
-     Summarise Genetic Variants
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../summarise_data/global-sample-map.html">
-     Plot Global Map of Samples
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../evolution-malaria-control.html">
-   <strong>
-    Pf7 Analysis Guides:
-   </strong>
-   Study Evolution Against Malaria Control Measures
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="drug-resistance-summary.html">
-     Drug Resistance Frequencies Across Pf7
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chloroquine-resistance-map.html">
-     Plot Map of Chloroquine Resistance
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="summarise_hrp2_hrp3_deletions.html">
-     Summarise
-     <em>
-      hrp2
-     </em>
-     and
-     <em>
-      hrp3
-     </em>
-     Deletions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="visualise_hrp2_hrp3_deletions.html">
-     Visualise
-     <em>
-      hrp2
-     </em>
-     and
-     <em>
-      hrp3
-     </em>
-     Deletions
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Analyse csp C-Terminal Variation
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../popgen.html">
-   <strong>
-    Pf7 Analysis Guides:
-   </strong>
-   Population Structure and Selection
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../popgen/PCoA.html">
-     Principal Coordinate Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../popgen/geographic-genetic-differentiation.html">
-     Geographic patterns of population differentiation and gene flow
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../popgen/neighbour-joining-tree-swga.html">
-     Neighbour Joining Tree for sWGA vs. gDNA
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../popgen/proportion-eba175.html">
-     Plot
-     <em>
-      eba175
-     </em>
-     C Allele Proportions
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../api.html">
-   <strong>
-    Pf7 API
-   </strong>
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../Data_access.html"><strong>Pf7 Data Access</strong></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../summarise-data.html"><strong>Pf7 Analysis Guides:</strong> Summarise Pf7 Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../summarise_data/sample-summary-table.html">Summarise Samples by Administrative Division</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../summarise_data/sample-collection-over-time.html">Visualising sample collections over time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../summarise_data/barplot-samples-by-country.html">Barplot of Samples by Country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../summarise_data/variant-summary-table.html">Summarise Genetic Variants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../summarise_data/global-sample-map.html">Plot Global Map of Samples</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Pv4
- </span>
-</p>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../evolution-malaria-control.html"><strong>Pf7 Analysis Guides:</strong> Study Evolution Against Malaria Control Measures</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="drug-resistance-summary.html">Drug Resistance Frequencies Across Pf7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chloroquine-resistance-map.html">Plot Map of Chloroquine Resistance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="summarise_hrp2_hrp3_deletions.html">Summarise <em>hrp2</em> and <em>hrp3</em> Deletions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualise_hrp2_hrp3_deletions.html">Visualise <em>hrp2</em> and <em>hrp3</em> Deletions</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Analyse csp C-Terminal Variation</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../popgen.html"><strong>Pf7 Analysis Guides:</strong> Population Structure and Selection</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../popgen/PCoA.html">Principal Coordinate Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../popgen/geographic-genetic-differentiation.html">Geographic patterns of population differentiation and gene flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../popgen/neighbour-joining-tree-swga.html">Neighbour Joining Tree for sWGA vs. gDNA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../popgen/proportion-eba175.html">Plot <em>eba175</em> C Allele Proportions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html"><strong>Pf7 API</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Pv4</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../pv4/Data_access.html">
-   <strong>
-    Pv4 Data Access
-   </strong>
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../pv4/api.html">
-   <strong>
-    Pv4 API
-   </strong>
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../pv4/Data_access.html"><strong>Pv4 Data Access</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pv4/api.html"><strong>Pv4 API</strong></a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/pf7/evolution_malaria_control/csp-cterm-analysis.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+</nav></div>
     </div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/malariagen/parasite-data"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/malariagen/parasite-data/issues/new?title=Issue%20on%20page%20%2Fpf7/evolution_malaria_control/csp-cterm-analysis.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
         
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/malariagen/parasite-data/blob/master/docs/pf7/evolution_malaria_control/csp-cterm-analysis.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/malariagen/parasite-data/master?urlpath=lab/tree/docs/pf7/evolution_malaria_control/csp-cterm-analysis.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/malariagen/parasite-data/blob/master/docs/pf7/evolution_malaria_control/csp-cterm-analysis.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/malariagen/parasite-data" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/malariagen/parasite-data/issues/new?title=Issue%20on%20page%20%2Fpf7/evolution_malaria_control/csp-cterm-analysis.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/pf7/evolution_malaria_control/csp-cterm-analysis.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
     </div>
+  
 </div>
+</div>
+              
+              
 
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Analyse csp C-Terminal Variation</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#setup">
-   Setup
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#access-pf7-data">
-   Access Pf7 Data
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#access-the-csp-c-terminal-haplotypes-data">
-   Access the csp c-terminal Haplotypes Data
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#frequency-of-csp-c-terminal-haplotypes-and-global-mean-distances">
-   Frequency of csp c-terminal haplotypes and global mean distances
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#plotting">
-     Plotting
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#save-the-plot">
-     Save the plot
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#histograms-of-amino-acid-differences-between-subpopulations-for-csp-c-terminal">
-   Histograms of Amino Acid Differences Between Subpopulations for csp c-terminal
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#count-amino-acid-differences-to-non-3d7-haplotypes">
-     Count amino acid differences to non-3D7 haplotypes
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#count-numbers-of-amino-acid-differences-from-each-haplotype-for-each-sample">
-     Count numbers of amino acid differences from each haplotype for each sample
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-plot-showing-differences-between-3d7-and-dd2-haplotypes">
-     Create plot showing differences between 3D7 and Dd2 haplotypes
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Save the plot
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#barplot-of-non-reference-allele-proportions-in-different-sub-populations">
-   Barplot of Non-reference Allele Proportions in Different Sub-populations
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#extracting-mutations-format-and-tidy-up-substitutions-column">
-     Extracting mutations: Format and tidy-up substitutions column
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#extracting-mutations-unique-mutations-sorted-by-positon-number">
-     Extracting mutations: Unique mutations sorted by positon number
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#formatting-add-columns-for-aa-position-and-amino-acids-before-and-after">
-     Formatting: Add columns for aa position, and amino acids before and after
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#figure-preparation">
-     Figure preparation
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#unstack-for-count-percentage-values">
-       UNSTACK - for count percentage values
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#unstack-for-amino-acid-lists">
-       UNSTACK for amino acid lists
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     Plotting
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#showing-allele-proportions-for-pf7">
-       Showing allele proportions for Pf7
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#showing-allele-proportions-for-one-subpopulation">
-       Showing allele proportions for one subpopulation
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#showing-allele-proportions-for-pf7-by-subpopulations">
-       Showing allele proportions for Pf7 by subpopulations
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     Save the plot
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#access-pf7-data">Access Pf7 Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#access-the-csp-c-terminal-haplotypes-data">Access the csp c-terminal Haplotypes Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequency-of-csp-c-terminal-haplotypes-and-global-mean-distances">Frequency of csp c-terminal haplotypes and global mean distances</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting">Plotting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-the-plot">Save the plot</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#histograms-of-amino-acid-differences-between-subpopulations-for-csp-c-terminal">Histograms of Amino Acid Differences Between Subpopulations for csp c-terminal</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#count-amino-acid-differences-to-non-3d7-haplotypes">Count amino acid differences to non-3D7 haplotypes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#count-numbers-of-amino-acid-differences-from-each-haplotype-for-each-sample">Count numbers of amino acid differences from each haplotype for each sample</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-plot-showing-differences-between-3d7-and-dd2-haplotypes">Create plot showing differences between 3D7 and Dd2 haplotypes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Save the plot</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#barplot-of-non-reference-allele-proportions-in-different-sub-populations">Barplot of Non-reference Allele Proportions in Different Sub-populations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extracting-mutations-format-and-tidy-up-substitutions-column">Extracting mutations: Format and tidy-up substitutions column</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extracting-mutations-unique-mutations-sorted-by-positon-number">Extracting mutations: Unique mutations sorted by positon number</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formatting-add-columns-for-aa-position-and-amino-acids-before-and-after">Formatting: Add columns for aa position, and amino acids before and after</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-preparation">Figure preparation</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#unstack-for-count-percentage-values">UNSTACK - for count percentage values</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#unstack-for-amino-acid-lists">UNSTACK for amino acid lists</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Plotting</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#showing-allele-proportions-for-pf7">Showing allele proportions for Pf7</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#showing-allele-proportions-for-one-subpopulation">Showing allele proportions for one subpopulation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#showing-allele-proportions-for-pf7-by-subpopulations">Showing allele proportions for Pf7 by subpopulations</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Save the plot</a></li>
+</ul>
+</li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Analyse csp C-Terminal Variation</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#setup">
-   Setup
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#access-pf7-data">
-   Access Pf7 Data
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#access-the-csp-c-terminal-haplotypes-data">
-   Access the csp c-terminal Haplotypes Data
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#frequency-of-csp-c-terminal-haplotypes-and-global-mean-distances">
-   Frequency of csp c-terminal haplotypes and global mean distances
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#plotting">
-     Plotting
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#save-the-plot">
-     Save the plot
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#histograms-of-amino-acid-differences-between-subpopulations-for-csp-c-terminal">
-   Histograms of Amino Acid Differences Between Subpopulations for csp c-terminal
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#count-amino-acid-differences-to-non-3d7-haplotypes">
-     Count amino acid differences to non-3D7 haplotypes
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#count-numbers-of-amino-acid-differences-from-each-haplotype-for-each-sample">
-     Count numbers of amino acid differences from each haplotype for each sample
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-plot-showing-differences-between-3d7-and-dd2-haplotypes">
-     Create plot showing differences between 3D7 and Dd2 haplotypes
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Save the plot
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#barplot-of-non-reference-allele-proportions-in-different-sub-populations">
-   Barplot of Non-reference Allele Proportions in Different Sub-populations
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#extracting-mutations-format-and-tidy-up-substitutions-column">
-     Extracting mutations: Format and tidy-up substitutions column
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#extracting-mutations-unique-mutations-sorted-by-positon-number">
-     Extracting mutations: Unique mutations sorted by positon number
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#formatting-add-columns-for-aa-position-and-amino-acids-before-and-after">
-     Formatting: Add columns for aa position, and amino acids before and after
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#figure-preparation">
-     Figure preparation
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#unstack-for-count-percentage-values">
-       UNSTACK - for count percentage values
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#unstack-for-amino-acid-lists">
-       UNSTACK for amino acid lists
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     Plotting
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#showing-allele-proportions-for-pf7">
-       Showing allele proportions for Pf7
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#showing-allele-proportions-for-one-subpopulation">
-       Showing allele proportions for one subpopulation
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#showing-allele-proportions-for-pf7-by-subpopulations">
-       Showing allele proportions for Pf7 by subpopulations
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     Save the plot
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="section" id="analyse-csp-c-terminal-variation">
-<h1>Analyse csp C-Terminal Variation<a class="headerlink" href="#analyse-csp-c-terminal-variation" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="analyse-csp-c-terminal-variation">
+<h1>Analyse csp C-Terminal Variation<a class="headerlink" href="#analyse-csp-c-terminal-variation" title="Permalink to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>The c-terminal domain of the <em>Plasmodium falciparum</em> circumsporozoite protein (csp) has been targeted by the RTS,S and R21 vaccines, underscoring the importance of monitoring the variability of this region.</p>
 <p>This notebook recreates the following figures from the <a class="reference external" href="https://wellcomeopenresearch.org/articles/8-22">Pf7 paper</a>:</p>
 <ul class="simple">
@@ -855,9 +523,9 @@
 <li><p><strong>Supplementary Figure 10</strong>: Barplot of non-reference allele proportions in different sub-populations.</p></li>
 </ul>
 <p><strong>This notebook takes 5 minutes to run.</strong></p>
-</div>
-<div class="section" id="setup">
-<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this heading">#</a></h2>
 <p>Install and import the malariagen Python package:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -899,9 +567,9 @@ import malariagen_data
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="access-pf7-data">
-<h2>Access Pf7 Data<a class="headerlink" href="#access-pf7-data" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="access-pf7-data">
+<h2>Access Pf7 Data<a class="headerlink" href="#access-pf7-data" title="Permalink to this heading">#</a></h2>
 <p>We use the malariagen data package to load the release data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1226,9 +894,9 @@ import malariagen_data
   </div>
 </div></div>
 </div>
-</div>
-<div class="section" id="access-the-csp-c-terminal-haplotypes-data">
-<h2>Access the csp c-terminal Haplotypes Data<a class="headerlink" href="#access-the-csp-c-terminal-haplotypes-data" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="access-the-csp-c-terminal-haplotypes-data">
+<h2>Access the csp c-terminal Haplotypes Data<a class="headerlink" href="#access-the-csp-c-terminal-haplotypes-data" title="Permalink to this heading">#</a></h2>
 <p>We can download the csp c-terminal region haplotypes for 16,203 samples from the MalariaGEN web resources using <code class="docutils literal notranslate"><span class="pre">wget</span></code> command.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1906,9 +1574,9 @@ Name: csp_277-397_aa_haplotype, dtype: float64
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="frequency-of-csp-c-terminal-haplotypes-and-global-mean-distances">
-<h2>Frequency of csp c-terminal haplotypes and global mean distances<a class="headerlink" href="#frequency-of-csp-c-terminal-haplotypes-and-global-mean-distances" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="frequency-of-csp-c-terminal-haplotypes-and-global-mean-distances">
+<h2>Frequency of csp c-terminal haplotypes and global mean distances<a class="headerlink" href="#frequency-of-csp-c-terminal-haplotypes-and-global-mean-distances" title="Permalink to this heading">#</a></h2>
 <p>We will start with finding out the frequency of haplotypes.</p>
 <p>The csp_277-397_ns_changes column provides information about nucleotide sequence changes in each sample. An empty value in this column indicates no change in the nucleotide sequence, and such haplotypes are referred to as 3D7, representing the reference sample in Pf7.</p>
 <div class="cell docutils container">
@@ -2883,8 +2551,8 @@ Name: csp_277-397_aa_haplotype, dtype: float64
   </div>
 </div></div>
 </div>
-<div class="section" id="plotting">
-<h3>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">¶</a></h3>
+<section id="plotting">
+<h3>Plotting<a class="headerlink" href="#plotting" title="Permalink to this heading">#</a></h3>
 <p>We are ready to create the first plot which will have 2 subplots - one for showing the haplotype frequencies and the other one for showing the global mean distance. Then, we will paint lab strains with red colour using <code class="docutils literal notranslate"><span class="pre">df_haplotypes_lab</span></code> dataset.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2912,14 +2580,14 @@ Name: csp_277-397_aa_haplotype, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/csp-cterm-analysis_38_0.png" src="../../_images/csp-cterm-analysis_38_0.png" />
+<img alt="../../_images/e1e13a3495ca7652f53c3e49be3def8001da1b7a62817e658cf862401f63ca61.png" src="../../_images/e1e13a3495ca7652f53c3e49be3def8001da1b7a62817e658cf862401f63ca61.png" />
 </div>
 </div>
 <p><strong>Figure Legend: Analysis of c-terminal of csp.</strong>
 Upper panel - frequency of different haplotypes of c-terminal of csp. Haplotypes found in some lab strains are named and highlighted in red. Haplotypes are ordered as per lower panel. Lower panel - global mean distance (number of amino acid differences) to all other haplotypes.</p>
-</div>
-<div class="section" id="save-the-plot">
-<h3>Save the plot<a class="headerlink" href="#save-the-plot" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="save-the-plot">
+<h3>Save the plot<a class="headerlink" href="#save-the-plot" title="Permalink to this heading">#</a></h3>
 <p>We can save the plot by running:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2945,13 +2613,13 @@ Upper panel - frequency of different haplotypes of c-terminal of csp. Haplotypes
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="histograms-of-amino-acid-differences-between-subpopulations-for-csp-c-terminal">
-<h2>Histograms of Amino Acid Differences Between Subpopulations for csp c-terminal<a class="headerlink" href="#histograms-of-amino-acid-differences-between-subpopulations-for-csp-c-terminal" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="histograms-of-amino-acid-differences-between-subpopulations-for-csp-c-terminal">
+<h2>Histograms of Amino Acid Differences Between Subpopulations for csp c-terminal<a class="headerlink" href="#histograms-of-amino-acid-differences-between-subpopulations-for-csp-c-terminal" title="Permalink to this heading">#</a></h2>
 <p>Before creating this figure, we need to count the number of nucleotide changes within samples.</p>
-<div class="section" id="count-amino-acid-differences-to-non-3d7-haplotypes">
-<h3>Count amino acid differences to non-3D7 haplotypes<a class="headerlink" href="#count-amino-acid-differences-to-non-3d7-haplotypes" title="Permalink to this headline">¶</a></h3>
+<section id="count-amino-acid-differences-to-non-3d7-haplotypes">
+<h3>Count amino acid differences to non-3D7 haplotypes<a class="headerlink" href="#count-amino-acid-differences-to-non-3d7-haplotypes" title="Permalink to this heading">#</a></h3>
 <p>Short way of counting substitions is using the  <code class="docutils literal notranslate"><span class="pre">csp_277-397_ns_changes</span></code> column in the dataframe. Since different substutions are concatanated using ‘/’ (i.e. D288N/S301N), we will first split the string and then find the count.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3034,9 +2702,9 @@ Name: csp_277-397_aa_haplotype, dtype: int64
 </div>
 </div>
 <p>Both methods gave the same results.</p>
-</div>
-<div class="section" id="count-numbers-of-amino-acid-differences-from-each-haplotype-for-each-sample">
-<h3>Count numbers of amino acid differences from each haplotype for each sample<a class="headerlink" href="#count-numbers-of-amino-acid-differences-from-each-haplotype-for-each-sample" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="count-numbers-of-amino-acid-differences-from-each-haplotype-for-each-sample">
+<h3>Count numbers of amino acid differences from each haplotype for each sample<a class="headerlink" href="#count-numbers-of-amino-acid-differences-from-each-haplotype-for-each-sample" title="Permalink to this heading">#</a></h3>
 <p>We already found the amino acid differences to 3D7, as a bonus step, we can utilize the same function to count amino acid differences between each haplotype.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3074,9 +2742,9 @@ Name: csp_277-397_aa_haplotype, dtype: int64
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="create-plot-showing-differences-between-3d7-and-dd2-haplotypes">
-<h3>Create plot showing differences between 3D7 and Dd2 haplotypes<a class="headerlink" href="#create-plot-showing-differences-between-3d7-and-dd2-haplotypes" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="create-plot-showing-differences-between-3d7-and-dd2-haplotypes">
+<h3>Create plot showing differences between 3D7 and Dd2 haplotypes<a class="headerlink" href="#create-plot-showing-differences-between-3d7-and-dd2-haplotypes" title="Permalink to this heading">#</a></h3>
 <p>Let’s define a colour to each subpopulation to be used in the figure.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3160,13 +2828,13 @@ Name: csp_277-397_aa_haplotype, dtype: int64
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.05, 0.5, &#39;Frequency (number of samples with this number of\namino acid differences from given haplotype)&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/csp-cterm-analysis_59_1.png" src="../../_images/csp-cterm-analysis_59_1.png" />
+<img alt="../../_images/eabb2dac7c91939be1b1a20eace745564c190d2b35f01f140feb3f1681d96625.png" src="../../_images/eabb2dac7c91939be1b1a20eace745564c190d2b35f01f140feb3f1681d96625.png" />
 </div>
 </div>
 <p><strong>Figure Legend: Analysis of c-terminal of csp.</strong> Histograms of number of amino acid differences between samples in each major sub-population and the 3D7 haplotype (upper plot) and Dd2 haplotype (lower plot).</p>
-</div>
-<div class="section" id="id1">
-<h3>Save the plot<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="id1">
+<h3>Save the plot<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This will send the file to your Google Drive, where you can download it from if needed</span>
@@ -3178,17 +2846,17 @@ Name: csp_277-397_aa_haplotype, dtype: int64
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="barplot-of-non-reference-allele-proportions-in-different-sub-populations">
-<h2>Barplot of Non-reference Allele Proportions in Different Sub-populations<a class="headerlink" href="#barplot-of-non-reference-allele-proportions-in-different-sub-populations" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="barplot-of-non-reference-allele-proportions-in-different-sub-populations">
+<h2>Barplot of Non-reference Allele Proportions in Different Sub-populations<a class="headerlink" href="#barplot-of-non-reference-allele-proportions-in-different-sub-populations" title="Permalink to this heading">#</a></h2>
 <p>Before proceeding with plotting, we need to determine the allele proportions, a process that involves the following two steps:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Extracting mutations from the substitution column.</p></li>
 <li><p>Calculating the count of each mutation within a subpopulation.</p></li>
 </ol>
-<div class="section" id="extracting-mutations-format-and-tidy-up-substitutions-column">
-<h3>Extracting mutations: Format and tidy-up substitutions column<a class="headerlink" href="#extracting-mutations-format-and-tidy-up-substitutions-column" title="Permalink to this headline">¶</a></h3>
+<section id="extracting-mutations-format-and-tidy-up-substitutions-column">
+<h3>Extracting mutations: Format and tidy-up substitutions column<a class="headerlink" href="#extracting-mutations-format-and-tidy-up-substitutions-column" title="Permalink to this heading">#</a></h3>
 <p>Let’s examine a value in the substitutions column to determine the appropriate method for extraction.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3228,9 +2896,9 @@ Name: csp_277-397_aa_haplotype, dtype: int64
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="extracting-mutations-unique-mutations-sorted-by-positon-number">
-<h3>Extracting mutations: Unique mutations sorted by positon number<a class="headerlink" href="#extracting-mutations-unique-mutations-sorted-by-positon-number" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="extracting-mutations-unique-mutations-sorted-by-positon-number">
+<h3>Extracting mutations: Unique mutations sorted by positon number<a class="headerlink" href="#extracting-mutations-unique-mutations-sorted-by-positon-number" title="Permalink to this heading">#</a></h3>
 <p>We will find unique mutations and sort them by positions in ascending order which will be useful for the final figure.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -4202,9 +3870,9 @@ Name: csp_277-397_aa_haplotype, dtype: int64
   </div>
 </div></div>
 </div>
-</div>
-<div class="section" id="formatting-add-columns-for-aa-position-and-amino-acids-before-and-after">
-<h3>Formatting: Add columns for aa position, and amino acids before and after<a class="headerlink" href="#formatting-add-columns-for-aa-position-and-amino-acids-before-and-after" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="formatting-add-columns-for-aa-position-and-amino-acids-before-and-after">
+<h3>Formatting: Add columns for aa position, and amino acids before and after<a class="headerlink" href="#formatting-add-columns-for-aa-position-and-amino-acids-before-and-after" title="Permalink to this heading">#</a></h3>
 <p>Before calculating allele frequencies, some data formatting is required. We will transverse the dataframe to extract: aa_positions, wild-type and mutation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -6240,12 +5908,12 @@ Name: csp_277-397_aa_haplotype, dtype: int64
   </div>
 </div></div>
 </div>
-</div>
-<div class="section" id="figure-preparation">
-<h3>Figure preparation<a class="headerlink" href="#figure-preparation" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="figure-preparation">
+<h3>Figure preparation<a class="headerlink" href="#figure-preparation" title="Permalink to this heading">#</a></h3>
 <p>The last step is doing unstacking and grouping operations to prepare our data in a format suitable for creating a stacked bar plot.</p>
-<div class="section" id="unstack-for-count-percentage-values">
-<h4>UNSTACK - for count percentage values<a class="headerlink" href="#unstack-for-count-percentage-values" title="Permalink to this headline">¶</a></h4>
+<section id="unstack-for-count-percentage-values">
+<h4>UNSTACK - for count percentage values<a class="headerlink" href="#unstack-for-count-percentage-values" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Unstack index by count percentage and groupby amino acid position</span>
@@ -7991,9 +7659,9 @@ Name: csp_277-397_aa_haplotype, dtype: int64
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="unstack-for-amino-acid-lists">
-<h4>UNSTACK for amino acid lists<a class="headerlink" href="#unstack-for-amino-acid-lists" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="unstack-for-amino-acid-lists">
+<h4>UNSTACK for amino acid lists<a class="headerlink" href="#unstack-for-amino-acid-lists" title="Permalink to this heading">#</a></h4>
 <p>Second and last dataframe will convey amino acids instead of percentages.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -9142,18 +8810,18 @@ Name: csp_277-397_aa_haplotype, dtype: int64
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="id2">
-<h3>Plotting<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="id2">
+<h3>Plotting<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <p>There are three versions of this plot that we will go through one by one:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Showing allele proportions for Pf7</p></li>
 <li><p>Showing allele proportions for one subpopulation</p></li>
 <li><p>Showing allele proportions for Pf7 by subpopulations</p></li>
 </ol>
-<div class="section" id="showing-allele-proportions-for-pf7">
-<h4>Showing allele proportions for Pf7<a class="headerlink" href="#showing-allele-proportions-for-pf7" title="Permalink to this headline">¶</a></h4>
+<section id="showing-allele-proportions-for-pf7">
+<h4>Showing allele proportions for Pf7<a class="headerlink" href="#showing-allele-proportions-for-pf7" title="Permalink to this heading">#</a></h4>
 <p>We can assign a color to each rank of the alternate amino acid (1-6). We will display the corresponding colors in the legend.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -9292,13 +8960,13 @@ Name: csp_277-397_aa_haplotype, dtype: int64
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.081, 0.1, &#39;Alternate Amino Acid&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/csp-cterm-analysis_105_1.png" src="../../_images/csp-cterm-analysis_105_1.png" />
+<img alt="../../_images/90d17557986e1aaafcac9d1962df0773fe88f639e31aa7e32a792eb8b18aae78.png" src="../../_images/90d17557986e1aaafcac9d1962df0773fe88f639e31aa7e32a792eb8b18aae78.png" />
 </div>
 </div>
 <p><strong>Figure Legend: Variation in c-terminal of csp in Pf7 samples.</strong></p>
-</div>
-<div class="section" id="showing-allele-proportions-for-one-subpopulation">
-<h4>Showing allele proportions for one subpopulation<a class="headerlink" href="#showing-allele-proportions-for-one-subpopulation" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="showing-allele-proportions-for-one-subpopulation">
+<h4>Showing allele proportions for one subpopulation<a class="headerlink" href="#showing-allele-proportions-for-one-subpopulation" title="Permalink to this heading">#</a></h4>
 <p>To generate the depicted plot for a specific population, we need to filter the data corresponding to that population and normalize the allele proportions based on the population size. We will create a function that performs these two steps, and the remaining part of the plot remains the same as above.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -9492,13 +9160,13 @@ Name: csp_277-397_aa_haplotype, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/csp-cterm-analysis_111_0.png" src="../../_images/csp-cterm-analysis_111_0.png" />
+<img alt="../../_images/8d88490aa114dbfdbc7c17faa7c07017d1d3132748431e7b17ecce93376960b5.png" src="../../_images/8d88490aa114dbfdbc7c17faa7c07017d1d3132748431e7b17ecce93376960b5.png" />
 </div>
 </div>
 <p><strong>Figure Legend: Variation in c-terminal of csp in samples from West Africa.</strong></p>
-</div>
-<div class="section" id="showing-allele-proportions-for-pf7-by-subpopulations">
-<h4>Showing allele proportions for Pf7 by subpopulations<a class="headerlink" href="#showing-allele-proportions-for-pf7-by-subpopulations" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="showing-allele-proportions-for-pf7-by-subpopulations">
+<h4>Showing allele proportions for Pf7 by subpopulations<a class="headerlink" href="#showing-allele-proportions-for-pf7-by-subpopulations" title="Permalink to this heading">#</a></h4>
 <p>The final figure will display each subpopulation stacked on top of each other with a shared x-axis. We will update the make_pop_plots function to generate a subplot.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -9634,14 +9302,14 @@ Name: csp_277-397_aa_haplotype, dtype: int64
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.09, 0.001, &#39;Alt. Amino Acid&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/csp-cterm-analysis_117_1.png" src="../../_images/csp-cterm-analysis_117_1.png" />
+<img alt="../../_images/cacf58cec5adcfea23225bec13b33d0217d874b0f0c30aea427e444499d9199b.png" src="../../_images/cacf58cec5adcfea23225bec13b33d0217d874b0f0c30aea427e444499d9199b.png" />
 </div>
 </div>
 <p><strong>Figure Legend: Variation in c-terminal of csp.</strong> The x-axis shows amino acid positions and the y-axis the proportion of non-reference alleles in different sub-populations. Different alternative amino acids are represented by different colours as represented by the legend below the x-axis.</p>
-</div>
-</div>
-<div class="section" id="id3">
-<h3>Save the plot<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="id3">
+<h3>Save the plot<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This will send the file to your Google Drive, where you can download it from if needed</span>
@@ -9653,9 +9321,9 @@ Name: csp_277-397_aa_haplotype, dtype: int64
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -9669,7 +9337,7 @@ Name: csp_277-397_aa_haplotype, dtype: int64
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./pf7/evolution_malaria_control"
         },
         predefinedOutput: true
@@ -9677,44 +9345,136 @@ Name: csp_277-397_aa_haplotype, dtype: int64
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="visualise_hrp2_hrp3_deletions.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Visualise <em>hrp2</em> and <em>hrp3</em> Deletions</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="visualise_hrp2_hrp3_deletions.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Visualise <em>hrp2</em> and <em>hrp3</em> Deletions</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="../popgen.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="../popgen.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title"><strong>Pf7 Analysis Guides:</strong> Population Structure and Selection</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
+                </footer>
+              
+            </div>
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By MalariaGEN<br/>
-    
-        &copy; Copyright 2023.<br/>
-  </p>
-</footer>
-</main>
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-      </div>
-    </div>
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#access-pf7-data">Access Pf7 Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#access-the-csp-c-terminal-haplotypes-data">Access the csp c-terminal Haplotypes Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequency-of-csp-c-terminal-haplotypes-and-global-mean-distances">Frequency of csp c-terminal haplotypes and global mean distances</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting">Plotting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-the-plot">Save the plot</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#histograms-of-amino-acid-differences-between-subpopulations-for-csp-c-terminal">Histograms of Amino Acid Differences Between Subpopulations for csp c-terminal</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#count-amino-acid-differences-to-non-3d7-haplotypes">Count amino acid differences to non-3D7 haplotypes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#count-numbers-of-amino-acid-differences-from-each-haplotype-for-each-sample">Count numbers of amino acid differences from each haplotype for each sample</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-plot-showing-differences-between-3d7-and-dd2-haplotypes">Create plot showing differences between 3D7 and Dd2 haplotypes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Save the plot</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#barplot-of-non-reference-allele-proportions-in-different-sub-populations">Barplot of Non-reference Allele Proportions in Different Sub-populations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extracting-mutations-format-and-tidy-up-substitutions-column">Extracting mutations: Format and tidy-up substitutions column</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extracting-mutations-unique-mutations-sorted-by-positon-number">Extracting mutations: Unique mutations sorted by positon number</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formatting-add-columns-for-aa-position-and-amino-acids-before-and-after">Formatting: Add columns for aa position, and amino acids before and after</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-preparation">Figure preparation</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#unstack-for-count-percentage-values">UNSTACK - for count percentage values</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#unstack-for-amino-acid-lists">UNSTACK for amino acid lists</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Plotting</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#showing-allele-proportions-for-pf7">Showing allele proportions for Pf7</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#showing-allele-proportions-for-one-subpopulation">Showing allele proportions for one subpopulation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#showing-allele-proportions-for-pf7-by-subpopulations">Showing allele proportions for Pf7 by subpopulations</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Save the plot</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By MalariaGEN
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

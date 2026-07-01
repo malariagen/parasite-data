@@ -1,727 +1,506 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Visualizing genomic regions of Pf8 samples with IGV-notebook &#8212; MalariaGEN parasite data user guide</title>
-    
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pf8/useful_genomics_howtos/igv_notebook';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Pf8 Analysis Guides: Summarise Pf8 Data" href="../summarise-data.html" />
     <link rel="prev" title="Pf8 Analysis Guides: Useful Genomics How-Tos" href="../useful-how-tos.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../landing-page.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">MalariaGEN parasite data user guide</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../landing-page.html">
-   MalariaGEN parasite data user guide
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Malaria Parasite Google Cloud Data Access
- </span>
-</p>
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="MalariaGEN parasite data user guide - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="MalariaGEN parasite data user guide - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../landing-page.html">
+                    MalariaGEN parasite data user guide
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Malaria Parasite Google Cloud Data Access</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../cloud_data_access/parasite-cloud-data-access.html">
-   <strong>
-    Malaria Parasite Google Cloud Data Access
-   </strong>
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../cloud_data_access/parasite-cloud-data-access.html"><strong>Malaria Parasite Google Cloud Data Access</strong></a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Pf8
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Pf8</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Data_access.html">
-   <strong>
-    Pf8 Data Access
-   </strong>
-  </a>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../useful-how-tos.html">
-   <strong>
-    Pf8 Analysis Guides:
-   </strong>
-   Useful Genomics How-Tos
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Visualizing genomic regions of Pf8 samples with IGV-notebook
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../summarise-data.html">
-   <strong>
-    Pf8 Analysis Guides:
-   </strong>
-   Summarise Pf8 Data
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../summarise_data/table_sample_summary.html">
-     Create sample location summary table
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../summarise_data/Visualising_sample_collections_over_time.html">
-     Visualising sample collections over time
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../summarise_data/SamplesByCountry_Barplot.html">
-     Plot sample collection per country
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../summarise_data/table_variants_summary.html">
-     Summarise genetic variant types
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../summarise_data/figure1_samplemap.html">
-     Create map of sample collection locations
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../evolution-malaria-control.html">
-   <strong>
-    Pf8 Analysis Guides:
-   </strong>
-   Study Evolution Against Malaria Control Measures
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../evolution_malaria_control/table_dr_summary.html">
-     Plot drug resistance frequencies
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../evolution_malaria_control/drug_resistance_trends.html">
-     Explore drug resistance trends in Africa
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../evolution_malaria_control/cnv_fig.html">
-     View Copy Number Variations (CNV) in Pf8
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../evolution_malaria_control/Figure_HRPDeletion.html">
-     Explore
-     <em>
-      hrp2
-     </em>
-     and
-     <em>
-      hrp3
-     </em>
-     deletion breakpoints
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../evolution_malaria_control/Drug_Resistance_Pf7_Pf8_Concordance.html">
-     Drug Resistance in Pf7 vs Pf8
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../popgen.html">
-   <strong>
-    Pf8 Analysis Guides:
-   </strong>
-   Population Structure and Selection
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../popgen/PCoA.html">
-     Principal Coordinate Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../popgen/njt_pf8_anjl.html">
-     Create a Neighbour Joining Tree
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../popgen/Pf8_fws_figure_public_notebook.html">
-     Explore Fws across populations
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../api.html">
-   <strong>
-    Pf8 API
-   </strong>
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../Data_access.html"><strong>Pf8 Data Access</strong></a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../useful-how-tos.html"><strong>Pf8 Analysis Guides:</strong> Useful Genomics How-Tos</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Visualizing genomic regions of Pf8 samples with IGV-notebook</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Pf7
- </span>
-</p>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../summarise-data.html"><strong>Pf8 Analysis Guides:</strong> Summarise Pf8 Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../summarise_data/table_sample_summary.html">Create sample location summary table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../summarise_data/Visualising_sample_collections_over_time.html">Visualising sample collections over time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../summarise_data/SamplesByCountry_Barplot.html">Plot sample collection per country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../summarise_data/table_variants_summary.html">Summarise genetic variant types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../summarise_data/figure1_samplemap.html">Create map of sample collection locations</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../evolution-malaria-control.html"><strong>Pf8 Analysis Guides:</strong> Study Evolution Against Malaria Control Measures</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../evolution_malaria_control/table_dr_summary.html">Plot drug resistance frequencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../evolution_malaria_control/drug_resistance_trends.html">Explore drug resistance trends in Africa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../evolution_malaria_control/cnv_fig.html">View Copy Number Variations (CNV) in Pf8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../evolution_malaria_control/Figure_HRPDeletion.html">Explore <em>hrp2</em> and <em>hrp3</em> deletion breakpoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../evolution_malaria_control/Drug_Resistance_Pf7_Pf8_Concordance.html">Drug Resistance in Pf7 vs Pf8</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../popgen.html"><strong>Pf8 Analysis Guides:</strong> Population Structure and Selection</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../popgen/PCoA.html">Principal Coordinate Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../popgen/njt_pf8_anjl.html">Create a Neighbour Joining Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../popgen/Pf8_fws_figure_public_notebook.html">Explore Fws across populations</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html"><strong>Pf8 API</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Pf7</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../pf7/Data_access.html">
-   <strong>
-    Pf7 Data Access
-   </strong>
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../pf7/summarise-data.html">
-   <strong>
-    Pf7 Analysis Guides:
-   </strong>
-   Summarise Pf7 Data
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../pf7/summarise_data/sample-summary-table.html">
-     Summarise Samples by Administrative Division
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../pf7/summarise_data/sample-collection-over-time.html">
-     Visualising sample collections over time
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../pf7/summarise_data/barplot-samples-by-country.html">
-     Barplot of Samples by Country
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../pf7/summarise_data/variant-summary-table.html">
-     Summarise Genetic Variants
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../pf7/summarise_data/global-sample-map.html">
-     Plot Global Map of Samples
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../pf7/evolution-malaria-control.html">
-   <strong>
-    Pf7 Analysis Guides:
-   </strong>
-   Study Evolution Against Malaria Control Measures
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../pf7/evolution_malaria_control/drug-resistance-summary.html">
-     Drug Resistance Frequencies Across Pf7
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../pf7/evolution_malaria_control/chloroquine-resistance-map.html">
-     Plot Map of Chloroquine Resistance
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../pf7/evolution_malaria_control/summarise_hrp2_hrp3_deletions.html">
-     Summarise
-     <em>
-      hrp2
-     </em>
-     and
-     <em>
-      hrp3
-     </em>
-     Deletions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../pf7/evolution_malaria_control/visualise_hrp2_hrp3_deletions.html">
-     Visualise
-     <em>
-      hrp2
-     </em>
-     and
-     <em>
-      hrp3
-     </em>
-     Deletions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../pf7/evolution_malaria_control/csp-cterm-analysis.html">
-     Analyse csp C-Terminal Variation
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../pf7/popgen.html">
-   <strong>
-    Pf7 Analysis Guides:
-   </strong>
-   Population Structure and Selection
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../pf7/popgen/PCoA.html">
-     Principal Coordinate Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../pf7/popgen/geographic-genetic-differentiation.html">
-     Geographic patterns of population differentiation and gene flow
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../pf7/popgen/neighbour-joining-tree-swga.html">
-     Neighbour Joining Tree for sWGA vs. gDNA
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../pf7/popgen/proportion-eba175.html">
-     Plot
-     <em>
-      eba175
-     </em>
-     C Allele Proportions
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../pf7/api.html">
-   <strong>
-    Pf7 API
-   </strong>
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../pf7/Data_access.html"><strong>Pf7 Data Access</strong></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../pf7/summarise-data.html"><strong>Pf7 Analysis Guides:</strong> Summarise Pf7 Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../pf7/summarise_data/sample-summary-table.html">Summarise Samples by Administrative Division</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pf7/summarise_data/sample-collection-over-time.html">Visualising sample collections over time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pf7/summarise_data/barplot-samples-by-country.html">Barplot of Samples by Country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pf7/summarise_data/variant-summary-table.html">Summarise Genetic Variants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pf7/summarise_data/global-sample-map.html">Plot Global Map of Samples</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Pv4
- </span>
-</p>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../pf7/evolution-malaria-control.html"><strong>Pf7 Analysis Guides:</strong> Study Evolution Against Malaria Control Measures</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../pf7/evolution_malaria_control/drug-resistance-summary.html">Drug Resistance Frequencies Across Pf7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pf7/evolution_malaria_control/chloroquine-resistance-map.html">Plot Map of Chloroquine Resistance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pf7/evolution_malaria_control/summarise_hrp2_hrp3_deletions.html">Summarise <em>hrp2</em> and <em>hrp3</em> Deletions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pf7/evolution_malaria_control/visualise_hrp2_hrp3_deletions.html">Visualise <em>hrp2</em> and <em>hrp3</em> Deletions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pf7/evolution_malaria_control/csp-cterm-analysis.html">Analyse csp C-Terminal Variation</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../pf7/popgen.html"><strong>Pf7 Analysis Guides:</strong> Population Structure and Selection</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../pf7/popgen/PCoA.html">Principal Coordinate Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pf7/popgen/geographic-genetic-differentiation.html">Geographic patterns of population differentiation and gene flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pf7/popgen/neighbour-joining-tree-swga.html">Neighbour Joining Tree for sWGA vs. gDNA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pf7/popgen/proportion-eba175.html">Plot <em>eba175</em> C Allele Proportions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pf7/api.html"><strong>Pf7 API</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Pv4</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../pv4/Data_access.html">
-   <strong>
-    Pv4 Data Access
-   </strong>
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../pv4/api.html">
-   <strong>
-    Pv4 API
-   </strong>
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../pv4/Data_access.html"><strong>Pv4 Data Access</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pv4/api.html"><strong>Pv4 API</strong></a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/pf8/useful_genomics_howtos/igv_notebook.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+</nav></div>
     </div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/malariagen/parasite-data"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/malariagen/parasite-data/issues/new?title=Issue%20on%20page%20%2Fpf8/useful_genomics_howtos/igv_notebook.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
         
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/malariagen/parasite-data/blob/master/docs/pf8/useful_genomics_howtos/igv_notebook.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/malariagen/parasite-data/master?urlpath=lab/tree/docs/pf8/useful_genomics_howtos/igv_notebook.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/malariagen/parasite-data/blob/master/docs/pf8/useful_genomics_howtos/igv_notebook.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/malariagen/parasite-data" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/malariagen/parasite-data/issues/new?title=Issue%20on%20page%20%2Fpf8/useful_genomics_howtos/igv_notebook.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/pf8/useful_genomics_howtos/igv_notebook.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
     </div>
+  
 </div>
+</div>
+              
+              
 
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Visualizing genomic regions of Pf8 samples with IGV-notebook</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#what-is-igv-plot">
-     What is IGV Plot
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#setup-install-igv-notebook">
-     Setup: Install igv-notebook
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creation-of-igv-plot-using-pf8-data">
-     Creation of IGV Plot using Pf8 Data
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#examples-from-pf8">
-   Examples from Pf8
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#hrp2-deletions">
-     <em>
-      hrp2
-     </em>
-     deletions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#hrp3-deletions">
-     <em>
-      hrp3
-     </em>
-     deletions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mdr1-duplication">
-     MDR1 Duplication
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#plasmepsin-2-3-duplication">
-     Plasmepsin 2/3 Duplication
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#crt-72-76-haplotype">
-     CRT 72-76 Haplotype
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conclusion">
-   Conclusion
-  </a>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-igv-plot">What is IGV Plot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-install-igv-notebook">Setup: Install igv-notebook</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-igv-plot-using-pf8-data">Creation of IGV Plot using Pf8 Data</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-from-pf8">Examples from Pf8</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hrp2-deletions"><em>hrp2</em> deletions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hrp3-deletions"><em>hrp3</em> deletions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mdr1-duplication">MDR1 Duplication</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plasmepsin-2-3-duplication">Plasmepsin 2/3 Duplication</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#crt-72-76-haplotype">CRT 72-76 Haplotype</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Visualizing genomic regions of Pf8 samples with IGV-notebook</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#what-is-igv-plot">
-     What is IGV Plot
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#setup-install-igv-notebook">
-     Setup: Install igv-notebook
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creation-of-igv-plot-using-pf8-data">
-     Creation of IGV Plot using Pf8 Data
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#examples-from-pf8">
-   Examples from Pf8
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#hrp2-deletions">
-     <em>
-      hrp2
-     </em>
-     deletions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#hrp3-deletions">
-     <em>
-      hrp3
-     </em>
-     deletions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mdr1-duplication">
-     MDR1 Duplication
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#plasmepsin-2-3-duplication">
-     Plasmepsin 2/3 Duplication
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#crt-72-76-haplotype">
-     CRT 72-76 Haplotype
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conclusion">
-   Conclusion
-  </a>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="section" id="visualizing-genomic-regions-of-pf8-samples-with-igv-notebook">
-<h1>Visualizing genomic regions of Pf8 samples with IGV-notebook<a class="headerlink" href="#visualizing-genomic-regions-of-pf8-samples-with-igv-notebook" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="visualizing-genomic-regions-of-pf8-samples-with-igv-notebook">
+<h1>Visualizing genomic regions of Pf8 samples with IGV-notebook<a class="headerlink" href="#visualizing-genomic-regions-of-pf8-samples-with-igv-notebook" title="Permalink to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>This notebook aims to demonstrate the visualization of genomic regions in Pf8 samples using the <a class="reference external" href="https://github.com/igvteam/igv-notebook">igv-notebook library</a>. <code class="docutils literal notranslate"><span class="pre">igv-notebook</span></code> facilitates the creation of Integrative Genomics Viewer (IGV) plots with the ability to access CRAM files from the cloud without the need for downloads.</p>
 <p><strong>About Pf8 CRAM files</strong>: Compressed Reference-oriented Alignment Map (CRAM) is  a more highly compressed alternative to the BAM and SAM DNA sequence alignment file formats. Pf8 CRAM archive is publicly available at: https://pf8-release.cog.sanger.ac.uk/index.html</p>
 <p>We will start understanding igv plots and its setup. Then, we will show examples from impactful genes of <em>Plasmodium falciparum</em>.</p>
-<div class="section" id="what-is-igv-plot">
-<h3>What is IGV Plot<a class="headerlink" href="#what-is-igv-plot" title="Permalink to this headline">¶</a></h3>
+<section id="what-is-igv-plot">
+<h3>What is IGV Plot<a class="headerlink" href="#what-is-igv-plot" title="Permalink to this heading">#</a></h3>
 <p>IGV software, along with its Python library igv_notebook, has been developed by researchers at UC San Diego and the Broad Institute of MIT and Harvard. It is designed for the interactive visual exploration of genomic data and is freely available under the MIT open-source license.</p>
 <p>IGV plot primarily showcases the alignment of sequencing reads to a reference genome. Here is a snapshot of a IGV plot:</p>
 <p><img alt="image" src="../../_images/igv_plot.png" /></p>
@@ -736,9 +515,9 @@
 <li><p>The IGV desktop application documentation offers valuable insights into IGV plots and interactive features, some of which are also applicable to igv-notebook: https://igv.org/doc/desktop/</p></li>
 <li><p>Matt Eldridge inspects variants in IGV to whether these are real events or artifacts: https://bioinformatics-core-shared-training.github.io/intro-to-IGV/InspectingVariantsInIGV.html</p></li>
 </ul>
-</div>
-<div class="section" id="setup-install-igv-notebook">
-<h3>Setup: Install igv-notebook<a class="headerlink" href="#setup-install-igv-notebook" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="setup-install-igv-notebook">
+<h3>Setup: Install igv-notebook<a class="headerlink" href="#setup-install-igv-notebook" title="Permalink to this heading">#</a></h3>
 <p>First of all, we need to install and import <code class="docutils literal notranslate"><span class="pre">igv_notebook</span></code> python package.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -792,9 +571,9 @@ Requirement already satisfied: six&gt;=1.12.0 in /Users/eu1/Library/Python/3.11/
 </div>
 </div>
 <p>We will also require 3D7 reference annotation file to annotate genes in the IGV, and the 3D7 reference genome fasta file used for mapping of Pf8 samples. Both of these files are accessible through Sanger’s cloud storage, thus, we don’t need to download them here.</p>
-</div>
-<div class="section" id="creation-of-igv-plot-using-pf8-data">
-<h3>Creation of IGV Plot using Pf8 Data<a class="headerlink" href="#creation-of-igv-plot-using-pf8-data" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="creation-of-igv-plot-using-pf8-data">
+<h3>Creation of IGV Plot using Pf8 Data<a class="headerlink" href="#creation-of-igv-plot-using-pf8-data" title="Permalink to this heading">#</a></h3>
 <p>To initialise an IGV browser, we need to populate a configuration dictionary with essential file paths that will be utilized to load genomic data.</p>
 <p>We also need to define a specific genomic location, identified by the chromosome ID, starting base coordinate, and ending base coordinate to allow the browser to commence at the desired genomic position.</p>
 <p>We will create a function to streamline this process.</p>
@@ -856,12 +635,12 @@ Requirement already satisfied: six&gt;=1.12.0 in /Users/eu1/Library/Python/3.11/
 </div>
 </div>
 <p>We are ready to use our function to show examples from Pf8 on some impactful events.</p>
-</div>
-</div>
-<div class="section" id="examples-from-pf8">
-<h2>Examples from Pf8<a class="headerlink" href="#examples-from-pf8" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="hrp2-deletions">
-<h3><em>hrp2</em> deletions<a class="headerlink" href="#hrp2-deletions" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="examples-from-pf8">
+<h2>Examples from Pf8<a class="headerlink" href="#examples-from-pf8" title="Permalink to this heading">#</a></h2>
+<section id="hrp2-deletions">
+<h3><em>hrp2</em> deletions<a class="headerlink" href="#hrp2-deletions" title="Permalink to this heading">#</a></h3>
 <p><em>hrp2</em> and <em>hrp3</em> are genes located in subtelomeric regions of the genome with very high levels of natural variation. Deletion in those genes can cause failure of rapid diagnostic tests and is therefore important to monitor.</p>
 <p>We will specify the sample and navigate to a genomic location where <em>hrp2</em> deletion is expected.</p>
 <div class="cell docutils container">
@@ -2199,9 +1978,9 @@ function(e){var t,i,n,r,s,o,a,c,l,h,d,u,f,p,g,m,w,b,F,v="sizzle"+1*new Date,y=e.
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="hrp3-deletions">
-<h3><em>hrp3</em> deletions<a class="headerlink" href="#hrp3-deletions" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="hrp3-deletions">
+<h3><em>hrp3</em> deletions<a class="headerlink" href="#hrp3-deletions" title="Permalink to this heading">#</a></h3>
 <p>Let’s look at a different example of a deletion. We will navigate to <em>hrp3</em> where we expect to see deletion of the whole gene. In this example, we can also see the deletion of other neighbouring genes (PF3D7_1372100, PF3D7_1372000) in addition to <em>hrp3</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2869,9 +2648,9 @@ function(e){var t,i,n,r,s,o,a,c,l,h,d,u,f,p,g,m,w,b,F,v="sizzle"+1*new Date,y=e.
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="mdr1-duplication">
-<h3>MDR1 Duplication<a class="headerlink" href="#mdr1-duplication" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="mdr1-duplication">
+<h3>MDR1 Duplication<a class="headerlink" href="#mdr1-duplication" title="Permalink to this heading">#</a></h3>
 <p>Duplication of the MDR1 gene can lead to resistance to antimalarial drugs, including artemisinin-based combination therapies (ACTs).</p>
 <p>Before looking at a Pf8 sample for MDR1 duplication, let’s discuss what we expect to see in the IGV plot:</p>
 <ul class="simple">
@@ -2880,7 +2659,7 @@ function(e){var t,i,n,r,s,o,a,c,l,h,d,u,f,p,g,m,w,b,F,v="sizzle"+1*new Date,y=e.
 <li><p>Read orientation of paired reads is normally expected as left versus right,and right to left orientation implies duplication or translocation with respect to reference.</p></li>
 <li><p>When a large section of DNA is duplicated and inserted into the genome next to the original sequence, it will be shown as below.</p></li>
 </ul>
-<p>![image.png](data:image/png;base64,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)</p>
+<p><img alt="image.png" src="data:image/png;base64,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" /></p>
 <p>Figure credit: <a class="reference external" href="https://igv.org/doc/desktop/">IGV User Guide</a></p>
 <p>Now, let’s look at the plot and notice the increase in the coverage where MDR1 starts (after 955kb). Also, when we zoom-in in the MDR1, we can see many red flags with the right to left orientation. Notably, two neighboring genes (PF3D7_0523100 and PF3D7_0523200) also share these findings.</p>
 <div class="cell docutils container">
@@ -3549,9 +3328,9 @@ function(e){var t,i,n,r,s,o,a,c,l,h,d,u,f,p,g,m,w,b,F,v="sizzle"+1*new Date,y=e.
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="plasmepsin-2-3-duplication">
-<h3>Plasmepsin 2/3 Duplication<a class="headerlink" href="#plasmepsin-2-3-duplication" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="plasmepsin-2-3-duplication">
+<h3>Plasmepsin 2/3 Duplication<a class="headerlink" href="#plasmepsin-2-3-duplication" title="Permalink to this heading">#</a></h3>
 <p>Duplication of the Plasmepsin 2/3 gene can lead to resistance to piperaquine, a partner drug used in artemisinin-based combination therapies (ACTs).</p>
 <p>We will showcase two samples from Pf8 where we observed a duplication event. In addition to the red reads (insertions) with orientations right versus left, there are numerous left versus right reads indicating an insertion into the genome, marked in green at the genomic location of 298-299 kb.</p>
 <p>Also note that the coverage of Plasmepsin 2/3 gene (3892) is 2-5 times more than the neighbour genes.</p>
@@ -6223,9 +6002,9 @@ function(e){var t,i,n,r,s,o,a,c,l,h,d,u,f,p,g,m,w,b,F,v="sizzle"+1*new Date,y=e.
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="crt-72-76-haplotype">
-<h3>CRT 72-76 Haplotype<a class="headerlink" href="#crt-72-76-haplotype" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="crt-72-76-haplotype">
+<h3>CRT 72-76 Haplotype<a class="headerlink" href="#crt-72-76-haplotype" title="Permalink to this heading">#</a></h3>
 <p>In the last example, we will look at a CRT 72-76 haplotype, which is a genetic marker associated with resistance to chloroquine, an antimalarial drug. The haplotype is a combination of amino acid residues at positions 72 to 76 in the P. falciparum chloroquine-resistance transporter (pfcrt) gene.</p>
 <p>In the IGV plot genomic locations 403,620-403,625 bp, we can see while some reads don’t have any SNP, other reads have the following 4 SNPs: 403620 G&gt;T, 403621 A&gt;G, 403624 T&gt;A, 403625 A&gt;C. These four SNPs indicates a variation from the reference genome (3D7) and makes the CVIET haplotype.</p>
 <div class="cell docutils container">
@@ -6894,13 +6673,13 @@ function(e){var t,i,n,r,s,o,a,c,l,h,d,u,f,p,g,m,w,b,F,v="sizzle"+1*new Date,y=e.
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
 <p>In summary, you can visualise genomic variation in any Pf8 sample, by simply specifying sample ID, gene, and locus information to the <code class="docutils literal notranslate"><span class="pre">sample_viewer</span></code> function in this notebook.</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -6914,7 +6693,7 @@ function(e){var t,i,n,r,s,o,a,c,l,h,d,u,f,p,g,m,w,b,F,v="sizzle"+1*new Date,y=e.
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./pf8/useful_genomics_howtos"
         },
         predefinedOutput: true
@@ -6922,44 +6701,117 @@ function(e){var t,i,n,r,s,o,a,c,l,h,d,u,f,p,g,m,w,b,F,v="sizzle"+1*new Date,y=e.
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../useful-how-tos.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><strong>Pf8 Analysis Guides:</strong> Useful Genomics How-Tos</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../useful-how-tos.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><strong>Pf8 Analysis Guides:</strong> Useful Genomics How-Tos</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="../summarise-data.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="../summarise-data.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title"><strong>Pf8 Analysis Guides:</strong> Summarise Pf8 Data</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
+                </footer>
+              
+            </div>
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By MalariaGEN<br/>
-    
-        &copy; Copyright 2023.<br/>
-  </p>
-</footer>
-</main>
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-      </div>
-    </div>
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-igv-plot">What is IGV Plot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-install-igv-notebook">Setup: Install igv-notebook</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-igv-plot-using-pf8-data">Creation of IGV Plot using Pf8 Data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-from-pf8">Examples from Pf8</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hrp2-deletions"><em>hrp2</em> deletions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hrp3-deletions"><em>hrp3</em> deletions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mdr1-duplication">MDR1 Duplication</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plasmepsin-2-3-duplication">Plasmepsin 2/3 Duplication</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#crt-72-76-haplotype">CRT 72-76 Haplotype</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By MalariaGEN
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
