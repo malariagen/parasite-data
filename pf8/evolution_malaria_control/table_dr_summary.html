@@ -876,7 +876,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Retain QC pass samples</span>
-<span class="n">qc_sample_metadata</span> <span class="o">=</span> <span class="n">sample_metadata</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;QC pass&#39;</span><span class="p">]]</span>
+<span class="n">qc_sample_metadata</span> <span class="o">=</span> <span class="n">sample_metadata</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">'QC pass'</span><span class="p">]]</span>
 </pre></div>
 </div>
 </div>
@@ -889,10 +889,10 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read the data</span>
-<span class="n">resistance_classification_fn</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://pf8-release.cog.sanger.ac.uk/Pf8_inferred_resistance_status_classification.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">resistance_classification_fn</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'https://pf8-release.cog.sanger.ac.uk/Pf8_inferred_resistance_status_classification.tsv'</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">'</span><span class="se">\t</span><span class="s1">'</span><span class="p">)</span>
 
-<span class="c1"># Rename the first column as &#39;Sample&#39;</span>
-<span class="n">resistance_classification_fn</span> <span class="o">=</span> <span class="n">resistance_classification_fn</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="n">resistance_classification_fn</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="s1">&#39;Sample&#39;</span><span class="p">})</span>
+<span class="c1"># Rename the first column as 'Sample'</span>
+<span class="n">resistance_classification_fn</span> <span class="o">=</span> <span class="n">resistance_classification_fn</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="n">resistance_classification_fn</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="s1">'Sample'</span><span class="p">})</span>
 
 <span class="c1"># Print the first rows</span>
 <span class="n">resistance_classification_fn</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -1010,10 +1010,10 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read the data</span>
-<span class="n">drm_calls_fn</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://pf8-release.cog.sanger.ac.uk/Pf8_drug_resistance_marker_genotypes.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="p">)</span>
+<span class="n">drm_calls_fn</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'https://pf8-release.cog.sanger.ac.uk/Pf8_drug_resistance_marker_genotypes.tsv'</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">'</span><span class="se">\t</span><span class="s1">'</span><span class="p">,</span> <span class="p">)</span>
 
-<span class="c1"># Rename the first column as &#39;Sample&#39;</span>
-<span class="n">drm_calls_fn</span> <span class="o">=</span> <span class="n">drm_calls_fn</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="n">drm_calls_fn</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="s1">&#39;Sample&#39;</span><span class="p">})</span>
+<span class="c1"># Rename the first column as 'Sample'</span>
+<span class="n">drm_calls_fn</span> <span class="o">=</span> <span class="n">drm_calls_fn</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="n">drm_calls_fn</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="s1">'Sample'</span><span class="p">})</span>
 
 <span class="c1"># Print the first rows</span>
 <span class="n">drm_calls_fn</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -1194,7 +1194,7 @@ document.write(`
 <p>We can merge these 3 datasets (metadata, drug resistance genotype and classification) to facilitate streamlined analysis.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">qc_sample_metadata</span><span class="p">,</span><span class="n">drm_calls_fn</span><span class="p">,</span><span class="n">on</span><span class="o">=</span><span class="s1">&#39;Sample&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">qc_sample_metadata</span><span class="p">,</span><span class="n">drm_calls_fn</span><span class="p">,</span><span class="n">on</span><span class="o">=</span><span class="s1">'Sample'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1724,8 +1724,8 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Merge the dataframes on &quot;Sample&quot; column</span>
-<span class="n">df_all_sample_metadata</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">qc_sample_metadata</span><span class="p">,</span><span class="n">drm_calls_fn</span><span class="p">,</span><span class="n">on</span><span class="o">=</span><span class="s1">&#39;Sample&#39;</span><span class="p">),</span><span class="n">resistance_classification_fn</span><span class="p">,</span><span class="n">on</span><span class="o">=</span><span class="s1">&#39;Sample&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Merge the dataframes on "Sample" column</span>
+<span class="n">df_all_sample_metadata</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">qc_sample_metadata</span><span class="p">,</span><span class="n">drm_calls_fn</span><span class="p">,</span><span class="n">on</span><span class="o">=</span><span class="s1">'Sample'</span><span class="p">),</span><span class="n">resistance_classification_fn</span><span class="p">,</span><span class="n">on</span><span class="o">=</span><span class="s1">'Sample'</span><span class="p">)</span>
 
 <span class="c1"># Print first 3 rows</span>
 <span class="n">df_all_sample_metadata</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -2069,8 +2069,8 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define a dictionary of old&amp;new column names</span>
 <span class="n">column_name_changes</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
-<span class="n">column_name_changes</span><span class="p">[</span><span class="s1">&#39;SP (uncomplicated)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;SP (treatment)&#39;</span>
-<span class="n">column_name_changes</span><span class="p">[</span><span class="s1">&#39;SP-IPTp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;SP (IPTp)&#39;</span>
+<span class="n">column_name_changes</span><span class="p">[</span><span class="s1">'SP (uncomplicated)'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'SP (treatment)'</span>
+<span class="n">column_name_changes</span><span class="p">[</span><span class="s1">'SP-IPTp'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'SP (IPTp)'</span>
 
 <span class="c1"># Rename the columns using the dictionary</span>
 <span class="n">df_all_sample_metadata</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">column_name_changes</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -2087,74 +2087,74 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">drm_dict</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
 
-<span class="n">drm_dict</span><span class="p">[</span><span class="s1">&#39;Chloroquine&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;gene&#39;</span><span class="p">:</span> <span class="s1">&#39;crt&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;mutation&#39;</span><span class="p">:</span> <span class="s1">&#39;76T&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;column_name&#39;</span><span class="p">:</span> <span class="s1">&#39;crt_76[K]&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;sensitive&#39;</span><span class="p">:</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;resistant&#39;</span><span class="p">:</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span>
+<span class="n">drm_dict</span><span class="p">[</span><span class="s1">'Chloroquine'</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'gene'</span><span class="p">:</span> <span class="s1">'crt'</span><span class="p">,</span>
+    <span class="s1">'mutation'</span><span class="p">:</span> <span class="s1">'76T'</span><span class="p">,</span>
+    <span class="s1">'column_name'</span><span class="p">:</span> <span class="s1">'crt_76[K]'</span><span class="p">,</span>
+    <span class="s1">'sensitive'</span><span class="p">:</span> <span class="s1">'K'</span><span class="p">,</span>
+    <span class="s1">'resistant'</span><span class="p">:</span> <span class="s1">'T'</span><span class="p">,</span>
 <span class="p">}</span>
 
-<span class="n">drm_dict</span><span class="p">[</span><span class="s1">&#39;Pyrimethamine&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;gene&#39;</span><span class="p">:</span> <span class="s1">&#39;dhfr&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;mutation&#39;</span><span class="p">:</span> <span class="s1">&#39;108N&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;column_name&#39;</span><span class="p">:</span> <span class="s1">&#39;dhfr_108[S]&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;sensitive&#39;</span><span class="p">:</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;resistant&#39;</span><span class="p">:</span> <span class="s1">&#39;N&#39;</span><span class="p">,</span>
+<span class="n">drm_dict</span><span class="p">[</span><span class="s1">'Pyrimethamine'</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'gene'</span><span class="p">:</span> <span class="s1">'dhfr'</span><span class="p">,</span>
+    <span class="s1">'mutation'</span><span class="p">:</span> <span class="s1">'108N'</span><span class="p">,</span>
+    <span class="s1">'column_name'</span><span class="p">:</span> <span class="s1">'dhfr_108[S]'</span><span class="p">,</span>
+    <span class="s1">'sensitive'</span><span class="p">:</span> <span class="s1">'S'</span><span class="p">,</span>
+    <span class="s1">'resistant'</span><span class="p">:</span> <span class="s1">'N'</span><span class="p">,</span>
 <span class="p">}</span>
 
-<span class="n">drm_dict</span><span class="p">[</span><span class="s1">&#39;Sulfadoxine&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;gene&#39;</span><span class="p">:</span> <span class="s1">&#39;dhps&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;mutation&#39;</span><span class="p">:</span> <span class="s1">&#39;437G&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;column_name&#39;</span><span class="p">:</span> <span class="s1">&#39;dhps_437[G]&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;sensitive&#39;</span><span class="p">:</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;resistant&#39;</span><span class="p">:</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span>
+<span class="n">drm_dict</span><span class="p">[</span><span class="s1">'Sulfadoxine'</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'gene'</span><span class="p">:</span> <span class="s1">'dhps'</span><span class="p">,</span>
+    <span class="s1">'mutation'</span><span class="p">:</span> <span class="s1">'437G'</span><span class="p">,</span>
+    <span class="s1">'column_name'</span><span class="p">:</span> <span class="s1">'dhps_437[G]'</span><span class="p">,</span>
+    <span class="s1">'sensitive'</span><span class="p">:</span> <span class="s1">'A'</span><span class="p">,</span>
+    <span class="s1">'resistant'</span><span class="p">:</span> <span class="s1">'G'</span><span class="p">,</span>
 <span class="p">}</span>
 
-<span class="n">drm_dict</span><span class="p">[</span><span class="s1">&#39;Mefloquine&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;gene&#39;</span><span class="p">:</span> <span class="s1">&#39;mdr1&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;mutation&#39;</span><span class="p">:</span> <span class="s1">&#39;2+ copies&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;column_name&#39;</span><span class="p">:</span> <span class="s1">&#39;dup_mdr1&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;sensitive&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="s1">&#39;resistant&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="n">drm_dict</span><span class="p">[</span><span class="s1">'Mefloquine'</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'gene'</span><span class="p">:</span> <span class="s1">'mdr1'</span><span class="p">,</span>
+    <span class="s1">'mutation'</span><span class="p">:</span> <span class="s1">'2+ copies'</span><span class="p">,</span>
+    <span class="s1">'column_name'</span><span class="p">:</span> <span class="s1">'dup_mdr1'</span><span class="p">,</span>
+    <span class="s1">'sensitive'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s1">'resistant'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
 <span class="p">}</span>
 
-<span class="n">drm_dict</span><span class="p">[</span><span class="s1">&#39;Artemisinin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;gene&#39;</span><span class="p">:</span> <span class="s1">&#39;kelch13&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;mutation&#39;</span><span class="p">:</span> <span class="s1">&#39;WHO list&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;column_name&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+<span class="n">drm_dict</span><span class="p">[</span><span class="s1">'Artemisinin'</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'gene'</span><span class="p">:</span> <span class="s1">'kelch13'</span><span class="p">,</span>
+    <span class="s1">'mutation'</span><span class="p">:</span> <span class="s1">'WHO list'</span><span class="p">,</span>
+    <span class="s1">'column_name'</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
 <span class="p">}</span>
 
-<span class="n">drm_dict</span><span class="p">[</span><span class="s1">&#39;Piperaquine&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;gene&#39;</span><span class="p">:</span> <span class="s1">&#39;plasmepsin 2-3&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;mutation&#39;</span><span class="p">:</span> <span class="s1">&#39;2+ copies&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;column_name&#39;</span><span class="p">:</span> <span class="s1">&#39;dup_pm2&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;sensitive&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="s1">&#39;resistant&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="n">drm_dict</span><span class="p">[</span><span class="s1">'Piperaquine'</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'gene'</span><span class="p">:</span> <span class="s1">'plasmepsin 2-3'</span><span class="p">,</span>
+    <span class="s1">'mutation'</span><span class="p">:</span> <span class="s1">'2+ copies'</span><span class="p">,</span>
+    <span class="s1">'column_name'</span><span class="p">:</span> <span class="s1">'dup_pm2'</span><span class="p">,</span>
+    <span class="s1">'sensitive'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s1">'resistant'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
 <span class="p">}</span>
 
-<span class="n">drm_dict</span><span class="p">[</span><span class="s1">&#39;SP (treatment)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;gene&#39;</span><span class="p">:</span> <span class="s1">&#39;dhfr&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;mutation&#39;</span><span class="p">:</span> <span class="s1">&#39;triple mutant&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;column_name&#39;</span><span class="p">:</span> <span class="kc">None</span>
+<span class="n">drm_dict</span><span class="p">[</span><span class="s1">'SP (treatment)'</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'gene'</span><span class="p">:</span> <span class="s1">'dhfr'</span><span class="p">,</span>
+    <span class="s1">'mutation'</span><span class="p">:</span> <span class="s1">'triple mutant'</span><span class="p">,</span>
+    <span class="s1">'column_name'</span><span class="p">:</span> <span class="kc">None</span>
 <span class="p">}</span>
 
-<span class="n">drm_dict</span><span class="p">[</span><span class="s1">&#39;SP (IPTp)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;gene&#39;</span><span class="p">:</span> <span class="s1">&#39;dhfr and dhps&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;mutation&#39;</span><span class="p">:</span> <span class="s1">&#39;sextuple mutant&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;column_name&#39;</span><span class="p">:</span> <span class="kc">None</span>
+<span class="n">drm_dict</span><span class="p">[</span><span class="s1">'SP (IPTp)'</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'gene'</span><span class="p">:</span> <span class="s1">'dhfr and dhps'</span><span class="p">,</span>
+    <span class="s1">'mutation'</span><span class="p">:</span> <span class="s1">'sextuple mutant'</span><span class="p">,</span>
+    <span class="s1">'column_name'</span><span class="p">:</span> <span class="kc">None</span>
 <span class="p">}</span>
 
-<span class="n">drm_dict</span><span class="p">[</span><span class="s1">&#39;AS-MQ&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;gene&#39;</span><span class="p">:</span> <span class="s1">&#39;kelch13 and mdr1&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;mutation&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;column_name&#39;</span><span class="p">:</span> <span class="kc">None</span>
+<span class="n">drm_dict</span><span class="p">[</span><span class="s1">'AS-MQ'</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'gene'</span><span class="p">:</span> <span class="s1">'kelch13 and mdr1'</span><span class="p">,</span>
+    <span class="s1">'mutation'</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+    <span class="s1">'column_name'</span><span class="p">:</span> <span class="kc">None</span>
 <span class="p">}</span>
 
-<span class="n">drm_dict</span><span class="p">[</span><span class="s1">&#39;DHA-PPQ&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;gene&#39;</span><span class="p">:</span> <span class="s1">&#39;kelch13 and plasmepsin 2-3&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;mutation&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;column_name&#39;</span><span class="p">:</span> <span class="kc">None</span>
+<span class="n">drm_dict</span><span class="p">[</span><span class="s1">'DHA-PPQ'</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'gene'</span><span class="p">:</span> <span class="s1">'kelch13 and plasmepsin 2-3'</span><span class="p">,</span>
+    <span class="s1">'mutation'</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+    <span class="s1">'column_name'</span><span class="p">:</span> <span class="kc">None</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -2164,16 +2164,16 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">populations</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
-<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;SA&#39;</span><span class="p">]</span>       <span class="o">=</span> <span class="s2">&quot;South America&quot;</span>
-<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AF-W&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">&quot;Africa - West&quot;</span>
-<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AF-C&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">&quot;Africa - Central&quot;</span>
-<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AF-NE&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">&quot;Africa - Northeast&quot;</span>
-<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AF-E&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">&quot;Africa - East&quot;</span>
-<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AS-S-E&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">&quot;Asia - South - East&quot;</span>
-<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AS-S-FE&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">&quot;Asia - South - Far East&quot;</span>
-<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AS-SE-W&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Asia - Southeast - West&quot;</span>
-<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AS-SE-E&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Asia - Southeast - East&quot;</span>
-<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;OC-NG&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">&quot;Oceania - New Guinea&quot;</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">'SA'</span><span class="p">]</span>       <span class="o">=</span> <span class="s2">"South America"</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">'AF-W'</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">"Africa - West"</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">'AF-C'</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">"Africa - Central"</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">'AF-NE'</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">"Africa - Northeast"</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">'AF-E'</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">"Africa - East"</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">'AS-S-E'</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">"Asia - South - East"</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">'AS-S-FE'</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">"Asia - South - Far East"</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">'AS-SE-W'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"Asia - Southeast - West"</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">'AS-SE-E'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"Asia - Southeast - East"</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">'OC-NG'</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">"Oceania - New Guinea"</span>
 </pre></div>
 </div>
 </div>
@@ -2186,7 +2186,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">n_agg</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Aggregate function to calculate the count of non-undetermined samples for each drug in a given population.</span>
 
 <span class="sd">    Parameters:</span>
@@ -2194,7 +2194,7 @@ document.write(`
 
 <span class="sd">    Returns:</span>
 <span class="sd">    - pd.Series: Counts of sensitive samples that are resistant to each drug.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="c1"># Initialize an ordered dictionary to store drug names and their corresponding counts</span>
     <span class="n">names</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
@@ -2202,7 +2202,7 @@ document.write(`
     <span class="c1"># Iterate through each drug in drm_dict</span>
     <span class="k">for</span> <span class="n">drug</span> <span class="ow">in</span> <span class="n">drm_dict</span><span class="p">:</span>
         <span class="c1"># Count the number of non-undetermined samples for the current drug</span>
-        <span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">((</span><span class="n">x</span><span class="p">[</span><span class="n">drug</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;Undetermined&#39;</span><span class="p">))</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">((</span><span class="n">x</span><span class="p">[</span><span class="n">drug</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">'Undetermined'</span><span class="p">))</span>
 
         <span class="c1"># Store the drug name and its count in the dictionary</span>
         <span class="n">names</span><span class="p">[</span><span class="n">drug</span><span class="p">]</span> <span class="o">=</span> <span class="n">n</span>
@@ -2219,7 +2219,7 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate counts of non-undetermined samples for each drug in each population</span>
 <span class="n">df_drm_n_table</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">df_all_sample_metadata</span>
-    <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Population&#39;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'Population'</span><span class="p">)</span>
     <span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">n_agg</span><span class="p">,</span> <span class="n">include_groups</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="o">.</span><span class="n">rename_axis</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
     <span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
@@ -2232,15 +2232,15 @@ document.write(`
 <span class="n">max_n</span> <span class="o">=</span> <span class="n">df_drm_n_table</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
 
 <span class="c1"># Customize the index to include gene and mutation information for each drug</span>
-<span class="n">df_drm_n_table</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">drm_dict</span><span class="p">[</span><span class="n">drug</span><span class="p">][</span><span class="s1">&#39;gene&#39;</span><span class="p">],</span> <span class="n">drm_dict</span><span class="p">[</span><span class="n">drug</span><span class="p">][</span><span class="s1">&#39;mutation&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">drug</span> <span class="ow">in</span> <span class="n">drm_dict</span><span class="p">]</span>
-<span class="n">df_drm_n_table</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Marker&#39;</span><span class="p">]</span>
+<span class="n">df_drm_n_table</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">drm_dict</span><span class="p">[</span><span class="n">drug</span><span class="p">][</span><span class="s1">'gene'</span><span class="p">],</span> <span class="n">drm_dict</span><span class="p">[</span><span class="n">drug</span><span class="p">][</span><span class="s1">'mutation'</span><span class="p">])</span> <span class="k">for</span> <span class="n">drug</span> <span class="ow">in</span> <span class="n">drm_dict</span><span class="p">]</span>
+<span class="n">df_drm_n_table</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Marker'</span><span class="p">]</span>
 
 <span class="c1"># Rename the columns to indicate their association with drug resistance and sample counts</span>
-<span class="n">df_drm_n_table</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;index&#39;</span><span class="p">:</span> <span class="s1">&#39;Associated with resistance to&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_drm_n_table</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'index'</span><span class="p">:</span> <span class="s1">'Associated with resistance to'</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="c1"># Update column names to include population names and corresponding sample size ranges</span>
 <span class="k">for</span> <span class="n">population</span> <span class="ow">in</span> <span class="n">populations</span><span class="p">:</span>
-    <span class="n">new_column_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">populations</span><span class="p">[</span><span class="n">population</span><span class="p">]</span><span class="si">}</span><span class="s1"> (n=</span><span class="si">{</span><span class="n">min_n</span><span class="p">[</span><span class="n">population</span><span class="p">]</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">max_n</span><span class="p">[</span><span class="n">population</span><span class="p">]</span><span class="si">}</span><span class="s1">)&#39;</span>
+    <span class="n">new_column_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">populations</span><span class="p">[</span><span class="n">population</span><span class="p">]</span><span class="si">}</span><span class="s1"> (n=</span><span class="si">{</span><span class="n">min_n</span><span class="p">[</span><span class="n">population</span><span class="p">]</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">max_n</span><span class="p">[</span><span class="n">population</span><span class="p">]</span><span class="si">}</span><span class="s1">)'</span>
     <span class="n">df_drm_n_table</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="n">population</span><span class="p">:</span> <span class="n">new_column_name</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="c1"># Display the final drug resistance count table</span>
@@ -2710,7 +2710,7 @@ document.write(`
 <p>To save the table:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_drm_n_table</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;DRM_table_sample_numbers.xlsx&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_drm_n_table</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">"DRM_table_sample_numbers.xlsx"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2723,7 +2723,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">proportion_agg</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Aggregate function to calculate the proportion of resistance for each drug in a given population.</span>
 
 <span class="sd">    Parameters:</span>
@@ -2731,7 +2731,7 @@ document.write(`
 
 <span class="sd">    Returns:</span>
 <span class="sd">    - pd.Series: Proportions of resistance for each drug.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="c1"># Initialize an ordered dictionary to store drug names and their corresponding proportions</span>
     <span class="n">names</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
@@ -2739,7 +2739,7 @@ document.write(`
     <span class="c1"># Iterate through each drug in drm_dict</span>
     <span class="k">for</span> <span class="n">drug</span> <span class="ow">in</span> <span class="n">drm_dict</span><span class="p">:</span>
         <span class="c1"># Count the number of non-undetermined samples for the current drug</span>
-        <span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">((</span><span class="n">x</span><span class="p">[</span><span class="n">drug</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;Undetermined&#39;</span><span class="p">))</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">((</span><span class="n">x</span><span class="p">[</span><span class="n">drug</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">'Undetermined'</span><span class="p">))</span>
 
         <span class="c1"># Check if there are no non-undetermined samples for the drug</span>
         <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -2747,9 +2747,9 @@ document.write(`
         <span class="k">else</span><span class="p">:</span>
             <span class="c1"># Calculate the proportion of resistant samples for the drug</span>
             <span class="n">proportion</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span>
-                <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">drug</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Resistant&#39;</span><span class="p">)</span>
+                <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">drug</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'Resistant'</span><span class="p">)</span>
             <span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span>
-                <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">drug</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;Undetermined&#39;</span><span class="p">)</span>
+                <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">drug</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">'Undetermined'</span><span class="p">)</span>
             <span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
 
         <span class="c1"># Store the drug name and its proportion in the dictionary</span>
@@ -2766,10 +2766,10 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a table summarizing drug resistance proportions by population</span>
 
-<span class="c1"># Group the DataFrame by &#39;Population&#39; and apply the &#39;proportion_agg&#39; function to calculate resistance proportions</span>
+<span class="c1"># Group the DataFrame by 'Population' and apply the 'proportion_agg' function to calculate resistance proportions</span>
 <span class="n">df_drm_table</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">df_all_sample_metadata</span>
-    <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Population&#39;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'Population'</span><span class="p">)</span>
     <span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">proportion_agg</span><span class="p">,</span> <span class="n">include_groups</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="o">.</span><span class="n">rename_axis</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
     <span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
@@ -2778,19 +2778,19 @@ document.write(`
 <span class="p">)</span>
 
 <span class="c1"># Customize the index to include gene and mutation information for each drug</span>
-<span class="n">df_drm_table</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">drm_dict</span><span class="p">[</span><span class="n">drug</span><span class="p">][</span><span class="s1">&#39;gene&#39;</span><span class="p">],</span> <span class="n">drm_dict</span><span class="p">[</span><span class="n">drug</span><span class="p">][</span><span class="s1">&#39;mutation&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">drug</span> <span class="ow">in</span> <span class="n">drm_dict</span><span class="p">]</span>
-<span class="n">df_drm_table</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Marker&#39;</span><span class="p">]</span>
+<span class="n">df_drm_table</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">drm_dict</span><span class="p">[</span><span class="n">drug</span><span class="p">][</span><span class="s1">'gene'</span><span class="p">],</span> <span class="n">drm_dict</span><span class="p">[</span><span class="n">drug</span><span class="p">][</span><span class="s1">'mutation'</span><span class="p">])</span> <span class="k">for</span> <span class="n">drug</span> <span class="ow">in</span> <span class="n">drm_dict</span><span class="p">]</span>
+<span class="n">df_drm_table</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Marker'</span><span class="p">]</span>
 
 <span class="c1"># Rename the columns to indicate their association with drug resistance</span>
-<span class="n">df_drm_table</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;index&#39;</span><span class="p">:</span> <span class="s1">&#39;Associated with resistance to&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_drm_table</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'index'</span><span class="p">:</span> <span class="s1">'Associated with resistance to'</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="c1"># Update column names to include population names and corresponding sample size ranges</span>
 <span class="k">for</span> <span class="n">population</span> <span class="ow">in</span> <span class="n">populations</span><span class="p">:</span>
-    <span class="n">new_column_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">populations</span><span class="p">[</span><span class="n">population</span><span class="p">]</span><span class="si">}</span><span class="s1"> (n=</span><span class="si">{</span><span class="n">min_n</span><span class="p">[</span><span class="n">population</span><span class="p">]</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">max_n</span><span class="p">[</span><span class="n">population</span><span class="p">]</span><span class="si">}</span><span class="s1">)&#39;</span>
+    <span class="n">new_column_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">populations</span><span class="p">[</span><span class="n">population</span><span class="p">]</span><span class="si">}</span><span class="s1"> (n=</span><span class="si">{</span><span class="n">min_n</span><span class="p">[</span><span class="n">population</span><span class="p">]</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">max_n</span><span class="p">[</span><span class="n">population</span><span class="p">]</span><span class="si">}</span><span class="s1">)'</span>
     <span class="n">df_drm_table</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="n">population</span><span class="p">:</span> <span class="n">new_column_name</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="c1"># Add &#39;%&#39; symbol to all values in the table</span>
-<span class="n">df_drm_table</span> <span class="o">=</span> <span class="n">df_drm_table</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">%&quot;</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">))</span> <span class="k">else</span> <span class="n">x</span><span class="p">)</span>
+<span class="c1"># Add '%' symbol to all values in the table</span>
+<span class="n">df_drm_table</span> <span class="o">=</span> <span class="n">df_drm_table</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">%"</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">))</span> <span class="k">else</span> <span class="n">x</span><span class="p">)</span>
 
 <span class="c1"># Display the final drug resistance table</span>
 <span class="n">df_drm_table</span>
@@ -3260,7 +3260,7 @@ All samples were classified into different types of drug resistance based on pub
 <p>To save the table:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_drm_table</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;DRM_table.xlsx&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_drm_table</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">"DRM_table.xlsx"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

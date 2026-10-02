@@ -566,7 +566,7 @@ import malariagen_data
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fetch the details of hrp calls from this MalariaGEN.net file</span>
-<span class="n">hrp_calls_fn</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://www.malariagen.net/wp-content/uploads/2024/01/hrp_calls_pf7.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">hrp_calls_fn</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'https://www.malariagen.net/wp-content/uploads/2024/01/hrp_calls_pf7.tsv'</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">'</span><span class="se">\t</span><span class="s1">'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -887,7 +887,7 @@ import malariagen_data
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Merge df_samples with hrp_calls_fn</span>
-<span class="n">df_samples_hrp</span> <span class="o">=</span>  <span class="n">df_samples</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">hrp_calls_fn</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span><span class="s1">&#39;Sample&#39;</span><span class="p">)</span>
+<span class="n">df_samples_hrp</span> <span class="o">=</span>  <span class="n">df_samples</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">hrp_calls_fn</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span><span class="s1">'Sample'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df_samples_hrp</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="n">df_samples_hrp</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
@@ -1232,8 +1232,8 @@ import malariagen_data
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Count and sort deletion types and breakpoints in highest to lowest occurrence</span>
 <span class="n">df_samples_hrp</span><span class="p">[</span>
- <span class="n">df_samples_hrp</span><span class="p">[</span><span class="s1">&#39;HRP2&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;del&#39;</span>
-<span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;HRP2_deletion_type&#39;</span><span class="p">,</span> <span class="s1">&#39;HRP2_breakpoint&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+ <span class="n">df_samples_hrp</span><span class="p">[</span><span class="s1">'HRP2'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'del'</span>
+<span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">'HRP2_deletion_type'</span><span class="p">,</span> <span class="s1">'HRP2_breakpoint'</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1255,8 +1255,8 @@ dtype: int64
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Count and sort deletion types and breakpoints in highest to lowest occurrence</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
 <span class="n">df_samples_hrp</span><span class="p">[</span>
-<span class="n">df_samples_hrp</span><span class="p">[</span><span class="s1">&#39;HRP3&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;del&#39;</span>
-<span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;HRP3_deletion_type&#39;</span><span class="p">,</span> <span class="s1">&#39;HRP3_breakpoint&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s2">&quot;Samples_with_deletion&quot;</span><span class="p">)</span>
+<span class="n">df_samples_hrp</span><span class="p">[</span><span class="s1">'HRP3'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'del'</span>
+<span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">'HRP3_deletion_type'</span><span class="p">,</span> <span class="s1">'HRP3_breakpoint'</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s2">"Samples_with_deletion"</span><span class="p">)</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -1578,8 +1578,8 @@ dtype: int64
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Group the HRP3 deletions by breakpoint, population, country, and admin level 1.</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
     <span class="n">df_samples_hrp</span><span class="p">[</span>
-   <span class="n">df_samples_hrp</span><span class="p">[</span><span class="s1">&#39;HRP3&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;del&#39;</span>
-    <span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;HRP3_deletion_type&#39;</span><span class="p">,</span> <span class="s1">&#39;HRP3_breakpoint&#39;</span><span class="p">,</span> <span class="s1">&#39;Population&#39;</span><span class="p">,</span> <span class="s1">&#39;Country&#39;</span><span class="p">,</span> <span class="s1">&#39;Admin level 1&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s2">&quot;Samples_with_deletion&quot;</span><span class="p">)</span>
+   <span class="n">df_samples_hrp</span><span class="p">[</span><span class="s1">'HRP3'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'del'</span>
+    <span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">'HRP3_deletion_type'</span><span class="p">,</span> <span class="s1">'HRP3_breakpoint'</span><span class="p">,</span> <span class="s1">'Population'</span><span class="p">,</span> <span class="s1">'Country'</span><span class="p">,</span> <span class="s1">'Admin level 1'</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s2">"Samples_with_deletion"</span><span class="p">)</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -2060,20 +2060,20 @@ dtype: int64
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">hrp2_agg</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    This function counts number of distinct unique breakpoints, countries and samples for each deletion type in hrp2.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="c1"># Create an ordered dictionary to store the information.</span>
     <span class="n">summary</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
 
     <span class="c1"># Calculate the number of distinct breakpoints.</span>
-    <span class="n">summary</span><span class="p">[</span><span class="s1">&#39;Distinct Breakpoints&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;HRP2_breakpoint&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+    <span class="n">summary</span><span class="p">[</span><span class="s1">'Distinct Breakpoints'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">'HRP2_breakpoint'</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
 
     <span class="c1"># Calculate the number of unique countries.</span>
-    <span class="n">summary</span><span class="p">[</span><span class="s1">&#39;Countries&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+    <span class="n">summary</span><span class="p">[</span><span class="s1">'Countries'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">'Country'</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
 
     <span class="c1"># Calculate the total number of samples with deletions.</span>
-    <span class="n">summary</span><span class="p">[</span><span class="s1">&#39;Samples with Deletion&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">summary</span><span class="p">[</span><span class="s1">'Samples with Deletion'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
     <span class="c1"># Return the summary information as a Pandas Series.</span>
     <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">summary</span><span class="p">)</span>
@@ -2085,20 +2085,20 @@ dtype: int64
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">hrp3_agg</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    This function counts number of distinct unique breakpoints, countries and samples for each deletion type in hrp3.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="c1"># Create an ordered dictionary to store the information.</span>
     <span class="n">summary</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
 
     <span class="c1"># Calculate the number of distinct breakpoints.</span>
-    <span class="n">summary</span><span class="p">[</span><span class="s1">&#39;Distinct Breakpoints&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;HRP3_breakpoint&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+    <span class="n">summary</span><span class="p">[</span><span class="s1">'Distinct Breakpoints'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">'HRP3_breakpoint'</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
 
     <span class="c1"># Calculate the number of unique countries.</span>
-    <span class="n">summary</span><span class="p">[</span><span class="s1">&#39;Countries&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+    <span class="n">summary</span><span class="p">[</span><span class="s1">'Countries'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">'Country'</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
 
     <span class="c1"># Calculate the total number of samples with deletions.</span>
-    <span class="n">summary</span><span class="p">[</span><span class="s1">&#39;Samples with Deletion&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">summary</span><span class="p">[</span><span class="s1">'Samples with Deletion'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
     <span class="c1"># Return the summary information as a Pandas Series.</span>
     <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">summary</span><span class="p">)</span>
@@ -2114,10 +2114,10 @@ dtype: int64
 <span class="c1"># Group by deletion type, also include gene name</span>
 <span class="c1"># Apply hrp2_agg function to find numbers</span>
 <span class="n">hrp2_agg_df</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="n">df_samples_hrp</span><span class="p">[</span><span class="n">df_samples_hrp</span><span class="p">[</span><span class="s1">&#39;HRP2&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;del&#39;</span><span class="p">]</span>
-    <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Gene</span><span class="o">=</span><span class="s1">&#39;hrp2&#39;</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;HRP2_deletion_type&#39;</span><span class="p">:</span> <span class="s1">&#39;Deletion type&#39;</span><span class="p">})</span>
-    <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Gene&#39;</span><span class="p">,</span> <span class="s1">&#39;Deletion type&#39;</span><span class="p">])</span>
+    <span class="n">df_samples_hrp</span><span class="p">[</span><span class="n">df_samples_hrp</span><span class="p">[</span><span class="s1">'HRP2'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'del'</span><span class="p">]</span>
+    <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Gene</span><span class="o">=</span><span class="s1">'hrp2'</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'HRP2_deletion_type'</span><span class="p">:</span> <span class="s1">'Deletion type'</span><span class="p">})</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">'Gene'</span><span class="p">,</span> <span class="s1">'Deletion type'</span><span class="p">])</span>
     <span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">hrp2_agg</span><span class="p">)</span>
 <span class="p">)</span>
 
@@ -2126,11 +2126,11 @@ dtype: int64
 <span class="c1"># Apply hrp2_agg function to find numbers</span>
 <span class="n">hrp3_agg_df</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">df_samples_hrp</span><span class="p">[</span>
-        <span class="n">df_samples_hrp</span><span class="p">[</span><span class="s1">&#39;QC pass&#39;</span><span class="p">]</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_samples_hrp</span><span class="p">[</span><span class="s1">&#39;HRP3&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;del&#39;</span><span class="p">)</span>
+        <span class="n">df_samples_hrp</span><span class="p">[</span><span class="s1">'QC pass'</span><span class="p">]</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_samples_hrp</span><span class="p">[</span><span class="s1">'HRP3'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'del'</span><span class="p">)</span>
     <span class="p">]</span>
-    <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Gene</span><span class="o">=</span><span class="s1">&#39;hrp3&#39;</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;HRP3_deletion_type&#39;</span><span class="p">:</span> <span class="s1">&#39;Deletion type&#39;</span><span class="p">})</span>
-    <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Gene&#39;</span><span class="p">,</span> <span class="s1">&#39;Deletion type&#39;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Gene</span><span class="o">=</span><span class="s1">'hrp3'</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'HRP3_deletion_type'</span><span class="p">:</span> <span class="s1">'Deletion type'</span><span class="p">})</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">'Gene'</span><span class="p">,</span> <span class="s1">'Deletion type'</span><span class="p">])</span>
     <span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">hrp3_agg</span><span class="p">)</span>
 <span class="p">)</span>
 
@@ -2421,7 +2421,7 @@ dtype: int64
 <p>You will need to authorise Google Colab access to Google Drive.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">'/content/drive'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2437,7 +2437,7 @@ dtype: int64
 <span class="c1"># Change the file path if you wish to send the file to a specific location</span>
 <span class="c1"># Change the file name if you wish to call it something else</span>
 
-<span class="n">df_deletion_types_summary</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s1">&#39;/content/drive/My Drive/HRP_deletion_types_summary_unformatted.xlsx&#39;</span><span class="p">)</span>
+<span class="n">df_deletion_types_summary</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s1">'/content/drive/My Drive/HRP_deletion_types_summary_unformatted.xlsx'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2451,12 +2451,12 @@ dtype: int64
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">breakpoint_agg</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    This function aggregates countries and sample counts for each unique deletion type at specific breakpoints.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">names</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
-    <span class="n">names</span><span class="p">[</span><span class="s1">&#39;Countries&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()))</span>
-    <span class="n">names</span><span class="p">[</span><span class="s1">&#39;Samples with deletion&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">names</span><span class="p">[</span><span class="s1">'Countries'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">', '</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="n">x</span><span class="p">[</span><span class="s1">'Country'</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()))</span>
+    <span class="n">names</span><span class="p">[</span><span class="s1">'Samples with deletion'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">names</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2469,10 +2469,10 @@ dtype: int64
 <span class="c1"># Apply breakpoint_agg function</span>
 
 <span class="n">hrp2_breakpoints_summary</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="n">df_samples_hrp</span><span class="p">[</span><span class="n">df_samples_hrp</span><span class="p">[</span><span class="s1">&#39;HRP2&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;del&#39;</span><span class="p">]</span>
-    <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Gene</span><span class="o">=</span><span class="s1">&#39;hrp2&#39;</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;HRP2_deletion_type&#39;</span><span class="p">:</span> <span class="s1">&#39;Deletion type&#39;</span><span class="p">})</span>
-    <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Gene&#39;</span><span class="p">,</span> <span class="s1">&#39;Deletion type&#39;</span><span class="p">,</span> <span class="s1">&#39;HRP2_breakpoint&#39;</span><span class="p">])</span>
+    <span class="n">df_samples_hrp</span><span class="p">[</span><span class="n">df_samples_hrp</span><span class="p">[</span><span class="s1">'HRP2'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'del'</span><span class="p">]</span>
+    <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Gene</span><span class="o">=</span><span class="s1">'hrp2'</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'HRP2_deletion_type'</span><span class="p">:</span> <span class="s1">'Deletion type'</span><span class="p">})</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">'Gene'</span><span class="p">,</span> <span class="s1">'Deletion type'</span><span class="p">,</span> <span class="s1">'HRP2_breakpoint'</span><span class="p">])</span>
     <span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">breakpoint_agg</span><span class="p">)</span>
 <span class="p">)</span>
 
@@ -2481,10 +2481,10 @@ dtype: int64
 <span class="c1"># Apply breakpoint_agg function</span>
 
 <span class="n">hrp3_breakpoints_summary</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="n">df_samples_hrp</span><span class="p">[</span><span class="n">df_samples_hrp</span><span class="p">[</span><span class="s1">&#39;HRP3&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;del&#39;</span><span class="p">]</span>
-    <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Gene</span><span class="o">=</span><span class="s1">&#39;hrp3&#39;</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;HRP3_deletion_type&#39;</span><span class="p">:</span> <span class="s1">&#39;Deletion type&#39;</span><span class="p">})</span>
-    <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Gene&#39;</span><span class="p">,</span> <span class="s1">&#39;Deletion type&#39;</span><span class="p">,</span> <span class="s1">&#39;HRP3_breakpoint&#39;</span><span class="p">])</span>
+    <span class="n">df_samples_hrp</span><span class="p">[</span><span class="n">df_samples_hrp</span><span class="p">[</span><span class="s1">'HRP3'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'del'</span><span class="p">]</span>
+    <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Gene</span><span class="o">=</span><span class="s1">'hrp3'</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'HRP3_deletion_type'</span><span class="p">:</span> <span class="s1">'Deletion type'</span><span class="p">})</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">'Gene'</span><span class="p">,</span> <span class="s1">'Deletion type'</span><span class="p">,</span> <span class="s1">'HRP3_breakpoint'</span><span class="p">])</span>
     <span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">breakpoint_agg</span><span class="p">)</span>
 <span class="p">)</span>
 
@@ -2864,7 +2864,7 @@ dtype: int64
 <span class="c1"># Change the file path if you wish to send the file to a specific location</span>
 <span class="c1"># Change the file name if you wish to call it something else</span>
 
-<span class="n">df_breakpoints_summary</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s1">&#39;/content/drive/My Drive/HRP_breakpoints_summary_unformatted.xlsx&#39;</span><span class="p">)</span>
+<span class="n">df_breakpoints_summary</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s1">'/content/drive/My Drive/HRP_breakpoints_summary_unformatted.xlsx'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2878,31 +2878,31 @@ dtype: int64
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define an aggregation function to calculate proportions and counts for HRP2 and HRP3 genes.</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">proportion_agg</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    This function counts the number of deletions, the incidence of deletions, and more for both genes.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">names</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
 
     <span class="c1"># Calculate the number of HRP2 deletions</span>
-    <span class="n">names</span><span class="p">[</span><span class="s1">&#39;hrp2 calls&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;HRP2&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;uncallable&#39;</span><span class="p">)</span>
+    <span class="n">names</span><span class="p">[</span><span class="s1">'hrp2 calls'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">'HRP2'</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">'uncallable'</span><span class="p">)</span>
 
     <span class="c1"># Calculate the incidence of HRP2 deletions</span>
-    <span class="n">names</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">% hr</span><span class="s1">p2 deletions&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;HRP2&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;del&#39;</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;HRP2&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;uncallable&#39;</span><span class="p">))</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
+    <span class="n">names</span><span class="p">[</span><span class="s1">'</span><span class="si">% hr</span><span class="s1">p2 deletions'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">'HRP2'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'del'</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">'HRP2'</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">'uncallable'</span><span class="p">))</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
 
     <span class="c1"># Calculate the number of HRP3 deletions</span>
-    <span class="n">names</span><span class="p">[</span><span class="s1">&#39;hrp3 calls&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;HRP3&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;uncallable&#39;</span><span class="p">)</span>
+    <span class="n">names</span><span class="p">[</span><span class="s1">'hrp3 calls'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">'HRP3'</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">'uncallable'</span><span class="p">)</span>
 
     <span class="c1"># Calculate the percentage of HRP3 deletions</span>
-    <span class="n">names</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">% hr</span><span class="s1">p3 deletions&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;HRP3&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;del&#39;</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;HRP3&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;uncallable&#39;</span><span class="p">))</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">names</span><span class="p">[</span><span class="s1">'</span><span class="si">% hr</span><span class="s1">p3 deletions'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">'HRP3'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'del'</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">'HRP3'</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">'uncallable'</span><span class="p">))</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
 
     <span class="c1"># Calculate the number of deletions for both HRP2 and HRP3</span>
-    <span class="n">names</span><span class="p">[</span><span class="s1">&#39;hrp2 and hrp3 calls&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">((</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;HRP2&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;uncallable&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;HRP3&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;uncallable&#39;</span><span class="p">))</span>
+    <span class="n">names</span><span class="p">[</span><span class="s1">'hrp2 and hrp3 calls'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">((</span><span class="n">x</span><span class="p">[</span><span class="s1">'HRP2'</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">'uncallable'</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">'HRP3'</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">'uncallable'</span><span class="p">))</span>
 
     <span class="c1"># Calculate the incidence of deletions for both HRP2 and HRP3</span>
-    <span class="n">names</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">% hr</span><span class="s1">p2 and hrp3 deletions&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span>
-        <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;HRP2&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;del&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;HRP3&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;del&#39;</span><span class="p">)</span>
+    <span class="n">names</span><span class="p">[</span><span class="s1">'</span><span class="si">% hr</span><span class="s1">p2 and hrp3 deletions'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span>
+        <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">'HRP2'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'del'</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">'HRP3'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'del'</span><span class="p">)</span>
     <span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span>
-        <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;HRP2&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;uncallable&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;HRP3&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;uncallable&#39;</span><span class="p">)</span>
+        <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">'HRP2'</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">'uncallable'</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">'HRP3'</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">'uncallable'</span><span class="p">)</span>
     <span class="p">))</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
     <span class="c1"># Convert the values to integers</span>
     <span class="n">names</span> <span class="o">=</span> <span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">names</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
@@ -2918,20 +2918,20 @@ dtype: int64
 
 <span class="c1"># Calculate proportions and counts for HRP2 and HRP3 genes by country</span>
 <span class="n">df_hrp_by_country_table</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="n">df_samples_hrp</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Country&#39;</span><span class="p">)</span>  <span class="c1"># Group the data by country</span>
+    <span class="n">df_samples_hrp</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'Country'</span><span class="p">)</span>  <span class="c1"># Group the data by country</span>
     <span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">proportion_agg</span><span class="p">)</span>  <span class="c1"># Apply the proportion aggregation function to calculate statistics</span>
     <span class="o">.</span><span class="n">transpose</span><span class="p">()</span>  <span class="c1"># Transpose the table for better readability</span>
 <span class="p">)</span>
 
 <span class="c1"># Calculate sample counts for each country</span>
 <span class="n">hrp_by_country_n</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="n">df_samples_hrp</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Country&#39;</span><span class="p">)</span>  <span class="c1"># Group the data by country</span>
+    <span class="n">df_samples_hrp</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'Country'</span><span class="p">)</span>  <span class="c1"># Group the data by country</span>
     <span class="o">.</span><span class="n">size</span><span class="p">()</span>  <span class="c1"># Calculate the number of samples in each country</span>
 <span class="p">)</span>
 
 <span class="c1"># Rename columns to include sample counts next to country names</span>
-<span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">df_samples_hrp</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_samples_hrp</span><span class="p">[</span><span class="s1">&#39;QC pass&#39;</span><span class="p">],</span> <span class="s1">&#39;Country&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
-    <span class="n">new_column_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">country</span><span class="si">}</span><span class="s1"> (n=</span><span class="si">{</span><span class="n">hrp_by_country_n</span><span class="p">[</span><span class="n">country</span><span class="p">]</span><span class="si">:</span><span class="s1">,</span><span class="si">}</span><span class="s1">)&#39;</span>
+<span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">df_samples_hrp</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_samples_hrp</span><span class="p">[</span><span class="s1">'QC pass'</span><span class="p">],</span> <span class="s1">'Country'</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
+    <span class="n">new_column_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">country</span><span class="si">}</span><span class="s1"> (n=</span><span class="si">{</span><span class="n">hrp_by_country_n</span><span class="p">[</span><span class="n">country</span><span class="p">]</span><span class="si">:</span><span class="s1">,</span><span class="si">}</span><span class="s1">)'</span>
     <span class="n">df_hrp_by_country_table</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="n">country</span><span class="p">:</span> <span class="n">new_column_name</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="c1"># Transpose the table to have countries as rows and statistics as columns</span>
@@ -3500,7 +3500,7 @@ dtype: int64
 <span class="c1"># Change the file path if you wish to send the file to a specific location</span>
 <span class="c1"># Change the file name if you wish to call it something else</span>
 
-<span class="n">df_hrp_by_country_table</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s1">&#39;/content/drive/My Drive/HRP_country_summary_unformatted.xlsx&#39;</span><span class="p">)</span>
+<span class="n">df_hrp_by_country_table</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s1">'/content/drive/My Drive/HRP_country_summary_unformatted.xlsx'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

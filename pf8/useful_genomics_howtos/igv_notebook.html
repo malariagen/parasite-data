@@ -580,7 +580,7 @@ Requirement already satisfied: six&gt;=1.12.0 in /Users/eu1/Library/Python/3.11/
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">sample_viewer</span><span class="p">(</span><span class="n">sample_id</span><span class="p">,</span> <span class="n">chromosome</span><span class="p">,</span> <span class="n">start_base_coordinate</span><span class="p">,</span> <span class="n">end_base_coordinate</span><span class="p">,</span> <span class="n">showSoftClips</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-<span class="w">  </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">  </span><span class="sd">"""</span>
 <span class="sd">    Visualize genomic data using IGV_notebook.</span>
 
 <span class="sd">    Parameters:</span>
@@ -591,41 +591,41 @@ Requirement already satisfied: six&gt;=1.12.0 in /Users/eu1/Library/Python/3.11/
 
 <span class="sd">    Returns:</span>
 <span class="sd">    - igv_plot: IGV Browser object for further interaction.</span>
-<span class="sd">  &quot;&quot;&quot;</span>
+<span class="sd">  """</span>
 
   <span class="c1"># Define the genomic locus formatted for igv-notebook</span>
-  <span class="n">locus</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Pf3D7_</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">chromosome</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1">_v3:</span><span class="si">{</span><span class="n">start_base_coordinate</span><span class="si">:</span><span class="s1">,</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">end_base_coordinate</span><span class="si">:</span><span class="s1">,</span><span class="si">}</span><span class="s1">&#39;</span>
-  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Visualizing chromosome </span><span class="si">{</span><span class="n">chromosome</span><span class="si">}</span><span class="s1"> for genomic locus: </span><span class="si">{</span><span class="n">locus</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+  <span class="n">locus</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">'Pf3D7_</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">chromosome</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1">_v3:</span><span class="si">{</span><span class="n">start_base_coordinate</span><span class="si">:</span><span class="s1">,</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">end_base_coordinate</span><span class="si">:</span><span class="s1">,</span><span class="si">}</span><span class="s1">'</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Visualizing chromosome </span><span class="si">{</span><span class="n">chromosome</span><span class="si">}</span><span class="s1"> for genomic locus: </span><span class="si">{</span><span class="n">locus</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 
   <span class="c1"># Initialize the browser</span>
   <span class="n">igv_notebook</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
   <span class="n">igv_plot</span> <span class="o">=</span> <span class="n">igv_notebook</span><span class="o">.</span><span class="n">Browser</span><span class="p">(</span>
 
     <span class="p">{</span>
-        <span class="s2">&quot;locus&quot;</span><span class="p">:</span> <span class="n">locus</span><span class="p">,</span>
-            <span class="s2">&quot;tracks&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">"locus"</span><span class="p">:</span> <span class="n">locus</span><span class="p">,</span>
+            <span class="s2">"tracks"</span><span class="p">:</span> <span class="p">[</span>
 
             <span class="p">{</span>
-                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Annotations&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s1">&#39;https://pf8-release.cog.sanger.ac.uk/annotations/PlasmoDB-55_Pfalciparum3D7.gff.gz&#39;</span><span class="p">,</span>
-                <span class="s2">&quot;indexed&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
-                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;annotation&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;gff&quot;</span>
+                <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Annotations"</span><span class="p">,</span>
+                <span class="s2">"url"</span><span class="p">:</span> <span class="s1">'https://pf8-release.cog.sanger.ac.uk/annotations/PlasmoDB-55_Pfalciparum3D7.gff.gz'</span><span class="p">,</span>
+                <span class="s2">"indexed"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"annotation"</span><span class="p">,</span>
+                <span class="s2">"format"</span><span class="p">:</span> <span class="s2">"gff"</span>
             <span class="p">},</span>
             <span class="p">{</span>
-                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;CRAM&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;https://pf8-release.cog.sanger.ac.uk/cram/</span><span class="si">{</span><span class="n">sample_id</span><span class="si">}</span><span class="s2">.cram&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;indexURL&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;https://pf8-release.cog.sanger.ac.uk/cram/</span><span class="si">{</span><span class="n">sample_id</span><span class="si">}</span><span class="s2">.cram.crai&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;cram&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;alignment&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;showSoftClips&quot;</span><span class="p">:</span> <span class="n">showSoftClips</span><span class="p">,</span>
+                <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"CRAM"</span><span class="p">,</span>
+                <span class="s2">"url"</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"https://pf8-release.cog.sanger.ac.uk/cram/</span><span class="si">{</span><span class="n">sample_id</span><span class="si">}</span><span class="s2">.cram"</span><span class="p">,</span>
+                <span class="s2">"indexURL"</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"https://pf8-release.cog.sanger.ac.uk/cram/</span><span class="si">{</span><span class="n">sample_id</span><span class="si">}</span><span class="s2">.cram.crai"</span><span class="p">,</span>
+                <span class="s2">"format"</span><span class="p">:</span> <span class="s2">"cram"</span><span class="p">,</span>
+                <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"alignment"</span><span class="p">,</span>
+                <span class="s2">"showSoftClips"</span><span class="p">:</span> <span class="n">showSoftClips</span><span class="p">,</span>
             <span class="p">},</span>
         <span class="p">],</span>
 
         <span class="c1"># Load the reference</span>
-        <span class="s2">&quot;reference&quot;</span><span class="p">:</span> <span class="p">{</span>
-           <span class="s2">&quot;fastaURL&quot;</span><span class="p">:</span> <span class="s1">&#39;https://pf8-release.cog.sanger.ac.uk/reference/PlasmoDB-54-Pfalciparum3D7-Genome.fasta&#39;</span><span class="p">,</span>
-           <span class="s2">&quot;indexed&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="c1"># reads entire fasta</span>
+        <span class="s2">"reference"</span><span class="p">:</span> <span class="p">{</span>
+           <span class="s2">"fastaURL"</span><span class="p">:</span> <span class="s1">'https://pf8-release.cog.sanger.ac.uk/reference/PlasmoDB-54-Pfalciparum3D7-Genome.fasta'</span><span class="p">,</span>
+           <span class="s2">"indexed"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="c1"># reads entire fasta</span>
         <span class="p">},</span>
     <span class="p">})</span>
 
@@ -645,7 +645,7 @@ Requirement already satisfied: six&gt;=1.12.0 in /Users/eu1/Library/Python/3.11/
 <p>We will specify the sample and navigate to a genomic location where <em>hrp2</em> deletion is expected.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_viewer</span><span class="p">(</span><span class="s1">&#39;PP0026-C&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1374970</span><span class="p">,</span> <span class="mi">1375040</span><span class="p">,</span> <span class="n">showSoftClips</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_viewer</span><span class="p">(</span><span class="s1">'PP0026-C'</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1374970</span><span class="p">,</span> <span class="mi">1375040</span><span class="p">,</span> <span class="n">showSoftClips</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1314,7 +1314,7 @@ function(e){var t,i,n,r,s,o,a,c,l,h,d,u,f,p,g,m,w,b,F,v="sizzle"+1*new Date,y=e.
 <p>Let’s zoom out a bit to have a clear view by defining a range (1kb) that includes the deletion locus. The breakpoint will be seen before 1,374,850 bp and after 1,374,950 bp.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_viewer</span><span class="p">(</span><span class="s1">&#39;PP0026-C&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1374800</span><span class="p">,</span> <span class="mi">1375079</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_viewer</span><span class="p">(</span><span class="s1">'PP0026-C'</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1374800</span><span class="p">,</span> <span class="mi">1375079</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1984,7 +1984,7 @@ function(e){var t,i,n,r,s,o,a,c,l,h,d,u,f,p,g,m,w,b,F,v="sizzle"+1*new Date,y=e.
 <p>Let’s look at a different example of a deletion. We will navigate to <em>hrp3</em> where we expect to see deletion of the whole gene. In this example, we can also see the deletion of other neighbouring genes (PF3D7_1372100, PF3D7_1372000) in addition to <em>hrp3</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_viewer</span><span class="p">(</span><span class="s1">&#39;PD0129-C&#39;</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">2840236</span><span class="p">,</span><span class="mi">2842840</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_viewer</span><span class="p">(</span><span class="s1">'PD0129-C'</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">2840236</span><span class="p">,</span><span class="mi">2842840</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2664,7 +2664,7 @@ function(e){var t,i,n,r,s,o,a,c,l,h,d,u,f,p,g,m,w,b,F,v="sizzle"+1*new Date,y=e.
 <p>Now, let’s look at the plot and notice the increase in the coverage where MDR1 starts (after 955kb). Also, when we zoom-in in the MDR1, we can see many red flags with the right to left orientation. Notably, two neighboring genes (PF3D7_0523100 and PF3D7_0523200) also share these findings.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_viewer</span><span class="p">(</span><span class="s1">&#39;PD0131-C&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">941041</span><span class="p">,</span> <span class="mi">969604</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_viewer</span><span class="p">(</span><span class="s1">'PD0131-C'</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">941041</span><span class="p">,</span> <span class="mi">969604</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3336,7 +3336,7 @@ function(e){var t,i,n,r,s,o,a,c,l,h,d,u,f,p,g,m,w,b,F,v="sizzle"+1*new Date,y=e.
 <p>Also note that the coverage of Plasmepsin 2/3 gene (3892) is 2-5 times more than the neighbour genes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_viewer</span><span class="p">(</span><span class="s1">&#39;PG0607-C&#39;</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">295000</span><span class="p">,</span> <span class="mi">302000</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_viewer</span><span class="p">(</span><span class="s1">'PG0607-C'</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">295000</span><span class="p">,</span> <span class="mi">302000</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -4003,7 +4003,7 @@ function(e){var t,i,n,r,s,o,a,c,l,h,d,u,f,p,g,m,w,b,F,v="sizzle"+1*new Date,y=e.
 <p>Let’s look at the duplication at the second sample in genomic locus close to 299kb.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_viewer</span><span class="p">(</span><span class="s1">&#39;PG0609-C&#39;</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">293000</span><span class="p">,</span> <span class="mi">300000</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_viewer</span><span class="p">(</span><span class="s1">'PG0609-C'</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">293000</span><span class="p">,</span> <span class="mi">300000</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -4671,7 +4671,7 @@ function(e){var t,i,n,r,s,o,a,c,l,h,d,u,f,p,g,m,w,b,F,v="sizzle"+1*new Date,y=e.
 <p>The breakpoint in the first sample starts around 297,350bp.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_viewer</span><span class="p">(</span><span class="s1">&#39;PG0607-C&#39;</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">297200</span><span class="p">,</span> <span class="mi">299000</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_viewer</span><span class="p">(</span><span class="s1">'PG0607-C'</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">297200</span><span class="p">,</span> <span class="mi">299000</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -5338,7 +5338,7 @@ function(e){var t,i,n,r,s,o,a,c,l,h,d,u,f,p,g,m,w,b,F,v="sizzle"+1*new Date,y=e.
 <p>The breakpoint in the second sample starts around 297,300bp, 60 base pairs behind from the first sample.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_viewer</span><span class="p">(</span><span class="s1">&#39;PG0609-C&#39;</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">297200</span><span class="p">,</span> <span class="mi">299000</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_viewer</span><span class="p">(</span><span class="s1">'PG0609-C'</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">297200</span><span class="p">,</span> <span class="mi">299000</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -6009,7 +6009,7 @@ function(e){var t,i,n,r,s,o,a,c,l,h,d,u,f,p,g,m,w,b,F,v="sizzle"+1*new Date,y=e.
 <p>In the IGV plot genomic locations 403,620-403,625 bp, we can see while some reads don’t have any SNP, other reads have the following 4 SNPs: 403620 G&gt;T, 403621 A&gt;G, 403624 T&gt;A, 403625 A&gt;C. These four SNPs indicates a variation from the reference genome (3D7) and makes the CVIET haplotype.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_viewer</span><span class="p">(</span><span class="s1">&#39;FP0025-C&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">403600</span><span class="p">,</span> <span class="mi">403650</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_viewer</span><span class="p">(</span><span class="s1">'FP0025-C'</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">403600</span><span class="p">,</span> <span class="mi">403650</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

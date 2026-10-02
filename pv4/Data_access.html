@@ -508,7 +508,7 @@ document.write(`
 <span class="kn">from</span><span class="w"> </span><span class="nn">dask.diagnostics.progress</span><span class="w"> </span><span class="kn">import</span> <span class="n">ProgressBar</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">allel</span>
 <span class="c1"># silence some warnings</span>
-<span class="n">dask</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="o">**</span><span class="p">{</span><span class="s1">&#39;array.slicing.split_large_chunks&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">})</span>
+<span class="n">dask</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="o">**</span><span class="p">{</span><span class="s1">'array.slicing.split_large_chunks'</span><span class="p">:</span> <span class="kc">False</span><span class="p">})</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">malariagen_data</span>
 </pre></div>
 </div>
@@ -747,7 +747,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The dataset has </span><span class="si">{}</span><span class="s2"> samples and </span><span class="si">{}</span><span class="s2"> fields&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pv4_metadata</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">pv4_metadata</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"The dataset has </span><span class="si">{}</span><span class="s2"> samples and </span><span class="si">{}</span><span class="s2"> fields"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pv4_metadata</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">pv4_metadata</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
 </pre></div>
 </div>
 </div>
@@ -775,7 +775,7 @@ document.write(`
 <p>The python package <a class="reference external" href="https://pandas.pydata.org/">Pandas</a> can be used to explore and query the sample metadata in different ways. For example, here is a summary of the numbers of samples grouped by the country they were collected in:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pv4_metadata</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Country&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pv4_metadata</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"Country"</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -6127,7 +6127,7 @@ Data variables: (12/42)
 <p>Each of the elements in this xarray dataset is a <a class="reference external" href="https://docs.dask.org/en/latest/array.html">dask array</a>. The individual dask arrays can be accessed as follows, replacing the string with the variable you are looking for:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pos</span> <span class="o">=</span> <span class="n">variant_dataset</span><span class="p">[</span><span class="s2">&quot;variant_position&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">data</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pos</span> <span class="o">=</span> <span class="n">variant_dataset</span><span class="p">[</span><span class="s2">"variant_position"</span><span class="p">]</span><span class="o">.</span><span class="n">data</span>
 <span class="n">pos</span>
 </pre></div>
 </div>
@@ -6224,7 +6224,7 @@ Data variables: (12/42)
 <p>Variant genotypes can be accessed as dask arrays as shown below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gt</span> <span class="o">=</span> <span class="n">variant_dataset</span><span class="p">[</span><span class="s2">&quot;call_genotype&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">data</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gt</span> <span class="o">=</span> <span class="n">variant_dataset</span><span class="p">[</span><span class="s2">"call_genotype"</span><span class="p">]</span><span class="o">.</span><span class="n">data</span>
 <span class="n">gt</span>
 </pre></div>
 </div>
@@ -6387,8 +6387,8 @@ Data variables: (12/42)
 <p>Note that the columns of this array (second dimension) match the rows in the sample metadata. You can use this correspondance to apply further subsetting operations to the genotypes by querying the sample metadata. E.g.:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">loc_cambodia</span> <span class="o">=</span> <span class="n">pv4_metadata</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="s2">&quot;Country == &#39;Cambodia&#39;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;found </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">loc_cambodia</span><span class="p">)</span><span class="si">}</span><span class="s2"> samples from Cambodia&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">loc_cambodia</span> <span class="o">=</span> <span class="n">pv4_metadata</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="s2">"Country == 'Cambodia'"</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"found </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">loc_cambodia</span><span class="p">)</span><span class="si">}</span><span class="s2"> samples from Cambodia"</span><span class="p">)</span>
 <span class="n">variant_dataset_cambodia</span> <span class="o">=</span> <span class="n">variant_dataset</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">samples</span><span class="o">=</span><span class="n">loc_cambodia</span><span class="p">)</span>
 <span class="n">variant_dataset_cambodia</span>
 </pre></div>
@@ -7644,7 +7644,7 @@ Data variables:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># use the scikit-allel wrapper class for genotype calls</span>
-<span class="n">gt</span> <span class="o">=</span> <span class="n">allel</span><span class="o">.</span><span class="n">GenotypeDaskArray</span><span class="p">(</span><span class="n">variant_dataset_cambodia</span><span class="p">[</span><span class="s2">&quot;call_genotype&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+<span class="n">gt</span> <span class="o">=</span> <span class="n">allel</span><span class="o">.</span><span class="n">GenotypeDaskArray</span><span class="p">(</span><span class="n">variant_dataset_cambodia</span><span class="p">[</span><span class="s2">"call_genotype"</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
 <span class="n">gt</span>
 </pre></div>
 </div>
@@ -7950,7 +7950,7 @@ Data variables:
 <p>The above loads a default set of attributes <code class="docutils literal notranslate"><span class="pre">&quot;ID&quot;,</span> <span class="pre">&quot;Parent&quot;,</span> <span class="pre">&quot;Name&quot;,</span> <span class="pre">&quot;alias&quot;</span></code>. To access all features set <code class="docutils literal notranslate"><span class="pre">attributes</span></code> to <code class="docutils literal notranslate"><span class="pre">&quot;*&quot;</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pv4</span><span class="o">.</span><span class="n">genome_features</span><span class="p">(</span><span class="n">attributes</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pv4</span><span class="o">.</span><span class="n">genome_features</span><span class="p">(</span><span class="n">attributes</span><span class="o">=</span><span class="s2">"*"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8348,7 +8348,7 @@ Data variables:
 <p>Or to get a specific set of attributes specify them in a list</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pv4</span><span class="o">.</span><span class="n">genome_features</span><span class="p">(</span><span class="n">attributes</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;alias&#39;</span><span class="p">,</span><span class="s1">&#39;comment&#39;</span><span class="p">,</span><span class="s1">&#39;product&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pv4</span><span class="o">.</span><span class="n">genome_features</span><span class="p">(</span><span class="n">attributes</span><span class="o">=</span><span class="p">[</span><span class="s1">'alias'</span><span class="p">,</span><span class="s1">'comment'</span><span class="p">,</span><span class="s1">'product'</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -8721,7 +8721,7 @@ Data variables:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([b&#39;a&#39;, b&#39;a&#39;, b&#39;t&#39;, ..., b&#39;t&#39;, b&#39;a&#39;, b&#39;a&#39;], dtype=&#39;|S1&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([b'a', b'a', b't', ..., b't', b'a', b'a'], dtype='|S1')
 </pre></div>
 </div>
 </div>
@@ -8735,22 +8735,22 @@ Data variables:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;PvP01_01_v1&#39;,
- &#39;PvP01_02_v1&#39;,
- &#39;PvP01_03_v1&#39;,
- &#39;PvP01_04_v1&#39;,
- &#39;PvP01_05_v1&#39;,
- &#39;PvP01_06_v1&#39;,
- &#39;PvP01_07_v1&#39;,
- &#39;PvP01_08_v1&#39;,
- &#39;PvP01_09_v1&#39;,
- &#39;PvP01_10_v1&#39;,
- &#39;PvP01_11_v1&#39;,
- &#39;PvP01_12_v1&#39;,
- &#39;PvP01_13_v1&#39;,
- &#39;PvP01_14_v1&#39;,
- &#39;PvP01_API_v1&#39;,
- &#39;PvP01_MIT_v1&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['PvP01_01_v1',
+ 'PvP01_02_v1',
+ 'PvP01_03_v1',
+ 'PvP01_04_v1',
+ 'PvP01_05_v1',
+ 'PvP01_06_v1',
+ 'PvP01_07_v1',
+ 'PvP01_08_v1',
+ 'PvP01_09_v1',
+ 'PvP01_10_v1',
+ 'PvP01_11_v1',
+ 'PvP01_12_v1',
+ 'PvP01_13_v1',
+ 'PvP01_14_v1',
+ 'PvP01_API_v1',
+ 'PvP01_MIT_v1']
 </pre></div>
 </div>
 </div>
@@ -8758,7 +8758,7 @@ Data variables:
 <p>To load a single contig</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pv4</span><span class="o">.</span><span class="n">genome_sequence</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="s1">&#39;PvP01_01_v1&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pv4</span><span class="o">.</span><span class="n">genome_sequence</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="s1">'PvP01_01_v1'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8828,7 +8828,7 @@ Data variables:
 <p>To load multiple contigs specify them in a list. The data will be concatenated.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pv4</span><span class="o">.</span><span class="n">genome_sequence</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;PvP01_01_v1&#39;</span><span class="p">,</span><span class="s1">&#39;PvP01_06_v1&#39;</span><span class="p">,</span><span class="s1">&#39;PvP01_10_v1&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pv4</span><span class="o">.</span><span class="n">genome_sequence</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="p">[</span><span class="s1">'PvP01_01_v1'</span><span class="p">,</span><span class="s1">'PvP01_06_v1'</span><span class="p">,</span><span class="s1">'PvP01_10_v1'</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -8906,7 +8906,7 @@ Data variables:
 <p>You can also specify a specific region of the contig.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pv4</span><span class="o">.</span><span class="n">genome_sequence</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;PvP01_01_v1&#39;</span><span class="p">,</span><span class="s1">&#39;PvP01_06_v1:15-20&#39;</span><span class="p">,</span><span class="s1">&#39;PvP01_10_v1:40-50&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pv4</span><span class="o">.</span><span class="n">genome_sequence</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="p">[</span><span class="s1">'PvP01_01_v1'</span><span class="p">,</span><span class="s1">'PvP01_06_v1:15-20'</span><span class="p">,</span><span class="s1">'PvP01_10_v1:40-50'</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -8978,13 +8978,13 @@ Data variables:
 <p>If you know the gene name you would like to access, but aren’t sure what the ID would be you can access this through the annotations. Below is an example for <code class="docutils literal notranslate"><span class="pre">?</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gene_name</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">genome_features</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">genome_features</span><span class="o">.</span><span class="n">Name</span> <span class="o">==</span> <span class="s1">&#39;ORC2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">ID</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gene_name</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">genome_features</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">genome_features</span><span class="o">.</span><span class="n">Name</span> <span class="o">==</span> <span class="s1">'ORC2'</span><span class="p">]</span><span class="o">.</span><span class="n">ID</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">gene_name</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;PVP01_0105500&#39;]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['PVP01_0105500']
 </pre></div>
 </div>
 </div>
@@ -8992,7 +8992,7 @@ Data variables:
 <p>You can then enter this as the region</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pv4</span><span class="o">.</span><span class="n">genome_sequence</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="s1">&#39;PVP01_0105500&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pv4</span><span class="o">.</span><span class="n">genome_sequence</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="s1">'PVP01_0105500'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

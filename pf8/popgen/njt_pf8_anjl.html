@@ -542,22 +542,22 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cloud path to Pf8 distance matrix</span>
-<span class="n">s3_path</span> <span class="o">=</span> <span class="s2">&quot;s3://pf8-release/Pf8_mean_genotype_distance.npy&quot;</span>
+<span class="n">s3_path</span> <span class="o">=</span> <span class="s2">"s3://pf8-release/Pf8_mean_genotype_distance.npy"</span>
 
-<span class="n">config</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;signature_version&#39;</span><span class="p">:</span> <span class="s1">&#39;s3&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;s3&#39;</span><span class="p">:</span> <span class="p">{</span> <span class="s1">&#39;addressing_style&#39;</span><span class="p">:</span> <span class="s1">&#39;virtual&#39;</span> <span class="p">}</span>
+<span class="n">config</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'signature_version'</span><span class="p">:</span> <span class="s1">'s3'</span><span class="p">,</span>
+    <span class="s1">'s3'</span><span class="p">:</span> <span class="p">{</span> <span class="s1">'addressing_style'</span><span class="p">:</span> <span class="s1">'virtual'</span> <span class="p">}</span>
 <span class="p">}</span>
 
 <span class="n">fs</span> <span class="o">=</span> <span class="n">s3fs</span><span class="o">.</span><span class="n">S3FileSystem</span><span class="p">(</span>
     <span class="n">anon</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">endpoint_url</span><span class="o">=</span><span class="s1">&#39;https://cog.sanger.ac.uk&#39;</span><span class="p">,</span>
+    <span class="n">endpoint_url</span><span class="o">=</span><span class="s1">'https://cog.sanger.ac.uk'</span><span class="p">,</span>
     <span class="n">config_kwargs</span><span class="o">=</span><span class="n">config</span>
 <span class="p">)</span>
 
 <span class="c1"># Open and load the .npy file</span>
-<span class="k">with</span> <span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">s3_path</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="k">with</span> <span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">s3_path</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">mean_distance_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Distance matrix loaded successfully.&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Distance matrix loaded successfully.'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -574,7 +574,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make subsets of the metadata dataframe</span>
-<span class="n">df_qc</span> <span class="o">=</span> <span class="n">sample_metadata</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;QC pass&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">]</span>
+<span class="n">df_qc</span> <span class="o">=</span> <span class="n">sample_metadata</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">'QC pass'</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">]</span>
 <span class="n">df_qc</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>
@@ -588,7 +588,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Apply the same filtering to the distance matrix</span>
-<span class="n">qc_samples</span> <span class="o">=</span> <span class="p">(</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;QC pass&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+<span class="n">qc_samples</span> <span class="o">=</span> <span class="p">(</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">'QC pass'</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
 <span class="n">qc_matrix</span> <span class="o">=</span> <span class="n">mean_distance_matrix</span><span class="p">[</span><span class="n">qc_samples</span><span class="p">][:,</span><span class="n">qc_samples</span><span class="p">]</span>
 <span class="n">qc_matrix</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
@@ -616,16 +616,16 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># First, create a dictionary of colours for each of the ten subpopulations in Pf8</span>
 <span class="c1"># This maps a population acronym (the dictionary key) to a 6-digit HEX code, which corresponds to a colour (the dictionary value)</span>
 <span class="n">colour_dict</span> <span class="o">=</span> <span class="p">{</span>
-<span class="s2">&quot;SA&quot;</span><span class="p">:</span> <span class="s2">&quot;#4daf4a&quot;</span><span class="p">,</span> <span class="c1"># South America</span>
-<span class="s2">&quot;AF-W&quot;</span><span class="p">:</span><span class="s2">&quot;#e31a1c&quot;</span><span class="p">,</span> <span class="c1"># West Africa</span>
-<span class="s2">&quot;AF-C&quot;</span><span class="p">:</span><span class="s2">&quot;#fd8d3c&quot;</span><span class="p">,</span> <span class="c1"># Central Africa</span>
-<span class="s2">&quot;AF-NE&quot;</span><span class="p">:</span> <span class="s2">&quot;#bb8129&quot;</span><span class="p">,</span> <span class="c1"># Northeast Africa</span>
-<span class="s2">&quot;AF-E&quot;</span><span class="p">:</span><span class="s2">&quot;#fecc5c&quot;</span><span class="p">,</span> <span class="c1"># East Africa</span>
-<span class="s2">&quot;AS-S-E&quot;</span><span class="p">:</span><span class="s2">&quot;#dfc0eb&quot;</span><span class="p">,</span> <span class="c1"># Eastern South Asia</span>
-<span class="s2">&quot;AS-S-FE&quot;</span><span class="p">:</span> <span class="s2">&quot;#984ea3&quot;</span><span class="p">,</span> <span class="c1"># Far-Eastern South Asia</span>
-<span class="s2">&quot;AS-SE-W&quot;</span><span class="p">:</span> <span class="s2">&quot;#9ecae1&quot;</span><span class="p">,</span> <span class="c1"># Western Southeast Asia</span>
-<span class="s2">&quot;AS-SE-E&quot;</span><span class="p">:</span><span class="s2">&quot;#3182bd&quot;</span><span class="p">,</span> <span class="c1"># Eastern Southeast Asia</span>
-<span class="s2">&quot;OC-NG&quot;</span><span class="p">:</span><span class="s2">&quot;#f781bf&quot;</span> <span class="c1"># Oceania / New Guinea</span>
+<span class="s2">"SA"</span><span class="p">:</span> <span class="s2">"#4daf4a"</span><span class="p">,</span> <span class="c1"># South America</span>
+<span class="s2">"AF-W"</span><span class="p">:</span><span class="s2">"#e31a1c"</span><span class="p">,</span> <span class="c1"># West Africa</span>
+<span class="s2">"AF-C"</span><span class="p">:</span><span class="s2">"#fd8d3c"</span><span class="p">,</span> <span class="c1"># Central Africa</span>
+<span class="s2">"AF-NE"</span><span class="p">:</span> <span class="s2">"#bb8129"</span><span class="p">,</span> <span class="c1"># Northeast Africa</span>
+<span class="s2">"AF-E"</span><span class="p">:</span><span class="s2">"#fecc5c"</span><span class="p">,</span> <span class="c1"># East Africa</span>
+<span class="s2">"AS-S-E"</span><span class="p">:</span><span class="s2">"#dfc0eb"</span><span class="p">,</span> <span class="c1"># Eastern South Asia</span>
+<span class="s2">"AS-S-FE"</span><span class="p">:</span> <span class="s2">"#984ea3"</span><span class="p">,</span> <span class="c1"># Far-Eastern South Asia</span>
+<span class="s2">"AS-SE-W"</span><span class="p">:</span> <span class="s2">"#9ecae1"</span><span class="p">,</span> <span class="c1"># Western Southeast Asia</span>
+<span class="s2">"AS-SE-E"</span><span class="p">:</span><span class="s2">"#3182bd"</span><span class="p">,</span> <span class="c1"># Eastern Southeast Asia</span>
+<span class="s2">"OC-NG"</span><span class="p">:</span><span class="s2">"#f781bf"</span> <span class="c1"># Oceania / New Guinea</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -646,18 +646,18 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the figure object</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">anjl</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
     <span class="n">Z</span><span class="p">,</span>
-    <span class="n">leaf_data</span><span class="o">=</span><span class="n">df_qc</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">&#39;???&#39;</span><span class="p">),</span> <span class="c1"># the input dataframe</span>
-    <span class="n">color</span><span class="o">=</span> <span class="s2">&quot;Population&quot;</span><span class="p">,</span> <span class="c1"># how the tree branches should be coloured</span>
+    <span class="n">leaf_data</span><span class="o">=</span><span class="n">df_qc</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">'???'</span><span class="p">),</span> <span class="c1"># the input dataframe</span>
+    <span class="n">color</span><span class="o">=</span> <span class="s2">"Population"</span><span class="p">,</span> <span class="c1"># how the tree branches should be coloured</span>
     <span class="n">color_discrete_map</span> <span class="o">=</span> <span class="n">colour_dict</span><span class="p">,</span> <span class="c1"># the colour dictionary we just created</span>
-    <span class="n">hover_name</span><span class="o">=</span><span class="s2">&quot;Sample&quot;</span><span class="p">,</span> <span class="c1"># what the title of the hover text should be</span>
-    <span class="n">hover_data</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Country&quot;</span><span class="p">],</span> <span class="c1"># this can be a list</span>
+    <span class="n">hover_name</span><span class="o">=</span><span class="s2">"Sample"</span><span class="p">,</span> <span class="c1"># what the title of the hover text should be</span>
+    <span class="n">hover_data</span><span class="o">=</span><span class="p">[</span><span class="s2">"Country"</span><span class="p">],</span> <span class="c1"># this can be a list</span>
     <span class="n">line_width</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
     <span class="n">marker_size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
     <span class="n">width</span> <span class="o">=</span> <span class="mi">1500</span><span class="p">,</span>
     <span class="n">height</span> <span class="o">=</span> <span class="mi">1500</span><span class="p">,</span>
     <span class="n">distance_sort</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
     <span class="n">count_sort</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-    <span class="n">render_mode</span><span class="o">=</span><span class="s2">&quot;svg&quot;</span>
+    <span class="n">render_mode</span><span class="o">=</span><span class="s2">"svg"</span>
 <span class="p">)</span>
 
 <span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -710,7 +710,7 @@ if (outputEl) {{
 <h2>Save the figure<a class="headerlink" href="#save-the-figure" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">'/content/drive'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -726,7 +726,7 @@ if (outputEl) {{
 <span class="c1"># Change the file path if you wish to send the file to a specific location</span>
 <span class="c1"># Change the file name if you wish to call it something else</span>
 
-<span class="n">fig</span><span class="o">.</span><span class="n">write_image</span><span class="p">(</span><span class="s1">&#39;/content/drive/My Drive/njt_pf8.png&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">write_image</span><span class="p">(</span><span class="s1">'/content/drive/My Drive/njt_pf8.png'</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

@@ -575,19 +575,19 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define a dictionary to link population code with the full name of each region</span>
 <span class="n">population_legend</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
-<span class="n">population_legend</span><span class="p">[</span><span class="s1">&#39;SA&#39;</span><span class="p">]</span>       <span class="o">=</span> <span class="s2">&quot;01. South America&quot;</span>
-<span class="n">population_legend</span><span class="p">[</span><span class="s1">&#39;AF-W&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">&quot;02. Africa - West&quot;</span>
-<span class="n">population_legend</span><span class="p">[</span><span class="s1">&#39;AF-C&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">&quot;03. Africa - Central&quot;</span>
-<span class="n">population_legend</span><span class="p">[</span><span class="s1">&#39;AF-NE&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">&quot;04. Africa - Northeast&quot;</span>
-<span class="n">population_legend</span><span class="p">[</span><span class="s1">&#39;AF-E&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">&quot;05. Africa - East&quot;</span>
-<span class="n">population_legend</span><span class="p">[</span><span class="s1">&#39;AS-S-E&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">&quot;06. Asia - South - East&quot;</span>
-<span class="n">population_legend</span><span class="p">[</span><span class="s1">&#39;AS-S-FE&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">&quot;07. Asia - South - Far East&quot;</span>
-<span class="n">population_legend</span><span class="p">[</span><span class="s1">&#39;AS-SE-W&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;08. Asia - Southeast - West&quot;</span>
-<span class="n">population_legend</span><span class="p">[</span><span class="s1">&#39;AS-SE-E&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;09. Asia - Southeast - East&quot;</span>
-<span class="n">population_legend</span><span class="p">[</span><span class="s1">&#39;OC-NG&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">&quot;10. Oceania - New Guinea&quot;</span>
+<span class="n">population_legend</span><span class="p">[</span><span class="s1">'SA'</span><span class="p">]</span>       <span class="o">=</span> <span class="s2">"01. South America"</span>
+<span class="n">population_legend</span><span class="p">[</span><span class="s1">'AF-W'</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">"02. Africa - West"</span>
+<span class="n">population_legend</span><span class="p">[</span><span class="s1">'AF-C'</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">"03. Africa - Central"</span>
+<span class="n">population_legend</span><span class="p">[</span><span class="s1">'AF-NE'</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">"04. Africa - Northeast"</span>
+<span class="n">population_legend</span><span class="p">[</span><span class="s1">'AF-E'</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">"05. Africa - East"</span>
+<span class="n">population_legend</span><span class="p">[</span><span class="s1">'AS-S-E'</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">"06. Asia - South - East"</span>
+<span class="n">population_legend</span><span class="p">[</span><span class="s1">'AS-S-FE'</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">"07. Asia - South - Far East"</span>
+<span class="n">population_legend</span><span class="p">[</span><span class="s1">'AS-SE-W'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"08. Asia - Southeast - West"</span>
+<span class="n">population_legend</span><span class="p">[</span><span class="s1">'AS-SE-E'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"09. Asia - Southeast - East"</span>
+<span class="n">population_legend</span><span class="p">[</span><span class="s1">'OC-NG'</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">"10. Oceania - New Guinea"</span>
 
-<span class="c1"># Include full name of each population as &#39;Region&#39; in the sample_metadata dataframe</span>
-<span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;Region&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;Population&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">population_legend</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="si">}</span><span class="s1"> (</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1">)&#39;</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">population_legend</span> <span class="k">else</span> <span class="s1">&#39;11. Unverified identity&#39;</span><span class="p">)</span>
+<span class="c1"># Include full name of each population as 'Region' in the sample_metadata dataframe</span>
+<span class="n">sample_metadata</span><span class="p">[</span><span class="s1">'Region'</span><span class="p">]</span> <span class="o">=</span> <span class="n">sample_metadata</span><span class="p">[</span><span class="s1">'Population'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">population_legend</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="si">}</span><span class="s1"> (</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1">)'</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">population_legend</span> <span class="k">else</span> <span class="s1">'11. Unverified identity'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -600,9 +600,9 @@ document.write(`
 <p>We make the new column so that the original longitude values are retained, in case they were ever needed in the future.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;country_long_table&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;Country longitude&#39;</span><span class="p">]</span> <span class="c1"># Add the new column for sorting the table</span>
-<span class="n">sample_metadata</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;Admin level 1&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Kisumu&#39;</span><span class="p">,</span> <span class="s1">&#39;country_long_table&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">40</span> <span class="c1"># Want it to appear last in AF-NE</span>
-<span class="n">sample_metadata</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;Admin level 1&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Kilifi&#39;</span><span class="p">,</span> <span class="s1">&#39;country_long_table&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">34</span> <span class="c1"># Want it to appear first in AF-E</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">'country_long_table'</span><span class="p">]</span> <span class="o">=</span> <span class="n">sample_metadata</span><span class="p">[</span><span class="s1">'Country longitude'</span><span class="p">]</span> <span class="c1"># Add the new column for sorting the table</span>
+<span class="n">sample_metadata</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">'Admin level 1'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'Kisumu'</span><span class="p">,</span> <span class="s1">'country_long_table'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">40</span> <span class="c1"># Want it to appear last in AF-NE</span>
+<span class="n">sample_metadata</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">'Admin level 1'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'Kilifi'</span><span class="p">,</span> <span class="s1">'country_long_table'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">34</span> <span class="c1"># Want it to appear first in AF-E</span>
 </pre></div>
 </div>
 </div>
@@ -613,14 +613,14 @@ document.write(`
 <p>Here we group by Region, Country, Admin level 1 and count the number of sequenced samples, then output to a dataframe, then order the locations from West to East based on country.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Aggregate data for all samples and store in a dataframe &#39;agg1&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Aggregate data for all samples and store in a dataframe 'agg1'</span>
 <span class="n">agg1</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">sample_metadata</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span>
-        <span class="p">[</span><span class="s1">&#39;Region&#39;</span><span class="p">,</span><span class="s1">&#39;Country&#39;</span><span class="p">,</span><span class="s1">&#39;Admin level 1&#39;</span><span class="p">,</span><span class="s1">&#39;country_long_table&#39;</span><span class="p">])</span>
+        <span class="p">[</span><span class="s1">'Region'</span><span class="p">,</span><span class="s1">'Country'</span><span class="p">,</span><span class="s1">'Admin level 1'</span><span class="p">,</span><span class="s1">'country_long_table'</span><span class="p">])</span>
     <span class="o">.</span><span class="n">size</span><span class="p">()</span>
-    <span class="o">.</span><span class="n">to_frame</span><span class="p">(</span><span class="s1">&#39;Sequenced samples&#39;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">to_frame</span><span class="p">(</span><span class="s1">'Sequenced samples'</span><span class="p">)</span>
     <span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
-    <span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Region&#39;</span><span class="p">,</span><span class="s1">&#39;country_long_table&#39;</span><span class="p">,</span><span class="s1">&#39;Admin level 1&#39;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Region'</span><span class="p">,</span><span class="s1">'country_long_table'</span><span class="p">,</span><span class="s1">'Admin level 1'</span><span class="p">])</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -632,14 +632,14 @@ document.write(`
 <span class="c1"># We define new dataframes to keep each stage of data manipulation separate</span>
 <span class="n">agg2</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">sample_metadata</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span>
-        <span class="p">[</span><span class="s1">&#39;Region&#39;</span><span class="p">,</span><span class="s1">&#39;Country&#39;</span><span class="p">,</span><span class="s1">&#39;Admin level 1&#39;</span><span class="p">,</span><span class="s1">&#39;country_long_table&#39;</span><span class="p">,</span><span class="s1">&#39;QC pass&#39;</span><span class="p">]</span>
+        <span class="p">[</span><span class="s1">'Region'</span><span class="p">,</span><span class="s1">'Country'</span><span class="p">,</span><span class="s1">'Admin level 1'</span><span class="p">,</span><span class="s1">'country_long_table'</span><span class="p">,</span><span class="s1">'QC pass'</span><span class="p">]</span>
         <span class="p">)</span>
     <span class="o">.</span><span class="n">size</span><span class="p">()</span>
-    <span class="o">.</span><span class="n">to_frame</span><span class="p">(</span><span class="s1">&#39;Analysis set samples&#39;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">to_frame</span><span class="p">(</span><span class="s1">'Analysis set samples'</span><span class="p">)</span>
     <span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
-    <span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Region&#39;</span><span class="p">,</span><span class="s1">&#39;country_long_table&#39;</span><span class="p">,</span><span class="s1">&#39;Admin level 1&#39;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Region'</span><span class="p">,</span><span class="s1">'country_long_table'</span><span class="p">,</span><span class="s1">'Admin level 1'</span><span class="p">])</span>
 <span class="p">)</span>
-<span class="n">agg3</span> <span class="o">=</span> <span class="n">agg2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">agg2</span><span class="p">[</span><span class="s1">&#39;QC pass&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">]</span>
+<span class="n">agg3</span> <span class="o">=</span> <span class="n">agg2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">agg2</span><span class="p">[</span><span class="s1">'QC pass'</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -650,11 +650,11 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table_df</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">agg1</span><span class="p">,</span> <span class="n">agg3</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span> <span class="s1">&#39;Admin level 1&#39;</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s1">&#39;left&#39;</span><span class="p">,</span><span class="n">suffixes</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;_y&#39;</span><span class="p">))</span>
-    <span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Region&#39;</span><span class="p">,</span><span class="s1">&#39;country_long_table&#39;</span><span class="p">,</span> <span class="s1">&#39;Admin level 1&#39;</span><span class="p">])</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">agg1</span><span class="p">,</span> <span class="n">agg3</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span> <span class="s1">'Admin level 1'</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s1">'left'</span><span class="p">,</span><span class="n">suffixes</span><span class="o">=</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span> <span class="s1">'_y'</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Region'</span><span class="p">,</span><span class="s1">'country_long_table'</span><span class="p">,</span> <span class="s1">'Admin level 1'</span><span class="p">])</span>
     <span class="p">)</span> <span class="c1"># Merge</span>
-<span class="n">table_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">table_df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">regex</span><span class="o">=</span><span class="s1">&#39;_y$&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># Drop duplicate columns</span>
-<span class="n">table_df_trimmed</span> <span class="o">=</span> <span class="n">table_df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;country_long_table&#39;</span><span class="p">,</span><span class="s1">&#39;QC pass&#39;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># Drop further uneccesary columns and make a new df to avoid confusion</span>
+<span class="n">table_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">table_df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">regex</span><span class="o">=</span><span class="s1">'_y$'</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># Drop duplicate columns</span>
+<span class="n">table_df_trimmed</span> <span class="o">=</span> <span class="n">table_df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">'country_long_table'</span><span class="p">,</span><span class="s1">'QC pass'</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># Drop further uneccesary columns and make a new df to avoid confusion</span>
 </pre></div>
 </div>
 </div>
@@ -665,7 +665,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove the first 3 characters from each value in the column</span>
-<span class="n">table_df_trimmed</span><span class="p">[</span><span class="s1">&#39;Region&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">table_df_trimmed</span><span class="p">[</span><span class="s1">&#39;Region&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+<span class="n">table_df_trimmed</span><span class="p">[</span><span class="s1">'Region'</span><span class="p">]</span> <span class="o">=</span> <span class="n">table_df_trimmed</span><span class="p">[</span><span class="s1">'Region'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
 </pre></div>
 </div>
 </div>
@@ -676,23 +676,23 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get our unverified location samples and count them</span>
-<span class="n">ui_samps</span> <span class="o">=</span> <span class="n">sample_metadata</span><span class="p">[</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;Region&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;11. Unverified identity&#39;</span><span class="p">]</span>
+<span class="n">ui_samps</span> <span class="o">=</span> <span class="n">sample_metadata</span><span class="p">[</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">'Region'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'11. Unverified identity'</span><span class="p">]</span>
 <span class="n">no_ui</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ui_samps</span><span class="p">)</span>
-<span class="n">no_ui_qc</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ui_samps</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ui_samps</span><span class="p">[</span><span class="s1">&#39;QC pass&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">])</span>
+<span class="n">no_ui_qc</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ui_samps</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ui_samps</span><span class="p">[</span><span class="s1">'QC pass'</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">])</span>
 
 <span class="c1"># Create a mini dataframe to append to our main table</span>
 <span class="n">ui_sum</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;Region&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Unverified identity&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;Country&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;Admin level 1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;Sequenced samples&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">no_ui</span><span class="p">],</span>
-    <span class="s1">&#39;Analysis set samples&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">no_ui_qc</span><span class="p">]</span>
+    <span class="s1">'Region'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'Unverified identity'</span><span class="p">],</span>
+    <span class="s1">'Country'</span><span class="p">:</span> <span class="p">[</span><span class="s1">''</span><span class="p">],</span>
+    <span class="s1">'Admin level 1'</span><span class="p">:</span> <span class="p">[</span><span class="s1">''</span><span class="p">],</span>
+    <span class="s1">'Sequenced samples'</span><span class="p">:</span> <span class="p">[</span><span class="n">no_ui</span><span class="p">],</span>
+    <span class="s1">'Analysis set samples'</span><span class="p">:</span> <span class="p">[</span><span class="n">no_ui_qc</span><span class="p">]</span>
 <span class="p">}</span>
 <span class="n">ui_sum_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ui_sum</span><span class="p">)</span>
 
 <span class="c1"># Add to the main table</span>
 <span class="n">table_df_ui</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">table_df_trimmed</span><span class="p">,</span> <span class="n">ui_sum_df</span><span class="p">],</span> <span class="n">ignore_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="n">table_df_ui</span><span class="p">[</span><span class="s1">&#39;Analysis set samples&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">table_df_ui</span><span class="p">[</span><span class="s1">&#39;Analysis set samples&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int&#39;</span><span class="p">)</span> <span class="c1"># Convert from float to integer</span>
+<span class="n">table_df_ui</span><span class="p">[</span><span class="s1">'Analysis set samples'</span><span class="p">]</span> <span class="o">=</span> <span class="n">table_df_ui</span><span class="p">[</span><span class="s1">'Analysis set samples'</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'int'</span><span class="p">)</span> <span class="c1"># Convert from float to integer</span>
 </pre></div>
 </div>
 </div>
@@ -702,14 +702,14 @@ document.write(`
 <h3>Add a totals row at the bottom<a class="headerlink" href="#add-a-totals-row-at-the-bottom" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">total_samps</span> <span class="o">=</span> <span class="n">table_df_ui</span><span class="p">[</span><span class="s1">&#39;Sequenced samples&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="s1">&#39;sum&#39;</span><span class="p">)</span>
-<span class="n">total_analysis</span> <span class="o">=</span> <span class="n">table_df_ui</span><span class="p">[</span><span class="s1">&#39;Analysis set samples&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="s1">&#39;sum&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">total_samps</span> <span class="o">=</span> <span class="n">table_df_ui</span><span class="p">[</span><span class="s1">'Sequenced samples'</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="s1">'sum'</span><span class="p">)</span>
+<span class="n">total_analysis</span> <span class="o">=</span> <span class="n">table_df_ui</span><span class="p">[</span><span class="s1">'Analysis set samples'</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="s1">'sum'</span><span class="p">)</span>
 <span class="n">totals</span> <span class="o">=</span>  <span class="p">{</span>
-    <span class="s1">&#39;Region&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Total&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;Country&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;Admin level 1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;Sequenced samples&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">total_samps</span><span class="p">],</span>
-    <span class="s1">&#39;Analysis set samples&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">total_analysis</span><span class="p">]</span>
+    <span class="s1">'Region'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'Total'</span><span class="p">],</span>
+    <span class="s1">'Country'</span><span class="p">:</span> <span class="p">[</span><span class="s1">''</span><span class="p">],</span>
+    <span class="s1">'Admin level 1'</span><span class="p">:</span> <span class="p">[</span><span class="s1">''</span><span class="p">],</span>
+    <span class="s1">'Sequenced samples'</span><span class="p">:</span> <span class="p">[</span><span class="n">total_samps</span><span class="p">],</span>
+    <span class="s1">'Analysis set samples'</span><span class="p">:</span> <span class="p">[</span><span class="n">total_analysis</span><span class="p">]</span>
 <span class="p">}</span>
 <span class="n">totals_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">totals</span><span class="p">)</span>
 <span class="n">table_df_ui_totals</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">table_df_ui</span><span class="p">,</span> <span class="n">totals_df</span><span class="p">],</span> <span class="n">ignore_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
@@ -722,7 +722,7 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This has all the info we need - but it could still be clearer to read</span>
 <span class="c1"># Make it so there is just one name per Region / Country</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_rows</span> <span class="o">=</span> <span class="mi">300</span>
-<span class="n">table_df_final</span> <span class="o">=</span> <span class="n">table_df_ui_totals</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">&#39;Region&#39;</span><span class="p">,</span> <span class="s1">&#39;Country&#39;</span><span class="p">,</span> <span class="s1">&#39;Admin level 1&#39;</span><span class="p">])</span>
+<span class="n">table_df_final</span> <span class="o">=</span> <span class="n">table_df_ui_totals</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">'Region'</span><span class="p">,</span> <span class="s1">'Country'</span><span class="p">,</span> <span class="s1">'Admin level 1'</span><span class="p">])</span>
 <span class="n">table_df_final</span>
 </pre></div>
 </div>
@@ -1714,7 +1714,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># You will need to authorise Google Colab access to Google Drive</span>
-<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">'/content/drive'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1729,7 +1729,7 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This will send the file to your Google Drive, where you can download it from if needed</span>
 <span class="c1"># Change the file path if you wish to send the file to a specific location</span>
 <span class="c1"># Change the file name if you wish to call it something else</span>
-<span class="n">table_df_final</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s1">&#39;/content/drive/My Drive/summary_table_sample_summary.xlsx&#39;</span><span class="p">)</span>
+<span class="n">table_df_final</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s1">'/content/drive/My Drive/summary_table_sample_summary.xlsx'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

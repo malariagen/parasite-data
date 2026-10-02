@@ -553,8 +553,8 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read in calls file direct from MalariaGEN website</span>
 <span class="n">df_eba</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
-    <span class="s1">&#39;https://www.malariagen.net/wp-content/uploads/2023/11/Pf7_eba175_callset.txt&#39;</span>
-    <span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span>
+    <span class="s1">'https://www.malariagen.net/wp-content/uploads/2023/11/Pf7_eba175_callset.txt'</span>
+    <span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">'</span><span class="se">\t</span><span class="s1">'</span>
     <span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span>
     <span class="p">,</span> <span class="n">low_memory</span><span class="o">=</span><span class="kc">False</span>
 <span class="p">)</span>
@@ -841,8 +841,8 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Merge the two dataframes on identical Sample IDs</span>
 <span class="n">df_calls</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="n">sample_metadata</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;QC pass&#39;</span><span class="p">]]</span>
-    <span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_eba</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;Sample&#39;</span><span class="p">)</span>
+    <span class="n">sample_metadata</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">'QC pass'</span><span class="p">]]</span>
+    <span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_eba</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">'Sample'</span><span class="p">)</span>
 <span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df_calls</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="c1"># View the new dataframe stucture</span>
@@ -1185,11 +1185,11 @@ document.write(`
 <p>First, we check the frequency of allelic types in the overall dataset before checking in each population.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_F</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">df_calls</span><span class="p">[</span><span class="s1">&#39;eba175_call&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">)</span>
-<span class="n">num_C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">df_calls</span><span class="p">[</span><span class="s1">&#39;eba175_call&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_F</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">df_calls</span><span class="p">[</span><span class="s1">'eba175_call'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'F'</span><span class="p">)</span>
+<span class="n">num_C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">df_calls</span><span class="p">[</span><span class="s1">'eba175_call'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'C'</span><span class="p">)</span>
 <span class="n">proportion_C</span> <span class="o">=</span> <span class="n">num_C</span> <span class="o">/</span> <span class="p">(</span><span class="n">num_C</span> <span class="o">+</span> <span class="n">num_F</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;We see </span><span class="si">{</span><span class="n">num_F</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> samples with the F allele and </span><span class="si">{</span><span class="n">num_C</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> samples with the C allele, </span><span class="se">\</span>
-<span class="s2">meaning that overall </span><span class="si">{</span><span class="n">proportion_C</span><span class="si">:</span><span class="s2">.0%</span><span class="si">}</span><span class="s2"> of samples that have an unambiguous call have the rarer C allele.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"We see </span><span class="si">{</span><span class="n">num_F</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> samples with the F allele and </span><span class="si">{</span><span class="n">num_C</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> samples with the C allele, </span><span class="se">\</span>
+<span class="s2">meaning that overall </span><span class="si">{</span><span class="n">proportion_C</span><span class="si">:</span><span class="s2">.0%</span><span class="si">}</span><span class="s2"> of samples that have an unambiguous call have the rarer C allele."</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1205,16 +1205,16 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define populations in an ordered dictionary</span>
 <span class="n">populations</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
-<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;SA&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;South America&#39;</span>
-<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AF-W&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;West Africa&#39;</span>
-<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AF-C&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Central Africa&#39;</span>
-<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AF-NE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Northeast Africa&#39;</span>
-<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AF-E&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;East Africa&#39;</span>
-<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AS-S-E&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Eastern South Asia&#39;</span>
-<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AS-S-FE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Far-eastern South Asia&#39;</span>
-<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AS-SE-W&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Western Southeast Asia&#39;</span>
-<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;AS-SE-E&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Eastern Southeast Asia&#39;</span>
-<span class="n">populations</span><span class="p">[</span><span class="s1">&#39;OC-NG&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Oceania&#39;</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">'SA'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'South America'</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">'AF-W'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'West Africa'</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">'AF-C'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'Central Africa'</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">'AF-NE'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'Northeast Africa'</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">'AF-E'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'East Africa'</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">'AS-S-E'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'Eastern South Asia'</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">'AS-S-FE'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'Far-eastern South Asia'</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">'AS-SE-W'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'Western Southeast Asia'</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">'AS-SE-E'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'Eastern Southeast Asia'</span>
+<span class="n">populations</span><span class="p">[</span><span class="s1">'OC-NG'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'Oceania'</span>
 </pre></div>
 </div>
 </div>
@@ -1225,13 +1225,13 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Function to aggregate population frequencies</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">my_agg</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="n">names</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
-    <span class="n">names</span><span class="p">[</span><span class="s1">&#39;Number F&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;eba175_call&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">)</span>
-    <span class="n">names</span><span class="p">[</span><span class="s1">&#39;Number C&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;eba175_call&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>
-    <span class="n">names</span><span class="p">[</span><span class="s1">&#39;Number F or C&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="s1">&#39;Number F&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">names</span><span class="p">[</span><span class="s1">&#39;Number C&#39;</span><span class="p">]</span>
-    <span class="n">names</span><span class="p">[</span><span class="s1">&#39;Proportion C&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="s1">&#39;Number C&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">names</span><span class="p">[</span><span class="s1">&#39;Number F or C&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="n">names</span><span class="p">[</span><span class="s1">&#39;Number F or C&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+    <span class="n">names</span><span class="p">[</span><span class="s1">'Number F'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">'eba175_call'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'F'</span><span class="p">)</span>
+    <span class="n">names</span><span class="p">[</span><span class="s1">'Number C'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">'eba175_call'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'C'</span><span class="p">)</span>
+    <span class="n">names</span><span class="p">[</span><span class="s1">'Number F or C'</span><span class="p">]</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="s1">'Number F'</span><span class="p">]</span> <span class="o">+</span> <span class="n">names</span><span class="p">[</span><span class="s1">'Number C'</span><span class="p">]</span>
+    <span class="n">names</span><span class="p">[</span><span class="s1">'Proportion C'</span><span class="p">]</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="s1">'Number C'</span><span class="p">]</span> <span class="o">/</span> <span class="n">names</span><span class="p">[</span><span class="s1">'Number F or C'</span><span class="p">]</span> <span class="k">if</span> <span class="n">names</span><span class="p">[</span><span class="s1">'Number F or C'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
     <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">names</span><span class="p">)</span>
 <span class="c1"># Summary table with population aggregates</span>
-<span class="n">df_pop_summary</span> <span class="o">=</span> <span class="n">df_calls</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Population&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">my_agg</span><span class="p">)</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">populations</span><span class="o">.</span><span class="n">keys</span><span class="p">()]</span>
+<span class="n">df_pop_summary</span> <span class="o">=</span> <span class="n">df_calls</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'Population'</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">my_agg</span><span class="p">)</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">populations</span><span class="o">.</span><span class="n">keys</span><span class="p">()]</span>
 <span class="n">df_pop_summary</span>
 </pre></div>
 </div>
@@ -1562,16 +1562,16 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create an ordered dictionary which maps the codes for major sub-populations -from west to east- to a colour code.</span>
 <span class="n">population_colours</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
-<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;SA&#39;</span><span class="p">]</span>       <span class="o">=</span> <span class="s2">&quot;#4daf4a&quot;</span>
-<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AF-W&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">&quot;#e31a1c&quot;</span>
-<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AF-C&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">&quot;#fd8d3c&quot;</span>
-<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AF-NE&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">&quot;#bb8129&quot;</span>
-<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AF-E&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">&quot;#fecc5c&quot;</span>
-<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AS-S-E&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">&quot;#dfc0eb&quot;</span>
-<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AS-S-FE&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">&quot;#984ea3&quot;</span>
-<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AS-SE-W&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;#9ecae1&quot;</span>
-<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AS-SE-E&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;#3182bd&quot;</span>
-<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;OC-NG&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">&quot;#f781bf&quot;</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">'SA'</span><span class="p">]</span>       <span class="o">=</span> <span class="s2">"#4daf4a"</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">'AF-W'</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">"#e31a1c"</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">'AF-C'</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">"#fd8d3c"</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">'AF-NE'</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">"#bb8129"</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">'AF-E'</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">"#fecc5c"</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">'AS-S-E'</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">"#dfc0eb"</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">'AS-S-FE'</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">"#984ea3"</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">'AS-SE-W'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"#9ecae1"</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">'AS-SE-E'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"#3182bd"</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">'OC-NG'</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">"#f781bf"</span>
 </pre></div>
 </div>
 </div>
@@ -1582,19 +1582,19 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the figure size</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 <span class="c1"># Set the chart variables</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df_pop_summary</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">df_pop_summary</span><span class="p">[</span><span class="s1">&#39;Proportion C&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">population_colours</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df_pop_summary</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">df_pop_summary</span><span class="p">[</span><span class="s1">'Proportion C'</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">population_colours</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
 <span class="c1"># Set the labels</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">df_pop_summary</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Population&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Proportion of C allele&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'Population'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'Proportion of C allele'</span><span class="p">)</span>
 <span class="c1"># Hide the right spine (axis line) of the plot</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;right&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">'right'</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
 <span class="c1"># Hide the top spine (axis line) of the plot</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;top&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">'top'</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
 <span class="c1"># Set the y-axis limits</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="c1"># Add a horizontal line showing %50 proportion</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lightgray&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'lightgray'</span><span class="p">)</span>
 <span class="c1"># Adjust figure to ensure everything fits nicely</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 </pre></div>
@@ -1617,7 +1617,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># You will need to authorise Google Colab access to Google Drive</span>
-<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">'/content/drive'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1633,8 +1633,8 @@ document.write(`
 <span class="c1"># Change the file path if you wish to send the file to a specific location</span>
 <span class="c1"># Change the file name if you wish to call it something else</span>
 
-<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;/content/drive/My Drive/Proportion_of_C_allele_by_population_20210720.pdf&#39;</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;/content/drive/My Drive/Proportion_of_C_allele_by_population_20210720.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">480</span><span class="p">)</span> <span class="c1"># increase the dpi for higher resolution</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">'/content/drive/My Drive/Proportion_of_C_allele_by_population_20210720.pdf'</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">'/content/drive/My Drive/Proportion_of_C_allele_by_population_20210720.png'</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">480</span><span class="p">)</span> <span class="c1"># increase the dpi for higher resolution</span>
 </pre></div>
 </div>
 </div>
@@ -1648,18 +1648,18 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Group the df_calls by variables (Population, Country, Admin level 1, and Year)</span>
-<span class="c1"># and apply the custom aggregation function &#39;my_agg&#39; to calculate the allele frequencies</span>
-<span class="n">df_admin1_year_summary</span> <span class="o">=</span> <span class="n">df_calls</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span> <span class="s1">&#39;Country&#39;</span><span class="p">,</span> <span class="s1">&#39;Admin level 1&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">my_agg</span><span class="p">)</span>
+<span class="c1"># and apply the custom aggregation function 'my_agg' to calculate the allele frequencies</span>
+<span class="n">df_admin1_year_summary</span> <span class="o">=</span> <span class="n">df_calls</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">'Population'</span><span class="p">,</span> <span class="s1">'Country'</span><span class="p">,</span> <span class="s1">'Admin level 1'</span><span class="p">,</span> <span class="s1">'Year'</span><span class="p">])</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">my_agg</span><span class="p">)</span>
 <span class="c1"># Print the shape of the resulting DataFrame</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df_admin1_year_summary</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="c1"># Calculate and print the maximum and minimum proportions of the C-type allele</span>
 <span class="c1"># considering n = number of samples with an F or C type allele called</span>
 <span class="c1"># min and max C allele proportions where n &gt;= 30</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Max proporiton C (n &gt; 30) = </span><span class="si">{</span><span class="n">df_admin1_year_summary</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_admin1_year_summary</span><span class="p">[</span><span class="s1">&#39;Number F or C&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Proportion C&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Min proporiton C (n &gt; 30) = </span><span class="si">{</span><span class="n">df_admin1_year_summary</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_admin1_year_summary</span><span class="p">[</span><span class="s1">&#39;Number F or C&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Proportion C&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Max proporiton C (n &gt; 30) = </span><span class="si">{</span><span class="n">df_admin1_year_summary</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_admin1_year_summary</span><span class="p">[</span><span class="s1">'Number F or C'</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="s1">'Proportion C'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Min proporiton C (n &gt; 30) = </span><span class="si">{</span><span class="n">df_admin1_year_summary</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_admin1_year_summary</span><span class="p">[</span><span class="s1">'Number F or C'</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="s1">'Proportion C'</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <span class="c1"># display 200 rows of resulting df where n &gt; 30</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_rows</span> <span class="o">=</span> <span class="mi">200</span>
-<span class="n">df_admin1_year_summary</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_admin1_year_summary</span><span class="p">[</span><span class="s1">&#39;Number F or C&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">]</span>
+<span class="n">df_admin1_year_summary</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_admin1_year_summary</span><span class="p">[</span><span class="s1">'Number F or C'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>

@@ -613,22 +613,22 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cloud path to Pf8 distance matrix</span>
-<span class="n">s3_path</span> <span class="o">=</span> <span class="s2">&quot;s3://pf8-release/Pf8_mean_genotype_distance.npy&quot;</span>
+<span class="n">s3_path</span> <span class="o">=</span> <span class="s2">"s3://pf8-release/Pf8_mean_genotype_distance.npy"</span>
 
-<span class="n">config</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;signature_version&#39;</span><span class="p">:</span> <span class="s1">&#39;s3&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;s3&#39;</span><span class="p">:</span> <span class="p">{</span> <span class="s1">&#39;addressing_style&#39;</span><span class="p">:</span> <span class="s1">&#39;virtual&#39;</span> <span class="p">}</span>
+<span class="n">config</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'signature_version'</span><span class="p">:</span> <span class="s1">'s3'</span><span class="p">,</span>
+    <span class="s1">'s3'</span><span class="p">:</span> <span class="p">{</span> <span class="s1">'addressing_style'</span><span class="p">:</span> <span class="s1">'virtual'</span> <span class="p">}</span>
 <span class="p">}</span>
 
 <span class="n">fs</span> <span class="o">=</span> <span class="n">s3fs</span><span class="o">.</span><span class="n">S3FileSystem</span><span class="p">(</span>
     <span class="n">anon</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">endpoint_url</span><span class="o">=</span><span class="s1">&#39;https://cog.sanger.ac.uk&#39;</span><span class="p">,</span>
+    <span class="n">endpoint_url</span><span class="o">=</span><span class="s1">'https://cog.sanger.ac.uk'</span><span class="p">,</span>
     <span class="n">config_kwargs</span><span class="o">=</span><span class="n">config</span>
 <span class="p">)</span>
 
 <span class="c1"># Open and load the .npy file</span>
-<span class="k">with</span> <span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">s3_path</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="k">with</span> <span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">s3_path</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">mean_distance_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Distance matrix loaded successfully.&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Distance matrix loaded successfully.'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -640,9 +640,9 @@ document.write(`
 <p>We need to subset the sample_metadata dataframe and the distance matrix so they only contain these samples.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Subset the metadata using the &#39;QC pass&#39; column</span>
-<span class="c1"># Select only rows where the value is &#39;True&#39;</span>
-<span class="n">sample_metadata_qc_pass</span> <span class="o">=</span> <span class="n">sample_metadata</span><span class="p">[</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;QC pass&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Subset the metadata using the 'QC pass' column</span>
+<span class="c1"># Select only rows where the value is 'True'</span>
+<span class="n">sample_metadata_qc_pass</span> <span class="o">=</span> <span class="n">sample_metadata</span><span class="p">[</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">'QC pass'</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">]</span>
 <span class="n">sample_metadata_qc_pass</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>
@@ -652,7 +652,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Subset the distance matrix using the same column</span>
-<span class="n">mean_distance_matrix_qc_pass</span> <span class="o">=</span> <span class="n">mean_distance_matrix</span><span class="p">[</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;QC pass&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">][:,</span> <span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;QC pass&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">]</span>
+<span class="n">mean_distance_matrix_qc_pass</span> <span class="o">=</span> <span class="n">mean_distance_matrix</span><span class="p">[</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">'QC pass'</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">][:,</span> <span class="n">sample_metadata</span><span class="p">[</span><span class="s1">'QC pass'</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">]</span>
 <span class="n">mean_distance_matrix_qc_pass</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>
@@ -695,7 +695,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.10/dist-packages/skbio/stats/ordination/_principal_coordinate_analysis.py:146: RuntimeWarning: The result contains negative eigenvalues. Please compare their magnitude with the magnitude of some of the largest positive eigenvalues. If the negative ones are smaller, it&#39;s probably safe to ignore them, but if they are large in magnitude, the results won&#39;t be useful. See the Notes section for more details. The smallest eigenvalue is -0.0007589793531224132 and the largest is 0.003880083793774247.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.10/dist-packages/skbio/stats/ordination/_principal_coordinate_analysis.py:146: RuntimeWarning: The result contains negative eigenvalues. Please compare their magnitude with the magnitude of some of the largest positive eigenvalues. If the negative ones are smaller, it's probably safe to ignore them, but if they are large in magnitude, the results won't be useful. See the Notes section for more details. The smallest eigenvalue is -0.0007589793531224132 and the largest is 0.003880083793774247.
   warn(
 </pre></div>
 </div>
@@ -1360,7 +1360,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># View subpopulations in dataset</span>
-<span class="n">sample_metadata_qc_pass</span><span class="p">[</span><span class="s1">&#39;Population&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<span class="n">sample_metadata_qc_pass</span><span class="p">[</span><span class="s1">'Population'</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1441,24 +1441,24 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define ordered dictionary to map colours to sub-populations</span>
 <span class="n">colourings</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
-<span class="n">colourings</span><span class="p">[</span><span class="s1">&#39;Population&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
+<span class="n">colourings</span><span class="p">[</span><span class="s1">'Population'</span><span class="p">]</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
 
 <span class="c1"># We nest a regular dictionary within the ordered dictionary which contains the</span>
 <span class="c1"># colour-subpopulation associations</span>
 <span class="n">population_colours</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;SA&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">&quot;#4daf4a&quot;</span>
-<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AF-W&#39;</span><span class="p">]</span><span class="o">=</span> <span class="s2">&quot;#e31a1c&quot;</span>
-<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AF-C&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;#fd8d3c&quot;</span>
-<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AF-NE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;#bb8129&quot;</span>
-<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AF-E&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;#fecc5c&quot;</span>
-<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AS-S-E&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;#dfc0eb&quot;</span>
-<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AS-S-FE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;#984ea3&quot;</span>
-<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AS-SE-W&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;#9ecae1&quot;</span>
-<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;AS-SE-E&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;#3182bd&quot;</span>
-<span class="n">population_colours</span><span class="p">[</span><span class="s1">&#39;OC-NG&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;#f781bf&quot;</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">'SA'</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">"#4daf4a"</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">'AF-W'</span><span class="p">]</span><span class="o">=</span> <span class="s2">"#e31a1c"</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">'AF-C'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"#fd8d3c"</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">'AF-NE'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"#bb8129"</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">'AF-E'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"#fecc5c"</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">'AS-S-E'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"#dfc0eb"</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">'AS-S-FE'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"#984ea3"</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">'AS-SE-W'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"#9ecae1"</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">'AS-SE-E'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"#3182bd"</span>
+<span class="n">population_colours</span><span class="p">[</span><span class="s1">'OC-NG'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"#f781bf"</span>
 
-<span class="c1"># Assign the population_colours dictionary to the &#39;Population&#39; key within the colourings ordered dictionary.</span>
-<span class="n">colourings</span><span class="p">[</span><span class="s1">&#39;Population&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">population_colours</span>
+<span class="c1"># Assign the population_colours dictionary to the 'Population' key within the colourings ordered dictionary.</span>
+<span class="n">colourings</span><span class="p">[</span><span class="s1">'Population'</span><span class="p">]</span> <span class="o">=</span> <span class="n">population_colours</span>
 </pre></div>
 </div>
 </div>
@@ -1466,21 +1466,21 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check all associations are as expected</span>
-<span class="n">colourings</span><span class="p">[</span><span class="s1">&#39;Population&#39;</span><span class="p">]</span>
+<span class="n">colourings</span><span class="p">[</span><span class="s1">'Population'</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;SA&#39;: &#39;#4daf4a&#39;,
- &#39;AF-W&#39;: &#39;#e31a1c&#39;,
- &#39;AF-C&#39;: &#39;#fd8d3c&#39;,
- &#39;AF-NE&#39;: &#39;#bb8129&#39;,
- &#39;AF-E&#39;: &#39;#fecc5c&#39;,
- &#39;AS-S-E&#39;: &#39;#dfc0eb&#39;,
- &#39;AS-S-FE&#39;: &#39;#984ea3&#39;,
- &#39;AS-SE-W&#39;: &#39;#9ecae1&#39;,
- &#39;AS-SE-E&#39;: &#39;#3182bd&#39;,
- &#39;OC-NG&#39;: &#39;#f781bf&#39;}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{'SA': '#4daf4a',
+ 'AF-W': '#e31a1c',
+ 'AF-C': '#fd8d3c',
+ 'AF-NE': '#bb8129',
+ 'AF-E': '#fecc5c',
+ 'AS-S-E': '#dfc0eb',
+ 'AS-S-FE': '#984ea3',
+ 'AS-SE-W': '#9ecae1',
+ 'AS-SE-E': '#3182bd',
+ 'OC-NG': '#f781bf'}
 </pre></div>
 </div>
 </div>
@@ -1496,7 +1496,7 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the function and its input parameters</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">plot_pca_coords</span><span class="p">(</span><span class="n">pcoa_results</span><span class="p">,</span> <span class="n">pc1</span><span class="p">,</span> <span class="n">pc2</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">df_samples</span><span class="o">=</span><span class="n">sample_metadata_qc_pass</span><span class="p">,</span>
                     <span class="n">sample_populations</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                    <span class="n">population_column</span><span class="o">=</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span>
+                    <span class="n">population_column</span><span class="o">=</span><span class="s1">'Population'</span><span class="p">,</span>
                     <span class="n">xlim</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ylim</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                     <span class="n">include_n_in_legend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                     <span class="n">include_prop_explain</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
@@ -1508,7 +1508,7 @@ document.write(`
                    <span class="p">):</span>
 
     <span class="c1"># A note on ordering populations</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Parameters:</span>
 <span class="sd">     - sample_populations: array-like (str)</span>
 <span class="sd">         populations to display.</span>
@@ -1518,7 +1518,7 @@ document.write(`
 <span class="sd">        order of populations in the legend.  If None, and sample_populations is None,</span>
 <span class="sd">        then uses the order they appear in df_samples.</span>
 <span class="sd">        If None and sample_populations is filled, then uses the order in sample_populations.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="c1"># Remove the upper and right-hand borders from the plot to ensure points are not obscured</span>
     <span class="n">sns</span><span class="o">.</span><span class="n">despine</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 
@@ -1529,8 +1529,8 @@ document.write(`
         <span class="n">target_populations</span> <span class="o">=</span> <span class="n">sample_populations</span>
 
     <span class="c1"># This condition deals with randomising the plotting of population points</span>
-    <span class="c1"># If the parameter is set to &#39;True&#39; then points are plotted randomly</span>
-    <span class="c1"># If it is set to &#39;False&#39; then populations are plotted in order.</span>
+    <span class="c1"># If the parameter is set to 'True' then points are plotted randomly</span>
+    <span class="c1"># If it is set to 'False' then populations are plotted in order.</span>
     <span class="k">if</span> <span class="n">is_randomize</span><span class="p">:</span>
 
         <span class="c1"># Filter samples according to the target populations</span>
@@ -1538,10 +1538,10 @@ document.write(`
                                     <span class="p">[</span><span class="n">population_column</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
         <span class="c1"># Select and apply their corresponding subpopulation colour</span>
-        <span class="n">colourings_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">colourings</span><span class="p">[</span><span class="n">population_column</span><span class="p">],</span> <span class="n">orient</span><span class="o">=</span><span class="s2">&quot;index&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">])</span>
+        <span class="n">colourings_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">colourings</span><span class="p">[</span><span class="n">population_column</span><span class="p">],</span> <span class="n">orient</span><span class="o">=</span><span class="s2">"index"</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">"color"</span><span class="p">])</span>
         <span class="n">colourings_df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">population_column</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="n">colourings_df</span> <span class="o">=</span> <span class="n">colourings_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-        <span class="n">df_samples_filt</span> <span class="o">=</span> <span class="n">df_samples_filt</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">colourings_df</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span>
+        <span class="n">df_samples_filt</span> <span class="o">=</span> <span class="n">df_samples_filt</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">colourings_df</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">"left"</span><span class="p">,</span>
                                                 <span class="n">left_on</span><span class="o">=</span><span class="n">population_column</span><span class="p">,</span>
                                                <span class="n">right_on</span><span class="o">=</span><span class="n">population_column</span><span class="p">)</span>
 
@@ -1549,7 +1549,7 @@ document.write(`
         <span class="n">filt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">df_samples</span><span class="p">[</span><span class="n">population_column</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">target_populations</span><span class="p">)</span>
         <span class="n">x_filt</span> <span class="o">=</span> <span class="n">pcoa_results</span><span class="o">.</span><span class="n">samples</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">filt</span><span class="p">,</span> <span class="n">pc1</span><span class="p">]</span>
         <span class="n">y_filt</span> <span class="o">=</span> <span class="n">pcoa_results</span><span class="o">.</span><span class="n">samples</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">filt</span><span class="p">,</span> <span class="n">pc2</span><span class="p">]</span>
-        <span class="n">color</span> <span class="o">=</span> <span class="n">df_samples_filt</span><span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+        <span class="n">color</span> <span class="o">=</span> <span class="n">df_samples_filt</span><span class="p">[</span><span class="s2">"color"</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
 
         <span class="c1"># Randomly reorder the data points using a permutation of indices.</span>
         <span class="n">plot_idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="n">df_samples_filt</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -1561,10 +1561,10 @@ document.write(`
         <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
             <span class="n">x_filt</span><span class="p">,</span>
             <span class="n">y_filt</span><span class="p">,</span>
-            <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span>
+            <span class="n">marker</span><span class="o">=</span><span class="s1">'o'</span><span class="p">,</span>
             <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span>
             <span class="n">s</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
-            <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span>
+            <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'k'</span><span class="p">,</span>
             <span class="n">linewidths</span><span class="o">=</span><span class="mf">.5</span><span class="p">,</span>
         <span class="p">)</span>
 
@@ -1578,10 +1578,10 @@ document.write(`
             <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
                 <span class="n">x_filt</span><span class="p">,</span>
                 <span class="n">y_filt</span><span class="p">,</span>
-                <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span>
+                <span class="n">marker</span><span class="o">=</span><span class="s1">'o'</span><span class="p">,</span>
                 <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span>
                 <span class="n">s</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
-                <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span>
+                <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'k'</span><span class="p">,</span>
                 <span class="n">linewidths</span><span class="o">=</span><span class="mf">.5</span><span class="p">,</span>
             <span class="p">)</span>
 
@@ -1592,30 +1592,30 @@ document.write(`
     <span class="n">labels</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">target_legend_order</span> <span class="o">=</span> <span class="n">legend_order</span>
 
-    <span class="c1"># If `legend_order` is set to &quot;None&quot;, write legend in same order as `target_populations`</span>
+    <span class="c1"># If `legend_order` is set to "None", write legend in same order as `target_populations`</span>
     <span class="k">if</span> <span class="n">target_legend_order</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">target_legend_order</span> <span class="o">=</span> <span class="n">target_populuations</span>
 
     <span class="k">for</span> <span class="n">target_pop</span> <span class="ow">in</span> <span class="n">target_legend_order</span><span class="p">:</span>
         <span class="c1"># Generate a coloured marker to link population names to point colours on the plot</span>
-        <span class="c1"># The marker has a circular shape (&#39;o&#39;),</span>
-        <span class="c1"># a black edge (&#39;mec=&quot;k&quot;&#39;), and a color from the population colourings dictionary.</span>
+        <span class="c1"># The marker has a circular shape ('o'),</span>
+        <span class="c1"># a black edge ('mec="k"'), and a color from the population colourings dictionary.</span>
         <span class="n">handle</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">Line2D</span><span class="p">([],</span> <span class="p">[],</span>
-                            <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span>
-                            <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span>
-                            <span class="n">mec</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span>
+                            <span class="n">linestyle</span><span class="o">=</span><span class="s1">'none'</span><span class="p">,</span>
+                            <span class="n">marker</span><span class="o">=</span><span class="s1">'o'</span><span class="p">,</span>
+                            <span class="n">mec</span><span class="o">=</span><span class="s2">"k"</span><span class="p">,</span>
                             <span class="n">markerfacecolor</span><span class="o">=</span><span class="n">colourings</span><span class="p">[</span><span class="n">population_column</span><span class="p">][</span><span class="n">target_pop</span><span class="p">])</span>
         <span class="n">handles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span> <span class="c1"># add to handles list</span>
 
         <span class="c1"># An option to include population size within the legend text</span>
         <span class="c1"># Otherwise, just write the population name</span>
         <span class="k">if</span> <span class="n">include_n_in_legend</span><span class="p">:</span>
-            <span class="n">label</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">target_pop</span><span class="si">}</span><span class="s2"> (n=</span><span class="si">{</span><span class="n">df_samples</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">population_column</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">target_pop</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">)&quot;</span>
+            <span class="n">label</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">target_pop</span><span class="si">}</span><span class="s2"> (n=</span><span class="si">{</span><span class="n">df_samples</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">population_column</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">target_pop</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">)"</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">label</span> <span class="o">=</span> <span class="n">target_pop</span>
         <span class="n">labels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
 
-    <span class="c1"># Define the legend using handles, labels, &#39;loc&#39; where to place in the plot,</span>
+    <span class="c1"># Define the legend using handles, labels, 'loc' where to place in the plot,</span>
     <span class="c1"># and bbox_to_anchor which sets the position of the legend box border</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="n">handles</span><span class="p">,</span>
             <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span>
@@ -1623,13 +1623,13 @@ document.write(`
 
     <span class="c1"># An option for labelling individual points on the plot with their sample ID</span>
     <span class="k">if</span> <span class="n">is_label_sample</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">sample_label</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">df_samples</span><span class="p">[</span><span class="n">plot_idx</span><span class="p">][</span><span class="s2">&quot;Sample&quot;</span><span class="p">]):</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">sample_label</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">df_samples</span><span class="p">[</span><span class="n">plot_idx</span><span class="p">][</span><span class="s2">"Sample"</span><span class="p">]):</span>
             <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">sample_label</span><span class="p">,</span> <span class="p">(</span><span class="n">x_filt</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">y_filt</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
 
     <span class="c1"># Option to include the proportion of variance explained by each PC</span>
     <span class="k">if</span> <span class="n">include_prop_explain</span><span class="p">:</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> (</span><span class="si">%.1f%%</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">pc1</span><span class="p">,</span> <span class="n">pcoa_results</span><span class="o">.</span><span class="n">proportion_explained</span><span class="p">[</span><span class="n">pc1</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> (</span><span class="si">%.1f%%</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">pc2</span><span class="p">,</span> <span class="n">pcoa_results</span><span class="o">.</span><span class="n">proportion_explained</span><span class="p">[</span><span class="n">pc2</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'</span><span class="si">%s</span><span class="s1"> (</span><span class="si">%.1f%%</span><span class="s1">)'</span> <span class="o">%</span> <span class="p">(</span><span class="n">pc1</span><span class="p">,</span> <span class="n">pcoa_results</span><span class="o">.</span><span class="n">proportion_explained</span><span class="p">[</span><span class="n">pc1</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'</span><span class="si">%s</span><span class="s1"> (</span><span class="si">%.1f%%</span><span class="s1">)'</span> <span class="o">%</span> <span class="p">(</span><span class="n">pc2</span><span class="p">,</span> <span class="n">pcoa_results</span><span class="o">.</span><span class="n">proportion_explained</span><span class="p">[</span><span class="n">pc2</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
     <span class="c1"># Otherwise, just use PC values</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">pc1</span><span class="p">)</span>
@@ -1653,7 +1653,7 @@ document.write(`
             <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
             <span class="n">df_samples</span><span class="o">=</span><span class="n">sample_metadata_qc_pass</span><span class="p">,</span>
             <span class="n">sample_populations</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-            <span class="n">population_column</span><span class="o">=</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span>
+            <span class="n">population_column</span><span class="o">=</span><span class="s1">'Population'</span><span class="p">,</span>
             <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span>
             <span class="n">legend_loc</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
             <span class="n">xlim</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -1668,12 +1668,12 @@ document.write(`
 
 <span class="c1"># Specify the size of the plot font</span>
     <span class="n">rcParams</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span>
-    <span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span>
-    <span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.labelsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span>
+    <span class="n">rcParams</span><span class="p">[</span><span class="s1">'font.size'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span>
+    <span class="n">rcParams</span><span class="p">[</span><span class="s1">'axes.labelsize'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span>
 
 <span class="c1"># Specify the size of the axes tick label sizes</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;xtick.labelsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">12</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;ytick.labelsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">12</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">'xtick.labelsize'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">12</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">'ytick.labelsize'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">12</span>
 
 <span class="c1"># If no population order is specified, just plot populations</span>
 <span class="c1"># in the same order as df_samples</span>
@@ -1710,7 +1710,7 @@ document.write(`
         <span class="n">start</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_xlim</span><span class="p">()</span>
         <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">start</span> <span class="o">/</span> <span class="n">xtick_stepsize</span><span class="p">)</span> <span class="o">*</span> <span class="n">xtick_stepsize</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">xtick_stepsize</span><span class="p">))</span>
 
-    <span class="c1"># Set a tight_layout() to ensure subplots fit within the figure&#39;s boundaries</span>
+    <span class="c1"># Set a tight_layout() to ensure subplots fit within the figure's boundaries</span>
     <span class="c1"># without overlapping or getting cut off</span>
     <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 
@@ -1728,19 +1728,19 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">fig_pca</span><span class="p">(</span>
     <span class="n">pcoa_results</span><span class="p">,</span>
-    <span class="s1">&#39;PC1&#39;</span><span class="p">,</span> <span class="s1">&#39;PC2&#39;</span><span class="p">,</span>
+    <span class="s1">'PC1'</span><span class="p">,</span> <span class="s1">'PC2'</span><span class="p">,</span>
     <span class="kc">None</span><span class="p">,</span>
     <span class="n">sample_metadata_qc_pass</span><span class="p">,</span>
-    <span class="n">sample_populations</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;AF-W&quot;</span><span class="p">,</span> <span class="s2">&quot;AF-NE&quot;</span><span class="p">,</span> <span class="s2">&quot;AF-E&quot;</span><span class="p">,</span> <span class="s2">&quot;AF-C&quot;</span><span class="p">,</span> <span class="s2">&quot;SA&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;AS-SE-E&quot;</span><span class="p">,</span> <span class="s2">&quot;AS-S-E&quot;</span><span class="p">,</span> <span class="s2">&quot;AS-S-FE&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;AS-SE-W&quot;</span><span class="p">,</span> <span class="s2">&quot;OC-NG&quot;</span><span class="p">],</span>
-    <span class="n">population_column</span><span class="o">=</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span>
+    <span class="n">sample_populations</span><span class="o">=</span><span class="p">[</span><span class="s2">"AF-W"</span><span class="p">,</span> <span class="s2">"AF-NE"</span><span class="p">,</span> <span class="s2">"AF-E"</span><span class="p">,</span> <span class="s2">"AF-C"</span><span class="p">,</span> <span class="s2">"SA"</span><span class="p">,</span>
+                        <span class="s2">"AS-SE-E"</span><span class="p">,</span> <span class="s2">"AS-S-E"</span><span class="p">,</span> <span class="s2">"AS-S-FE"</span><span class="p">,</span>
+                        <span class="s2">"AS-SE-W"</span><span class="p">,</span> <span class="s2">"OC-NG"</span><span class="p">],</span>
+    <span class="n">population_column</span><span class="o">=</span><span class="s1">'Population'</span><span class="p">,</span>
     <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span>
-    <span class="n">legend_loc</span><span class="o">=</span><span class="s2">&quot;best&quot;</span><span class="p">,</span>
+    <span class="n">legend_loc</span><span class="o">=</span><span class="s2">"best"</span><span class="p">,</span>
     <span class="n">xtick_stepsize</span><span class="o">=</span><span class="mf">4e-4</span><span class="p">,</span>
     <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
     <span class="n">is_randomize</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-    <span class="n">legend_order</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">colourings</span><span class="p">[</span><span class="s2">&quot;Population&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="n">legend_order</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">colourings</span><span class="p">[</span><span class="s2">"Population"</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -1753,12 +1753,12 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mount Google Drive</span>
-<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">'/content/drive'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount(&quot;/content/drive&quot;, force_remount=True).
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount("/content/drive", force_remount=True).
 </pre></div>
 </div>
 </div>
@@ -1769,12 +1769,12 @@ document.write(`
 <span class="c1"># This will send the file to your Google Drive, where you can download it from if needed</span>
 <span class="c1"># Change the file path if you wish to send the file to a specific location</span>
 <span class="c1"># Change the file name if you wish to call it something else</span>
-<span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;/content/drive/My Drive/&#39;</span>
-<span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;PCoA_1_vs_2&#39;</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="s1">'/content/drive/My Drive/'</span>
+<span class="n">file_name</span> <span class="o">=</span> <span class="s1">'PCoA_1_vs_2'</span>
 
 <span class="c1"># We save as both .png and .PDF files</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">240</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s2">&quot;tight&quot;</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.pdf&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.png'</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">240</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s2">"tight"</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.pdf'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1787,18 +1787,18 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">fig_pca</span><span class="p">(</span>
     <span class="n">pcoa_results</span><span class="p">,</span>
-    <span class="s1">&#39;PC1&#39;</span><span class="p">,</span> <span class="s1">&#39;PC8&#39;</span><span class="p">,</span>
+    <span class="s1">'PC1'</span><span class="p">,</span> <span class="s1">'PC8'</span><span class="p">,</span>
     <span class="kc">None</span><span class="p">,</span>
     <span class="n">sample_metadata_qc_pass</span><span class="p">,</span>
-    <span class="n">sample_populations</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;AF-W&quot;</span><span class="p">,</span> <span class="s2">&quot;AF-NE&quot;</span><span class="p">,</span> <span class="s2">&quot;AF-E&quot;</span><span class="p">,</span> <span class="s2">&quot;AF-C&quot;</span><span class="p">,</span> <span class="s2">&quot;SA&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;AS-SE-E&quot;</span><span class="p">,</span> <span class="s2">&quot;AS-S-E&quot;</span><span class="p">,</span> <span class="s2">&quot;AS-S-FE&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;AS-SE-W&quot;</span><span class="p">,</span> <span class="s2">&quot;OC-NG&quot;</span><span class="p">],</span>
-    <span class="n">population_column</span><span class="o">=</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span>
+    <span class="n">sample_populations</span><span class="o">=</span><span class="p">[</span><span class="s2">"AF-W"</span><span class="p">,</span> <span class="s2">"AF-NE"</span><span class="p">,</span> <span class="s2">"AF-E"</span><span class="p">,</span> <span class="s2">"AF-C"</span><span class="p">,</span> <span class="s2">"SA"</span><span class="p">,</span>
+                        <span class="s2">"AS-SE-E"</span><span class="p">,</span> <span class="s2">"AS-S-E"</span><span class="p">,</span> <span class="s2">"AS-S-FE"</span><span class="p">,</span>
+                        <span class="s2">"AS-SE-W"</span><span class="p">,</span> <span class="s2">"OC-NG"</span><span class="p">],</span>
+    <span class="n">population_column</span><span class="o">=</span><span class="s1">'Population'</span><span class="p">,</span>
     <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span>
-    <span class="n">legend_loc</span><span class="o">=</span><span class="s2">&quot;best&quot;</span><span class="p">,</span>
+    <span class="n">legend_loc</span><span class="o">=</span><span class="s2">"best"</span><span class="p">,</span>
     <span class="n">xtick_stepsize</span><span class="o">=</span><span class="mf">4e-4</span><span class="p">,</span>
     <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
-    <span class="n">legend_order</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">colourings</span><span class="p">[</span><span class="s2">&quot;Population&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span>
+    <span class="n">legend_order</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">colourings</span><span class="p">[</span><span class="s2">"Population"</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span>
     <span class="n">include_prop_explain</span><span class="o">=</span><span class="kc">False</span>
 <span class="p">)</span>
 </pre></div>
@@ -1815,12 +1815,12 @@ document.write(`
 <span class="c1"># This will send the file to your Google Drive, where you can download it from if needed</span>
 <span class="c1"># Change the file path if you wish to send the file to a specific location</span>
 <span class="c1"># Change the file name if you wish to call it something else</span>
-<span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;/content/drive/My Drive/&#39;</span>
-<span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;PCoA_1_vs_8&#39;</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="s1">'/content/drive/My Drive/'</span>
+<span class="n">file_name</span> <span class="o">=</span> <span class="s1">'PCoA_1_vs_8'</span>
 
 <span class="c1"># We save as both .png and .PDF files</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">240</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s2">&quot;tight&quot;</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.pdf&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.png'</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">240</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s2">"tight"</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.pdf'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1833,18 +1833,18 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">fig_pca</span><span class="p">(</span>
     <span class="n">pcoa_results</span><span class="p">,</span>
-    <span class="s1">&#39;PC1&#39;</span><span class="p">,</span> <span class="s1">&#39;PC3&#39;</span><span class="p">,</span>
+    <span class="s1">'PC1'</span><span class="p">,</span> <span class="s1">'PC3'</span><span class="p">,</span>
     <span class="kc">None</span><span class="p">,</span>
     <span class="n">sample_metadata_qc_pass</span><span class="p">,</span>
-    <span class="n">sample_populations</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;AF-W&quot;</span><span class="p">,</span> <span class="s2">&quot;AF-NE&quot;</span><span class="p">,</span> <span class="s2">&quot;AF-E&quot;</span><span class="p">,</span> <span class="s2">&quot;AF-C&quot;</span><span class="p">,</span> <span class="s2">&quot;SA&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;AS-SE-E&quot;</span><span class="p">,</span> <span class="s2">&quot;AS-S-E&quot;</span><span class="p">,</span> <span class="s2">&quot;AS-S-FE&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;AS-SE-W&quot;</span><span class="p">,</span> <span class="s2">&quot;OC-NG&quot;</span><span class="p">],</span>
-    <span class="n">population_column</span><span class="o">=</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span>
+    <span class="n">sample_populations</span><span class="o">=</span><span class="p">[</span><span class="s2">"AF-W"</span><span class="p">,</span> <span class="s2">"AF-NE"</span><span class="p">,</span> <span class="s2">"AF-E"</span><span class="p">,</span> <span class="s2">"AF-C"</span><span class="p">,</span> <span class="s2">"SA"</span><span class="p">,</span>
+                        <span class="s2">"AS-SE-E"</span><span class="p">,</span> <span class="s2">"AS-S-E"</span><span class="p">,</span> <span class="s2">"AS-S-FE"</span><span class="p">,</span>
+                        <span class="s2">"AS-SE-W"</span><span class="p">,</span> <span class="s2">"OC-NG"</span><span class="p">],</span>
+    <span class="n">population_column</span><span class="o">=</span><span class="s1">'Population'</span><span class="p">,</span>
     <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span>
-    <span class="n">legend_loc</span><span class="o">=</span><span class="s2">&quot;best&quot;</span><span class="p">,</span>
+    <span class="n">legend_loc</span><span class="o">=</span><span class="s2">"best"</span><span class="p">,</span>
     <span class="n">xtick_stepsize</span><span class="o">=</span><span class="mf">4e-4</span><span class="p">,</span>
     <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
-    <span class="n">legend_order</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">colourings</span><span class="p">[</span><span class="s2">&quot;Population&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="n">legend_order</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">colourings</span><span class="p">[</span><span class="s2">"Population"</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -1860,12 +1860,12 @@ document.write(`
 <span class="c1"># This will send the file to your Google Drive, where you can download it from if needed</span>
 <span class="c1"># Change the file path if you wish to send the file to a specific location</span>
 <span class="c1"># Change the file name if you wish to call it something else</span>
-<span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;/content/drive/My Drive/&#39;</span>
-<span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;PCoA_1_vs_3&#39;</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="s1">'/content/drive/My Drive/'</span>
+<span class="n">file_name</span> <span class="o">=</span> <span class="s1">'PCoA_1_vs_3'</span>
 
 <span class="c1"># We save as both .png and .PDF files</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">240</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s2">&quot;tight&quot;</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.pdf&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.png'</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">240</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s2">"tight"</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.pdf'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1878,22 +1878,22 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">fig_pca</span><span class="p">(</span>
     <span class="n">pcoa_results</span><span class="p">,</span>
-    <span class="s1">&#39;PC2&#39;</span><span class="p">,</span> <span class="s1">&#39;PC3&#39;</span><span class="p">,</span>
+    <span class="s1">'PC2'</span><span class="p">,</span> <span class="s1">'PC3'</span><span class="p">,</span>
     <span class="kc">None</span><span class="p">,</span>
     <span class="n">sample_metadata_qc_pass</span><span class="p">,</span>
-    <span class="n">sample_populations</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;AF-W&quot;</span><span class="p">,</span> <span class="s2">&quot;AF-NE&quot;</span><span class="p">,</span> <span class="s2">&quot;AF-E&quot;</span><span class="p">,</span> <span class="s2">&quot;AF-C&quot;</span><span class="p">,</span> <span class="s2">&quot;SA&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;AS-SE-E&quot;</span><span class="p">,</span> <span class="s2">&quot;AS-S-E&quot;</span><span class="p">,</span> <span class="s2">&quot;AS-S-FE&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;AS-SE-W&quot;</span><span class="p">,</span> <span class="s2">&quot;OC-NG&quot;</span><span class="p">],</span>
-    <span class="n">population_column</span><span class="o">=</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span>
+    <span class="n">sample_populations</span><span class="o">=</span><span class="p">[</span><span class="s2">"AF-W"</span><span class="p">,</span> <span class="s2">"AF-NE"</span><span class="p">,</span> <span class="s2">"AF-E"</span><span class="p">,</span> <span class="s2">"AF-C"</span><span class="p">,</span> <span class="s2">"SA"</span><span class="p">,</span>
+                        <span class="s2">"AS-SE-E"</span><span class="p">,</span> <span class="s2">"AS-S-E"</span><span class="p">,</span> <span class="s2">"AS-S-FE"</span><span class="p">,</span>
+                        <span class="s2">"AS-SE-W"</span><span class="p">,</span> <span class="s2">"OC-NG"</span><span class="p">],</span>
+    <span class="n">population_column</span><span class="o">=</span><span class="s1">'Population'</span><span class="p">,</span>
     <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span>
-    <span class="n">legend_loc</span><span class="o">=</span><span class="s2">&quot;best&quot;</span><span class="p">,</span>
+    <span class="n">legend_loc</span><span class="o">=</span><span class="s2">"best"</span><span class="p">,</span>
     <span class="n">xtick_stepsize</span><span class="o">=</span><span class="mf">4e-4</span><span class="p">,</span>
     <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
-    <span class="n">legend_order</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">colourings</span><span class="p">[</span><span class="s2">&quot;Population&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="n">legend_order</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">colourings</span><span class="p">[</span><span class="s2">"Population"</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
 <span class="p">)</span>
 
-<span class="c1">#fig.savefig(&#39;figures/PCoA_2_vs_3.pdf&#39;)</span>
-<span class="c1">#fig.savefig(&#39;figures/PCoA_2_vs_3.png&#39;, dpi=600)</span>
+<span class="c1">#fig.savefig('figures/PCoA_2_vs_3.pdf')</span>
+<span class="c1">#fig.savefig('figures/PCoA_2_vs_3.png', dpi=600)</span>
 </pre></div>
 </div>
 </div>
@@ -1908,12 +1908,12 @@ document.write(`
 <span class="c1"># This will send the file to your Google Drive, where you can download it from if needed</span>
 <span class="c1"># Change the file path if you wish to send the file to a specific location</span>
 <span class="c1"># Change the file name if you wish to call it something else</span>
-<span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;/content/drive/My Drive/&#39;</span>
-<span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;PCoA_2_vs_3&#39;</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="s1">'/content/drive/My Drive/'</span>
+<span class="n">file_name</span> <span class="o">=</span> <span class="s1">'PCoA_2_vs_3'</span>
 
 <span class="c1"># We save as both .png and .PDF files</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">240</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s2">&quot;tight&quot;</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.pdf&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.png'</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">240</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s2">"tight"</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.pdf'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

@@ -566,7 +566,7 @@ document.write(`
 <span class="c1"># The warning states that iteritems will be replaced by items() in the future</span>
 <span class="c1"># It appears to be a bug in rpy2 that we can ignore for now</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
-<span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">FutureWarning</span><span class="p">)</span> <span class="c1"># comment out this code if you would like to see the warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">'ignore'</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">FutureWarning</span><span class="p">)</span> <span class="c1"># comment out this code if you would like to see the warnings</span>
 </pre></div>
 </div>
 </div>
@@ -574,8 +574,8 @@ document.write(`
 <p>Install the required R packages</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This code block surpresses a long list of &#39;warnings&#39; from rpy2 when installing R packages</span>
-<span class="c1"># The &#39;warnings&#39; apppear to be empty or contain progress messages for the installation</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This code block surpresses a long list of 'warnings' from rpy2 when installing R packages</span>
+<span class="c1"># The 'warnings' apppear to be empty or contain progress messages for the installation</span>
 <span class="c1"># For this reason, we surpress them to keep the notebook neater.</span>
 <span class="c1"># If you want to see them, comment out this block.</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">rpy2.rinterface_lib.callbacks</span><span class="w"> </span><span class="kn">import</span> <span class="n">logger</span> <span class="k">as</span> <span class="n">rpy2_logger</span>
@@ -588,9 +588,9 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">R</span>
-<span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">&quot;ape&quot;</span><span class="p">,</span> <span class="n">lib</span> <span class="o">=</span> <span class="s1">&#39;/usr/local/lib/R/site-library&#39;</span><span class="p">)</span>
-<span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">&quot;RcppCNPy&quot;</span><span class="p">,</span> <span class="n">lib</span> <span class="o">=</span> <span class="s1">&#39;/usr/local/lib/R/site-library&#39;</span><span class="p">)</span>
-<span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">&quot;reticulate&quot;</span><span class="p">,</span> <span class="n">lib</span> <span class="o">=</span> <span class="s1">&#39;/usr/local/lib/R/site-library&#39;</span><span class="p">)</span>
+<span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">"ape"</span><span class="p">,</span> <span class="n">lib</span> <span class="o">=</span> <span class="s1">'/usr/local/lib/R/site-library'</span><span class="p">)</span>
+<span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">"RcppCNPy"</span><span class="p">,</span> <span class="n">lib</span> <span class="o">=</span> <span class="s1">'/usr/local/lib/R/site-library'</span><span class="p">)</span>
+<span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">"reticulate"</span><span class="p">,</span> <span class="n">lib</span> <span class="o">=</span> <span class="s1">'/usr/local/lib/R/site-library'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -633,29 +633,29 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the distance matrix</span>
 <span class="c1"># Replace these values with your FTP server details</span>
-<span class="n">ftp_host</span> <span class="o">=</span> <span class="s1">&#39;ngs.sanger.ac.uk&#39;</span>
-<span class="n">ftp_file_path</span> <span class="o">=</span> <span class="s1">&#39;/production/malaria/Resource/34/Pf7_genetic_distance_matrix.npy&#39;</span>
+<span class="n">ftp_host</span> <span class="o">=</span> <span class="s1">'ngs.sanger.ac.uk'</span>
+<span class="n">ftp_file_path</span> <span class="o">=</span> <span class="s1">'/production/malaria/Resource/34/Pf7_genetic_distance_matrix.npy'</span>
 
 <span class="c1"># Create an FTP instance and connect to the server</span>
 <span class="n">ftp</span> <span class="o">=</span> <span class="n">FTP</span><span class="p">(</span><span class="n">ftp_host</span><span class="p">)</span>
 <span class="n">ftp</span><span class="o">.</span><span class="n">login</span><span class="p">()</span>
 
 <span class="c1"># Change the current directory to the location of the file</span>
-<span class="n">ftp</span><span class="o">.</span><span class="n">cwd</span><span class="p">(</span><span class="s1">&#39;/production/malaria/Resource/34/&#39;</span><span class="p">)</span>  <span class="c1"># Change to the root directory or your desired directory</span>
+<span class="n">ftp</span><span class="o">.</span><span class="n">cwd</span><span class="p">(</span><span class="s1">'/production/malaria/Resource/34/'</span><span class="p">)</span>  <span class="c1"># Change to the root directory or your desired directory</span>
 
 <span class="c1"># Download the file to Colab</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;Pf7_genetic_distance_matrix.npy&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">ftp</span><span class="o">.</span><span class="n">retrbinary</span><span class="p">(</span><span class="s1">&#39;RETR &#39;</span> <span class="o">+</span> <span class="n">ftp_file_path</span><span class="p">,</span> <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'Pf7_genetic_distance_matrix.npy'</span><span class="p">,</span> <span class="s1">'wb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">ftp</span><span class="o">.</span><span class="n">retrbinary</span><span class="p">(</span><span class="s1">'RETR '</span> <span class="o">+</span> <span class="n">ftp_file_path</span><span class="p">,</span> <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">)</span>
 
 <span class="c1"># Close the FTP connection</span>
 <span class="n">ftp</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
 
 <span class="c1"># Check if the file is downloaded successfully</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
-<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;Pf7_genetic_distance_matrix.npy&#39;</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;File downloaded successfully.&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">'Pf7_genetic_distance_matrix.npy'</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'File downloaded successfully.'</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;File download failed.&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'File download failed.'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -668,7 +668,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">R</span>
-<span class="n">dist_fn</span> <span class="o">&lt;-</span> <span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s1">&#39;/content/Pf7_genetic_distance_matrix.npy&#39;</span><span class="p">)</span> <span class="c1"># The path to our copy of the distance matrix</span>
+<span class="n">dist_fn</span> <span class="o">&lt;-</span> <span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s1">'/content/Pf7_genetic_distance_matrix.npy'</span><span class="p">)</span> <span class="c1"># The path to our copy of the distance matrix</span>
 </pre></div>
 </div>
 </div>
@@ -676,7 +676,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">R</span>
-<span class="n">np</span> <span class="o">&lt;-</span> <span class="n">import</span><span class="p">(</span><span class="s2">&quot;numpy&quot;</span><span class="p">)</span> <span class="c1"># Import the python library numpy within an R environment</span>
+<span class="n">np</span> <span class="o">&lt;-</span> <span class="n">import</span><span class="p">(</span><span class="s2">"numpy"</span><span class="p">)</span> <span class="c1"># Import the python library numpy within an R environment</span>
 </pre></div>
 </div>
 </div>
@@ -711,7 +711,7 @@ mean_distance_matrix = np$load(dist_fn) # Define the distance matrix
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">robjects</span><span class="o">.</span><span class="n">globalenv</span><span class="p">[</span><span class="s1">&#39;r_dataframe&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">r_dataframe</span> <span class="c1">#Add the R dataframe to our R environment</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">robjects</span><span class="o">.</span><span class="n">globalenv</span><span class="p">[</span><span class="s1">'r_dataframe'</span><span class="p">]</span> <span class="o">=</span> <span class="n">r_dataframe</span> <span class="c1">#Add the R dataframe to our R environment</span>
 <span class="o">%</span><span class="n">R</span> <span class="n">df_samples</span> <span class="o">&lt;-</span> <span class="n">r_dataframe</span> <span class="c1"># change the dataframe name to something more informative</span>
 <span class="o">%</span><span class="n">R</span> <span class="n">head</span><span class="p">(</span><span class="n">df_samples</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
@@ -1038,8 +1038,8 @@ mean_distance_matrix = np$load(dist_fn) # Define the distance matrix
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>%%R
-df_samples$population_colour &lt;- ifelse(df_samples$`Sample type` == &quot;gDNA&quot;, &quot;#3182bd&quot;,
-                                       ifelse(df_samples$`Sample type` == &quot;sWGA&quot;, &quot;#e31a1c&quot;, &quot;NA&quot;))
+df_samples$population_colour &lt;- ifelse(df_samples$`Sample type` == "gDNA", "#3182bd",
+                                       ifelse(df_samples$`Sample type` == "sWGA", "#e31a1c", "NA"))
 </pre></div>
 </div>
 </div>
@@ -1056,13 +1056,13 @@ df_samples$population_colour &lt;- ifelse(df_samples$`Sample type` == &quot;gDNA
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>%%R
-# We combine the criteria using &quot;&amp;&quot; to create a logical vector &#39;pass_samples&#39;
+# We combine the criteria using "&amp;" to create a logical vector 'pass_samples'
 # where each element refers to a row in the df_samples dataframe
 # and evaluates to TRUE if all the conditions are met for that row, or FALSE otherwise.
 pass_samples &lt;- (
-    df_samples$`Exclusion reason` == &#39;Analysis_set&#39; &amp; # We use backticks (`) around column names with spaces &#39;Exclusion reason&#39;, to ensure they are correctly recognized as column names.
-    df_samples$Country == &#39;Ghana&#39; &amp;
-    df_samples$`Admin level 1` == &#39;Upper East&#39; &amp;
+    df_samples$`Exclusion reason` == 'Analysis_set' &amp; # We use backticks (`) around column names with spaces 'Exclusion reason', to ensure they are correctly recognized as column names.
+    df_samples$Country == 'Ghana' &amp;
+    df_samples$`Admin level 1` == 'Upper East' &amp;
     df_samples$Year == 2015
 )
 summary(pass_samples) # We have 225 samples that satisfy the criteria
@@ -1162,7 +1162,7 @@ computeEdgeGroupCounts &lt;- function(phylotree, labelgroups) {
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>%%R
-assignMajorityGroupColorToEdges &lt;- function(phylotree, edge_group_counts, groupcolors, equality_color=&quot;gray&quot;) {
+assignMajorityGroupColorToEdges &lt;- function(phylotree, edge_group_counts, groupcolors, equality_color="gray") {
   edge_colors &lt;- apply(phylotree$edge, 1, function(branch) { # Make an empty vector
     e &lt;- as.character(branch[2])
     major_group_index &lt;- which.max(edge_group_counts[e,]) # Identify the group with the max count
@@ -1183,7 +1183,7 @@ assignMajorityGroupColorToEdges &lt;- function(phylotree, edge_group_counts, gro
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>%%R
-assignGroupColorToUniqueEdges &lt;- function(phylotree, edge_group_counts, groupcolors, equality_color=&quot;gray&quot;) {
+assignGroupColorToUniqueEdges &lt;- function(phylotree, edge_group_counts, groupcolors, equality_color="gray") {
   edge_colors &lt;- apply(phylotree$edge, 1, function(branch) { # Make an empty vector
     e &lt;- as.character(branch[2])
     major_group_index &lt;- which.max(edge_group_counts[e,]) # Identify the group with the max count
@@ -1205,7 +1205,7 @@ assignGroupColorToUniqueEdges &lt;- function(phylotree, edge_group_counts, group
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>%%R
 # Create df_pops_with_colours by removing duplicated rows based on sample_type and population_colour columns
-df_pops_with_colours &lt;- df_samples[!duplicated(df_samples[, c(&#39;Sample type&#39;, &#39;population_colour&#39;)]), c(&#39;Sample type&#39;, &#39;population_colour&#39;)]
+df_pops_with_colours &lt;- df_samples[!duplicated(df_samples[, c('Sample type', 'population_colour')]), c('Sample type', 'population_colour')]
 
 # Display the resulting dataframe
 df_pops_with_colours
@@ -1232,7 +1232,7 @@ colourings_population
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     gDNA      sWGA       MDA 
-&quot;#3182bd&quot; &quot;#e31a1c&quot;      &quot;NA&quot; 
+"#3182bd" "#e31a1c"      "NA" 
 </pre></div>
 </div>
 </div>
@@ -1243,11 +1243,11 @@ colourings_population
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>%%R
-groups = as.factor(df_samples[pass_samples, &#39;Sample type&#39;])
-names(groups) = tree[3]$&#39;tip.label&#39;
+groups = as.factor(df_samples[pass_samples, 'Sample type'])
+names(groups) = tree[3]$'tip.label'
 counts = computeEdgeGroupCounts(tree, groups)
 edge_colors = unlist(assignGroupColorToUniqueEdges(
-    tree, counts, groupcolors=colourings_population, equality_color=&#39;gray&#39;
+    tree, counts, groupcolors=colourings_population, equality_color='gray'
 ))
 </pre></div>
 </div>
@@ -1260,8 +1260,8 @@ edge_colors = unlist(assignGroupColorToUniqueEdges(
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">R</span>
 <span class="n">plot</span><span class="o">.</span><span class="n">phylo</span><span class="p">(</span>
-    <span class="n">tree</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;unrooted&quot;</span><span class="p">,</span>
-    <span class="n">tip</span><span class="o">=</span><span class="n">df_samples</span><span class="p">[</span><span class="n">pass_samples</span><span class="p">,</span> <span class="s1">&#39;population_colour&#39;</span><span class="p">],</span>
+    <span class="n">tree</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"unrooted"</span><span class="p">,</span>
+    <span class="n">tip</span><span class="o">=</span><span class="n">df_samples</span><span class="p">[</span><span class="n">pass_samples</span><span class="p">,</span> <span class="s1">'population_colour'</span><span class="p">],</span>
     <span class="n">edge</span><span class="o">.</span><span class="n">color</span><span class="o">=</span><span class="n">unlist</span><span class="p">(</span><span class="n">edge_colors</span><span class="p">),</span>
     <span class="n">show</span><span class="o">.</span><span class="n">tip</span><span class="o">.</span><span class="n">label</span><span class="o">=</span><span class="n">FALSE</span><span class="p">,</span>
 <span class="p">)</span>
@@ -1281,12 +1281,12 @@ edge_colors = unlist(assignGroupColorToUniqueEdges(
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># You will need to authorise Google Colab access to Google Drive</span>
-<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">'/content/drive'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount(&quot;/content/drive&quot;, force_remount=True).
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount("/content/drive", force_remount=True).
 </pre></div>
 </div>
 </div>
@@ -1297,10 +1297,10 @@ edge_colors = unlist(assignGroupColorToUniqueEdges(
 <span class="c1"># This will send the file to your Google Drive, where you can download it from if needed</span>
 <span class="c1"># Change the file path if you wish to send the file to a specific location</span>
 <span class="c1"># Change the file name if you wish to call it something else</span>
-<span class="n">pdf</span><span class="p">(</span><span class="s1">&#39;/content/drive/My Drive/Ghana_UpperEast_2015.pdf&#39;</span><span class="p">)</span>
+<span class="n">pdf</span><span class="p">(</span><span class="s1">'/content/drive/My Drive/Ghana_UpperEast_2015.pdf'</span><span class="p">)</span>
 <span class="n">plot</span><span class="o">.</span><span class="n">phylo</span><span class="p">(</span>
-    <span class="n">tree</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;unrooted&quot;</span><span class="p">,</span>
-    <span class="n">tip</span><span class="o">=</span><span class="n">df_samples</span><span class="p">[</span><span class="n">pass_samples</span><span class="p">,</span> <span class="s1">&#39;population_colour&#39;</span><span class="p">],</span>
+    <span class="n">tree</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"unrooted"</span><span class="p">,</span>
+    <span class="n">tip</span><span class="o">=</span><span class="n">df_samples</span><span class="p">[</span><span class="n">pass_samples</span><span class="p">,</span> <span class="s1">'population_colour'</span><span class="p">],</span>
     <span class="n">edge</span><span class="o">.</span><span class="n">color</span><span class="o">=</span><span class="n">unlist</span><span class="p">(</span><span class="n">edge_colors</span><span class="p">),</span>
     <span class="n">show</span><span class="o">.</span><span class="n">tip</span><span class="o">.</span><span class="n">label</span><span class="o">=</span><span class="n">FALSE</span><span class="p">,</span>
 <span class="p">)</span>
@@ -1334,13 +1334,13 @@ edge_colors = unlist(assignGroupColorToUniqueEdges(
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>%%R
-# We combine the criteria using &quot;&amp;&quot; to create a logical vector &#39;pass_samples&#39;
+# We combine the criteria using "&amp;" to create a logical vector 'pass_samples'
 # where each element refers to a row in the df_samples dataframe
 # and evaluates to TRUE if all the conditions are met for that row, or FALSE otherwise.
 pass_samples &lt;- (
-    df_samples$`Exclusion reason` == &#39;Analysis_set&#39; &amp; # We use backticks (`) around column names with spaces &#39;Exclusion reason&#39;, to ensure they are correctly recognized as column names.
-    df_samples$Country == &#39;Kenya&#39; &amp;
-    df_samples$`Admin level 1` == &#39;Kilifi&#39; &amp;
+    df_samples$`Exclusion reason` == 'Analysis_set' &amp; # We use backticks (`) around column names with spaces 'Exclusion reason', to ensure they are correctly recognized as column names.
+    df_samples$Country == 'Kenya' &amp;
+    df_samples$`Admin level 1` == 'Kilifi' &amp;
     df_samples$Year &gt;= 2007 &amp;
     df_samples$Year &lt;= 2012 # Note we have a range of years included here
 )
@@ -1388,11 +1388,11 @@ aggregate(Sample ~ Country+`Sample type`, df_samples[pass_samples, ], FUN=length
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>%%R
-groups = as.factor(df_samples[pass_samples, &#39;Sample type&#39;])
-names(groups) = tree[3]$&#39;tip.label&#39;
+groups = as.factor(df_samples[pass_samples, 'Sample type'])
+names(groups) = tree[3]$'tip.label'
 counts = computeEdgeGroupCounts(tree, groups)
 edge_colors = unlist(assignGroupColorToUniqueEdges(
-    tree, counts, groupcolors=colourings_population, equality_color=&#39;gray&#39;
+    tree, counts, groupcolors=colourings_population, equality_color='gray'
 ))
 </pre></div>
 </div>
@@ -1405,8 +1405,8 @@ edge_colors = unlist(assignGroupColorToUniqueEdges(
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">R</span>
 <span class="n">plot</span><span class="o">.</span><span class="n">phylo</span><span class="p">(</span>
-    <span class="n">tree</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;unrooted&quot;</span><span class="p">,</span>
-    <span class="n">tip</span><span class="o">=</span><span class="n">df_samples</span><span class="p">[</span><span class="n">pass_samples</span><span class="p">,</span> <span class="s1">&#39;population_colour&#39;</span><span class="p">],</span>
+    <span class="n">tree</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"unrooted"</span><span class="p">,</span>
+    <span class="n">tip</span><span class="o">=</span><span class="n">df_samples</span><span class="p">[</span><span class="n">pass_samples</span><span class="p">,</span> <span class="s1">'population_colour'</span><span class="p">],</span>
     <span class="n">edge</span><span class="o">.</span><span class="n">color</span><span class="o">=</span><span class="n">unlist</span><span class="p">(</span><span class="n">edge_colors</span><span class="p">),</span>
     <span class="n">show</span><span class="o">.</span><span class="n">tip</span><span class="o">.</span><span class="n">label</span><span class="o">=</span><span class="n">FALSE</span><span class="p">,</span>
 <span class="p">)</span>
@@ -1425,7 +1425,7 @@ edge_colors = unlist(assignGroupColorToUniqueEdges(
 <p>If you need to mount it again, uncomment the following code:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># drive.mount(&#39;/content/drive&#39;)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># drive.mount('/content/drive')</span>
 </pre></div>
 </div>
 </div>
@@ -1436,10 +1436,10 @@ edge_colors = unlist(assignGroupColorToUniqueEdges(
 <span class="c1"># This will send the file to your Google Drive, where you can download it from if needed</span>
 <span class="c1"># Change the file path if you wish to send the file to a specific location</span>
 <span class="c1"># Change the file name if you wish to call it something else</span>
-<span class="n">pdf</span><span class="p">(</span><span class="s1">&#39;/content/drive/My Drive/Kenya_Kilifi_2007_2012.pdf&#39;</span><span class="p">)</span>
+<span class="n">pdf</span><span class="p">(</span><span class="s1">'/content/drive/My Drive/Kenya_Kilifi_2007_2012.pdf'</span><span class="p">)</span>
 <span class="n">plot</span><span class="o">.</span><span class="n">phylo</span><span class="p">(</span>
-    <span class="n">tree</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;unrooted&quot;</span><span class="p">,</span>
-    <span class="n">tip</span><span class="o">=</span><span class="n">df_samples</span><span class="p">[</span><span class="n">pass_samples</span><span class="p">,</span> <span class="s1">&#39;population_colour&#39;</span><span class="p">],</span>
+    <span class="n">tree</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"unrooted"</span><span class="p">,</span>
+    <span class="n">tip</span><span class="o">=</span><span class="n">df_samples</span><span class="p">[</span><span class="n">pass_samples</span><span class="p">,</span> <span class="s1">'population_colour'</span><span class="p">],</span>
     <span class="n">edge</span><span class="o">.</span><span class="n">color</span><span class="o">=</span><span class="n">unlist</span><span class="p">(</span><span class="n">edge_colors</span><span class="p">),</span>
     <span class="n">show</span><span class="o">.</span><span class="n">tip</span><span class="o">.</span><span class="n">label</span><span class="o">=</span><span class="n">FALSE</span><span class="p">,</span>
 <span class="p">)</span>
@@ -1463,9 +1463,9 @@ edge_colors = unlist(assignGroupColorToUniqueEdges(
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>%%R
 # Generate a logical vector for this tree
 pass_samples &lt;- (
-    df_samples$`Exclusion reason` == &#39;Analysis_set&#39; &amp; # We use backticks (`) around column names with spaces &#39;Exclusion reason&#39;, to ensure they are correctly recognized as column names.
-    df_samples$Country == &#39;Cambodia&#39; &amp;
-    df_samples$`Admin level 1` == &#39;Pursat&#39; &amp;
+    df_samples$`Exclusion reason` == 'Analysis_set' &amp; # We use backticks (`) around column names with spaces 'Exclusion reason', to ensure they are correctly recognized as column names.
+    df_samples$Country == 'Cambodia' &amp;
+    df_samples$`Admin level 1` == 'Pursat' &amp;
     df_samples$Year == 2016
 )
 summary(pass_samples) # We have 52 samples that satisfy the criteria
@@ -1506,11 +1506,11 @@ aggregate(Sample ~ Country+`Sample type`, df_samples[pass_samples, ], FUN=length
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>%%R
-groups = as.factor(df_samples[pass_samples, &#39;Sample type&#39;])
-names(groups) = tree[3]$&#39;tip.label&#39;
+groups = as.factor(df_samples[pass_samples, 'Sample type'])
+names(groups) = tree[3]$'tip.label'
 counts = computeEdgeGroupCounts(tree, groups)
 edge_colors = unlist(assignGroupColorToUniqueEdges(
-    tree, counts, groupcolors=colourings_population, equality_color=&#39;gray&#39;
+    tree, counts, groupcolors=colourings_population, equality_color='gray'
 ))
 </pre></div>
 </div>
@@ -1520,8 +1520,8 @@ edge_colors = unlist(assignGroupColorToUniqueEdges(
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">R</span>
 <span class="n">plot</span><span class="o">.</span><span class="n">phylo</span><span class="p">(</span>
-    <span class="n">tree</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;unrooted&quot;</span><span class="p">,</span>
-    <span class="n">tip</span><span class="o">=</span><span class="n">df_samples</span><span class="p">[</span><span class="n">pass_samples</span><span class="p">,</span> <span class="s1">&#39;population_colour&#39;</span><span class="p">],</span>
+    <span class="n">tree</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"unrooted"</span><span class="p">,</span>
+    <span class="n">tip</span><span class="o">=</span><span class="n">df_samples</span><span class="p">[</span><span class="n">pass_samples</span><span class="p">,</span> <span class="s1">'population_colour'</span><span class="p">],</span>
     <span class="n">edge</span><span class="o">.</span><span class="n">color</span><span class="o">=</span><span class="n">unlist</span><span class="p">(</span><span class="n">edge_colors</span><span class="p">),</span>
     <span class="n">show</span><span class="o">.</span><span class="n">tip</span><span class="o">.</span><span class="n">label</span><span class="o">=</span><span class="n">FALSE</span><span class="p">,</span>
 <span class="p">)</span>
@@ -1539,7 +1539,7 @@ edge_colors = unlist(assignGroupColorToUniqueEdges(
 <p>If you need to mount it again, uncomment the following code:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># drive.mount(&#39;/content/drive&#39;)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># drive.mount('/content/drive')</span>
 </pre></div>
 </div>
 </div>
@@ -1550,10 +1550,10 @@ edge_colors = unlist(assignGroupColorToUniqueEdges(
 <span class="c1"># This will send the file to your Google Drive, where you can download it from if needed</span>
 <span class="c1"># Change the file path if you wish to send the file to a specific location</span>
 <span class="c1"># Change the file name if you wish to call it something else</span>
-<span class="n">pdf</span><span class="p">(</span><span class="s1">&#39;/content/drive/My Drive/Cambodia_Pursat_2016.pdf&#39;</span><span class="p">)</span>
+<span class="n">pdf</span><span class="p">(</span><span class="s1">'/content/drive/My Drive/Cambodia_Pursat_2016.pdf'</span><span class="p">)</span>
 <span class="n">plot</span><span class="o">.</span><span class="n">phylo</span><span class="p">(</span>
-    <span class="n">tree</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;unrooted&quot;</span><span class="p">,</span>
-    <span class="n">tip</span><span class="o">=</span><span class="n">df_samples</span><span class="p">[</span><span class="n">pass_samples</span><span class="p">,</span> <span class="s1">&#39;population_colour&#39;</span><span class="p">],</span>
+    <span class="n">tree</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"unrooted"</span><span class="p">,</span>
+    <span class="n">tip</span><span class="o">=</span><span class="n">df_samples</span><span class="p">[</span><span class="n">pass_samples</span><span class="p">,</span> <span class="s1">'population_colour'</span><span class="p">],</span>
     <span class="n">edge</span><span class="o">.</span><span class="n">color</span><span class="o">=</span><span class="n">unlist</span><span class="p">(</span><span class="n">edge_colors</span><span class="p">),</span>
     <span class="n">show</span><span class="o">.</span><span class="n">tip</span><span class="o">.</span><span class="n">label</span><span class="o">=</span><span class="n">FALSE</span><span class="p">,</span>
 <span class="p">)</span>
@@ -1576,9 +1576,9 @@ edge_colors = unlist(assignGroupColorToUniqueEdges(
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>%%R
 # Generate a logical vector for this tree
 pass_samples &lt;- (
-    df_samples$`Exclusion reason` == &#39;Analysis_set&#39; &amp; # We use backticks (`) around column names with spaces &#39;Exclusion reason&#39;, to ensure they are correctly recognized as column names.
-    df_samples$Country == &#39;Vietnam&#39; &amp;
-    df_samples$`Admin level 1` == &#39;Binh Phuoc&#39; &amp;
+    df_samples$`Exclusion reason` == 'Analysis_set' &amp; # We use backticks (`) around column names with spaces 'Exclusion reason', to ensure they are correctly recognized as column names.
+    df_samples$Country == 'Vietnam' &amp;
+    df_samples$`Admin level 1` == 'Binh Phuoc' &amp;
     df_samples$Year == 2016
 )
 summary(pass_samples) # We have 61 samples that satisfy the criteria
@@ -1619,11 +1619,11 @@ aggregate(Sample ~ Country+`Sample type`, df_samples[pass_samples, ], FUN=length
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>%%R
-groups = as.factor(df_samples[pass_samples, &#39;Sample type&#39;])
-names(groups) = tree[3]$&#39;tip.label&#39;
+groups = as.factor(df_samples[pass_samples, 'Sample type'])
+names(groups) = tree[3]$'tip.label'
 counts = computeEdgeGroupCounts(tree, groups)
 edge_colors = unlist(assignGroupColorToUniqueEdges(
-    tree, counts, groupcolors=colourings_population, equality_color=&#39;gray&#39;
+    tree, counts, groupcolors=colourings_population, equality_color='gray'
 ))
 </pre></div>
 </div>
@@ -1633,8 +1633,8 @@ edge_colors = unlist(assignGroupColorToUniqueEdges(
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">R</span>
 <span class="n">plot</span><span class="o">.</span><span class="n">phylo</span><span class="p">(</span>
-    <span class="n">tree</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;unrooted&quot;</span><span class="p">,</span>
-    <span class="n">tip</span><span class="o">=</span><span class="n">df_samples</span><span class="p">[</span><span class="n">pass_samples</span><span class="p">,</span> <span class="s1">&#39;population_colour&#39;</span><span class="p">],</span>
+    <span class="n">tree</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"unrooted"</span><span class="p">,</span>
+    <span class="n">tip</span><span class="o">=</span><span class="n">df_samples</span><span class="p">[</span><span class="n">pass_samples</span><span class="p">,</span> <span class="s1">'population_colour'</span><span class="p">],</span>
     <span class="n">edge</span><span class="o">.</span><span class="n">color</span><span class="o">=</span><span class="n">unlist</span><span class="p">(</span><span class="n">edge_colors</span><span class="p">),</span>
     <span class="n">show</span><span class="o">.</span><span class="n">tip</span><span class="o">.</span><span class="n">label</span><span class="o">=</span><span class="n">FALSE</span><span class="p">,</span>
 <span class="p">)</span>
@@ -1652,7 +1652,7 @@ edge_colors = unlist(assignGroupColorToUniqueEdges(
 <p>If you need to mount it again, uncomment the following code:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># drive.mount(&#39;/content/drive&#39;)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># drive.mount('/content/drive')</span>
 </pre></div>
 </div>
 </div>
@@ -1663,10 +1663,10 @@ edge_colors = unlist(assignGroupColorToUniqueEdges(
 <span class="c1"># This will send the file to your Google Drive, where you can download it from if needed</span>
 <span class="c1"># Change the file path if you wish to send the file to a specific location</span>
 <span class="c1"># Change the file name if you wish to call it something else</span>
-<span class="n">pdf</span><span class="p">(</span><span class="s1">&#39;/content/drive/My Drive/Vietnam_BinhPhuoc_2016.pdf&#39;</span><span class="p">)</span>
+<span class="n">pdf</span><span class="p">(</span><span class="s1">'/content/drive/My Drive/Vietnam_BinhPhuoc_2016.pdf'</span><span class="p">)</span>
 <span class="n">plot</span><span class="o">.</span><span class="n">phylo</span><span class="p">(</span>
-    <span class="n">tree</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;unrooted&quot;</span><span class="p">,</span>
-    <span class="n">tip</span><span class="o">=</span><span class="n">df_samples</span><span class="p">[</span><span class="n">pass_samples</span><span class="p">,</span> <span class="s1">&#39;population_colour&#39;</span><span class="p">],</span>
+    <span class="n">tree</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"unrooted"</span><span class="p">,</span>
+    <span class="n">tip</span><span class="o">=</span><span class="n">df_samples</span><span class="p">[</span><span class="n">pass_samples</span><span class="p">,</span> <span class="s1">'population_colour'</span><span class="p">],</span>
     <span class="n">edge</span><span class="o">.</span><span class="n">color</span><span class="o">=</span><span class="n">unlist</span><span class="p">(</span><span class="n">edge_colors</span><span class="p">),</span>
     <span class="n">show</span><span class="o">.</span><span class="n">tip</span><span class="o">.</span><span class="n">label</span><span class="o">=</span><span class="n">FALSE</span><span class="p">,</span>
 <span class="p">)</span>

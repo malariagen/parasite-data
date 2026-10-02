@@ -536,7 +536,7 @@ document.write(`
 <span class="n">release_data</span> <span class="o">=</span> <span class="n">malariagen_data</span><span class="o">.</span><span class="n">Pf7</span><span class="p">()</span>
 <span class="n">sample_metadata</span> <span class="o">=</span> <span class="n">release_data</span><span class="o">.</span><span class="n">sample_metadata</span><span class="p">()</span>
 
-<span class="c1"># View the &#39;shape&#39; of the data - i.e. how many rows and columns does it have?</span>
+<span class="c1"># View the 'shape' of the data - i.e. how many rows and columns does it have?</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">sample_metadata</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -921,19 +921,19 @@ document.write(`
 <p>To do this, we will start by generating a dictionary object which we can use as a legend for the plot, with the full title for each population:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#You might have noticed the &#39;Population&#39; variable in the above meta-data does not contain the full name of each population, only an abbreviation.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#You might have noticed the 'Population' variable in the above meta-data does not contain the full name of each population, only an abbreviation.</span>
 <span class="c1">#Here, we generate a dictionary which contains the full name of each population. This will be useful later in creating a legend for the plot.</span>
 <span class="n">Population_legend</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
-<span class="n">Population_legend</span><span class="p">[</span><span class="s1">&#39;SA&#39;</span><span class="p">]</span>       <span class="o">=</span> <span class="s2">&quot;South America&quot;</span>
-<span class="n">Population_legend</span><span class="p">[</span><span class="s1">&#39;AF-W&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">&quot;Africa - West&quot;</span>
-<span class="n">Population_legend</span><span class="p">[</span><span class="s1">&#39;AF-C&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">&quot;Africa - Central&quot;</span>
-<span class="n">Population_legend</span><span class="p">[</span><span class="s1">&#39;AF-NE&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">&quot;Africa - Northeast&quot;</span>
-<span class="n">Population_legend</span><span class="p">[</span><span class="s1">&#39;AF-E&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">&quot;Africa - East&quot;</span>
-<span class="n">Population_legend</span><span class="p">[</span><span class="s1">&#39;AS-S-E&#39;</span><span class="p">]</span>   <span class="o">=</span> <span class="s2">&quot;Asia - South - East&quot;</span>
-<span class="n">Population_legend</span><span class="p">[</span><span class="s1">&#39;AS-S-FE&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">&quot;Asia - South - Far East&quot;</span>
-<span class="n">Population_legend</span><span class="p">[</span><span class="s1">&#39;AS-SE-W&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">&quot;Asia - Southeast - West&quot;</span>
-<span class="n">Population_legend</span><span class="p">[</span><span class="s1">&#39;AS-SE-E&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">&quot;Asia - Southeast - East&quot;</span>
-<span class="n">Population_legend</span><span class="p">[</span><span class="s1">&#39;OC-NG&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">&quot;Oceania - New Guinea&quot;</span>
+<span class="n">Population_legend</span><span class="p">[</span><span class="s1">'SA'</span><span class="p">]</span>       <span class="o">=</span> <span class="s2">"South America"</span>
+<span class="n">Population_legend</span><span class="p">[</span><span class="s1">'AF-W'</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">"Africa - West"</span>
+<span class="n">Population_legend</span><span class="p">[</span><span class="s1">'AF-C'</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">"Africa - Central"</span>
+<span class="n">Population_legend</span><span class="p">[</span><span class="s1">'AF-NE'</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">"Africa - Northeast"</span>
+<span class="n">Population_legend</span><span class="p">[</span><span class="s1">'AF-E'</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">"Africa - East"</span>
+<span class="n">Population_legend</span><span class="p">[</span><span class="s1">'AS-S-E'</span><span class="p">]</span>   <span class="o">=</span> <span class="s2">"Asia - South - East"</span>
+<span class="n">Population_legend</span><span class="p">[</span><span class="s1">'AS-S-FE'</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">"Asia - South - Far East"</span>
+<span class="n">Population_legend</span><span class="p">[</span><span class="s1">'AS-SE-W'</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">"Asia - Southeast - West"</span>
+<span class="n">Population_legend</span><span class="p">[</span><span class="s1">'AS-SE-E'</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">"Asia - Southeast - East"</span>
+<span class="n">Population_legend</span><span class="p">[</span><span class="s1">'OC-NG'</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">"Oceania - New Guinea"</span>
 </pre></div>
 </div>
 </div>
@@ -943,19 +943,19 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We create a second dictionary object, where each population is given a hexadecimal colour e.g. #4daf4a</span>
 <span class="n">Population_colours</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
-<span class="n">Population_colours</span><span class="p">[</span><span class="s1">&#39;SA&#39;</span><span class="p">]</span>      <span class="o">=</span> <span class="s2">&quot;#4daf4a&quot;</span>
-<span class="n">Population_colours</span><span class="p">[</span><span class="s1">&#39;AF-W&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">&quot;#e31a1c&quot;</span>
-<span class="n">Population_colours</span><span class="p">[</span><span class="s1">&#39;AF-C&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">&quot;#fd8d3c&quot;</span>
-<span class="n">Population_colours</span><span class="p">[</span><span class="s1">&#39;AF-NE&#39;</span><span class="p">]</span>   <span class="o">=</span> <span class="s2">&quot;#bb8129&quot;</span>
-<span class="n">Population_colours</span><span class="p">[</span><span class="s1">&#39;AF-E&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">&quot;#fecc5c&quot;</span>
-<span class="n">Population_colours</span><span class="p">[</span><span class="s1">&#39;AS-S-E&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">&quot;#dfc0eb&quot;</span>
-<span class="n">Population_colours</span><span class="p">[</span><span class="s1">&#39;AS-S-FE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;#984ea3&quot;</span>
-<span class="n">Population_colours</span><span class="p">[</span><span class="s1">&#39;AS-SE-W&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;#9ecae1&quot;</span>
-<span class="n">Population_colours</span><span class="p">[</span><span class="s1">&#39;AS-SE-E&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;#3182bd&quot;</span>
-<span class="n">Population_colours</span><span class="p">[</span><span class="s1">&#39;OC-NG&#39;</span><span class="p">]</span>   <span class="o">=</span> <span class="s2">&quot;#f781bf&quot;</span>
+<span class="n">Population_colours</span><span class="p">[</span><span class="s1">'SA'</span><span class="p">]</span>      <span class="o">=</span> <span class="s2">"#4daf4a"</span>
+<span class="n">Population_colours</span><span class="p">[</span><span class="s1">'AF-W'</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">"#e31a1c"</span>
+<span class="n">Population_colours</span><span class="p">[</span><span class="s1">'AF-C'</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">"#fd8d3c"</span>
+<span class="n">Population_colours</span><span class="p">[</span><span class="s1">'AF-NE'</span><span class="p">]</span>   <span class="o">=</span> <span class="s2">"#bb8129"</span>
+<span class="n">Population_colours</span><span class="p">[</span><span class="s1">'AF-E'</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">"#fecc5c"</span>
+<span class="n">Population_colours</span><span class="p">[</span><span class="s1">'AS-S-E'</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">"#dfc0eb"</span>
+<span class="n">Population_colours</span><span class="p">[</span><span class="s1">'AS-S-FE'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"#984ea3"</span>
+<span class="n">Population_colours</span><span class="p">[</span><span class="s1">'AS-SE-W'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"#9ecae1"</span>
+<span class="n">Population_colours</span><span class="p">[</span><span class="s1">'AS-SE-E'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"#3182bd"</span>
+<span class="n">Population_colours</span><span class="p">[</span><span class="s1">'OC-NG'</span><span class="p">]</span>   <span class="o">=</span> <span class="s2">"#f781bf"</span>
 
-<span class="c1"># Then we generate a new variable - &#39;population colour&#39; onto the metadata, and impute the assigned colours using the dictionary</span>
-<span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;Population_colour&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;Population&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">Population_colours</span><span class="p">)</span>
+<span class="c1"># Then we generate a new variable - 'population colour' onto the metadata, and impute the assigned colours using the dictionary</span>
+<span class="n">sample_metadata</span><span class="p">[</span><span class="s1">'Population_colour'</span><span class="p">]</span> <span class="o">=</span> <span class="n">sample_metadata</span><span class="p">[</span><span class="s1">'Population'</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">Population_colours</span><span class="p">)</span>
 
 <span class="c1"># Note we now have an extra colomn</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">sample_metadata</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
@@ -1338,21 +1338,21 @@ document.write(`
 <p>We therefore need to count the number of samples within each sub-category (e.g. East Africa - Kenya - Kilifi). To do this we can create a new dataframe, where we count the number of samples in each sub-category:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Here, we create the new dataframe &#39;sample_metadata_admin1&#39;.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Here, we create the new dataframe 'sample_metadata_admin1'.</span>
 <span class="n">sample_metadata_admin1</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
         <span class="n">sample_metadata</span>                   <span class="c1"># we first take the previous dataframe from above</span>
-        <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span>           <span class="c1"># then group the data by several variables (Population, Country &amp; Admin level 1)</span>
-                  <span class="s1">&#39;Country&#39;</span><span class="p">,</span>
-                  <span class="s1">&#39;Admin level 1&#39;</span><span class="p">,</span>
-                  <span class="s1">&#39;Population_colour&#39;</span><span class="p">,</span>    <span class="c1"># we also want to include some of the other variables from the previous dataframe (population colour and latitude/longitude)</span>
-                  <span class="s1">&#39;Admin level 1 latitude&#39;</span><span class="p">,</span>
-                  <span class="s1">&#39;Admin level 1 longitude&#39;</span><span class="p">])</span>
+        <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">'Population'</span><span class="p">,</span>           <span class="c1"># then group the data by several variables (Population, Country &amp; Admin level 1)</span>
+                  <span class="s1">'Country'</span><span class="p">,</span>
+                  <span class="s1">'Admin level 1'</span><span class="p">,</span>
+                  <span class="s1">'Population_colour'</span><span class="p">,</span>    <span class="c1"># we also want to include some of the other variables from the previous dataframe (population colour and latitude/longitude)</span>
+                  <span class="s1">'Admin level 1 latitude'</span><span class="p">,</span>
+                  <span class="s1">'Admin level 1 longitude'</span><span class="p">])</span>
         <span class="o">.</span><span class="n">size</span><span class="p">()</span>
-        <span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Number of samples&#39;</span><span class="p">)</span>                       <span class="c1"># Then count samples within each subgroup (Population &gt; Country &gt; Admin level 1)</span>
+        <span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Number of samples'</span><span class="p">)</span>                       <span class="c1"># Then count samples within each subgroup (Population &gt; Country &gt; Admin level 1)</span>
     <span class="p">)</span>
 
-    <span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">&#39;Country&#39;</span><span class="p">,</span> <span class="s1">&#39;Admin level 1&#39;</span><span class="p">])</span> <span class="c1"># we then set Country and Admin level 1 as the new index</span>
+    <span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">'Country'</span><span class="p">,</span> <span class="s1">'Admin level 1'</span><span class="p">])</span> <span class="c1"># we then set Country and Admin level 1 as the new index</span>
 <span class="p">)</span>
 
 <span class="c1"># Lets check the above has worked correctly by outputting the new dataframe</span>
@@ -2431,31 +2431,31 @@ document.write(`
 <p>We can now plot figure 1A from the Pf7 paper. Firstly, we set the basic plotting parameters for the plot, such as the font sizes. We then set the range of latitude and longitude we would like to include in the plot, as well as the total size of the image.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set basic plotting parameters (this is required regardless of whether the &#39;Basemap&#39; or &#39;Cartopy&#39; package is used)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set basic plotting parameters (this is required regardless of whether the 'Basemap' or 'Cartopy' package is used)</span>
 <span class="n">rcParams</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span>
 <span class="n">base_font_size</span> <span class="o">=</span> <span class="mi">8</span>
-<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">base_font_size</span>
-<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.labelsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">base_font_size</span>
-<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;xtick.labelsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">base_font_size</span>
-<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;ytick.labelsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">base_font_size</span>
-<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;legend.fontsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">base_font_size</span>
-<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.linewidth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">.5</span>
-<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;lines.linewidth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">.5</span>
-<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;patch.linewidth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">.5</span>
-<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;ytick.direction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;out&#39;</span>
-<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;xtick.direction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;out&#39;</span>
-<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;lines.markeredgewidth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">.5</span>
-<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.max_open_warning&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">'font.size'</span><span class="p">]</span> <span class="o">=</span> <span class="n">base_font_size</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">'axes.labelsize'</span><span class="p">]</span> <span class="o">=</span> <span class="n">base_font_size</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">'xtick.labelsize'</span><span class="p">]</span> <span class="o">=</span> <span class="n">base_font_size</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">'ytick.labelsize'</span><span class="p">]</span> <span class="o">=</span> <span class="n">base_font_size</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">'legend.fontsize'</span><span class="p">]</span> <span class="o">=</span> <span class="n">base_font_size</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">'axes.linewidth'</span><span class="p">]</span> <span class="o">=</span> <span class="mf">.5</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">'lines.linewidth'</span><span class="p">]</span> <span class="o">=</span> <span class="mf">.5</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">'patch.linewidth'</span><span class="p">]</span> <span class="o">=</span> <span class="mf">.5</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">'ytick.direction'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'out'</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">'xtick.direction'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'out'</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">'lines.markeredgewidth'</span><span class="p">]</span> <span class="o">=</span> <span class="mf">.5</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">'figure.max_open_warning'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1000</span>
 
 <span class="c1"># Define the maximum and minimum latitude and longitude for the map</span>
-<span class="n">min_lat</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">&#39;Admin level 1 latitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">-</span> <span class="mi">3</span>
-<span class="n">max_lat</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">&#39;Admin level 1 latitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span> <span class="o">+</span> <span class="mi">3</span>
-<span class="n">min_long</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">&#39;Admin level 1 longitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">-</span> <span class="mi">3</span>
-<span class="n">max_long</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">&#39;Admin level 1 longitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span> <span class="o">+</span> <span class="mi">3</span>
+<span class="n">min_lat</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">'Admin level 1 latitude'</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">-</span> <span class="mi">3</span>
+<span class="n">max_lat</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">'Admin level 1 latitude'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span> <span class="o">+</span> <span class="mi">3</span>
+<span class="n">min_long</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">'Admin level 1 longitude'</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">-</span> <span class="mi">3</span>
+<span class="n">max_long</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">'Admin level 1 longitude'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span> <span class="o">+</span> <span class="mi">3</span>
 
 <span class="c1"># Then define the total size of the image</span>
-<span class="n">map_size</span> <span class="o">=</span> <span class="p">((</span><span class="nb">int</span><span class="p">(</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">&#39;Admin level 1 longitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span> <span class="o">+</span> <span class="mi">3</span>  <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">&#39;Admin level 1 longitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">-</span> <span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">10</span> <span class="p">,</span>
-<span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">&#39;Admin level 1 latitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span> <span class="o">+</span> <span class="mi">3</span>  <span class="o">-</span>  <span class="nb">int</span><span class="p">(</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">&#39;Admin level 1 latitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">-</span> <span class="mi">3</span> <span class="p">)</span> <span class="o">/</span> <span class="mi">10</span> <span class="p">)</span>
+<span class="n">map_size</span> <span class="o">=</span> <span class="p">((</span><span class="nb">int</span><span class="p">(</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">'Admin level 1 longitude'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span> <span class="o">+</span> <span class="mi">3</span>  <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">'Admin level 1 longitude'</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">-</span> <span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">10</span> <span class="p">,</span>
+<span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">'Admin level 1 latitude'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span> <span class="o">+</span> <span class="mi">3</span>  <span class="o">-</span>  <span class="nb">int</span><span class="p">(</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">'Admin level 1 latitude'</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">-</span> <span class="mi">3</span> <span class="p">)</span> <span class="o">/</span> <span class="mi">10</span> <span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2471,20 +2471,20 @@ document.write(`
 <span class="n">alpha</span> <span class="o">=</span> <span class="mf">1.0</span>
 
 <span class="c1"># 2. Draw the map background</span>
-<span class="n">m</span> <span class="o">=</span> <span class="n">Basemap</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;cyl&#39;</span><span class="p">,</span> <span class="n">resolution</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">,</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">Basemap</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">'cyl'</span><span class="p">,</span> <span class="n">resolution</span><span class="o">=</span><span class="s1">'c'</span><span class="p">,</span>
             <span class="n">llcrnrlat</span><span class="o">=</span><span class="n">min_lat</span><span class="p">,</span> <span class="n">urcrnrlat</span><span class="o">=</span><span class="n">max_lat</span><span class="p">,</span>
             <span class="n">llcrnrlon</span><span class="o">=</span><span class="n">min_long</span><span class="p">,</span> <span class="n">urcrnrlon</span><span class="o">=</span><span class="n">max_long</span>
           <span class="p">)</span>
 
 <span class="n">m</span><span class="o">.</span><span class="n">shadedrelief</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
-<span class="n">m</span><span class="o">.</span><span class="n">drawcountries</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">drawcountries</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">'gray'</span><span class="p">)</span>
 
 <span class="c1"># 3. Show admin 1 levels, with color reflecting population</span>
 <span class="n">m</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
-    <span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">&#39;Admin level 1 longitude&#39;</span><span class="p">],</span>
-    <span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">&#39;Admin level 1 latitude&#39;</span><span class="p">],</span>
-    <span class="n">c</span><span class="o">=</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">&#39;Population_colour&#39;</span><span class="p">],</span>
-    <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span>
+    <span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">'Admin level 1 longitude'</span><span class="p">],</span>
+    <span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">'Admin level 1 latitude'</span><span class="p">],</span>
+    <span class="n">c</span><span class="o">=</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">'Population_colour'</span><span class="p">],</span>
+    <span class="n">edgecolors</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span>
     <span class="n">s</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span>
     <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">,</span>
     <span class="n">latlon</span><span class="o">=</span><span class="kc">True</span>
@@ -2492,22 +2492,22 @@ document.write(`
 
 <span class="c1"># 4. Make legend with dummy points</span>
 <span class="k">for</span> <span class="n">population</span> <span class="ow">in</span> <span class="n">Population_colours</span><span class="p">:</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;Population&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">population</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">'Population'</span><span class="p">]</span> <span class="o">==</span> <span class="n">population</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
         <span class="p">[],</span>
         <span class="p">[],</span>
         <span class="n">c</span><span class="o">=</span><span class="n">Population_colours</span><span class="p">[</span><span class="n">population</span><span class="p">],</span>
-        <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span>
+        <span class="n">edgecolors</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span>
         <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">,</span>
         <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
-        <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">Population_legend</span><span class="p">[</span><span class="n">population</span><span class="p">]</span><span class="si">}</span><span class="s2"> (n=</span><span class="si">{</span><span class="n">n</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">)&quot;</span>
+        <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">Population_legend</span><span class="p">[</span><span class="n">population</span><span class="p">]</span><span class="si">}</span><span class="s2"> (n=</span><span class="si">{</span><span class="n">n</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">)"</span>
     <span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">scatterpoints</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">labelspacing</span><span class="o">=</span><span class="mf">.7</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">0.22</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mf">27.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;Population&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mf">27.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">'Population'</span><span class="p">)</span>
 
 <span class="c1"># 5. Add title (optional)</span>
-<span class="c1">#plt.title(&quot;Figure 1A: Sampling locations&quot;)</span>
+<span class="c1">#plt.title("Figure 1A: Sampling locations")</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -2528,8 +2528,8 @@ document.write(`
 <span class="o">!</span>wget<span class="w"> </span>https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/50m/raster/HYP_50M_SR_W.zip
 
 <span class="c1"># Unzip the file and define the path to the image file:</span>
-<span class="o">!</span>unzip<span class="w"> </span><span class="s1">&#39;./HYP_50M_SR_W.zip&#39;</span>
-<span class="n">image</span> <span class="o">=</span> <span class="s1">&#39;./HYP_50M_SR_W.tif&#39;</span>
+<span class="o">!</span>unzip<span class="w"> </span><span class="s1">'./HYP_50M_SR_W.zip'</span>
+<span class="n">image</span> <span class="o">=</span> <span class="s1">'./HYP_50M_SR_W.tif'</span>
 </pre></div>
 </div>
 </div>
@@ -2563,7 +2563,7 @@ replace HYP_50M_SR_W.tif? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
   inflating: HYP_50M_SR_W.tif        y
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;./HYP_50M_SR_W.tif&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'./HYP_50M_SR_W.tif'
 </pre></div>
 </div>
 </div>
@@ -2577,16 +2577,16 @@ replace HYP_50M_SR_W.tif? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
 <span class="c1"># 2. Draw the map background with identical parameters</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_extent</span><span class="p">([</span><span class="n">min_long</span><span class="p">,</span> <span class="n">max_long</span><span class="p">,</span><span class="n">min_lat</span><span class="p">,</span> <span class="n">max_lat</span><span class="p">],</span> <span class="n">crs</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">imread</span><span class="p">(</span><span class="n">image</span><span class="p">),</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;upper&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.4</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">imread</span><span class="p">(</span><span class="n">image</span><span class="p">),</span> <span class="n">origin</span><span class="o">=</span><span class="s1">'upper'</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.4</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span>
           <span class="n">extent</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">90</span><span class="p">])</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">BORDERS</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">BORDERS</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'-'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'grey'</span><span class="p">)</span>
 
 <span class="c1"># 3. Show admin 1 levels, with color reflecting population</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
-    <span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">&#39;Admin level 1 longitude&#39;</span><span class="p">],</span>
-    <span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">&#39;Admin level 1 latitude&#39;</span><span class="p">],</span>
-    <span class="n">c</span><span class="o">=</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">&#39;Population_colour&#39;</span><span class="p">],</span>
-    <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span>
+    <span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">'Admin level 1 longitude'</span><span class="p">],</span>
+    <span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">'Admin level 1 latitude'</span><span class="p">],</span>
+    <span class="n">c</span><span class="o">=</span><span class="n">sample_metadata_admin1</span><span class="p">[</span><span class="s1">'Population_colour'</span><span class="p">],</span>
+    <span class="n">edgecolors</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span>
     <span class="n">s</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span>
     <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">,</span>
     <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()</span>
@@ -2594,22 +2594,22 @@ replace HYP_50M_SR_W.tif? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
 
 <span class="c1"># 4. Make legend with dummy points</span>
 <span class="k">for</span> <span class="n">population</span> <span class="ow">in</span> <span class="n">Population_colours</span><span class="p">:</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">&#39;Population&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">population</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">sample_metadata</span><span class="p">[</span><span class="s1">'Population'</span><span class="p">]</span> <span class="o">==</span> <span class="n">population</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
         <span class="p">[],</span>
         <span class="p">[],</span>
         <span class="n">c</span><span class="o">=</span><span class="n">Population_colours</span><span class="p">[</span><span class="n">population</span><span class="p">],</span>
-        <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span>
+        <span class="n">edgecolors</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span>
         <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">,</span>
         <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
-        <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">Population_legend</span><span class="p">[</span><span class="n">population</span><span class="p">]</span><span class="si">}</span><span class="s2"> (n=</span><span class="si">{</span><span class="n">n</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">)&quot;</span>
+        <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">Population_legend</span><span class="p">[</span><span class="n">population</span><span class="p">]</span><span class="si">}</span><span class="s2"> (n=</span><span class="si">{</span><span class="n">n</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">)"</span>
     <span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">scatterpoints</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">labelspacing</span><span class="o">=</span><span class="mf">.7</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">0.22</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mf">27.5</span><span class="p">,</span> <span class="mf">4.1</span><span class="p">,</span> <span class="s1">&#39;Population&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mf">27.5</span><span class="p">,</span> <span class="mf">4.1</span><span class="p">,</span> <span class="s1">'Population'</span><span class="p">)</span>
 
 <span class="c1"># 5. Add title (optional)</span>
-<span class="c1">#plt.title(&quot;Figure 1A: Sampling locations&quot;)</span>
+<span class="c1">#plt.title("Figure 1A: Sampling locations")</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -2625,19 +2625,19 @@ replace HYP_50M_SR_W.tif? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mount Google Drive</span>
-<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">'/content/drive'</span><span class="p">)</span>
 
 <span class="c1"># Save sampling locations plot</span>
 <span class="c1"># This will send the file to your Google Drive, where you can download it from if needed</span>
-<span class="c1"># Note, this code will only save the updated &#39;cartopy&#39; version of the plot. If you would like to save the original version instead, you will have to comment out the code chunk which generates the map using cartopy (the chunk directly above this one).</span>
+<span class="c1"># Note, this code will only save the updated 'cartopy' version of the plot. If you would like to save the original version instead, you will have to comment out the code chunk which generates the map using cartopy (the chunk directly above this one).</span>
 <span class="c1"># Change the file path if you wish to send the file to a specific location</span>
 <span class="c1"># Change the file name if you wish to call it something else</span>
-<span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;/content/drive/My Drive/&#39;</span>
-<span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;Pf7_figure_1A_sample_collections_map&#39;</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="s1">'/content/drive/My Drive/'</span>
+<span class="n">file_name</span> <span class="o">=</span> <span class="s1">'Pf7_figure_1A_sample_collections_map'</span>
 
 <span class="c1"># We save as both .png and .PDF files</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">250</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.pdf&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.png'</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">250</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">file_path</span><span class="si">}{</span><span class="n">file_name</span><span class="si">}</span><span class="s1">.pdf'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
